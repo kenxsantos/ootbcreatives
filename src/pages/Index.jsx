@@ -1,27 +1,25 @@
 import React from "react";
 import { IoIosAdd } from "react-icons/io";
+import ReadMoreArea from "@foxeian/react-read-more";
+import NavBar from "../components/NavBar";
+import ReadMoreReadLess from "../components/ReadMoreReadLess";
+
 const Index = () => {
   return (
-    <div className="max-w-screen-2xl mt-20 -ml-12">
-      <section className="w-52 h-52">
-        <img src="../../public/assets/OOTBLogoWhite.png" alt="" srcset="" />
+    <div className="w-screen h-screen -ml-16 p-0 -mt-8 bg-cover bg-indexbg bg-cover pl-12 pt-8">
+      <NavBar />
+      <section className="w-48 h-48 mt-20">
+        <img src="../../public/assets/OOTBLogoWhite.png" alt="logo" />
       </section>
-      <section>
-        <h1 className="text-left text-[51px] leading-none text-white font-metropolis font-extrabold">
+      <section className="mb-4">
+        <h1 className="text-left text-[45px] leading-none text-white font-metropolis font-extrabold">
           <span>EXPLORE THE WORLD OF</span>
           <br />
           <span>ADVERTISING WITH US!</span>
         </h1>
       </section>
-      <section className="py-4">
-        <h1 className="text-left text-lg leading-none text-white font-jost">
-          Are you ready to start a wonderful journey?...
-        </h1>
-      </section>
-      <section className="py-4 text-left -mt-4">
-        <div class="inline-flex items-center rounded-full bg-gray-50  bg-opacity-30 px-4 py-1 text-xs text-white font-jost">
-          READ MORE
-        </div>
+      <section className="w-[500px]">
+        <ReadMoreReadLess />
       </section>
     </div>
   );

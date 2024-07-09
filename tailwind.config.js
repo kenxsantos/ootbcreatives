@@ -9,6 +9,9 @@ export default {
         metropolis: ["metropolis", "sans-serif"],
         jost: ["Jost"],
       },
+      backgroundImage: {
+        indexbg: 'url("/public/assets/OOTBRocketBG.png")',
+      },
     },
   },
   plugins: [],
