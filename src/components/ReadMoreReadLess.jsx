@@ -10,22 +10,29 @@ const ReadMoreReadLess = () => {
   return (
     <div className="text-left">
       <p className="text-left font-jost text-white">
-        Ready to break free from ordinary marketing?
+        OUT OF THE BOX CREATIVES is a 360 creative firm that specializes in PR
+        and marketing
         <span style={{ display: isExpanded ? "none" : "inline" }} id="dots">
           ...
         </span>
         <span style={{ display: isExpanded ? "inline" : "none" }} id="more">
-          &nbsp;Welcome aboard. Navigate through advertising with Out of the Box
-          Creatives, a creatively packaged firm specializing in PR and
-          marketing. In this ship, you will be astounded with an
-          out-of-this-world view on where you can take your business.
+          , we're not just about campaigns – we're about crafting your brand's
+          narrative, amplifying your message, and propelling you to new heights.
+          <br />
+          <br />
+          Our team blends imagination with data-driven insights to create
+          solutions that are as unique as your brand. From PR that sparks
+          conversations to marketing strategies that drive results, we're here
+          to help you reach your full potential. Let's explore what's possible
+          together.
         </span>
       </p>
       <button
         onClick={handleToggle}
         id="myBtn"
-        className="mt-4 inline-flex items-center rounded-full bg-gray-50  bg-opacity-30 px-4 py-1 text-xs text-white font-jost"
+        className="mt-4 gap-1 inline-flex items-center rounded-full bg-gray-50  bg-opacity-30 px-2 py-1 text-xs text-white font-jost"
       >
+        <img src="/public/assets/staricon.png" alt="star" className="w-2" />
         {isExpanded ? "READ LESS" : "READ MORE"}
       </button>
     </div>
