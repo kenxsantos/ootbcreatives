@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        metropolis: ["metropolis", "sans-serif"],
+        metropolis: ["Metropolis", "sans-serif"],
         jost: ["Jost"],
       },
       backgroundImage: {
