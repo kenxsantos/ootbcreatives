@@ -2,8 +2,8 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <nav className="w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="max-w-5xl mx-auto">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-white flex justify-evenly items-center font-jost text-md">
           <section>SERVICES</section>
           <section className="flex flex-col leading-none">
