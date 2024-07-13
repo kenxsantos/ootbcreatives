@@ -62,7 +62,7 @@ const Landing = () => {
             loop
             ref={videoRef}
           >
-            <source src="assets/OOTBREEL2021.mp4" type="video/mp4" />
+            <source src="/assets/OOTBREEL2021.mp4" type="video/mp4" />
           </video>
         )}
         <img
