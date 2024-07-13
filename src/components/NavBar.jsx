@@ -7,7 +7,7 @@ const NavBar = () => {
   const [activeLink, setActiveLink] = useState(null);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 5) {
         setIsScrolled(true);
         logoAnimation.start({
           scale: 0.5,
@@ -40,9 +40,9 @@ const NavBar = () => {
   };
   const navLinks = [
     { name: "SERVICES", id: "SERVICES" },
-    { name: "CLIENTS", id: "CLIENTS", sub: "ONBOARD" },
+    { name: "CLIENTS", id: "CLIENTS" },
     { name: "CREWMATES", id: "CREWMATES" },
-    { name: "OOTB", id: "OOTBACADEMY", sub: "ACADEMY" },
+    { name: "ACADEMY", id: "ACADEMY" },
     { name: "CAREERS", id: "CAREERS" },
     { name: "RESOURCES", id: "RESOURCES" },
     { name: "RADIO US", id: "RADIO US" },

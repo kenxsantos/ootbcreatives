@@ -8,16 +8,16 @@ const ReadMoreReadLess = () => {
   };
 
   return (
-    <div className="text-left w-[600px] h-64">
-      <p className="text-left font-jost text-white">
+    <div className="text-left h-64 w-[550px] ">
+      <p className="text-left font-jost text-white text-justify">
         OUT OF THE BOX CREATIVES is a 360 creative firm that specializes in PR
-        and marketing
+        and marketing, we're not just about campaigns
         <span style={{ display: isExpanded ? "none" : "inline" }} id="dots">
-          ...
+          &nbsp;–
         </span>
         <span style={{ display: isExpanded ? "inline" : "none" }} id="more">
-          , we're not just about campaigns – we're about crafting your brand's
-          narrative, amplifying your message, and propelling you to new heights.
+          &nbsp;– we're about crafting your brand's narrative, amplifying your
+          message, and propelling you to new heights.
           <br />
           <br />
           Our team blends imagination with data-driven insights to create

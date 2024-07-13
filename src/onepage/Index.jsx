@@ -7,8 +7,6 @@ const Index = () => {
     <div>
       <NavBar />
       <Landing />
-      <Landing />
-      <Landing />
     </div>
   );
 };
