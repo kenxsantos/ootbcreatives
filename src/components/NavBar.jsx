@@ -60,7 +60,7 @@ const NavBar = () => {
                 </section>
                 {activeLink === link.id && (
                   <motion.img
-                    src="/public/assets/lineflare.png"
+                    src="/assets/lineflare.png"
                     alt="flare"
                     className="w-44 ml-2 absolute mt-16"
                     initial={{ opacity: 0, y: 10 }}
@@ -80,7 +80,7 @@ const NavBar = () => {
             initial={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <img src="../../public/assets/OOTBLogoWhite.png" alt="logo" />
+            <img src="/assets/OOTBLogoWhite.png" alt="logo" />
           </motion.section>
         </div>
       </div>

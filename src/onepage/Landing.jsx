@@ -45,7 +45,7 @@ const Landing = () => {
         } bg-cover xl:h-full 2xl:h-screen bg-indexbg`}
       >
         <img
-          src="../../public/assets/ShadowOverlay2.png"
+          src="/assets/ShadowOverlay2.png"
           alt="Shadow Overlay"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
@@ -62,14 +62,11 @@ const Landing = () => {
             loop
             ref={videoRef}
           >
-            <source
-              src="../../public/assets/OOTBREEL2021.mp4"
-              type="video/mp4"
-            />
+            <source src="assets/OOTBREEL2021.mp4" type="video/mp4" />
           </video>
         )}
         <img
-          src="../../public/assets/ShadowOverlay2.png"
+          src="/assets/ShadowOverlay2.png"
           alt=""
           className="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none xl:h-full 2xl:h-screen"
           style={{ opacity: 1 }}

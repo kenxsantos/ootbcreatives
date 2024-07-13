@@ -32,7 +32,7 @@ const ReadMoreReadLess = () => {
         id="myBtn"
         className="mt-4 gap-1 inline-flex items-center rounded-full bg-gray-50  bg-opacity-30 px-2 py-1 text-xs text-white font-jost"
       >
-        <img src="/public/assets/staricon.png" alt="star" className="w-2" />
+        <img src="/assets/staricon.png" alt="star" className="w-2" />
         {isExpanded ? "READ LESS" : "READ MORE"}
       </button>
     </div>
