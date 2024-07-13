@@ -60,6 +60,7 @@ const Landing = () => {
             className="absolute right-0 w-full h-full object-cover z-0 xl:h-full 2xl:h-screen"
             autoPlay
             loop
+            muted
             ref={videoRef}
           >
             <source src="/assets/OOTBREEL2021.mp4" type="video/mp4" />
