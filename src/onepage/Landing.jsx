@@ -36,6 +36,7 @@ const Landing = () => {
             src="/assets/OOTBREEL2021.mp4"
             autoPlay
             loop
+            muted
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.2 }}
