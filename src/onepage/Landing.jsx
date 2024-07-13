@@ -21,7 +21,7 @@ const Landing = () => {
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             className="absolute inset-0 w-full h-full"
           >
             <img
@@ -36,10 +36,9 @@ const Landing = () => {
             src="/assets/OOTBREEL2021.mp4"
             autoPlay
             loop
-            muted
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
         )}
