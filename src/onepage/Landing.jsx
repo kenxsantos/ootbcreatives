@@ -25,7 +25,7 @@ const Landing = () => {
             className="absolute inset-0 w-full h-full"
           >
             <img
-              src="../../public/assets/ShadowOverlay2.png"
+              src="/assets/ShadowOverlay2.png"
               alt="Shadow Overlay"
               className="absolute inset-0 w-full h-full object-cover z-10"
             />
@@ -33,7 +33,7 @@ const Landing = () => {
         ) : (
           <motion.video
             key="video"
-            src="../../public/assets/OOTBREEL2021.mp4"
+            src="/assets/OOTBREEL2021.mp4"
             autoPlay
             loop
             muted
@@ -46,7 +46,7 @@ const Landing = () => {
       </AnimatePresence>
       <div className="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none">
         <img
-          src="../../public/assets/ShadowOverlay2.png"
+          src="assets/ShadowOverlay2.png"
           alt="Shadow Overlay"
           className="w-full h-full object-cover"
         />
