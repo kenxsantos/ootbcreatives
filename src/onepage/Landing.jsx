@@ -1,76 +1,54 @@
 import ReadMoreReadLess from "../components/ReadMoreReadLess";
 import React, { useState, useEffect, useRef } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 const Landing = () => {
   const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowVideo(true);
-    }, 5000); // 5 seconds delay
+    }, 5000);
 
-    return () => clearTimeout(timer); // Cleanup timer on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    if (videoRef.current) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            videoRef.current.play();
-          } else {
-            videoRef.current.pause();
-          }
-        },
-        {
-          threshold: 0.1,
-        }
-      );
-
-      observer.observe(videoRef.current);
-
-      return () => {
-        if (videoRef.current) {
-          observer.unobserve(videoRef.current);
-        }
-      };
-    }
-  }, [showVideo]);
   return (
-    <div className="relative">
-      <div
-        className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-          showVideo ? "opacity-0" : "opacity-100"
-        } bg-cover xl:h-full 2xl:h-screen bg-indexbg`}
-      >
-        <img
-          src="/assets/ShadowOverlay2.png"
-          alt="Shadow Overlay"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
-      </div>
-      <div
-        className={`absolute inset-0 items-center text-right w-full border transition-opacity duration-1000 ${
-          showVideo ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        {showVideo && (
-          <video
-            className="absolute right-0 w-full h-full object-cover z-0 xl:h-full 2xl:h-screen"
+    <div className="relative bg-cover bg-indexbg">
+      <AnimatePresence>
+        {!showVideo ? (
+          <motion.div
+            key="image"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <img
+              src="../../public/assets/ShadowOverlay2.png"
+              alt="Shadow Overlay"
+              className="absolute inset-0 w-full h-full object-cover z-10"
+            />
+          </motion.div>
+        ) : (
+          <motion.video
+            key="video"
+            src="../../public/assets/OOTBREEL2021.mp4"
             autoPlay
             loop
             muted
-            ref={videoRef}
-          >
-            <source src="/assets/OOTBREEL2021.mp4" type="video/mp4" />
-          </video>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
         )}
+      </AnimatePresence>
+      <div className="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none">
         <img
-          src="/assets/ShadowOverlay2.png"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none xl:h-full 2xl:h-screen "
-          style={{ opacity: 1 }}
+          src="../../public/assets/ShadowOverlay2.png"
+          alt="Shadow Overlay"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="relative max-w-7xl mx-auto z-20">
