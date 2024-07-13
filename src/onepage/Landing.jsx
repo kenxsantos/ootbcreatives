@@ -68,7 +68,7 @@ const Landing = () => {
         <img
           src="/assets/ShadowOverlay2.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none xl:h-full 2xl:h-screen"
+          className="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none xl:h-full 2xl:h-screen "
           style={{ opacity: 1 }}
         />
       </div>
