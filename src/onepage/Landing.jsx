@@ -19,7 +19,7 @@ const Landing = () => {
       <div className="relative max-w-screen-2xl mx-auto z-20 p-12">
         <div className="relative z-30">
           <section className="mb-4">
-            <h1 className="pt-[20rem] text-left text-[65px] leading-none text-white font-metropolis font-bold tracking-tighter">
+            <h1 className="pt-[18rem] text-left text-[65px] leading-none text-white font-metropolis font-bold tracking-tighter">
               <span>BOLD IDEAS</span>
               <br />
               <span>STELLAR RESULTS</span>
