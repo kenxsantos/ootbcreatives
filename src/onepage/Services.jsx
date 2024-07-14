@@ -1,0 +1,69 @@
+import React from "react";
+import services from "../json/services.json";
+import { useState } from "react";
+const Services = () => {
+  const defaultService =
+    services.find((service) => service.title === "Event Management") ||
+    services[0];
+
+  // Initialize the state with the default service
+  const [selectedService, setSelectedService] = useState(defaultService);
+
+  const handleServiceClick = (service) => {
+    setSelectedService(service);
+  };
+  return (
+    <div className="relative pt-[18rem] h-screen max-w-screen-2xl mx-auto px-12 bg-indexbg bg-cover">
+      <div className="relative z-30">
+        <section>
+          <section className="mb-4 h-48">
+            <h1 className="text-left text-[65px] leading-none text-white font-metropolis font-bold tracking-tighter">
+              <span>{selectedService.title}</span>
+              <br />
+              <span>{selectedService.subtitle}</span>
+            </h1>
+            <p className="font-jost text-base text-white">
+              Preparing for a space party? Gotchu!
+            </p>
+          </section>
+        </section>
+        <section className="mb-4">
+          <div>
+            <h1 className="font-jost text-white">
+              <span className="mr-8">SERVICES</span>
+              <span>Let's discover how far your business can go!</span>
+            </h1>
+          </div>
+          <div className="flex justify-evenly gap-4 mt-4 mb-4">
+            {services.map((service) => (
+              <div
+                key={service.id}
+                onClick={() => handleServiceClick(service)}
+                className={`flex w-80 h-48 rounded-2xl p-4 flex items-end transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer ${
+                  selectedService.id === service.id ||
+                  service.title === "Event Management"
+                    ? "scale-110 bg-events-management"
+                    : "bg-public-relation"
+                }`}
+              >
+                <h2 className="font-metropolis font-bold text-white text-2xl flex flex-col leading-none">
+                  <span>{service.title}</span>
+                  <span>{service.subtitle}</span>
+                </h2>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
+        <img
+          src="/assets/ShadowOverlay3.png"
+          alt="Shadow Overlay"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Services;

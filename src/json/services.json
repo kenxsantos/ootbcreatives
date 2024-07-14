@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "EVENTS",
+    "subtitle": "MANAGEMENT",
+    "description": "We got it covered for any type of event!"
+  },
+  {
+    "id": 2,
+    "title": "PUBLIC",
+    "subtitle": "RELATION",
+    "description": "We got it covered!"
+  },
+  {
+    "id": 3,
+    "title": "BRANDING AND",
+    "subtitle": "MARKETING",
+    "description": "We got it covered!"
+  },
+  {
+    "id": 4,
+    "title": "PRODUCTION",
+    "subtitle": "",
+    "description": "We got it covered!"
+  }
+]
