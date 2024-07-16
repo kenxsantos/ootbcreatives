@@ -3,24 +3,75 @@
     "id": 1,
     "title": "EVENTS",
     "subtitle": "MANAGEMENT",
-    "description": "We got it covered for any type of event!"
+    "heading": "Create Buzz, Attract Crowds, Ignite Sales.",
+    "subheading": "We got it covered for any type of event",
+    "description": {
+      "1": "Planning for events could be stressful. Especially when you’re clueless on where to start and what to do. Let the Out of the Box Creatives crewmates do the work. ",
+      "2": "With extensive experience in event planning and management, we create bespoke solutions for corporate and private clients. Our services include theme development, creative design, vendor coordination, and seamless event execution. We are committed to delivering high-quality events that exceed your expectations while remaining budget-conscious."
+    },
+    "link": "events-management",
+    "offers": {
+      "1": "Conceptualization",
+      "2": "Planning",
+      "3": "Fabrication",
+      "4": "Technical Setup & Styling",
+      "5": "Program Coordination",
+      "6": "Post Event Report"
+    },
+    "images": {
+      "1": "/assets/eventsmanagement/rally.png",
+      "2": "/assets/eventsmanagement/rally.png"
+    }
   },
   {
     "id": 2,
     "title": "PUBLIC",
     "subtitle": "RELATION",
-    "description": "We got it covered!"
+    "heading": "PR That Gets Results. Period.",
+    "subheading": "We got it covered!",
+    "description": {
+      "1": "We don't just talk about PR; we deliver measurable results. Our team of seasoned PR professionals combines data and creativity with strategic thinking to create campaigns that generate buzz, build awareness, and drive real impact. Whether you're looking to launch a new product, or enhance your reputation, we have the expertise and experience to help you succeed. Let us show you the power of PR that truly works."
+    },
+    "link": "public-relation",
+    "offers": {
+      "1": "PR Strategy",
+      "2": "Political Campaign",
+      "3": "OOH Media / Guerilla Marketing"
+    }
   },
   {
     "id": 3,
     "title": "BRANDING AND",
     "subtitle": "MARKETING",
-    "description": "We got it covered!"
+    "heading": "Brand Strategy & Marketing that Fuels Growth", 
+    "subheading": "We got it covered!",
+    "description": {
+      "1": "We believe that branding and marketing should do more than just look good – they should deliver measurable results. Our team will be with you every step of the way to develop and execute comprehensive branding and marketing plans that are tailored to your unique goals and objectives. "
+    },
+    "link": "branding-and-marketing",
+    "offers": {
+      "1": "Market Research & Analysis",
+      "2": "Branding Development",
+      "3": "Integrated Marketing Communications",
+      "4": "Digital Marketing",
+      "5": "Website Design & Development"
+    }
   },
   {
     "id": 4,
-    "title": "PRODUCTION",
-    "subtitle": "",
-    "description": "We got it covered!"
+    "title": "COMMERCIAL",
+    "subtitle": "PRODUCTION",
+    "heading": "Bring Your Vision to Life.",
+    "subheading": "We got it covered!",
+    "description": {
+      "1": "Your commercial isn't just an advertisement; it's a story, a moment, an experience. Our passion is all about transforming your ideas into captivating visuals that leave a lasting impact. Our team of experienced directors, producers, and creatives will guide you through every step of the production process, from concept development and scriptwriting to filming, editing, and post-production. We ensure your commercial is not only visually stunning but also strategically aligned with your brand's message and goals. "
+    },  
+    "link": "production",
+    "offers": {
+      "1": "Script Writing",
+      "2": "Venue & Talent Scouting",
+      "3": "Photo & Video Production",
+      "4": "Offline & Online Editing"
+    }
   }
 ]
