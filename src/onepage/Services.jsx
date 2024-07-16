@@ -1,6 +1,7 @@
 import React from "react";
 import services from "../json/services.json";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Services = () => {
   const defaultService =
     services.find((service) => service.title === "Event Management") ||
@@ -9,11 +10,11 @@ const Services = () => {
   // Initialize the state with the default service
   const [selectedService, setSelectedService] = useState(defaultService);
 
-  const handleServiceClick = (service) => {
+  const handleMouseEnter = (service) => {
     setSelectedService(service);
   };
   return (
-    <div className="relative pt-[18rem] h-screen max-w-screen-2xl mx-auto px-12 bg-indexbg bg-cover">
+    <div className="relative pt-[18rem] h-max max-w-screen-2xl mx-auto px-12 bg-indexbg bg-cover">
       <div className="relative z-30">
         <section>
           <section className="mb-4 h-48">
@@ -23,7 +24,7 @@ const Services = () => {
               <span>{selectedService.subtitle}</span>
             </h1>
             <p className="font-jost text-base text-white">
-              Preparing for a space party? Gotchu!
+              {selectedService.heading}
             </p>
           </section>
         </section>
@@ -36,21 +37,22 @@ const Services = () => {
           </div>
           <div className="flex justify-evenly gap-4 mt-4 mb-4">
             {services.map((service) => (
-              <div
-                key={service.id}
-                onClick={() => handleServiceClick(service)}
-                className={`flex w-80 h-48 rounded-2xl p-4 flex items-end transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer ${
-                  selectedService.id === service.id ||
-                  service.title === "Event Management"
-                    ? "scale-110 bg-events-management"
-                    : "bg-public-relation"
-                }`}
-              >
-                <h2 className="font-metropolis font-bold text-white text-2xl flex flex-col leading-none">
-                  <span>{service.title}</span>
-                  <span>{service.subtitle}</span>
-                </h2>
-              </div>
+              <Link to={`/services/${service.link}`} key={service.id}>
+                <div
+                  onMouseEnter={() => handleMouseEnter(service)}
+                  className={`flex w-80 h-48 rounded-2xl p-4 flex items-end transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer ${
+                    selectedService.id === service.id ||
+                    service.title === "Event Management"
+                      ? "scale-110 bg-events-management mx-4"
+                      : "bg-public-relation"
+                  }`}
+                >
+                  <h2 className="font-metropolis font-bold text-white text-2xl flex flex-col leading-none">
+                    <span>{service.title}</span>
+                    <span>{service.subtitle}</span>
+                  </h2>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
