@@ -59,7 +59,7 @@ const Services = () => {
       </div>
       <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
         <img
-          src="/assets/ShadowOverlay3.png"
+          src="/assets/others/ShadowOverlay.png"
           alt="Shadow Overlay"
           className="absolute inset-0 w-full h-full object-cover"
         />

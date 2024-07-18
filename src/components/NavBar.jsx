@@ -83,7 +83,7 @@ const NavBar = () => {
           >
             <Link to="/">
               <img
-                src="/assets/OOTBLogoWhite.png"
+                src="/assets/logo/OOTBLogoWhite.png"
                 alt="logo"
                 className="w-24 mr-16"
               />

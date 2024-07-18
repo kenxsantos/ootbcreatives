@@ -10,13 +10,16 @@ export default {
         jost: ["Jost"],
       },
       backgroundImage: {
-        indexbg: 'url("/assets/OOTBRocketBG.png")',
+        indexbg: 'url("/assets/backgrounds/OOTBRocketBG.png")',
         "events-management": "linear-gradient(135deg, #8b2a18, #b45d27)",
         "public-relation": "linear-gradient(135deg, #3f2987, #903da4)",
       },
       colors: {
         orange: "#F38920",
         purple: "#A667D1",
+      },
+      boxShadow: {
+        "bottom-glow": "0 0px 15px rgba(255, 105, 180, 0.6)", // Adjust the values as needed
       },
     },
   },

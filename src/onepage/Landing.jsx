@@ -33,7 +33,7 @@ const Landing = () => {
           {showVideo ? (
             <motion.video
               key="video"
-              src="/assets/OOTBREEL2021.mp4"
+              src="/assets/videos/OOTBREEL2021.mp4"
               autoPlay
               loop
               muted
@@ -45,7 +45,7 @@ const Landing = () => {
           ) : (
             <motion.img
               key="overlay2"
-              src="/assets/ShadowOverlay2.png"
+              src="/assets/others/ShadowOverlay2.png"
               alt="Shadow Overlay"
               initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
@@ -58,7 +58,7 @@ const Landing = () => {
         {showVideo && (
           <motion.img
             key="overlay3"
-            src="/assets/ShadowOverlay3.png"
+            src="/assets/others/ShadowOverlay3.png"
             alt="Shadow Overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

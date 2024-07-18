@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div>
       <NavBar />
-      <Landing />
+      {/* <Landing /> */}
       <Services />
     </div>
   );
