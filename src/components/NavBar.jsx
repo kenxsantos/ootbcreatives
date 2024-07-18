@@ -61,7 +61,7 @@ const NavBar = () => {
                 </section>
                 {activeLink === link.id && (
                   <motion.img
-                    src="/assets/lineflare.png"
+                    src="/assets/others/lineflare.png"
                     alt="flare"
                     className="w-44 ml-2 absolute mt-16"
                     initial={{ opacity: 0, y: 10 }}

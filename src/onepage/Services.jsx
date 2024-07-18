@@ -14,7 +14,7 @@ const Services = () => {
     setSelectedService(service);
   };
   return (
-    <div className="relative pt-[18rem] h-max max-w-screen-2xl mx-auto px-12 bg-indexbg bg-cover">
+    <div className="relative pt-[18rem] h-max max-w-screen-2xl mx-auto px-12">
       <div className="relative z-30">
         <section>
           <section className="mb-4 h-48">
@@ -40,14 +40,21 @@ const Services = () => {
               <Link to={`/services/${service.link}`} key={service.id}>
                 <div
                   onMouseEnter={() => handleMouseEnter(service)}
-                  className={`flex w-80 h-48 rounded-2xl p-4 flex items-end transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer ${
+                  className={`relative flex w-80 h-48 rounded-2xl p-4 flex items-end transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer ${
                     selectedService.id === service.id ||
                     service.title === "Event Management"
-                      ? "scale-110 bg-events-management mx-4"
-                      : "bg-public-relation"
+                      ? "scale-110 border-orange border-2 mx-4"
+                      : "border-2 border-white"
                   }`}
                 >
-                  <h2 className="font-metropolis font-bold text-white text-2xl flex flex-col leading-none">
+                  <div>
+                    <img
+                      src={service.thumbnail}
+                      alt=""
+                      className="absolute inset-0 w-full h-full z-0 rounded-2xl"
+                    />
+                  </div>
+                  <h2 className="font-metropolis font-bold text-white text-2xl flex flex-col leading-none z-10">
                     <span>{service.title}</span>
                     <span>{service.subtitle}</span>
                   </h2>
