@@ -69,7 +69,7 @@ const ShowServices = () => {
                 </h1>
               </section>
               <section className="w-max p-4 font-jost text-white border">
-                COME ONBOARD NOW
+                <Link to="/">COME ONBOARD NOW</Link>
               </section>
             </div>
           </section>
@@ -78,12 +78,12 @@ const ShowServices = () => {
               <div className="font-metropolis text-2xl font-bold text-white text-center mb-4">
                 {service.heading}
               </div>
-              <div className="bg-opacity-30 bg-gray-50 px-8 pt-4 rounded-xl">
+              <div className="bg-opacity-30 bg-gray-50 px-8 pt-4 pb-4 rounded-xl">
                 {service.description &&
                   Object.values(service.description).map((desc, index) => (
                     <p
                       key={index}
-                      className="font-jost text-white text-sm mb-4 text-justify"
+                      className="font-jost text-white text-sm  text-justify"
                     >
                       {desc}
                     </p>
