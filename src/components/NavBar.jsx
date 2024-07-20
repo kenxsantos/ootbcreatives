@@ -85,7 +85,7 @@ const NavBar = () => {
               <img
                 src="/assets/logo/OOTBLogoWhite.png"
                 alt="logo"
-                className="w-24 mr-16"
+                className="w-28 mr-16"
               />
             </Link>
           </motion.section>
