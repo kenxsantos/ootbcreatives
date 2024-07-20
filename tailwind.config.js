@@ -11,6 +11,7 @@ export default {
       },
       backgroundImage: {
         indexbg: 'url("/assets/backgrounds/OOTBRocketBG.png")',
+        clientsbg: 'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
         "events-management": "linear-gradient(135deg, #8b2a18, #b45d27)",
         "public-relation": "linear-gradient(135deg, #3f2987, #903da4)",
       },
@@ -19,7 +20,9 @@ export default {
         purple: "#A667D1",
       },
       boxShadow: {
-        "bottom-glow": "0 0px 15px rgba(255, 105, 180, 0.6)", // Adjust the values as needed
+        "bottom-glow": "0 0px 15px rgba(255, 105, 180, 0.6)",
+        "inner-clients": "0px 50px 44px -22px rgba(166, 103, 209, 1)  inset",
+        "inner-service": "0px -177px 157px -73px rgba(0,0,0,1) inset",
       },
     },
   },
