@@ -1,0 +1,39 @@
+[
+    {
+        "recently": {
+            "id": 1,
+            "1": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            },
+            "2": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            }
+        },
+        "clientsOnboard": {
+            "id": 2,
+            "1": {
+                "brand": "coca-cola",
+                "logo": "/assets/clients/clients-onboard/coca-cola.png"
+            },
+            "2": {
+                "brand": "bdo",
+                "logo": "/assets/clients/clients-onboard/bdo.png"
+            },
+            "3": {
+                "brand": "zeiss",
+                "logo": "/assets/clients/clients-onboard/zeiss.png"
+            },
+            "4": {
+                "brand": "",
+                "logo": ""
+            },
+            "5": {
+                "brand": "",
+                "logo": ""
+            }
+            
+        }
+    }
+]
