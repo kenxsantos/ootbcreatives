@@ -7,14 +7,24 @@ const Services = () => {
     services.find((service) => service.title === "Event Management") ||
     services[0];
 
-  // Initialize the state with the default service
   const [selectedService, setSelectedService] = useState(defaultService);
+  const [backgroundImage, setBackgroundImage] = useState(
+    defaultService.thumbnail
+  );
 
   const handleMouseEnter = (service) => {
     setSelectedService(service);
+    setBackgroundImage(service.thumbnail);
   };
+
   return (
-    <div className="relative pt-[18rem] h-max max-w-screen-2xl mx-auto px-12">
+    <div
+      className="relative pt-[18rem] h-max max-w-screen-2xl mx-auto px-12"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+      }}
+    >
       <div className="relative z-30">
         <section>
           <section className="mb-4 h-48">
