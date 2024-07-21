@@ -3,7 +3,10 @@
     "id": 1,
     "title": "EVENTS",
     "subtitle": "MANAGEMENT",
-    "heading": "Create Buzz, Attract Crowds, Ignite Sales.",
+    "heading": {
+      "text": "Create Buzz, Attract Crowds, Ignite Sales.",
+      "highlight": "Attract Crowds"
+    },
     "subheading": "We got it covered for any type of event",
     "thumbnail": "/assets/eventsmanagement/thumbnail.png",
     "background": "/assets/eventsmanagement/thumbnail.png",
@@ -29,7 +32,10 @@
     "id": 2,
     "title": "PUBLIC",
     "subtitle": "RELATION",
-    "heading": "PR That Gets Results. Period.",
+    "heading": {
+      "text": "PR That Gets Results. Period.",
+      "highlight": "Period."
+    },
     "subheading": "We got it covered!",
     "thumbnail": "/assets/publicrelation/thumbnail.png",
     "description": {
@@ -46,7 +52,10 @@
     "id": 3,
     "title": "BRANDING AND",
     "subtitle": "MARKETING",
-    "heading": "Brand Strategy & Marketing that Fuels Growth", 
+    "heading": {
+      "text": "Brand Strategy & Marketing that Fuels Growth",
+      "highlight": "Fuels Growth"
+    }, 
     "subheading": "We got it covered!",
     "thumbnail": "/assets/branding/thumbnail.png",
     "description": {
@@ -65,7 +74,10 @@
     "id": 4,
     "title": "COMMERCIAL",
     "subtitle": "PRODUCTION",
-    "heading": "Bring Your Vision to Life.",
+      "heading": {
+        "text": "Bring Your Vision to Life.",
+        "highlight": "Vision"
+      },
     "subheading": "We got it covered!",
     "thumbnail": "/assets/commercial/thumbnail.jpg",
     "description": {
