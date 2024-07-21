@@ -13,9 +13,9 @@ const NavBar = () => {
           scale: 0.5,
           opacity: 1,
           x: -40,
-          y: -170,
+          y: -140,
           // Move the logo 50 pixels up
-          transition: { duration: 0.3 },
+          transition: { duration: 0.1 },
         });
       } else {
         setIsScrolled(false);
@@ -48,7 +48,7 @@ const NavBar = () => {
     { name: "RADIO US", id: "RADIO US" },
   ];
   return (
-    <nav className="w-full fixed top-0 z-50 ">
+    <nav className="w-full fixed top-0 z-50">
       <div className="mx-auto max-w-screen-2xl px-12 pt-4">
         <div className="text-white flex items-center justify-evenly font-jost text-md px-24">
           {navLinks.map((link) => (
@@ -74,7 +74,7 @@ const NavBar = () => {
             </Link>
           ))}
         </div>
-        <div className="mt-8">
+        <div>
           <motion.section
             className="w-48 h-48"
             animate={logoAnimation}
@@ -85,7 +85,7 @@ const NavBar = () => {
               <img
                 src="/assets/logo/OOTBLogoWhite.png"
                 alt="logo"
-                className="w-28 mr-16"
+                className="w-48 mr-16"
               />
             </Link>
           </motion.section>

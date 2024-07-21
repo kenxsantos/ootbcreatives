@@ -5,10 +5,10 @@ const Clients = () => {
     <div className=" max-w-screen-2xl bg-clientsbg h-full mx-auto bg-cover">
       <div className="w-full mx-auto pt-40 flex flex-col px-12">
         <section className="mx-auto text-center flex flex-col justify-center">
-          <h1 className="font-metropolis text-white text-5xl font-bold">
+          <h1 className="font-metropolis text-white text-4xl font-bold">
             We've brought so many brands interstellar!
           </h1>
-          <h2 className="text-orange font-metropolis font-bold text-4xl">
+          <h2 className="text-orange font-metropolis font-bold text-3xl">
             Let our works do the talking.
           </h2>
         </section>
