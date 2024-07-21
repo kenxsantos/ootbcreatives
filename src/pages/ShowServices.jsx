@@ -3,12 +3,14 @@ import FixedNavBar from "../components/FixedNavBar";
 import { IoIosArrowBack } from "react-icons/io";
 import services from "../json/services.json";
 import { useParams, Link } from "react-router-dom";
+import HighlightText from "../components/HighlightText";
 const ShowServices = () => {
   const { slug } = useParams(); // Access the slug sfrom the URL
   const service = services.find((p) => p.link === slug);
   if (!service) {
     return <div>Project not found</div>;
   }
+
   return (
     <div className="relative max-w-screen-2xl bg-indexbg bg-cover mx-auto">
       <div className="absolute inset-0 w-full h-full z-0">
@@ -76,7 +78,11 @@ const ShowServices = () => {
           <section className="relative w-1/2 flex flex-col pt-36 overflow-auto h-[660px] hide-scrollbar">
             <div className="px-8">
               <div className="font-metropolis text-2xl font-bold text-white text-center mb-4">
-                {service.heading}
+                <HighlightText
+                  text={service.heading.text}
+                  highlight={service.heading.highlight}
+                  highlightClassName="text-orange"
+                />
               </div>
               <div className="bg-opacity-30 bg-gray-50 px-8 pt-4 pb-4 rounded-xl">
                 {service.description &&
