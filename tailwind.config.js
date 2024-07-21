@@ -23,6 +23,7 @@ export default {
         "bottom-glow": "0 0px 15px rgba(255, 105, 180, 0.6)",
         "inner-clients": "0px 50px 44px -22px rgba(166, 103, 209, 1)  inset",
         "inner-service": "0px -177px 157px -73px rgba(0,0,0,1) inset",
+        "inner-overlay": "255px 0px 255px 200px rgba(0,0,0,1) inset",
       },
     },
   },
