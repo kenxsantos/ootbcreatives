@@ -9,7 +9,20 @@
             "2": {
                 "brand": "bridgestone",
                 "logo": "/assets/clients/recently-added/bridgestone.png"
+            },
+            "3": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            },
+            "4": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            },
+            "5": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
             }
+
         },
         "clientsOnboard": {
             "id": 2,
@@ -30,14 +43,6 @@
                 "logo": "/assets/clients/clients-onboard/coca-cola.png"
             },
             "5": {
-                "brand": "",
-                "logo": "/assets/clients/clients-onboard/coca-cola.png"
-            },
-            "6": {
-                "brand": "",
-                "logo": "/assets/clients/clients-onboard/coca-cola.png"
-            },
-            "7": {
                 "brand": "",
                 "logo": "/assets/clients/clients-onboard/coca-cola.png"
             }
