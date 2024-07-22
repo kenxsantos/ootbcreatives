@@ -22,7 +22,7 @@ const ShowServices = () => {
       </div>
       <div className="relative z-10">
         <FixedNavBar />
-        <div className="px-12 w-full flex pb-20">
+        <div className="px-12 w-full flex">
           <section className="w-1/2 flex flex-col">
             <Link to="/">
               <div className="flex items-center h-36 -ml-12 justify-start ">
@@ -70,12 +70,12 @@ const ShowServices = () => {
                   {service.subheading}
                 </h1>
               </section>
-              <section className="w-max p-4 font-jost text-white border">
+              <section className="w-max p-4 font-jost text-white border mb-12">
                 <Link to="/">COME ONBOARD NOW</Link>
               </section>
             </div>
           </section>
-          <section className="relative w-1/2 flex flex-col pt-36 overflow-auto h-[660px] hide-scrollbar">
+          <section className="relative w-1/2 flex flex-col pt-36 overflow-auto h-[630px] hide-scrollbar">
             <div className="px-8">
               <div className="font-metropolis text-2xl font-bold text-white text-center mb-4">
                 <HighlightText
@@ -95,15 +95,23 @@ const ShowServices = () => {
                     </p>
                   ))}
               </div>
-              <div className="w-full mt-8 mb-4 rounded-xl">
+              <div className="w-full mt-8 mb-4 rounded-xl ">
                 {service.images &&
                   Object.values(service.images).map((img, index) => (
-                    <div key={index} className="mb-4">
-                      <img
-                        src={img}
-                        alt=""
-                        className="rounded-xl border-2 border-orange"
-                      />
+                    <div
+                      key={index}
+                      className=" border border-orange mb-4 rounded-xl"
+                    >
+                      <div>
+                        <img src={img} alt="" className="rounded-t-xl" />
+                      </div>
+                      <div className="bg-opacity-80 bg-gray-700 px-8 pt-4 pb-4 rounded-b-xl">
+                        <p className="font-jost text-white text-sm  text-justify">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ducimus itaque repudiandae ullam provident
+                          officiis accusantium minima id eum nisi maxime?
+                        </p>
+                      </div>
                     </div>
                   ))}
               </div>
