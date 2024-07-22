@@ -19,7 +19,7 @@ const ClientsOnboard = () => {
       <div className="font-jost text-white text-base">CLIENTS ONBOARD</div>
       <div className="w-full mt-4">
         {clients.map((client, index) => (
-          <div key={index} className="flex gap-4">
+          <div key={index} className="flex gap-4 w-full overflow-x-auto">
             {Object.keys(client.clientsOnboard).map((key, idx) => {
               if (key !== "id") {
                 const clientsOnboardItem = client.clientsOnboard[key];
@@ -29,13 +29,15 @@ const ClientsOnboard = () => {
                     key={idx}
                     onClick={() => openModal(clientsOnboardItem)}
                   >
-                    {clientsOnboardItem.logo && (
-                      <img
-                        src={clientsOnboardItem.logo}
-                        alt={clientsOnboardItem.brand}
-                        className="w-full"
-                      />
-                    )}
+                    <div className="w-full h-full overflow-auto">
+                      {clientsOnboardItem.logo && (
+                        <img
+                          src={clientsOnboardItem.logo}
+                          alt={clientsOnboardItem.brand}
+                          className="w-full object-contain"
+                        />
+                      )}
+                    </div>
                   </div>
                 );
               }
