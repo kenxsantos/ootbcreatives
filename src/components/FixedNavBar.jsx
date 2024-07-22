@@ -1,8 +1,7 @@
-import React, { useStates } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAnimation, motion } from "framer-motion";
+import { motion } from "framer-motion";
 const NavBar = () => {
-  const logoAnimation = useAnimation();
   const [activeLink, setActiveLink] = useState(null);
 
   const handleLinkClick = (link) => {
