@@ -48,7 +48,7 @@ const NavBar = () => {
     { name: "RADIO US", id: "RADIO US" },
   ];
   return (
-    <nav className="w-full fixed top-0 z-50">
+    <nav className="w-full fixed top-0 z-50 h-28">
       <div className="mx-auto max-w-screen-2xl px-12 pt-4">
         <div className="text-white flex items-center justify-evenly font-jost text-md px-24">
           {navLinks.map((link) => (
