@@ -1,0 +1,72 @@
+[
+    {
+        "recently": {
+            "id": 1,
+            "1": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            },
+            "2": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            },
+            "3": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            },
+            "4": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            },
+            "5": {
+                "brand": "bridgestone",
+                "logo": "/assets/clients/recently-added/bridgestone.png"
+            }
+
+        },
+        "clientsOnboard": {
+            "id": 2,
+            "1": {
+                "brand": "coca-cola",
+                "logo": "/assets/clients/clients-onboard/coca-cola.png"
+            },
+            "2": {
+                "brand": "bdo",
+                "logo": "/assets/clients/clients-onboard/bdo.png"
+            },
+            "3": {
+                "brand": "zeiss",
+                "logo": "/assets/clients/clients-onboard/zeiss.png"
+            },
+            "4": {
+                "brand": "dove",
+                "logo": "/assets/clients/clients-onboard/dove.png"
+            },
+            "5": {
+                "brand": "lazada",
+                "logo": "/assets/clients/clients-onboard/lazada.png"
+            },
+            "6": {
+                "brand": "seagames2019",
+                "logo": "/assets/clients/clients-onboard/seagames2019.png"
+            },
+            "7": {
+                "brand": "securitybank",
+                "logo": "/assets/clients/clients-onboard/securitybank.png"
+            },
+            "8": {
+                "brand": "smart",
+                "logo": "/assets/clients/clients-onboard/smart.png"
+            },
+            "9": {
+                "brand": "StLukes",
+                "logo": "/assets/clients/clients-onboard/StLukes.png"
+            },
+            "10": {
+                "brand": "unilever",
+                "logo": "/assets/clients/clients-onboard/unilever.png"
+            }
+            
+        }
+    }
+]
