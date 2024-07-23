@@ -1,11 +1,20 @@
 import ReadMoreReadLess from "../components/ReadMoreReadLess";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { VscMute, VscUnmute } from "react-icons/vsc";
 
 const Landing = () => {
   const [showVideo, setShowVideo] = useState(false);
   const [bgClass, setBgClass] = useState("bg-indexbg");
   const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -52,7 +61,7 @@ const Landing = () => {
             <motion.video
               key="video"
               ref={videoRef}
-              src="/assets/videos/OOTBREEL2021.mp4"
+              src="/assets/videos/OOTBWEBSITEOPENING.mp4"
               autoPlay
               loop
               muted
@@ -73,13 +82,24 @@ const Landing = () => {
           )}
         </AnimatePresence>
         {showVideo && (
-          <motion.div
-            key="overlay3"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0 w-full h-full z-10 shadow-inner-overlay"
-          />
+          <>
+            <motion.div
+              key="overlay3"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0 w-full h-full z-10 shadow-inner-overlay"
+            />
+            <motion.button
+              onClick={toggleMute}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="absolute bottom-20 right-4 z-40 p-2 text-white rounded-full"
+            >
+              {isMuted ? <VscMute size={24} /> : <VscUnmute size={24} />}
+            </motion.button>
+          </>
         )}
       </div>
     </div>
