@@ -58,13 +58,13 @@ const ClientsOnboard = () => {
             <div
               key={idx}
               onClick={() => openModal(clientsOnboardItem)}
-              className="h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center hover:cursor-pointer"
+              className="h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center justify-center hover:cursor-pointer"
             >
               {clientsOnboardItem.logo && (
                 <img
                   src={clientsOnboardItem.logo}
                   alt={clientsOnboardItem.brand}
-                  className="w-full p-8"
+                  className="h-32 p-2"
                 />
               )}
             </div>
