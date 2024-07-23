@@ -12,8 +12,6 @@ export default {
       backgroundImage: {
         indexbg: 'url("/assets/backgrounds/OOTBRocketBG.png")',
         clientsbg: 'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
-        "events-management": "linear-gradient(135deg, #8b2a18, #b45d27)",
-        "public-relation": "linear-gradient(135deg, #3f2987, #903da4)",
       },
       colors: {
         orange: "#F38920",
