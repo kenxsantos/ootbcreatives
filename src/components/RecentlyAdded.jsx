@@ -1,5 +1,5 @@
 import clients from "../json/clients.json";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import ClientsModal from "./ClientsModal";
 
@@ -53,30 +53,34 @@ const RecentlyAdded = () => {
   return (
     <div>
       <div className="font-jost text-white text-base">RECENTLY ADDED</div>
-      <div className="w-full mt-4 overflow-hidden">
-        <motion.div
-          className="flex gap-4 w-max h-full hide-scrollbar"
-          animate={controls}
-        >
-          {allRecentlyAdded.map((recentlyAddedItem, idx) => (
-            <div
-              key={idx}
-              onClick={() => openModal(recentlyAddedItem)}
-              className="relative h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center hover:cursor-pointer "
-            >
-              <div className="bg-orange bg-[#F38920] rounded-full bottom-0 absolute w-full border-4 border-[#F38920] text-center text-white font-jost text-sm">
-                RECENTLY ADDED
-              </div>
-              {recentlyAddedItem.logo && (
-                <img
-                  src={recentlyAddedItem.logo}
-                  alt={recentlyAddedItem.brand}
-                  className="w-full p-8"
-                />
-              )}
-            </div>
-          ))}
-        </motion.div>
+      <div className="overflow-hidden py-4 -mt-2">
+        <div className="w-full">
+          <motion.div
+            className="flex gap-4 w-max h-full hide-scrollbar"
+            animate={controls}
+          >
+            {allRecentlyAdded.map((recentlyAddedItem, idx) => (
+              <motion.div
+                key={idx}
+                onClick={() => openModal(recentlyAddedItem)}
+                className="relative h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center hover:cursor-pointer"
+                whileHover={{ scale: 1.1, margin: "0px 12px" }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <div className="bg-orange bg-[#F38920] rounded-full -mb-2 bottom-0 absolute w-full border-4 border-[#F38920] text-center text-white font-jost text-xs">
+                  RECENTLY ADDED
+                </div>
+                {recentlyAddedItem.logo && (
+                  <img
+                    src={recentlyAddedItem.logo}
+                    alt={recentlyAddedItem.brand}
+                    className="w-full p-8"
+                  />
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
       <ClientsModal
         isOpen={isOpen}

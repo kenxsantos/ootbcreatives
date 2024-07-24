@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import services from "../json/services.json";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const defaultService =
@@ -18,7 +19,7 @@ const Services = () => {
 
   return (
     <div
-      className="relative pt-[18rem] h-full max-w-screen-2xl mx-auto px-12 shadow-inner-overlay"
+      className="relative pt-48 h-full max-w-screen-2xl mx-auto px-12 shadow-inner-overlay"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -39,15 +40,17 @@ const Services = () => {
           <div>
             <h1 className="font-jost text-white">
               <span className="mr-8">SERVICES</span>
-              <span>Let's discover how far your business can go!</span>
+              <span>Let&apos;s discover how far your business can go!</span>
             </h1>
           </div>
           <div className="flex justify-evenly gap-4 mt-4 mb-4">
             {services.map((service) => (
               <Link to={`/services/${service.link}`} key={service.id}>
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   onMouseEnter={() => handleMouseEnter(service)}
-                  className={`relative flex w-72 h-48 rounded-2xl p-4 items-end transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer ${
+                  className={`relative flex w-72 h-48 rounded-2xl p-4 items-end hover:cursor-pointer ${
                     selectedService.id === service.id
                       ? "scale-110 border-orange border-2 mx-4"
                       : "border-2 border-white"
@@ -64,7 +67,7 @@ const Services = () => {
                     {service.subtitle}
                   </h2>
                   <div className="absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
-                </div>
+                </motion.div>
               </Link>
             ))}
           </div>

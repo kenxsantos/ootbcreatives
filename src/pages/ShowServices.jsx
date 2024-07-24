@@ -13,17 +13,13 @@ const ShowServices = () => {
 
   return (
     <div className="relative max-w-screen-2xl bg-indexbg bg-cover mx-auto">
-      <div className="absolute inset-0 w-full h-full z-0">
-        <img
-          src="/assets/others/ShadowOverlay4.png"
-          alt="Overlay"
-          className="w-full h-full object-cover"
-        />
+      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50">
+        <div className="absolute inset-0 w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
         <FixedNavBar />
         <div className="px-12 w-full flex">
-          <section className="w-1/2 flex flex-col">
+          <section className="relative w-1/2 flex flex-col">
             <Link to="/">
               <div className="flex items-center h-36 -ml-12 justify-start ">
                 <div className="rotate-90 w-36 -ml-[60px]">
