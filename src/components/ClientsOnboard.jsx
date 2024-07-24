@@ -1,12 +1,11 @@
 import clients from "../json/clients.json";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import ClientsModal from "./ClientsModal";
 const ClientsOnboard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState({});
   const controls = useAnimation();
-  const containerRef = useRef(null);
 
   const openModal = (item) => {
     setModalContent(item);
@@ -49,27 +48,31 @@ const ClientsOnboard = () => {
   return (
     <div>
       <div className="font-jost text-white text-base">CLIENTS ONBOARD</div>
-      <div className="w-full mt-4 overflow-hidden">
-        <motion.div
-          className="flex gap-4 w-max h-full hide-scrollbar"
-          animate={controls}
-        >
-          {allClientsOnboard.map((clientsOnboardItem, idx) => (
-            <div
-              key={idx}
-              onClick={() => openModal(clientsOnboardItem)}
-              className="h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center justify-center hover:cursor-pointer"
-            >
-              {clientsOnboardItem.logo && (
-                <img
-                  src={clientsOnboardItem.logo}
-                  alt={clientsOnboardItem.brand}
-                  className="h-32 p-2"
-                />
-              )}
-            </div>
-          ))}
-        </motion.div>
+      <div className="overflow-hidden py-2">
+        <div className="w-full">
+          <motion.div
+            className="flex gap-4 w-max h-full hide-scrollbar"
+            animate={controls}
+          >
+            {allClientsOnboard.map((clientsOnboardItem, idx) => (
+              <motion.div
+                key={idx}
+                onClick={() => openModal(clientsOnboardItem)}
+                className="h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center justify-center hover:cursor-pointer"
+                whileHover={{ scale: 1.1, margin: "0px 12px" }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                {clientsOnboardItem.logo && (
+                  <img
+                    src={clientsOnboardItem.logo}
+                    alt={clientsOnboardItem.brand}
+                    className="h-32 p-2"
+                  />
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
       <ClientsModal
         isOpen={isOpen}
