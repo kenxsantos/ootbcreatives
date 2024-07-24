@@ -3,7 +3,7 @@ import RecentlyAdded from "../components/RecentlyAdded";
 const Clients = () => {
   return (
     <div className=" max-w-screen-2xl bg-clientsbg h-full mx-auto bg-cover">
-      <div className="w-full mx-auto pt-32 flex flex-col px-12">
+      <div className="w-full mx-auto pt-28 flex flex-col px-12">
         <section className="mx-auto text-center flex flex-col justify-center">
           <h1 className="font-metropolis text-white text-4xl font-bold">
             We&apos;ve brought so many brands interstellar!

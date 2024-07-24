@@ -64,8 +64,12 @@ const RecentlyAdded = () => {
                 key={idx}
                 onClick={() => openModal(recentlyAddedItem)}
                 className="relative h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center hover:cursor-pointer"
-                whileHover={{ scale: 1.1, margin: "0px 12px" }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                whileTap={{ scale: 1.1 }}
+                whileHover={{
+                  scale: 1.1,
+                  margin: "0px 12px",
+                }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
               >
                 <div className="bg-orange bg-[#F38920] rounded-full -mb-2 bottom-0 absolute w-full border-4 border-[#F38920] text-center text-white font-jost text-xs">
                   RECENTLY ADDED

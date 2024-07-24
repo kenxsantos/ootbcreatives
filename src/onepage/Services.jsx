@@ -48,7 +48,7 @@ const Services = () => {
               <Link to={`/services/${service.link}`} key={service.id}>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
                   onMouseEnter={() => handleMouseEnter(service)}
                   className={`relative flex w-72 h-48 rounded-2xl p-4 items-end hover:cursor-pointer ${
                     selectedService.id === service.id
