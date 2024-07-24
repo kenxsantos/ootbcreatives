@@ -1,13 +1,29 @@
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { IoIosClose } from "react-icons/io";
+import { motion } from "framer-motion";
 const ClientsModal = ({ isOpen, close, modalContent }) => {
   return (
-    <Dialog open={isOpen} onClose={close} className="relative z-50">
+    <Dialog
+      open={isOpen}
+      onClose={close}
+      animate={{ scale: [0, 1, 0.5, 1] }}
+      transition={{ times: [0, 0.1, 0.9, 1] }}
+      className="relative z-50"
+    >
       <DialogBackdrop
         transition
         className="fixed inset-0  transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
       />
-      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.5,
+          delay: 0.5,
+          ease: [0, 0.1, 0.1, 1.0],
+        }}
+        className="fixed inset-0 z-10 w-screen overflow-y-auto"
+      >
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
@@ -35,7 +51,7 @@ const ClientsModal = ({ isOpen, close, modalContent }) => {
             </div>
           </DialogPanel>
         </div>
-      </div>
+      </motion.div>
     </Dialog>
   );
 };

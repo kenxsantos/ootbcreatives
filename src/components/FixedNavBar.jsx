@@ -8,6 +8,7 @@ const NavBar = () => {
     setActiveLink(link);
   };
   const navLinks = [
+    { id: "landing" },
     { name: "SERVICES", id: "SERVICES" },
     { name: "CLIENTS", id: "CLIENTS" },
     { name: "CREWMATES", id: "CREWMATES" },

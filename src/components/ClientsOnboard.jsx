@@ -59,8 +59,9 @@ const ClientsOnboard = () => {
                 key={idx}
                 onClick={() => openModal(clientsOnboardItem)}
                 className="h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center justify-center hover:cursor-pointer"
+                whileTap={{ scale: 1.1 }}
                 whileHover={{ scale: 1.1, margin: "0px 12px" }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
               >
                 {clientsOnboardItem.logo && (
                   <img
