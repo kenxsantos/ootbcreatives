@@ -5,6 +5,7 @@ import Services from "./Services";
 import Clients from "./Clients";
 import { useAnimation, motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
+import Crewmates from "./Crewmates";
 
 const Index = () => {
   const [activeLink, setActiveLink] = useState(null);
@@ -80,6 +81,9 @@ const Index = () => {
       </div>
       <div id="clients">
         <Clients />
+      </div>
+      <div id="crewmates">
+        <Crewmates />
       </div>
     </div>
   );
