@@ -8,7 +8,7 @@ const ReadMoreButton = ({ isExpanded, handleToggle }) => {
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
         onClick={handleToggle}
         id="myBtn"
-        className="gap-1 inline-flex items-center rounded-full bg-gray-50  bg-opacity-30 px-2 py-1 text-xs text-white font-jost"
+        className="gap-1 inline-flex items-center rounded-full bg-gray-50  bg-opacity-30 px-2 py-1 px-3 text-xs text-white font-jost"
       >
         <img src="/assets/others/staricon.png" alt="star" className="w-2" />
         {isExpanded ? "READ LESS" : "READ MORE"}
