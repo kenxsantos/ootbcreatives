@@ -1,72 +1,110 @@
 [
-    {
-        "recently": {
-            "id": 1,
-            "1": {
-                "brand": "bridgestone",
-                "logo": "/assets/clients/recently-added/bridgestone.png"
-            },
-            "2": {
-                "brand": "bridgestone",
-                "logo": "/assets/clients/recently-added/bridgestone.png"
-            },
-            "3": {
-                "brand": "bridgestone",
-                "logo": "/assets/clients/recently-added/bridgestone.png"
-            },
-            "4": {
-                "brand": "bridgestone",
-                "logo": "/assets/clients/recently-added/bridgestone.png"
-            },
-            "5": {
-                "brand": "bridgestone",
-                "logo": "/assets/clients/recently-added/bridgestone.png"
-            }
-
-        },
-        "clientsOnboard": {
-            "id": 2,
-            "1": {
-                "brand": "coca-cola",
-                "logo": "/assets/clients/clients-onboard/coca-cola.png"
-            },
-            "2": {
-                "brand": "bdo",
-                "logo": "/assets/clients/clients-onboard/bdo.png"
-            },
-            "3": {
-                "brand": "zeiss",
-                "logo": "/assets/clients/clients-onboard/zeiss.png"
-            },
-            "4": {
-                "brand": "dove",
-                "logo": "/assets/clients/clients-onboard/dove.png"
-            },
-            "5": {
-                "brand": "lazada",
-                "logo": "/assets/clients/clients-onboard/lazada.png"
-            },
-            "6": {
-                "brand": "seagames2019",
-                "logo": "/assets/clients/clients-onboard/seagames2019.png"
-            },
-            "7": {
-                "brand": "securitybank",
-                "logo": "/assets/clients/clients-onboard/securitybank.png"
-            },
-            "8": {
-                "brand": "smart",
-                "logo": "/assets/clients/clients-onboard/smart.png"
-            },
-            "9": {
-                "brand": "StLukes",
-                "logo": "/assets/clients/clients-onboard/StLukes.png"
-            },
-            "10": {
-                "brand": "unilever",
-                "logo": "/assets/clients/clients-onboard/unilever.png"
-            }
-            
-        }
+  {
+    "recently": {
+      "id": 1,
+      "1": {
+        "brand": "bridgestone",
+        "logo": "/assets/clients/recently-added/bridgestone.png"
+      },
+      "2": {
+        "brand": "bridgestone",
+        "logo": "/assets/clients/recently-added/bridgestone.png"
+      },
+      "3": {
+        "brand": "bridgestone",
+        "logo": "/assets/clients/recently-added/bridgestone.png"
+      },
+      "4": {
+        "brand": "bridgestone",
+        "logo": "/assets/clients/recently-added/bridgestone.png"
+      },
+      "5": {
+        "brand": "bridgestone",
+        "logo": "/assets/clients/recently-added/bridgestone.png"
+      }
+    },
+    "clientsOnboard": {
+      "id": 2,
+      "1": {
+        "brand": "coca-cola",
+        "logo": "/assets/clients/clients-onboard/coca-cola.png"
+      },
+      "2": {
+        "brand": "bdo",
+        "logo": "/assets/clients/clients-onboard/bdo.png"
+      },
+      "3": {
+        "brand": "zeiss",
+        "logo": "/assets/clients/clients-onboard/zeiss.png"
+      },
+      "4": {
+        "brand": "dove",
+        "logo": "/assets/clients/clients-onboard/dove.png"
+      },
+      "5": {
+        "brand": "lazada",
+        "logo": "/assets/clients/clients-onboard/lazada.png"
+      },
+      "6": {
+        "brand": "seagames2019",
+        "logo": "/assets/clients/clients-onboard/seagames2019.png"
+      },
+      "7": {
+        "brand": "securitybank",
+        "logo": "/assets/clients/clients-onboard/securitybank.png"
+      },
+      "8": {
+        "brand": "smart",
+        "logo": "/assets/clients/clients-onboard/smart.png"
+      },
+      "9": {
+        "brand": "StLukes",
+        "logo": "/assets/clients/clients-onboard/StLukes.png"
+      },
+      "10": {
+        "brand": "unilever",
+        "logo": "/assets/clients/clients-onboard/unilever.png"
+      },
+      "11": {
+        "brand": "paymaya",
+        "logo": "/assets/clients/clients-onboard/paymaya.png"
+      },
+      "12": {
+        "brand": "robinsons",
+        "logo": "/assets/clients/clients-onboard/robinson.png"
+      },
+      "13": {
+        "brand": "bosshugo",
+        "logo": "/assets/clients/clients-onboard/bosshugo.png"
+      },
+      "14": {
+        "brand": "garudapancasila",
+        "logo": "/assets/clients/clients-onboard/GarudaPancasila.png"
+      },
+      "15": {
+        "brand": "dost",
+        "logo": "/assets/clients/clients-onboard/dost.png"
+      },
+      "16": {
+        "brand": "cosmopolitan",
+        "logo": "/assets/clients/clients-onboard/cosmopolitan.png"
+      },
+      "17": {
+        "brand": "filinvest",
+        "logo": "/assets/clients/clients-onboard/filinvest.png"
+      },
+      "18": {
+        "brand": "asianinstitute",
+        "logo": "/assets/clients/clients-onboard/asianinstitute.png"
+      },
+      "19": {
+        "brand": "smdc",
+        "logo": "/assets/clients/clients-onboard/smdc.png"
+      },
+      "20": {
+        "brand": "dot",
+        "logo": "/assets/clients/clients-onboard/DoT.png"
+      }
     }
+  }
 ]
