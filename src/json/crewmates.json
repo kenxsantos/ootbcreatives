@@ -1,9 +1,42 @@
 [
-    {
-        "id": 1,
-        "name": "Rafael Timothy L. Estrella",
-        "position": "President",
-        "description": "",
-        "title": "The Pilot"
-    }
+  {
+    "id": 1,
+    "name": "Rafael Timothy L. Estrella",
+    "position": "President",
+    "description": "",
+    "title": "The Pilot",
+    "astronaut": "/assets/astronauts/RafaelTimothyEstrella.png"
+  },
+  {
+    "id": 2,
+    "name": "Rondelyn Mae “Tammy” Makalintal",
+    "position": "(Chief Executive Officer CEO)",
+    "description": "",
+    "title": "The Navigator",
+    "astronaut": "/assets/astronauts/RondelynMaeMakalintal.png"
+  },
+  {
+    "id": 3,
+    "name": "Mark Anthony Edano",
+    "position": "Event Producer",
+    "description": "",
+    "title": "Lorem ipsum",
+    "astronaut": "/assets/astronauts/MarkAnthonyEdano.png"
+  },
+  {
+    "id": 4,
+    "name": "Atty. Ramon Christopher Ganan ",
+    "position": "Chief Financial Officer - CFO)",
+    "description": "",
+    "title": "Lorem ipsum",
+    "astronaut": "/assets/astronauts/RamonChristopherGanan.png"
+  },
+  {
+    "id": 5,
+    "name": "Blessilee Pevee Agrante",
+    "position": "HR Specialist",
+    "description": "",
+    "title": "Lorem ipsum",
+    "astronaut": "/assets/astronauts/BlessiePeveeAgrante.png"
+  }
 ]
