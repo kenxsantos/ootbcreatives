@@ -15,7 +15,7 @@ const Crewmates = () => {
             discover how far we can go.
           </h2>
         </section>
-        <section className="mt-16 w-full">
+        <section className="mt-20 w-full">
           <CrewmatesCard />
         </section>
       </div>
