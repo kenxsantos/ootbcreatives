@@ -2,41 +2,60 @@
   {
     "id": 1,
     "name": "Rafael Timothy L. Estrella",
+    "nickname": "Timothy",
     "position": "President",
-    "description": "",
     "title": "The Pilot",
-    "astronaut": "/assets/astronauts/RafaelTimothyEstrella.png"
+    "astronaut": "/assets/astronauts/RafaelTimothyEstrella.png",
+    "link": "rafael-timothy-estrella",
+    "description": {
+      "1": "Out of the Box Creatives is a launching rocketship, and Timothy is the dude in the pilot's seat. He's the co-founder and the boss, making sure all teams are working together, the finances are on point, and they're all blasting off in the same direction.",
+      "2": "Timothy has been in the game for six years, crushing it in business management, advertising, and marketing. He's not just the boss. He's a doer and a leader. He can win over clients with his chill personality and keep his team pumped for the next big project. But what really makes Timothy special is his go-getter attitude. He's got a million ideas and the know-how to make them happen, from crafting global marketing plans to implementing crazy-creative solutions that keep OOTB miles ahead of the competition.",
+      "3": "Buckle up with Timothy as they navigate the advertising world and  celebrate wins."
+    }
   },
   {
     "id": 2,
     "name": "Rondelyn Mae “Tammy” Makalintal",
+    "nickname": "Tammy",
     "position": "(Chief Executive Officer CEO)",
-    "description": "",
     "title": "The Navigator",
-    "astronaut": "/assets/astronauts/RondelynMaeMakalintal.png"
+    "astronaut": "/assets/astronauts/RondelynMaeMakalintal.png",
+    "link": "rondelyn-mae-makalintal",
+    "description": {
+      "1": "Out of the Box Creatives isn't just a rocket ship – it's one that's powered by creativity! And at the helm, guiding them through the world of advertising, is Tammy, the Chief Executive Officer and resident navigator.",
+      "2": "She's the coolest co-pilot you've ever seen. With a degree in Mass Communication specializing in Advertising and PR, Tammy is a master mapmaker of the agency world. Before joining OOTB, she spent seven years leading amazing creative projects for big-name brands, politicians, and organizations – both local and international. From Eventscape Manila to Fleishman Hillard, Tammy's worked with the best of the best.",
+      "3": "Now, she brings that experience to OOTB. Tammy's the one who charts their course, juicing out the perfect creative direction to fuel explosive growth. But she's more than just brains – she's magic! Need a resource? A connection? Poof! Tammy pulls it out of thin air, making sure the OOTB crew has everything they need to reach for the stars.",
+      "4": "Get ready for a wild ride filled with creative genius, strategic navigation, and a whole lot of magic!"
+    }
   },
   {
     "id": 3,
     "name": "Mark Anthony Edano",
+    "nickname": "Mark",
     "position": "Event Producer",
     "description": "",
     "title": "Lorem ipsum",
-    "astronaut": "/assets/astronauts/MarkAnthonyEdano.png"
+    "astronaut": "/assets/astronauts/MarkAnthonyEdano.png",
+    "link": "mark-anthony-edano"
   },
   {
     "id": 4,
     "name": "Atty. Ramon Christopher Ganan ",
+    "nickname": "Atty. Ramon",
     "position": "Chief Financial Officer - CFO)",
     "description": "",
     "title": "Lorem ipsum",
-    "astronaut": "/assets/astronauts/RamonChristopherGanan.png"
+    "astronaut": "/assets/astronauts/RamonChristopherGanan.png",
+    "link": "atty-ramon-christopher-ganan"
   },
   {
     "id": 5,
-    "name": "Blessilee Pevee Agrante",
+    "name": "Blessie Pevee Agrante",
+    "nickname": "Blessie",
     "position": "HR Specialist",
     "description": "",
     "title": "Lorem ipsum",
-    "astronaut": "/assets/astronauts/BlessiePeveeAgrante.png"
+    "astronaut": "/assets/astronauts/BlessiePeveeAgrante.png",
+    "link": "blessie-pevee-agrante"
   }
 ]
