@@ -5,7 +5,7 @@ import { VscMute, VscUnmute } from "react-icons/vsc";
 
 const Landing = () => {
   const [showVideo, setShowVideo] = useState(false);
-  const [bgClass, setBgClass] = useState("bg-indexbg");
+  const [bgClass, setBgClass] = useState("bg-rocket");
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
 
