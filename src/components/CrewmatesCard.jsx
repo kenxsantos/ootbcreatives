@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ReadMoreButton from "./ReadMoreButton";
 import crewmates from "../json/crewmates.json";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,13 +17,15 @@ const CrewmatesCard = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl -mt-12">
+    <div className="max-w-screen-2xl ">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
         slidesPerView={"auto"}
+        centerInsufficientSlides={true}
+        slideToClickedSlide={true}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -36,10 +39,10 @@ const CrewmatesCard = () => {
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
-        className="h-full py-8 relative "
+        className="h-full py-8 relative"
       >
         {crewmates.map((crewmate, index) => (
-          <SwiperSlide className="w-[25rem] h-full  mx-auto flex items-center justify-center ">
+          <SwiperSlide className="w-[25rem] h-full  mx-auto ">
             <section key={index} className="rounded-2xl bg-purple px-6 py-8">
               <div className="relative w-72 h-64">
                 <div className="flex w-full">
@@ -58,10 +61,12 @@ const CrewmatesCard = () => {
                   <h1 className="font-jost text-white text-xs uppercase mb-2">
                     {crewmate.position}
                   </h1>
-                  <ReadMoreButton
-                    isExpanded={isExpanded}
-                    handleToggle={handleToggle}
-                  />
+                  <Link to={`/crewmates/${crewmate.link}`} key={index}>
+                    <ReadMoreButton
+                      isExpanded={isExpanded}
+                      handleToggle={handleToggle}
+                    />
+                  </Link>
                   <h1 className="absolute bottom-0 text-xs font-jost text-white uppercase">
                     {crewmate.title}
                   </h1>
@@ -81,13 +86,13 @@ const CrewmatesCard = () => {
         <div className="relative bottom-8 flex items-center justify-center slider-controler mt-16">
           <div className="swiper-button-prev slider-arrow bg-white w-[3.5rem] h-[3.5rem] rounded-full left-[30%] transform translate-x-[-30%] md:left-[20%] md:translate-x-[-20%] lg:left-[42%] lg:translate-x-[-42%]">
             <ion-icon
-              name="arrow-back-outline"
+              name="arrow-back-outline border "
               className="text-2xl text-[#222224]"
             ></ion-icon>
           </div>
           <div className="swiper-button-next slider-arrow bg-white w-[3.5rem] h-[3.5rem] rounded-full left-[70%] transform translate-x-[-70%] md:left-[80%] md:translate-x-[-80%] lg:left-[58%] lg:translate-x-[-58%]">
             <ion-icon
-              name="arrow-forward-outline"
+              name="arrow-forward-outline border"
               className="text-2xl text-[#222224]"
             ></ion-icon>
           </div>
