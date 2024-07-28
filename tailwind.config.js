@@ -10,8 +10,10 @@ export default {
         jost: ["Jost"],
       },
       backgroundImage: {
-        indexbg: 'url("/assets/backgrounds/OOTBRocketBG.png")',
-        clientsbg: 'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
+        rocket: 'url("/assets/backgrounds/OOTBRocketBG.png")',
+        "blurred-planets":
+          'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
+        "clear-planets": 'url("/assets/backgrounds/OOTBClearPlanetsBG.png")',
       },
       colors: {
         orange: "#F38920",
