@@ -3,7 +3,7 @@ import CrewmatesCard from "../components/CrewmatesCard";
 
 const Crewmates = () => {
   return (
-    <div className=" max-w-screen-2xl bg-blurred-planets h-screen mx-auto bg-cover">
+    <div className=" max-w-screen-2xl bg-blurred-planets h-full mx-auto bg-cover">
       <div className="w-full mx-auto pt-28">
         <section className="mx-auto text-center flex flex-col justify-center">
           <h1 className="font-metropolis text-white text-3xl font-bold mx-auto text-center">
