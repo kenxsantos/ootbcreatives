@@ -1,14 +1,16 @@
 import { useParams, Link } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import crewmates from "../json/crewmates.json";
 import NotFound from "../components/NotFound";
 import FixedNavBar from "../components/FixedNavBar";
 import { IoIosClose, IoIosArrowBack } from "react-icons/io";
 import NicknameSlider from "../components/NicknameSlider";
 const ShowCrewmates = () => {
-  const { slug } = useParams(); // Access the slug sfrom the URL
+  const { slug, id } = useParams(); // Access the slug sfrom the URL
   const crewmate = crewmates.find((p) => p.link === slug);
   const nextRef = useRef(null);
+  const prevRef = useRef(null);
+
   const [activeIndex, setActiveIndex] = useState(0);
   if (!crewmate) {
     return (
@@ -23,12 +25,12 @@ const ShowCrewmates = () => {
       <div className="relative z-10">
         <FixedNavBar />
         <div className="w-full h-full">
-          <section className="w-full flex h-36 items-center justify-center">
-            <div className="w-4/12 flex justify-center">
+          <section className="w-full flex h-36  items-center justify-center">
+            <div className="w-4/12 flex justify-end -mb-16  pr-8">
               <img
                 src="/assets/astronauts/Rocket.png"
                 alt=""
-                className="rotate-90 w-56"
+                className="rotate-120 w-60"
               />
             </div>
             <div className="w-4/12 flex justify-center items-center">
@@ -49,11 +51,11 @@ const ShowCrewmates = () => {
             </div>
           </section>
           <section className="w-full flex mt-12">
-            <div className="w-1/5 flex flex-col items-center justify-center gap-4">
+            <div className="w-1/5 flex flex-col items-center justify-center pb-12">
               <div>
                 <button
                   ref={nextRef}
-                  className="text-white rounden-full border p-1 cursor-pointer rounded-3xl text-xl rotate-90"
+                  className="text-white rounded-full border p-1 cursor-pointer rounded-3xl text-xl rotate-90 mb-1"
                 >
                   <IoIosArrowBack size={16} />
                 </button>
@@ -62,11 +64,20 @@ const ShowCrewmates = () => {
                 setActiveIndex={setActiveIndex}
                 activeIndex={activeIndex}
                 nextRef={nextRef}
+                prevRef={prevRef}
               />
+              <div>
+                <button
+                  ref={prevRef}
+                  className="text-white rounded-full border p-1 cursor-pointer rounded-3xl text-xl -rotate-90 mt-8"
+                >
+                  <IoIosArrowBack size={16} />
+                </button>
+              </div>
             </div>
-            <div className="w-4/5 flex h-full relative">
+            <div className="w-4/5 flex relative">
               <div className="w-1/4 relative">
-                <div className="absolute bottom-0 left-[180px] w-[485px] -translate-x-1/2">
+                <div className="absolute bottom-0 left-[150px] w-[500px] -translate-x-1/2">
                   <img
                     src={crewmates[activeIndex].astronaut}
                     alt={crewmates[activeIndex].name}
@@ -74,8 +85,8 @@ const ShowCrewmates = () => {
                   />
                 </div>
               </div>
-              <div className="w-3/4 bg-red-400 rounded-tl-[80px] py-12  pl-28 pr-12 h-full">
-                <h1 className="text-white text-[40px] font-metropolis font-bold">
+              <div className="w-3/4 bg-red-400 rounded-tl-[80px] pt-12  pl-20 pr-12 h-full">
+                <h1 className="text-white text-[40px] font-metropolis font-bold leading-none">
                   {crewmates[activeIndex].name}
                 </h1>
                 <h2 className="font-jost text-white text-base uppercase mb-4">
@@ -87,7 +98,7 @@ const ShowCrewmates = () => {
                     (desc, index) => (
                       <p
                         key={index}
-                        className="font-jost text-white text-sm text-justify mb-4 ml-10"
+                        className="font-jost text-white text-base text-justify mb-4 ml-10"
                       >
                         {desc}
                       </p>
