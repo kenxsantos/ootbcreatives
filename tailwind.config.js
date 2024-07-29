@@ -25,6 +25,9 @@ export default {
         "inner-service": "0px -177px 157px -73px rgba(0,0,0,1) inset",
         "inner-overlay": "255px 0px 255px 200px rgba(0,0,0,1) inset",
       },
+      rotate: {
+        120: "120deg",
+      },
     },
   },
   plugins: [
