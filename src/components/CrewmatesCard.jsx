@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import ReadMoreButton from "./ReadMoreButton";
 import crewmates from "../json/crewmates.json";
@@ -12,10 +12,16 @@ import { Mousewheel, Pagination, Navigation } from "swiper/modules";
 
 const CrewmatesCard = () => {
   const [activeCard, setActiveCard] = useState(0);
-
+  const navigate = useNavigate();
   const handleSlideChange = (swiper) => {
     setActiveCard(swiper.realIndex);
   };
+  // const handleShowCrewmates = (event, link, id) => {
+  //   event.preventDefault();
+
+  //   navigate(`/crewmates/${link}/${id}`);
+  //   console.log(navigate);
+  // };
 
   return (
     <div className="max-w-screen-2xl mx-auto">
@@ -33,7 +39,7 @@ const CrewmatesCard = () => {
           el: ".custom-pagination",
         }}
         modules={[Mousewheel, Pagination, Navigation]}
-        className="h-full py-8 relative w-full py-20"
+        className="h-full relative w-full pt-28 pb-16"
         onSlideChange={handleSlideChange}
       >
         {crewmates.map((crewmate, index) => (
@@ -47,7 +53,7 @@ const CrewmatesCard = () => {
               } `}
               animate={{
                 scale: index === activeCard ? 1.25 : 1,
-                transition: { duration: 0.5, ease: "easeInOut" },
+                transition: { duration: 0.6, ease: "easeInOut" },
               }}
             >
               <div className="relative w-72 h-64">
@@ -55,13 +61,13 @@ const CrewmatesCard = () => {
                   <h1 className="font-metropolis text-white font-bold text-3xl leading-none w-3/4">
                     {crewmate.name}
                   </h1>
-                  <div className="w-1/4">
+                  {/* <div className="w-1/4">
                     <img
                       src="/assets/astronauts/Rocket.png"
                       alt="rocket"
                       className="absolute w-40 h-40 -top-20 -right-10"
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <div>
                   <h1 className="font-jost text-white text-xs uppercase mb-2">
@@ -69,7 +75,12 @@ const CrewmatesCard = () => {
                   </h1>
                   <Link
                     to={`/crewmates/${crewmate.link}/${crewmate.id}`}
-                    key={index}
+                    // onClick={(event) =>
+                    //   handleShowCrewmates(
+                    //     event,
+                    //     ((link = crewmate.link), (id = crewmate.id))
+                    //   )
+                    // }
                   >
                     <ReadMoreButton />
                   </Link>

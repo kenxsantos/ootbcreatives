@@ -5,11 +5,14 @@ import NotFound from "../components/NotFound";
 import FixedNavBar from "../components/FixedNavBar";
 import { IoIosClose, IoIosArrowBack } from "react-icons/io";
 import NicknameSlider from "../components/NicknameSlider";
+import { motion } from "framer-motion";
+import CrewmatesDetails from "../components/CrewmatesDetails";
 const ShowCrewmates = () => {
   const { slug, id } = useParams(); // Access the slug sfrom the URL
   const crewmate = crewmates.find((p) => p.link === slug);
   const nextRef = useRef(null);
   const prevRef = useRef(null);
+  const index = parseInt(id, 10) - 1;
 
   const [activeIndex, setActiveIndex] = useState(0);
   if (!crewmate) {
@@ -75,37 +78,7 @@ const ShowCrewmates = () => {
                 </button>
               </div>
             </div>
-            <div className="w-4/5 flex relative">
-              <div className="w-1/4 relative">
-                <div className="absolute bottom-0 left-[150px] w-[500px] -translate-x-1/2">
-                  <img
-                    src={crewmates[activeIndex].astronaut}
-                    alt={crewmates[activeIndex].name}
-                    className="w-full"
-                  />
-                </div>
-              </div>
-              <div className="w-3/4 bg-red-400 rounded-tl-[80px] pt-12  pl-20 pr-12 h-full">
-                <h1 className="text-white text-[40px] font-metropolis font-bold leading-none">
-                  {crewmates[activeIndex].name}
-                </h1>
-                <h2 className="font-jost text-white text-base uppercase mb-4">
-                  {crewmates[activeIndex].position} -{" "}
-                  {crewmates[activeIndex].title}
-                </h2>
-                {crewmates[activeIndex].description &&
-                  Object.values(crewmates[activeIndex].description).map(
-                    (desc, index) => (
-                      <p
-                        key={index}
-                        className="font-jost text-white text-base text-justify mb-4 ml-10"
-                      >
-                        {desc}
-                      </p>
-                    )
-                  )}
-              </div>
-            </div>
+            <CrewmatesDetails activeIndex={activeIndex} />
           </section>
         </div>
       </div>

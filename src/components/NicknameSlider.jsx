@@ -2,43 +2,36 @@ import { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import "swiper/css";
-import { Navigation } from "swiper/modules";
+import { Mousewheel, Navigation } from "swiper/modules";
 import crewmates from "../json/crewmates.json";
-
+import { motion } from "framer-motion";
 const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
-  const { id } = useParams(); // Extract id from URL params
+  const { slug, id } = useParams(); // Extract id from URL params
   const navigate = useNavigate();
-  const swiperRef = useRef(null);
   const index = parseInt(id, 10) - 1;
+  const swiperRef = useRef(null);
 
-  // Effect to set the slide based on URL id when the component mounts
   useEffect(() => {
     const swiper = swiperRef.current?.swiper;
     if (swiper) {
-      // Ensure navigation elements are properly set
       swiper.params.navigation.nextEl = nextRef.current;
       swiper.params.navigation.prevEl = prevRef.current;
       swiper.navigation.init();
       swiper.navigation.update();
-
-      // Convert id to index
-      // Convert id to index
-
-      if (index >= 0 && index < crewmates.length) {
-        setActiveIndex(index); // Update state
-        swiper.slideTo(index, 0); // Slide to the index immediately
-      }
     }
   }, [id, nextRef, prevRef, setActiveIndex]);
 
-  // Effect to navigate to the URL when the slide changes
-
   const handleSlideChange = (swiper) => {
     const currentIndex = swiper.realIndex;
-    setActiveIndex(index);
-
-    // Update URL to the crewmate's link
+    setActiveIndex(currentIndex);
   };
+
+  useEffect(() => {
+    if (crewmates.length > 0) {
+      const currentMate = crewmates[activeIndex];
+      navigate(`/crewmates/${currentMate.link}/${currentMate.id}`);
+    }
+  }, [activeIndex, crewmates, navigate]);
 
   return (
     <div className="w-[100px] h-[400px] overflow-visible flex relative">
@@ -50,26 +43,28 @@ const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
         loop={true}
         slidesPerView={3}
         centerInsufficientSlides={true}
-        slideToClickedSlide={true}
+        mousewheel
+        speed={600}
         spaceBetween={50}
         navigation={{
           nextEl: nextRef.current,
           prevEl: prevRef.current,
         }}
-        modules={[Navigation]}
+        modules={[Mousewheel, Navigation]}
         className="mySwiper flex flex-col items-center justify-center"
         onSlideChange={handleSlideChange}
+        ref={swiperRef} // Attach the swiperRef to Swiper
       >
         {crewmates.map((crewmate, index) => (
           <SwiperSlide key={index}>
             <div
               className={`flex items-center justify-center h-32 ${
-                index === activeIndex ? "text-4xl font-bold" : "text-lg"
+                index === activeIndex
+                  ? "text-4xl font-bold hover:text-glow"
+                  : "text-lg"
               } text-white text-center font-metropolis transform -rotate-90 transition-all duration-300`}
             >
-              <Link to={`/crewmates/${crewmate.link}/${crewmate.id}`}>
-                {crewmate.nickname}
-              </Link>
+              {crewmate.nickname}
             </div>
           </SwiperSlide>
         ))}
