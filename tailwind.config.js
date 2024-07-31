@@ -14,6 +14,10 @@ export default {
         "blurred-planets":
           'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
         "clear-planets": 'url("/assets/backgrounds/OOTBClearPlanetsBG.png")',
+        "gradient-red":
+          "linear-gradient(90deg, rgba(200,111,73,1) 26%, rgba(208,129,96,1) 45%, rgba(221,159,133,1) 63%, rgba(199,179,183,1) 90%)",
+        "gradient-purple":
+          "linear-gradient(90deg, rgba(114,64,130,1) 26%, rgba(155,120,164,1) 100%)",
       },
       colors: {
         orange: "#F38920",
