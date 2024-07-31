@@ -15,6 +15,8 @@ const ShowCrewmates = () => {
   const index = parseInt(id, 10) - 1;
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const imageSrc = crewmate.rocket || crewmate.satellite;
+  const isRocket = !!crewmate.rocket;
   if (!crewmate) {
     return (
       <div className="w-full bg-indexbg h-screen">
@@ -23,24 +25,29 @@ const ShowCrewmates = () => {
     );
   }
   return (
-    <div className="relative max-w-screen-2xl bg-clear-planets bg-cover mx-auto h-full">
+    <div className="relative max-w-screen-2xl bg-blurred-planets bg-cover mx-auto h-full">
       <div className="absolute inset-0 w-full h-full z-0 "></div>
       <div className="relative z-10">
         <FixedNavBar />
         <div className="w-full h-full">
-          <section className="w-full flex h-36  items-center justify-center">
+          <section className="w-full flex items-center justify-center mt-4">
             <div className="w-4/12 flex justify-end -mb-16  pr-8">
-              <img
-                src="/assets/astronauts/Rocket.png"
-                alt=""
-                className="rotate-120 w-60"
-              />
+              {imageSrc && (
+                <motion.img
+                  key={imageSrc} // Helps AnimatePresence track the element
+                  src={imageSrc}
+                  alt={isRocket ? "rocket" : "satellite"}
+                  className={` w-60  ${
+                    crewmate.rocket ? "rotate-120" : "rotate-0"
+                  }`}
+                />
+              )}
             </div>
             <div className="w-4/12 flex justify-center items-center">
               <img
                 src="/assets/logo/OOTBFlatWhite.png"
                 alt=""
-                className="h-16"
+                className="h-12"
               />
             </div>
             <div className="w-4/12">
