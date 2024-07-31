@@ -6,9 +6,10 @@ import { Mousewheel, Navigation } from "swiper/modules";
 import crewmates from "../json/crewmates.json";
 import { motion } from "framer-motion";
 const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
-  const { slug, id } = useParams(); // Extract id from URL params
+  const { slug } = useParams(); // Extract id from URL params
   const navigate = useNavigate();
-  const index = parseInt(id, 10) - 1;
+  const crewmate = crewmates.find((p) => p.link === slug);
+  const index = crewmate.id - 1;
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -18,29 +19,27 @@ const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
       swiper.params.navigation.prevEl = prevRef.current;
       swiper.navigation.init();
       swiper.navigation.update();
+      if (crewmates.length > 0) {
+        const currentMate = crewmates[activeIndex];
+        navigate(`/crewmates/${currentMate.link}`);
+      }
     }
-  }, [id, nextRef, prevRef, setActiveIndex]);
+  }, [nextRef, prevRef, activeIndex, crewmates, navigate]);
 
   const handleSlideChange = (swiper) => {
     const currentIndex = swiper.realIndex;
     setActiveIndex(currentIndex);
   };
 
-  useEffect(() => {
-    if (crewmates.length > 0) {
-      const currentMate = crewmates[activeIndex];
-      navigate(`/crewmates/${currentMate.link}/${currentMate.id}`);
-    }
-  }, [activeIndex, crewmates, navigate]);
-
   return (
-    <div className="w-[100px] h-[400px] overflow-visible flex relative">
+    <div className="w-[100px] h-[330px] overflow-visible flex relative">
       <Swiper
         direction="vertical"
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
+        initialSlide={index}
         slidesPerView={3}
         centerInsufficientSlides={true}
         mousewheel
