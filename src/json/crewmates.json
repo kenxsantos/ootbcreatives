@@ -11,7 +11,8 @@
       "1": "Out of the Box Creatives is a launching rocketship, and Timothy is the dude in the pilot's seat. He's the co-founder and the boss, making sure all teams are working together, the finances are on point, and they're all blasting off in the same direction.",
       "2": "Timothy has been in the game for six years, crushing it in business management, advertising, and marketing. He's not just the boss. He's a doer and a leader. He can win over clients with his chill personality and keep his team pumped for the next big project. But what really makes Timothy special is his go-getter attitude. He's got a million ideas and the know-how to make them happen, from crafting global marketing plans to implementing crazy-creative solutions that keep OOTB miles ahead of the competition.",
       "3": "Buckle up with Timothy as they navigate the advertising world and  celebrate wins."
-    }
+    },
+    "rocket": "/assets/astronauts/Rocket.png"
   },
   {
     "id": 2,
@@ -33,21 +34,20 @@
     "name": "Mark Anthony Edano",
     "nickname": "Anthony",
     "position": "Event Producer",
-    "title": "No-Description",
+    "title": "",
     "astronaut": "/assets/astronauts/MarkAnthonyEdano.png",
     "link": "mark-anthony-edano",
     "description": {
-      "1": "At the control panel for all things creative is Mela, the resident copywriting whiz. She's the onboard DJ, blasting out catchy tunes that make every campaign a hit. This Communication graduate from Batangas State University may have only 4 years of experience, but her ideas are as loud and bold as her personality.",
-      "2": "Need a tagline that sticks? A social media post that pops? Mela's on it! She's the master of crafting compelling ideas and out-of-the-box copy that cuts through the noise and grabs attention across every platform.",
-      "3": "So get ready for a wild ride where words become super powers!"
-    }
+
+    },
+    "satellite": "/assets/astronauts/Satellite.png"
   },
   {
     "id": 4,
     "name": "Atty. Ramon Christopher Ganan ",
     "nickname": "Ramon",
     "position": "Chief Financial Officer",
-    "title": "Lorem ipsum",
+    "title": "",
     "astronaut": "/assets/astronauts/RamonChristopherGanan.png",
     "link": "atty-ramon-christopher-ganan",
     "description": {
@@ -60,7 +60,7 @@
     "name": "Blessie Pevee Agrante",
     "nickname": "Blessie",
     "position": "HR Specialist",
-    "title": "Lorem ipsum",
+    "title": "",
     "astronaut": "/assets/astronauts/BlessiePeveeAgrante.png",
     "link": "blessie-pevee-agrante",
     "description": {
@@ -73,7 +73,7 @@
     "name": "Maria Carmela Ansale",
     "nickname": "Mela",
     "position": "Copywriter",
-    "title": "Lorem ipsum",
+    "title": "",
     "astronaut": "/assets/astronauts/MariaCarmelaAnsale.png",
     "link": "maria-carmela-ansale",
     "description": {
@@ -87,7 +87,7 @@
     "name": "Christian James “Sachi” Liwag",
     "nickname": "Sachi",
     "position": "Creative Director",
-    "title": "Lorem ipsum",
+    "title": "",
     "astronaut": "/assets/astronauts/ChristianJamesLiwag.png",
     "link": "christian-james-liwanag",
     "description": {
@@ -101,7 +101,7 @@
     "name": "Andre Kirby Aquino",
     "nickname": "Andre",
     "position": "Multimedia Artist",
-    "title": "Lorem ipsum",
+    "title": "",
     "astronaut": "/assets/astronauts/AndreKirbyAquino.png",
     "link": "andre-kirby-aquino",
     "description": {
@@ -119,9 +119,6 @@
     "astronaut": "/assets/astronauts/MikeMaranan.png",
     "link": "mike-maranan",
     "description": {
-      "1": "Andre is a social media savvy crewmate with a degree in making things look INSANE. He can turn everything into mind-blowing graphics and videos that'll have you glued to your phone.",
-      "2": "Andre's mission? Turn every aspect of the space mission into a must-see content. Of course, who would forget about \"Insta-worthy\" space selfies and recreating those TikTok trends in zero gravity?",
-      "3": "Basically, Andre is the one who makes sure Earth doesn't just hear about it, they'll share it, and be totally stoked about humans reaching for the stars."
     }
   }
 ]
