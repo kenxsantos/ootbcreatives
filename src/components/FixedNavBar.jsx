@@ -8,7 +8,6 @@ const NavBar = () => {
     setActiveLink(link);
   };
   const navLinks = [
-    { id: "landing" },
     { name: "SERVICES", id: "SERVICES" },
     { name: "CLIENTS", id: "CLIENTS" },
     { name: "CREWMATES", id: "CREWMATES" },
@@ -18,7 +17,7 @@ const NavBar = () => {
     { name: "RADIO US", id: "RADIO US" },
   ];
   return (
-    <nav className="w-full top-0 z-50 ">
+    <nav className="w-full top-0 z-50">
       <div className="mx-auto max-w-screen-2xl px-16 pt-4">
         <div className="text-white flex items-center font-jost text-md">
           <div>
@@ -26,7 +25,7 @@ const NavBar = () => {
               <img
                 src="/assets/logo/OOTBLogoWhite.png"
                 alt="logo"
-                className="w-24 mr-16"
+                className="w-24 mr-28"
               />
             </Link>
           </div>
@@ -39,7 +38,7 @@ const NavBar = () => {
                   </span>
                   {link.sub && <span>{link.sub}</span>}
                 </section>
-                {activeLink === link.id && (
+                {activeLink === link.id && activeLink !== "landing" && (
                   <motion.img
                     src="/assets/others/lineflare.png"
                     alt="flare"
