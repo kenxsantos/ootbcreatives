@@ -30,14 +30,14 @@ const ShowCrewmates = () => {
       <div className="relative z-10">
         <FixedNavBar />
         <div className="w-full h-full">
-          <section className="w-full flex items-center justify-center mt-4">
-            <div className="w-4/12 flex justify-end -mb-16  pr-8">
+          <section className="relative w-full flex items-center justify-center mt-4">
+            <div className="w-4/12 flex justify-end relative">
               {imageSrc && (
                 <motion.img
                   key={imageSrc} // Helps AnimatePresence track the element
                   src={imageSrc}
                   alt={isRocket ? "rocket" : "satellite"}
-                  className={` w-60  ${
+                  className={`absolute w-60 -top-[100px] ${
                     crewmate.rocket ? "rotate-120" : "rotate-0"
                   }`}
                 />
