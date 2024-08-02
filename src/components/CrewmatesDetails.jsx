@@ -1,11 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { motion } from "framer-motion";
 import crewmates from "../json/crewmates.json";
+import { motion, useScroll, useSpring } from "framer-motion";
+
 const CrewmatesDetails = ({ activeIndex }) => {
   const { id } = useParams(); // Extract id from URL params
   const crewmate = crewmates[activeIndex];
-  const sentenceVariants = {};
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <div className="w-4/5 flex relative box">
       <div className="w-1/5 relative">
@@ -59,7 +66,10 @@ const CrewmatesDetails = ({ activeIndex }) => {
           {crewmate.position}
           {crewmate.title ? ` – ${crewmate.title}` : ""}
         </motion.p>
-        <div className="pl-12 overflow-auto h-[300px] hide-scrollbar">
+        <div
+          className="pl-12 overflow-auto h-[300px] hide-scrollbar "
+          style={{ scaleX }}
+        >
           {crewmate.description &&
             Object.values(crewmate.description).map((desc, index) => (
               <motion.p
