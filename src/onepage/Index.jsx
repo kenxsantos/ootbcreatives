@@ -6,6 +6,7 @@ import Clients from "./Clients";
 import { useAnimation, motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import Crewmates from "./Crewmates";
+import Offers from "./Offers";
 
 const Index = () => {
   const [activeLink, setActiveLink] = useState(null);
@@ -73,7 +74,7 @@ const Index = () => {
         </ScrollLink>
       </motion.div>
       <NavBar setActiveLink={handleSetActiveLink} />
-      <div id="landing">
+      {/* <div id="landing">
         <Landing />
       </div>
       <div id="services">
@@ -84,6 +85,9 @@ const Index = () => {
       </div>
       <div id="crewmates">
         <Crewmates />
+      </div> */}
+      <div id="offers">
+        <Offers />
       </div>
     </div>
   );
