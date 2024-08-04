@@ -1,42 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
-const GlowDiv = ({ children, index }) => {
-  const cardAnimation = {
-    hidden: {
-      rotate: 0,
-    },
-    visible: {
-      rotate: 360,
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        repeatType: "loop",
-        ease: "linear",
-        delay: (i) => i * 0.5, // Stagger the animations
-      },
-    },
-  };
 
+const GlowDiv = () => {
   return (
-    <motion.div
-      className="relative w-[190px] h-[254px] bg-[#07182E] rounded-lg flex items-center justify-center overflow-hidden"
-      initial="hidden"
-      animate="visible"
-      variants={cardAnimation}
-      custom={index}
-    >
-      <h2 className="z-10 text-white text-2xl">CARD</h2>
-      <motion.div
-        className="absolute inset-0 bg-[#07182E] rounded-lg"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ duration: 0.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.div
-        className="absolute w-1/2 h-full bg-gradient-to-b from-[#00B7FF] to-[#FF30FF]"
-        style={{ transformOrigin: "center" }}
-      />
-    </motion.div>
+    <div className=" relative w-[200px] h-[250px] rounded-lg z-10 overflow-hidden flex flex-col items-center justify-center ">
+      <div className="absolute top-[5px] left-[5px] w-[190px] h-[240px] z-20 bg-gray-400 bg-opacity-95 backdrop-blur-[24px] rounded-md overflow-hidden outline outline-2 outline-white"></div>
+      <div className="absolute z-0 top-1/2 left-1/2 w-[150px] h-[150px] rounded-full bg-red-500 opacity-100 blur-[12px] animate-blob-bounce"></div>
+    </div>
   );
 };
 
