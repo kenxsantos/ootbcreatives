@@ -5,7 +5,8 @@ import FixedNavBar from "../components/FixedNavBar";
 import offers from "../json/offers.json";
 import TransparentDiv from "../components/TransparentDiv";
 import interns from "../json/interns.json";
-import AcademyCard from "../components/AcademyCard";
+import { motion } from "framer-motion";
+
 const ShowAcademy = () => {
   return (
     <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
@@ -36,7 +37,7 @@ const ShowAcademy = () => {
                 {offer.academy && (
                   <div>
                     <section className="mb-4">
-                      <h1 className="font-metropolis font-bold text-6xl flex flex-col leading-none text-white tracking-tighter text-glow uppercase">
+                      <h1 className="font-metropolis font-extrabold text-6xl flex flex-col leading-none text-white tracking-tighter text-glow uppercase">
                         {offer.academy.title} <br />
                         {offer.academy.subtitle}
                       </h1>
@@ -70,12 +71,24 @@ const ShowAcademy = () => {
                 )}
               </div>
             ))}
-            <section className="w-max p-4 font-jost text-white mb-12 border  ml-10">
-              <Link to="/">COME ONBOARD NOW</Link>
-            </section>
+            <motion.section
+              whileTap={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, cursor: "pointer" }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              className="w-max p-4 font-jost text-white mb-12 border  ml-10"
+            >
+              <Link to="/ootb/academy/meet-the-interns">MEET THE INTERNS</Link>
+            </motion.section>
           </section>
-          <section className="relative w-1/2 flex flex-col ">
-            <AcademyCard />
+          <section className="relative w-1/2 flex flex-col px-12 h-[600px] mx-auto mt-36 items-center justify-center">
+            {interns.map((intern, index) => (
+              <TransparentDiv
+                key={index}
+                index={index}
+                title={intern.job}
+                description={intern.description}
+              />
+            ))}
           </section>
         </div>
       </div>
