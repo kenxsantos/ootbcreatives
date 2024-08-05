@@ -32,7 +32,8 @@ export default {
         "inner-service": "0px -177px 157px -73px rgba(0,0,0,1) inset",
         "inner-overlay": "255px 0px 255px 200px rgba(0,0,0,1) inset",
         "border-glow": "20px 20px 60px #bebebe, -20px -20px 60px #ffffff",
-        "inner-crewmates": "1px 200px 400px -53px rgba(255,255,255,0.4) inset",
+        "inner-crewmates":
+          "11px 200px 400px -160px rgba(255,255,255,0.5) inset",
       },
       rotate: {
         120: "120deg",
@@ -68,7 +69,7 @@ export default {
           display: "none",
         },
         ".text-glow": {
-          "text-shadow": "0 0 10px rgba(255, 255, 255, 0.7)",
+          "text-shadow": "4px -1px 33px rgba(255,255,255,1)",
         },
         ".hover\\:text-glow": {
           "@apply hover:text-glow": {},
