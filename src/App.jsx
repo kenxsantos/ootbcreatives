@@ -5,6 +5,7 @@ import ShowServices from "./pages/ShowServices.jsx";
 import ShowCrewmates from "./pages/ShowCrewmates.jsx";
 import CrewmatesCard from "./components/CrewmatesCard.jsx";
 import ShowAcademy from "./pages/ShowAcademy.jsx";
+import MeetTheIntern from "./pages/MeetTheInterns.jsx";
 function App() {
   return (
     <>
@@ -13,6 +14,10 @@ function App() {
         <Route path="services/:slug" element={<ShowServices />} />
         <Route path="crewmates/:slug" element={<ShowCrewmates />} />
         <Route path="/ootb/academy" element={<ShowAcademy />} />
+        <Route
+          path="/ootb/academy/meet-the-interns"
+          element={<MeetTheIntern />}
+        />
       </Routes>
     </>
   );
