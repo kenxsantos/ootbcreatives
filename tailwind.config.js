@@ -10,8 +10,14 @@ export default {
         jost: ["Jost"],
       },
       backgroundImage: {
-        indexbg: 'url("/assets/backgrounds/OOTBRocketBG.png")',
-        clientsbg: 'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
+        rocket: 'url("/assets/backgrounds/OOTBRocketBG.png")',
+        "blurred-planets":
+          'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
+        "clear-planets": 'url("/assets/backgrounds/OOTBClearPlanetsBG.png")',
+        "gradient-red":
+          "linear-gradient(90deg, rgba(200,111,73,1) 26%, rgba(208,129,96,1) 45%, rgba(221,159,133,1) 63%, rgba(199,179,183,1) 90%)",
+        "gradient-purple":
+          "linear-gradient(90deg, rgba(114,64,130,1) 26%, rgba(155,120,164,1) 100%)",
       },
       colors: {
         orange: "#F38920",
@@ -22,6 +28,9 @@ export default {
         "inner-clients": "0px 50px 44px -22px rgba(166, 103, 209, 1)  inset",
         "inner-service": "0px -177px 157px -73px rgba(0,0,0,1) inset",
         "inner-overlay": "255px 0px 255px 200px rgba(0,0,0,1) inset",
+      },
+      rotate: {
+        120: "120deg",
       },
     },
   },

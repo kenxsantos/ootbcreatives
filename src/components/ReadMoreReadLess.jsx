@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import ReadMoreButton from "./ReadMoreButton";
 const ReadMoreReadLess = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -27,16 +27,9 @@ const ReadMoreReadLess = () => {
           what&apos;s possible together.
         </span>
       </p>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        onClick={handleToggle}
-        id="myBtn"
-        className="mt-4 gap-1 inline-flex items-center rounded-full bg-gray-50  bg-opacity-30 px-2 py-1 text-xs text-white font-jost"
-      >
-        <img src="/assets/others/staricon.png" alt="star" className="w-2" />
-        {isExpanded ? "READ LESS" : "READ MORE"}
-      </motion.button>
+      <div className="mt-4">
+        <ReadMoreButton isExpanded={isExpanded} handleToggle={handleToggle} />
+      </div>
     </div>
   );
 };

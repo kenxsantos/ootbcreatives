@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "name": "Rafael Timothy L. Estrella",
+    "nickname": "Timothy",
+    "position": "President",
+    "title": "The Pilot",
+    "astronaut": "/assets/astronauts/RafaelTimothyEstrella.png",
+    "link": "rafael-timothy-estrella",
+    "description": {
+      "1": "Out of the Box Creatives is a launching rocketship, and Timothy is the dude in the pilot's seat. He's the co-founder and the boss, making sure all teams are working together, the finances are on point, and they're all blasting off in the same direction.",
+      "2": "Timothy has been in the game for six years, crushing it in business management, advertising, and marketing. He's not just the boss. He's a doer and a leader. He can win over clients with his chill personality and keep his team pumped for the next big project. But what really makes Timothy special is his go-getter attitude. He's got a million ideas and the know-how to make them happen, from crafting global marketing plans to implementing crazy-creative solutions that keep OOTB miles ahead of the competition.",
+      "3": "Buckle up with Timothy as they navigate the advertising world and  celebrate wins."
+    },
+    "rocket": "/assets/astronauts/Rocket.png"
+  },
+  {
+    "id": 2,
+    "name": "Tammy Makalintal",
+    "nickname": "Tammy",
+    "position": "Chief Executive Officer",
+    "title": "The Navigator",
+    "astronaut": "/assets/astronauts/RondelynMaeMakalintal.png",
+    "link": "rondelyn-mae-makalintal",
+    "description": {
+      "1": "Out of the Box Creatives isn't just a rocket ship – it's one that's powered by creativity! And at the helm, guiding them through the world of advertising, is Tammy, the Chief Executive Officer and resident navigator.",
+      "2": "She's the coolest co-pilot you've ever seen. With a degree in Mass Communication specializing in Advertising and PR, Tammy is a master mapmaker of the agency world. Before joining OOTB, she spent seven years leading amazing creative projects for big-name brands, politicians, and organizations – both local and international. From Eventscape Manila to Fleishman Hillard, Tammy's worked with the best of the best.",
+      "3": "Now, she brings that experience to OOTB. Tammy's the one who charts their course, juicing out the perfect creative direction to fuel explosive growth. But she's more than just brains – she's magic! Need a resource? A connection? Poof! Tammy pulls it out of thin air, making sure the OOTB crew has everything they need to reach for the stars.",
+      "4": "Get ready for a wild ride filled with creative genius, strategic navigation, and a whole lot of magic!"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Mark Anthony Edano",
+    "nickname": "Anthony",
+    "position": "Event Producer",
+    "title": "",
+    "astronaut": "/assets/astronauts/MarkAnthonyEdano.png",
+    "link": "mark-anthony-edano",
+    "description": {
+
+    },
+    "satellite": "/assets/astronauts/Satellite.png"
+  },
+  {
+    "id": 4,
+    "name": "Atty. Ramon Christopher Ganan ",
+    "nickname": "Ramon",
+    "position": "Chief Financial Officer",
+    "title": "",
+    "astronaut": "/assets/astronauts/RamonChristopherGanan.png",
+    "link": "atty-ramon-christopher-ganan",
+    "description": {
+      "1": "The team needs someone who knows how to secure the team’s resources, especially if you’re in the outer space! Ramon is a Juris Doctor who graduated from the Pamantasan ng Lungsod ng Maynila and has been legally backing up businesses for more than 5 years now.",
+      "2": "As the managing director of RCG Law & Business Consultancy Services and the Chief Financial Officer of Out of the Box Creatives, he definitely knows how to secure money IN THE BAG! No budget goes unchecked and no coin goes uncounted. The budget-setter of the team!"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Blessie Pevee Agrante",
+    "nickname": "Blessie",
+    "position": "HR Specialist",
+    "title": "",
+    "astronaut": "/assets/astronauts/BlessiePeveeAgrante.png",
+    "link": "blessie-pevee-agrante",
+    "description": {
+      "1": "Keeping the whole crew together is Blessie, the resident HR. Forget uptight suits; Blessie is all about keeping the vibes chill and making sure everyone feels like part of the Out of the Box Creatives fam.",
+      "2": "She's got tons of experience keeping teams happy and always on the lookout for ways to make OOTB the coolest place to work in the universe. She's OOTB's talent hunter, with a sixth sense for seeking awesome new teammates."
+    }
+  },
+  {
+    "id": 6,
+    "name": "Maria Carmela Ansale",
+    "nickname": "Mela",
+    "position": "Copywriter",
+    "title": "",
+    "astronaut": "/assets/astronauts/MariaCarmelaAnsale.png",
+    "link": "maria-carmela-ansale",
+    "description": {
+      "1": "At the control panel for all things creative is Mela, the resident copywriting whiz. She's the onboard DJ, blasting out catchy tunes that make every campaign a hit. This Communication graduate from Batangas State University may have only 4 years of experience, but her ideas are as loud and bold as her personality.",
+      "2": "Need a tagline that sticks? A social media post that pops? Mela's on it! She's the master of crafting compelling ideas and out-of-the-box copy that cuts through the noise and grabs attention across every platform.",
+      "3": "So get ready for a wild ride where words become super powers!"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Christian James “Sachi” Liwag",
+    "nickname": "Sachi",
+    "position": "Creative Director",
+    "title": "",
+    "astronaut": "/assets/astronauts/ChristianJamesLiwag.png",
+    "link": "christian-james-liwanag",
+    "description": {
+      "1": "Sachi is a wizard who turns these crazy space mission ideas into reality.",
+      "2": "He's a tech master with a degree in IT under his belt. But his real passion lies in the world of visual arts. He can take any mind-blowing concept the team throws at him and turn it into something awesome with his digital skills.",
+      "3": "Sachi is basically the one who fuels up these space missions. He takes those far-out ideas from the crewmates and creates incredible visuals that make everyone say, \"Woah, sign me up for that space adventure!\""
+    }
+  },
+  {
+    "id": 8,
+    "name": "Andre Kirby Aquino",
+    "nickname": "Andre",
+    "position": "Multimedia Artist",
+    "title": "",
+    "astronaut": "/assets/astronauts/AndreKirbyAquino.png",
+    "link": "andre-kirby-aquino",
+    "description": {
+      "1": "Andre is a social media savvy crewmate with a degree in making things look INSANE. He can turn everything into mind-blowing graphics and videos that'll have you glued to your phone.",
+      "2": "Andre's mission? Turn every aspect of the space mission into a must-see content. Of course, who would forget about \"Insta-worthy\" space selfies and recreating those TikTok trends in zero gravity?",
+      "3": "Basically, Andre is the one who makes sure Earth doesn't just hear about it, they'll share it, and be totally stoked about humans reaching for the stars."
+    }
+  },
+  {
+    "id": 9,
+    "name": "Mike Maranan",
+    "nickname": "Mike",
+    "position": "Chief Technical Officer",
+    "title": "No-Description",
+    "astronaut": "/assets/astronauts/MikeMaranan.png",
+    "link": "mike-maranan",
+    "description": {
+    }
+  }
+]

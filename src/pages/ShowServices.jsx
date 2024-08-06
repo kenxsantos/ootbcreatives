@@ -12,7 +12,7 @@ const ShowServices = () => {
   }
 
   return (
-    <div className="relative max-w-screen-2xl bg-indexbg bg-cover mx-auto">
+    <div className="relative max-w-screen-2xl bg-rocket bg-cover mx-auto">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50">
         <div className="absolute inset-0 w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>

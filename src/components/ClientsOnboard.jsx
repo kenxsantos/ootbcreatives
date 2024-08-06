@@ -24,7 +24,7 @@ const ClientsOnboard = () => {
         x: {
           repeat: Infinity,
           repeatType: "loop",
-          duration: 20, // Adjust the duration to control speed
+          duration: 80, // Adjust the duration to control speed
           ease: "linear",
         },
       },
