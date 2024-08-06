@@ -74,7 +74,7 @@ const Index = () => {
         </ScrollLink>
       </motion.div>
       <NavBar setActiveLink={handleSetActiveLink} />
-      {/* <div id="landing">
+      <div id="landing">
         <Landing />
       </div>
       <div id="services">
@@ -85,7 +85,7 @@ const Index = () => {
       </div>
       <div id="crewmates">
         <Crewmates />
-      </div> */}
+      </div>
       <div id="offers">
         <Offers />
       </div>
