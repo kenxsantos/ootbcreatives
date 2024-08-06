@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "job": "MMA Intern",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies.",
+    "batch-1": {
+      "1": {
+        "name": "Daniela Chan",
+        "date-started": "April 2024",
+        "date-ended": "July 2024",
+        "image": "/assets/interns/batch1/daniela-chan.png"
+      },
+      "2": {
+        "name": "Hailie Pangilinan",
+        "date-started": "April 2024",
+        "date-ended": "ONGOING",
+        "image": "/assets/interns/batch1/hailie-pangilinan.png"
+      },
+      "3": {
+        "name": "Gaddiel Johannes Sapnu",
+        "date-started": "April 2024",
+        "date-ended": "ONGOING",
+        "image": "/assets/interns/batch1/gaddiel-johannes-sapnu.png"
+      },
+      "4": {
+        "name": "Hazel Tiam-Lee",
+        "date-started": "June 2024",
+        "date-ended": "July 2024",
+        "image": "/assets/interns/batch1/hazel-tiam-lee.png"
+      },
+      "5": {
+        "name": "Sophia Cruz",
+        "date-started": "June 2024",
+        "date-ended": "July 2024",
+        "image": "/assets/interns/batch1/sophia-cruz.png"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "job": "Copywriting Intern",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies.",
+    "batch-1": {
+      "1": {
+        "name": "Daniela Chan",
+        "date-started": "April 2024",
+        "date-ended": "July 2024"
+      },
+      "2": {
+        "name": "Hailie Pangilinan",
+        "date-started": "April 2024",
+        "date-ended": "ONGOING"
+      },
+      "3": {
+        "name": "Gaddiel Johannes Sapnu",
+        "date-started": "April 2024",
+        "date-ended": "ONGOING"
+      },
+      "4": {
+        "name": "Hazel Tiam-Lee",
+        "date-started": "June 2024",
+        "date-ended": "July 2024"
+      },
+      "5": {
+        "name": "Sophia Cruz",
+        "date-started": "June 2024",
+        "date-ended": "July 2024"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "job": "Marketing Intern",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies.",
+    "batch-1": {
+      "1": {
+        "name": "Daniela Chan",
+        "date-started": "April 2024",
+        "date-ended": "July 2024"
+      },
+      "2": {
+        "name": "Hailie Pangilinan",
+        "date-started": "April 2024",
+        "date-ended": "ONGOING"
+      },
+      "3": {
+        "name": "Gaddiel Johannes Sapnu",
+        "date-started": "April 2024",
+        "date-ended": "ONGOING"
+      },
+      "4": {
+        "name": "Hazel Tiam-Lee",
+        "date-started": "June 2024",
+        "date-ended": "July 2024"
+      },
+      "5": {
+        "name": "Sophia Cruz",
+        "date-started": "June 2024",
+        "date-ended": "July 2024"
+      }
+    }
+  }
+]
