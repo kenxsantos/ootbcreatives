@@ -22,9 +22,9 @@ const InternsProfile = ({ index }) => {
             className="shadow-inner-crewmates rounded-3xl flex flex-col justify-start h-60 -mb-20 p-4"
             style={{ width: `${width + index * 20}px` }}
           >
-            <div className="flex gap-1 mb-2">
+            <div className="flex gap-1 mb-2 items-center justify-center">
               {Object.values(intern["batch-1"]).map((item, index) => (
-                <div className="w-24  flex" key={index}>
+                <div className="w-24 flex" key={index}>
                   {item.image ? (
                     <img
                       className="rounded-sm"
