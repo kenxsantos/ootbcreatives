@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { motion } from "framer-motion";
 const DropdownButton = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,43 +22,47 @@ const DropdownButton = () => {
       {isOpen && (
         <div
           id="dropdown"
-          className="absolute z-10 mt-2 bg-gray-400  rounded-lg shadow w-full text-center"
+          className="absolute z-10 mt-2 backdrop-blur-sm bg-white/30  rounded-lg shadow w-full text-center"
         >
           <ul
-            className="py-2 text-sm  font-jost text-white"
+            className="py-2 text-sm font-jost text-white"
             aria-labelledby="dropdownDefaultButton"
           >
             <li>
-              <a
+              <motion.a
+                whileHover={{ scale: 1.1, cursor: "pointer" }}
                 href="#"
-                className="block px-4 py-2 hover:bg-white hover:text-white"
+                className="block px-4 py-2 text-white hover:text-glow"
               >
                 2023
-              </a>
+              </motion.a>
             </li>
             <li>
-              <a
+              <motion.a
+                whileHover={{ scale: 1.1, cursor: "pointer" }}
                 href="#"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block px-4 py-2 text-white hover:text-glow"
               >
-                2022
-              </a>
+                2023
+              </motion.a>
             </li>
             <li>
-              <a
+              <motion.a
+                whileHover={{ scale: 1.1, cursor: "pointer" }}
                 href="#"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block px-4 py-2 text-white hover:text-glow"
               >
-                2021
-              </a>
+                2023
+              </motion.a>
             </li>
             <li>
-              <a
+              <motion.a
+                whileHover={{ scale: 1.1, cursor: "pointer" }}
                 href="#"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block px-4 py-2 text-white hover:text-glow"
               >
-                2020
-              </a>
+                2023
+              </motion.a>
             </li>
           </ul>
         </div>
