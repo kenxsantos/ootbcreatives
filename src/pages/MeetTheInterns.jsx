@@ -4,11 +4,20 @@ import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
 import offers from "../json/offers.json";
 import TransparentDiv from "../components/TransparentDiv";
-import interns from "../json/interns.json";
+import internsData from "../json/internship.json";
 import { motion } from "framer-motion";
 import InternsProfile from "../components/InternsProfile";
-
+import DropdownButton from "../components/DropdownButton";
+import { useState } from "react";
 const MeetTheIntern = () => {
+  const years = internsData.map((internYear) => Object.keys(internYear)[0]);
+  const [selectedYear, setSelectedYear] = useState(years[0]);
+  const [hoveredBatch, setHoveredBatch] = useState(null);
+
+  const selectedData = internsData.find(
+    (internYear) => internYear[selectedYear]
+  );
+  const batches = selectedData[selectedYear];
   return (
     <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-10">
@@ -19,7 +28,7 @@ const MeetTheIntern = () => {
         <div className="w-full flex">
           <section className="relative w-1/2 flex flex-col px-12">
             <Link to="/">
-              <div className="flex items-center h-36 -ml-12 justify-start ">
+              <div className="flex items-center h-36 -ml-12 justify-start">
                 <div className="rotate-90 w-36 -ml-[60px]">
                   <img
                     src="/assets/others/BackShadow.png"
@@ -76,13 +85,30 @@ const MeetTheIntern = () => {
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost text-white mb-12 border  ml-10"
+              className="w-max p-4 font-jost text-white mb-4 border  ml-10"
             >
               <Link to="/">MEET THE INTERNS</Link>
             </motion.section>
           </section>
-          <section className="relative w-1/2 flex flex-col px-12 h-[600px] mx-auto mt-20  items-center justify-center">
-            <InternsProfile />
+
+          <section className="relative w-1/2 flex flex-col">
+            <div className="flex justify-center gap-8 px-20 items-center h-28 w-full pl-32">
+              <h1 className="text-white font-metropolis text-3xl text-left font-bold">
+                Meet the interns!
+              </h1>
+              <DropdownButton
+                years={years}
+                selectedYear={selectedYear}
+                onSelectYear={setSelectedYear}
+              />
+            </div>
+            <div className="px-20 h-[730px] flex items-center justify-center overflow-hidden">
+              <InternsProfile
+                batches={batches}
+                hoveredBatch={hoveredBatch}
+                setHoveredBatch={setHoveredBatch}
+              />
+            </div>
           </section>
         </div>
       </div>
