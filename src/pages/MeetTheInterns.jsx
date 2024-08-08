@@ -1,27 +1,32 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
 import offers from "../json/offers.json";
-import TransparentDiv from "../components/TransparentDiv";
-import internsData from "../json/internship.json";
 import { motion } from "framer-motion";
+import internsData from "../json/internship.json";
 import InternsProfile from "../components/InternsProfile";
 import DropdownButton from "../components/DropdownButton";
-import { useState } from "react";
+
 const MeetTheIntern = () => {
-  const years = internsData.map((internYear) => Object.keys(internYear)[0]);
-  const [selectedYear, setSelectedYear] = useState(years[0]);
+  // Extract the available years from the JSON data
+  const years = internsData.map((internYear) => internYear.year.toString());
+  const [selectedYear, setSelectedYear] = useState(years[0]); // default to the first year
   const [hoveredBatch, setHoveredBatch] = useState(null);
 
+  // Find the data corresponding to the selected year
   const selectedData = internsData.find(
-    (internYear) => internYear[selectedYear]
+    (internYear) => internYear.year.toString() === selectedYear
   );
-  const batches = selectedData[selectedYear];
+
+  const batches = selectedData ? selectedData.batch : {};
+
+  console.log("batch", batches);
+
   return (
     <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-10">
-        <div className="absolute inset-0 w-1/2 h-full z-0 bg-black  bg-opacity-30"></div>
+        <div className="absolute inset-0 w-1/2 h-full z-0 bg-black bg-opacity-40"></div>
       </div>
       <div className="relative z-10">
         <FixedNavBar />
@@ -52,7 +57,7 @@ const MeetTheIntern = () => {
                         {offer.academy.subtitle}
                       </h1>
                     </section>
-                    <section className=" pr-24">
+                    <section className="pr-24">
                       {Object.values(offer.academy.paragraph).map(
                         (paragraph, idx) => (
                           <p
@@ -85,7 +90,7 @@ const MeetTheIntern = () => {
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost text-white mb-4 border  ml-10"
+              className="w-max p-4 font-jost text-white mb-4 border ml-10"
             >
               <Link to="/">MEET THE INTERNS</Link>
             </motion.section>
@@ -104,6 +109,7 @@ const MeetTheIntern = () => {
             </div>
             <div className="px-20 h-[730px] flex items-center justify-center overflow-hidden">
               <InternsProfile
+                year={selectedYear}
                 batches={batches}
                 hoveredBatch={hoveredBatch}
                 setHoveredBatch={setHoveredBatch}
