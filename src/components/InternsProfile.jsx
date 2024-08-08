@@ -11,10 +11,16 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
-const InternsProfile = ({ batches }) => {
+import { Link } from "react-router-dom";
+
+const InternsProfile = ({ batches, year }) => {
   const [activeCard, setActiveCard] = useState(0);
   const handleSlideChange = (swiper) => {
     setActiveCard(swiper.realIndex);
+  };
+
+  const formattedName = (name) => {
+    return name.toLowerCase().replace(/ /g, "-");
   };
 
   return (
@@ -55,7 +61,7 @@ const InternsProfile = ({ batches }) => {
             >
               <div key={index} className="mb-8 w-full">
                 <h2 className="text-white font-jost text-base mb-4 text-center uppercase">
-                  {batch.replace("batch-", "Batch ")}
+                  {"Batch " + batch}
                 </h2>
                 <div className="flex flex-wrap justify-center gap-2">
                   <AnimatePresence>
@@ -70,13 +76,29 @@ const InternsProfile = ({ batches }) => {
                           transition={{ duration: 0.3 }}
                           className="w-20 h-20 flex"
                         >
-                          <motion.img
-                            className="rounded-md"
-                            whileTap={{ scale: 1.1 }}
-                            whileHover={{ scale: 1.1, cursor: "pointer" }}
-                            src="https://randomuser.me/api/portraits/men/9.jpg"
-                            alt={intern.name}
-                          />
+                          <Link
+                            to={`/ootb/academy/meet-the-interns/${year}/batch-${batch}/${formattedName(
+                              intern.name
+                            )}`}
+                            state={{ batches, year }}
+                            onClick={() => {
+                              console.log("Navigating with state:", {
+                                batches,
+                                year,
+                              });
+                            }}
+                          >
+                            <motion.img
+                              whileTap={{ scale: 1.1 }}
+                              whileHover={{
+                                scale: 1.1,
+                                cursor: "pointer",
+                                opacity: 1,
+                              }}
+                              src="https://randomuser.me/api/portraits/men/9.jpg"
+                              alt={intern.name}
+                            />
+                          </Link>
                         </motion.div>
                       ))}
                   </AnimatePresence>
