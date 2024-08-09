@@ -9,21 +9,21 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Copywrting",
-          "image": "/assets/interns/2024/batch-1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png"
         },
         "2": {
           "name": "Cheska Joy Atienza",
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/2024/batch-1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png"
         },
         "3": {
           "name": "Justine Bryce Aldos",
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/2024/batch-1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png"
         }
       },
       "2": {
@@ -32,14 +32,14 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/2024/batch-1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png"
         },
         "2": {
           "name": "Shannelle Andrea Tiongson",
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/2024/batch-1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png"
         }
       },
       "3": {
@@ -313,6 +313,33 @@
     "id": 3,
     "year": 2022,
     "batch": {
+      "1": {
+        "1": {
+          "name": "No Interns Batch 1",
+          "date-started": "June 2022",
+          "date-ended": "August 2022",
+          "role": "Multimedia Artist",
+          "image": "/assets/interns/2022/batch-1/allysa-alexis-paigan.jpg"
+        }
+      },
+      "2": {
+        "1": {
+          "name": "No Intens Batch 2",
+          "date-started": "June 2022",
+          "date-ended": "August 2022",
+          "role": "Multimedia Artist",
+          "image": "/assets/interns/2022/batch-1/allysa-alexis-paigan.jpg"
+        }
+      },
+      "3": {
+        "1": {
+          "name": "No Interns Batch 3",
+          "date-started": "June 2022",
+          "date-ended": "August 2022",
+          "role": "Multimedia Artist",
+          "image": "/assets/interns/2022/batch-1/allysa-alexis-paigan.jpg"
+        }
+      },
       "4": {
         "1": {
           "name": "Allysa Alexis Paigan",
