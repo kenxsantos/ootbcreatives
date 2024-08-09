@@ -9,7 +9,7 @@ import InternsWork from "../components/InternsWork";
 import InternsBoardingPass from "../components/InternsBoardingPass";
 const ShowBoardingPass = () => {
   return (
-    <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-screen">
+    <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-10">
         <div className="absolute inset-0 w-1/2 h-full z-0 bg-black  bg-opacity-40"></div>
       </div>
