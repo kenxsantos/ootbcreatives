@@ -39,3 +39,27 @@
 .animate-blob-bounce {
   animation: blob-bounce 5s infinite ease;
 }
+/* Default bullet style */
+.swiper-pagination-bullet {
+  margin-top: 20px;
+  width: 8px;
+  height: 8px;
+  background-color: #ddd;
+  opacity: 1;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  width: 10px;
+  height: 10px;
+  background-color: #a667d1; /* Example: active bullet color */
+}
+
+/* Dynamic next/prev bullets */
+.swiper-pagination-bullet-next,
+.swiper-pagination-bullet-prev {
+  width: 10px;
+  height: 10px;
+  background-color: #f38920; /* Example: dynamic bullet color */
+}
