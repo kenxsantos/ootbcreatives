@@ -1,12 +1,28 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
+import { useState } from "react";
+import { useAnimation } from "framer-motion";
+import WorksModal from "./WorksModal.jsx";
 const InternsWork = () => {
   const { intern } = useParams();
   const capitalize = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
   const firstname = capitalize(intern.split("-")[0]);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({});
+  const controls = useAnimation();
+
+  const openModal = (item) => {
+    setModalContent(item);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
       <section className="w-full h-full">
@@ -28,9 +44,10 @@ const InternsWork = () => {
                 className="h-auto max-w-auto"
                 src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
                 alt=""
+                onClick={() => openModal(firstname)}
               />
             </div>
-            <div>
+            {/* <div>
               <img
                 className="h-auto max-w-auto"
                 src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
@@ -64,7 +81,7 @@ const InternsWork = () => {
                 src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
                 alt=""
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="mt-4">
@@ -76,6 +93,11 @@ const InternsWork = () => {
           </p>
         </div>
       </section>
+      <WorksModal
+        isOpen={isOpen}
+        close={closeModal}
+        // modalContent={modalContent}
+      />
     </div>
   );
 };
