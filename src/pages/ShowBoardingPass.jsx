@@ -3,11 +3,39 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
-
+import internship from "../json/internship.json";
 import { useState } from "react";
 import InternsWork from "../components/InternsWork";
 import InternsBoardingPass from "../components/InternsBoardingPass";
 const ShowBoardingPass = () => {
+  const { batch, year, intern } = useParams();
+  const [selectedBatch, setSelectedBatch] = useState(batch || "batch-1"); // Default to batch 1 if no batch is provided in the URL
+  const formattedName = (name) => name.toLowerCase().replace(/ /g, "-");
+
+  const yearData = internship.find((data) => data.year.toString() === year);
+
+  console.log("yearData:" + yearData);
+
+  const findIntern = () => {
+    const batchKey = selectedBatch.replace("batch-", "");
+
+    if (!yearData) return null;
+    const batchData = yearData.batch[batchKey];
+    if (!batchData) return null;
+
+    return (
+      Object.values(batchData).find(
+        (internData) => formattedName(internData.name) === intern
+      ) || null
+    );
+  };
+
+  const internData = findIntern();
+
+  console.log(internData);
+  if (!internData) {
+    return <div>Intern not found</div>;
+  }
   return (
     <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-10">
@@ -33,11 +61,11 @@ const ShowBoardingPass = () => {
               </div>
             </Link>
             <div>
-              <InternsWork />
+              <InternsWork internData={internData} />
             </div>
           </section>
           <section className="relative w-1/2 flex flex-col">
-            <InternsBoardingPass />
+            <InternsBoardingPass internData={internData} yearData={yearData} />
           </section>
         </div>
       </div>
