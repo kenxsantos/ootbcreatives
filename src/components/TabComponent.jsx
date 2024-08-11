@@ -51,7 +51,7 @@ const TabComponent = ({ yearData }) => {
 
   return (
     <div className="relative flex flex-col overflow-auto w-full rounded-3xl px-12 items-center justify-center h-full">
-      <div className="relative flex flex-col w-full h-[500px]  overflow-hidden ">
+      <div className="relative flex flex-col w-full h-full  overflow-hidden ">
         <Swiper
           ref={swiperRef}
           spaceBetween={10}

@@ -59,7 +59,7 @@ const InternsProfile = ({ batches, year }) => {
                 index === activeCard ? "bg-gradient-red" : "bg-gradient-purple"
               }`}
             >
-              <div key={index} className="mb-8 w-full">
+              <div key={index} className="w-full">
                 <h2 className="text-white font-jost text-base mb-4 text-center uppercase">
                   {"Batch " + batch}
                 </h2>
@@ -81,12 +81,6 @@ const InternsProfile = ({ batches, year }) => {
                               intern.name
                             )}`}
                             state={{ batches, year }}
-                            onClick={() => {
-                              console.log("Navigating with state:", {
-                                batches,
-                                year,
-                              });
-                            }}
                           >
                             <motion.img
                               whileTap={{ scale: 1.1 }}
