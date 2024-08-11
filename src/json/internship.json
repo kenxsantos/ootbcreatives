@@ -9,14 +9,58 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Copywrting",
-          "image": "/assets/interns/batch1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         },
         "2": {
           "name": "Cheska Joy Atienza",
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         },
         "3": {
           "name": "Justine Bryce Aldos",
@@ -32,14 +76,58 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/batch1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         },
         "2": {
           "name": "Shannelle Andrea Tiongson",
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/batch1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         }
       },
       "3": {
@@ -48,35 +136,145 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/daniela-chan.png"
+          "image": "/assets/interns/batch1/daniela-chan.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         },
         "2": {
           "name": "Hailie Pangilinan",
           "date-started": "April 2024",
           "date-ended": "ONGOING",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/hailie-pangilinan.png"
+          "image": "/assets/interns/batch1/hailie-pangilinan.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         },
         "3": {
           "name": "Gaddiel Johannes Sapnu",
           "date-started": "April 2024",
           "date-ended": "ONGOING",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/gaddiel-johannes-sapnu.png"
+          "image": "/assets/interns/batch1/gaddiel-johannes-sapnu.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         },
         "4": {
           "name": "Hazel Tiam-Lee",
           "date-started": "June 2024",
           "date-ended": "July 2024",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/hazel-tiam-lee.png"
+          "image": "/assets/interns/batch1/hazel-tiam-lee.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         },
         "5": {
           "name": "Sophia Marie Cruz",
           "date-started": "June 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/batch1/sophia-cruz.png"
+          "image": "/assets/interns/batch1/sophia-cruz.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         }
       }
     }
