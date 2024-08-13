@@ -25,6 +25,7 @@ export default {
       colors: {
         orange: "#F38920",
         purple: "#A667D1",
+        "purple-black": "#19143B",
       },
       boxShadow: {
         "bottom-glow": "0 0px 15px rgba(255, 105, 180, 0.6)",
