@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "position": "Multimedia",
+        "link": "multimedia",
+        "description": "Multimedia artists and animators create animation and visual effects for television, movies, video games, and other forms of media.",
+        "jobtype": "Full Time",
+        "salary": "$75,270",
+        "shift": "Monday - Saturday 11am - 7pm",
+        "location": "Makati",
+        "qualifications": {
+            "1": "Bachelor’s degree in computer graphics, art, or a related field.",
+            "2": "None",
+            "3": "Creativity; computer skills; communication skills; time-management skills."
+        },
+        "responsibilities": {
+            "1": "Create two-dimensional and three-dimensional images depicting objects in motion or illustrating a process, using computer animation or modeling programs.",
+            "2": "Create basic designs, drawings, and illustrations for product labels, cartons, direct mail, or television.",
+            "3": "Work with a team of animators and artists to create a movie, game, or visual effect."
+        }
+    },
+    {
+        "id": 2,
+        "position": "Marketing",
+        "link": "marketing",
+        "jobtype": "Part Time",
+        "salary": "$75,270",
+        "shift": "Monday - Saturday 11am - 7pm",
+        "location": "Makati",
+        "description": "Marketing artists and animators create animation and visual effects for television, movies, video games, and other forms of media.",
+        "qualifications": {
+            "1": "Bachelor’s degree in computer graphics, art, or a related field.",
+            "2": "None",
+            "3": "Creativity; computer skills; communication skills; time-management skills."
+        },
+        "responsibilities": {
+            "1": "Create two-dimensional and three-dimensional images depicting objects in motion or illustrating a process, using computer animation or modeling programs.",
+            "2": "Create basic designs, drawings, and illustrations for product labels, cartons, direct mail, or television.",
+            "3": "Work with a team of animators and artists to create a movie, game, or visual effect."
+        }
+    },
+    {
+        "id": 3,
+        "position": "Web Design",
+        "link": "web-design",
+        "description": "Web designs artists and animators create animation and visual effects for television, movies, video games, and other forms of media.",
+        "jobtype": "Full Time",
+        "salary": "$75,270",
+        "shift": "Monday - Saturday 11am - 7pm",
+        "location": "Manila",
+        "qualifications": {
+            "1": "Bachelor’s degree in computer graphics, art, or a related field.",
+            "2": "None",
+            "3": "Creativity; computer skills; communication skills; time-management skills."
+        },
+        "responsibilities": {
+            "1": "Create two-dimensional and three-dimensional images depicting objects in motion or illustrating a process, using computer animation or modeling programs.",
+            "2": "Create basic designs, drawings, and illustrations for product labels, cartons, direct mail, or television.",
+            "3": "Work with a team of animators and artists to create a movie, game, or visual effect."
+        }
+    },
+    {
+        "id": 4,
+        "position": "Accounts",
+        "link": "accounts",
+        "description": "Accounts artists and animators create animation and visual effects for television, movies, video games, and other forms of media.",
+        "jobtype": "Full Time",
+        "salary": "$75,270",
+        "shift": "Monday - Saturday 11am - 7pm",
+        "location": "Manila",
+        "qualifications": {
+            "1": "Bachelor’s degree in computer graphics, art, or a related field.",
+            "2": "None",
+            "3": "Creativity; computer skills; communication skills; time-management skills."
+        },
+        "responsibilities": {
+            "1": "Create two-dimensional and three-dimensional images depicting objects in motion or illustrating a process, using computer animation or modeling programs.",
+            "2": "Create basic designs, drawings, and illustrations for product labels, cartons, direct mail, or television.",
+            "3": "Work with a team of animators and artists to create a movie, game, or visual effect."
+        }
+    }
+]
