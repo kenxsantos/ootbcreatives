@@ -655,7 +655,29 @@
           "date-started": "September 2022",
           "date-ended": "October 2022",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/2022/batch-1/allysa-alexis-paigan.jpg"
+          "image": "/assets/interns/2022/batch-1/allysa-alexis-paigan.jpg",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         },
         "2": {
           "name": "John Herald Vargas",
