@@ -1,13 +1,15 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
-import offers from "../json/offers.json";
 import TransparentDiv from "../components/TransparentDiv";
 import interns from "../json/interns.json";
 import { motion } from "framer-motion";
 
 const ShowAcademy = () => {
+  const location = useLocation();
+  const offer = location.state?.offer;
+
   const width = 530;
   return (
     <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
@@ -33,45 +35,89 @@ const ShowAcademy = () => {
                 </span>
               </div>
             </Link>
-            {offers.map((offer, index) => (
-              <div className="ml-10" key={index}>
-                {offer.academy && (
-                  <div>
-                    <section className="mb-4">
-                      <h1 className="font-metropolis font-extrabold text-6xl flex flex-col leading-none text-white tracking-tighter text-glow uppercase">
-                        {offer.academy.title} <br />
-                        {offer.academy.subtitle}
-                      </h1>
-                    </section>
-                    <section className=" pr-24">
-                      {Object.values(offer.academy.paragraph).map(
-                        (paragraph, idx) => (
-                          <p
-                            key={idx}
-                            className="font-jost text-base text-white mb-4 text-justify"
-                          >
-                            {paragraph}
-                          </p>
-                        )
-                      )}
+            <div className="ml-10">
+              <div>
+                <section className="mb-4">
+                  <h1 className="font-metropolis font-extrabold text-6xl flex flex-col leading-none text-white tracking-tighter text-glow uppercase">
+                    {offer.title} <br />
+                    {offer.subtitle}
+                  </h1>
+                </section>
+                <section className=" pr-24">
+                  {(offer.paragraph && (
+                    <div>
+                      {Object.values(offer.paragraph).map((paragraph, idx) => (
+                        <p
+                          key={idx}
+                          className="font-jost text-base text-white mb-4 text-justify"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                      {Object.values(offer.list).map((item, idx) => (
+                        <li
+                          key={idx}
+                          className="font-jost text-base text-white text-justify list-disc"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                      <p className="font-jost text-base text-white mb-4 text-justify mt-4">
+                        {offer.end}
+                      </p>
+                    </div>
+                  )) ||
+                    (offer.list && (
                       <ul>
-                        {Object.values(offer.academy.list).map((item, idx) => (
+                        {Object.values(offer.list).map((listItem, index) => (
                           <li
-                            key={idx}
-                            className="font-jost text-base text-white text-justify list-disc ml-8"
+                            key={index}
+                            className="text-white font-jost text-base text-left leading-none"
                           >
-                            {item}
+                            {listItem}
                           </li>
                         ))}
                       </ul>
-                      <p className="font-jost text-base text-white mb-4 text-justify mt-4">
-                        {offer.academy.end}
+                    ))}
+                  {/* {offer.paragraph && (
+                    <ul>
+                      {Object.values(offer.paragraph).map(
+                        (paragraph, index) => (
+                          <li
+                            key={index}
+                            className="text-white font-jost text-base text-left leading-none"
+                          >
+                            {paragraph}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  )} */}
+                  {/* {Object.values(offer.paragraph).map((paragraph, idx) => (
+                      <p
+                        key={idx}
+                        className="font-jost text-base text-white mb-4 text-justify"
+                      >
+                        {paragraph}
                       </p>
-                    </section>
-                  </div>
-                )}
+                    ))}
+                    <ul>
+                      {Object.values(offer.list).map((item, idx) => (
+                        <li
+                          key={idx}
+                          className="font-jost text-base text-white text-justify list-disc ml-8"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="font-jost text-base text-white mb-4 text-justify mt-4">
+                      {offer.end}
+                    </p> */}
+                </section>
               </div>
-            ))}
+            </div>
+
             <motion.section
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
