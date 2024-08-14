@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
 import TransparentDiv from "../components/TransparentDiv";

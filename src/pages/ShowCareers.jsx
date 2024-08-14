@@ -55,7 +55,7 @@ const ShowCareers = () => {
                   whileHover={{ scale: 1.1, margin: "0px 8px" }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
                   key={index}
-                  className="w-60 h-72 bg-gray-500 p-6 rounded-2xl  flex flex-col justify-end hover:cursor-pointer"
+                  className="w-60 h-72 bg-gray-500 bg-opacity-60 p-6 rounded-2xl  flex flex-col justify-end hover:cursor-pointer"
                 >
                   <h1 className="font-metropolis font-extrabold text-2xl text-white text-glow uppercase">
                     {career.position}
