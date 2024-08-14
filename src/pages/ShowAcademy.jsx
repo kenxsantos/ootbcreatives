@@ -79,41 +79,6 @@ const ShowAcademy = () => {
                         ))}
                       </ul>
                     ))}
-                  {/* {offer.paragraph && (
-                    <ul>
-                      {Object.values(offer.paragraph).map(
-                        (paragraph, index) => (
-                          <li
-                            key={index}
-                            className="text-white font-jost text-base text-left leading-none"
-                          >
-                            {paragraph}
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  )} */}
-                  {/* {Object.values(offer.paragraph).map((paragraph, idx) => (
-                      <p
-                        key={idx}
-                        className="font-jost text-base text-white mb-4 text-justify"
-                      >
-                        {paragraph}
-                      </p>
-                    ))}
-                    <ul>
-                      {Object.values(offer.list).map((item, idx) => (
-                        <li
-                          key={idx}
-                          className="font-jost text-base text-white text-justify list-disc ml-8"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="font-jost text-base text-white mb-4 text-justify mt-4">
-                      {offer.end}
-                    </p> */}
                 </section>
               </div>
             </div>
