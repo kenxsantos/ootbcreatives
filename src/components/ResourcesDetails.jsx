@@ -10,6 +10,9 @@ const ResourcesDetails = () => {
   if (slug === "articles-blogs") {
     formattedTitle = slug.replace("-", " / ");
   }
+  if (slug === "stock-images") {
+    formattedTitle = slug.replace("-", "  ");
+  }
 
   return (
     <div className="relative max-w-screen-2xl bg-clear-planets bg-cover mx-auto h-screen">
@@ -36,7 +39,7 @@ const ResourcesDetails = () => {
           <section>
             <div className="-mt-[88px]">
               <h1 className="text-center tracking-tighter font-metropolis text-glow text-white text-xl font-extrabold uppercase">
-                {formattedTitle}
+                {"OOTB " + formattedTitle}
               </h1>
             </div>
             {slug === "articles-blogs" || slug === "news" ? (
