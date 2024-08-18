@@ -8,6 +8,7 @@ import interns from "../json/interns.json";
 import { motion } from "framer-motion";
 
 const ShowAcademy = () => {
+  const width = 530;
   return (
     <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-10">
@@ -83,6 +84,7 @@ const ShowAcademy = () => {
           <section className="relative w-1/2 flex flex-col px-12 h-[600px] mx-auto mt-36 items-center justify-center">
             {interns.map((intern, index) => (
               <TransparentDiv
+                width={width}
                 key={index}
                 index={index}
                 title={intern.job}
