@@ -16,67 +16,37 @@ const Offers = () => {
           </div>
           <div className=" flex mt-4 justify-center gap-12">
             {offers.map((offer, index) => (
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                key={index}
-                className="w-64 h-72 bg-gray-400 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer"
-              >
-                {offer.academy && (
-                  <Link
-                    to={`/ootb/${offer.academy.link}`}
-                    key={offer.academy.id}
-                  >
-                    <div>
-                      <h1 className="z-50 text-glow text-left text-xl font-bold font-metropolis text-white leading-none mb-2 uppercase">
-                        {offer.academy.title} <br /> {offer.academy.subtitle}
-                      </h1>
+              <Link to={`/ootb/${offer.link}`} key={offer.id} state={{ offer }}>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                  key={index}
+                  className="w-64 h-72 bg-gray-500 bg-opacity-60 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer"
+                >
+                  <div>
+                    <h1 className="z-50 text-glow text-left text-xl font-bold font-metropolis text-white leading-none mb-2 uppercase">
+                      {offer.title} <br /> {offer.subtitle}
+                    </h1>
+                    {(offer.description && (
                       <p className="text-white font-jost text-base text-left leading-none">
-                        {offer.academy.description}
+                        {offer.description}
                       </p>
-                    </div>
-                  </Link>
-                )}
-                {offer.careers && (
-                  <Link
-                    to={`/ootb/${offer.careers.link}`}
-                    key={offer.careers.id}
-                  >
-                    <div>
-                      <h1 className="text-glow text-left text-xl font-bold font-metropolis text-white leading-none mb-2 uppercase">
-                        {offer.careers.title} <br /> {offer.careers.subtitle}
-                      </h1>
-                      <p className="text-white font-jost text-base text-left leading-none">
-                        {offer.careers.description}
-                      </p>
-                    </div>
-                  </Link>
-                )}
-                {offer.resources && (
-                  <Link
-                    to={`/ootb/${offer.resources.link}`}
-                    key={offer.resources.id}
-                  >
-                    <div>
-                      <h1 className="text-glow text-left text-xl font-bold font-metropolis text-white relative leading-none mb-2 uppercase">
-                        {offer.resources.title}
-                      </h1>
-                      <ul>
-                        {Object.values(offer.resources.list).map(
-                          (item, idx) => (
+                    )) ||
+                      (offer.list && (
+                        <ul>
+                          {Object.values(offer.list).map((listItem, index) => (
                             <li
-                              key={idx}
+                              key={index}
                               className="text-white font-jost text-base text-left leading-none"
                             >
-                              {item}
+                              {listItem}
                             </li>
-                          )
-                        )}
-                      </ul>
-                    </div>
-                  </Link>
-                )}
-              </motion.div>
+                          ))}
+                        </ul>
+                      ))}
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </section>

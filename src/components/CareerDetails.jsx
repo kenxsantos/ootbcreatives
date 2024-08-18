@@ -3,16 +3,17 @@ import { useLocation, useNavigate } from "react-router-dom";
 import FixedNavBar from "../components/FixedNavBar";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import careers from "../json/careers.json";
+
 const CareerDetails = () => {
   const location = useLocation();
   const career = location.state?.career;
-  console.log(career);
 
   return (
     <div className="relative max-w-screen-2xl bg-clear-planets bg-cover mx-auto h-screen">
-      <div className="relative z-10">
+      <div className="relative z-30">
         <FixedNavBar />
+      </div>
+      <div className="relative z-10">
         <div className="w-full">
           <section className="relative w-full flex flex-col px-12">
             <Link to="/">
@@ -32,6 +33,48 @@ const CareerDetails = () => {
             </Link>
           </section>
         </div>
+        <div className="flex flex-col px-12 w-[500px] bg-purple-black h-screen absolute top-0 pt-44 z-0 ml-96 -mt-28">
+          <h1 className="text-white font-jost">OOTB CAREERS</h1>
+          <h1 className="text-white font-extrabold text-white text-glow tracking-tighter uppercase text-4xl font-metropolis">
+            {career.position}
+          </h1>
+          <p className="mt-4 text-white font-jost text-base text-justify leading-none">
+            {career.description}
+          </p>
+
+          <table className="text-white font-jost text-base mt-8 uppercase">
+            <tbody>
+              <tr>
+                <td className="p-2">Job Type</td>
+                <td className="p-2">{career.jobtype}</td>
+              </tr>
+              <tr>
+                <td className="p-2">Shift</td>
+                <td className="p-2">{career.shift}</td>
+              </tr>
+              <tr>
+                <td className="p-2">Salary</td>
+                <td className="p-2">{career.salary}</td>
+              </tr>
+              <tr>
+                <td className="p-2">Location</td>
+                <td className="p-2">{career.location}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <section className="w-max p-2 font-jost text-white border mt-12">
+            <Link to="/">COME ONBOARD NOW</Link>
+          </section>
+        </div>
+        <div className="h-screen absolute top-0 right-0 mx-auto flex items-center justify-center -mt-28 ">
+          <div
+            style={{
+              clipPath:
+                "polygon(7% 0%, 100% 0%, 100% 100%, 7% 100%, 0% 93%, 0% 7%)",
+            }}
+            className="w-[450px] h-[400px] rounded-l-2xl p-8 bg-gray-500 overflow-auto hide-scrollbar bg-black bg-opacity-60 p-5 rounded-lg shadow-lg  backdrop-blur-sm text-white"
+          >
         <section className="flex justify-start gap-4 ml-96 z-10 h-full">
           <div className="flex flex-col px-12 w-[500px] bg-purple-black h-screen absolute top-0 pt-44 z-0">
             <h1 className="text-white font-jost">OOTB CAREERS</h1>

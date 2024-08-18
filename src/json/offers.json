@@ -1,46 +1,46 @@
 [
   {
-    "academy": {
-      "title": "OOTB",
-      "subtitle": "Academy",
-      "description": "Launch Your Advertising Career with a Cosmic Leap into Real World Creativity.",
-      "link": "academy",
-      "paragraph": {
-        "1": "Ready to blast off into the exciting universe of advertising? Our internship program isn't just a career launchpad; it's a journey to the forefront of creative innovation.",
-        "2": "Here's what sets our academy apart:"
-      },
-      "list": {
-        "1": "You won't be fetching coffee here. You'll be working alongside seasoned professionals, collaborating on real-world campaigns that reach for the stars.",
-        "2": "Explore the vast expanse of your imagination as you brainstorm groundbreaking concepts, design eye-catching visuals, and craft messages that resonate across the cosmos.",
-        "3": "We believe creativity thrives on data. You'll learn to analyze insights, navigate market trends, and use data to fuel your creative fire.",
-        "4": "This isn't just an internship; it's a springboard into a fulfilling career. Build a portfolio that shines brighter than any star and connect with industry leaders who can guide your trajectory."
-      },
-      "end": "Don't settle for an ordinary internship. Choose a program that will launch your advertising career into a whole new dimension. Apply today and embark on a creative journey that's out of this world!"
+    "id": 1,
+    "offer": "academy",
+    "title": "OOTB",
+    "subtitle": "Academy",
+    "description": "Launch Your Advertising Career with a Cosmic Leap into Real World Creativity.",
+    "link": "academy",
+    "paragraph": {
+      "1": "Ready to blast off into the exciting universe of advertising? Our internship program isn't just a career launchpad; it's a journey to the forefront of creative innovation.",
+      "2": "Here's what sets our academy apart:"
+    },
+    "list": {
+      "1": "You won't be fetching coffee here. You'll be working alongside seasoned professionals, collaborating on real-world campaigns that reach for the stars.",
+      "2": "Explore the vast expanse of your imagination as you brainstorm groundbreaking concepts, design eye-catching visuals, and craft messages that resonate across the cosmos.",
+      "3": "We believe creativity thrives on data. You'll learn to analyze insights, navigate market trends, and use data to fuel your creative fire.",
+      "4": "This isn't just an internship; it's a springboard into a fulfilling career. Build a portfolio that shines brighter than any star and connect with industry leaders who can guide your trajectory."
+    },
+    "end": "Don't settle for an ordinary internship. Choose a program that will launch your advertising career into a whole new dimension. Apply today and embark on a creative journey that's out of this world!"
+  },
+  {
+    "id": 2,
+    "offer": "careers",
+    "title": "OOTB",
+    "subtitle": "Careers",
+    "description": "Launch Your Career into Orbit",
+    "link": "careers",
+    "paragraph": {
+      "1": "Ready to explore uncharted territories and make your mark in the world of advertising? Out of the Box Creatives is looking for ambitious fresh grads who are passionate about creativity, data-driven insights, and pushing the boundaries of what's possible.",
+      "2": "As a fast-growing startup, we offer a unique opportunity to be part of something truly groundbreaking. You'll work alongside a team of brilliant minds, collaborating on innovative campaigns that redefine the way brands connect with their audience."
     }
   },
   {
-    "careers": {
-      "title": "OOTB",
-      "subtitle": "Careers",
-      "description": "Launch Your Career into Orbit",
-      "link": "careers",
-      "paragraph": {
-        "1": "Ready to explore uncharted territories and make your mark in the world of advertising? Out of the Box Creatives is looking for ambitious fresh grads who are passionate about creativity, data-driven insights, and pushing the boundaries of what's possible.",
-        "2": "As a fast-growing startup, we offer a unique opportunity to be part of something truly groundbreaking. You'll work alongside a team of brilliant minds, collaborating on innovative campaigns that redefine the way brands connect with their audience."
-      }
-    }
-  },
-  {
-    "resources": {
-      "title": "Resources",
-      "link": "resources",
-      "list": {
-        "1": "Articles/Blog",
-        "2": "News",
-        "3": "Stock Images",
-        "4": "Templates",
-        "5": "Courses"
-      }
+    "id": 3,
+    "offer": "resources",
+    "title": "Resources",
+    "link": "resources",
+    "list": {
+      "1": "Articles/Blogs",
+      "2": "News",
+      "3": "Stock Images",
+      "4": "Templates",
+      "5": "Courses"
     }
   }
 ]

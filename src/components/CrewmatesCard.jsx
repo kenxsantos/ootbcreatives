@@ -16,12 +16,6 @@ const CrewmatesCard = () => {
   const handleSlideChange = (swiper) => {
     setActiveCard(swiper.realIndex);
   };
-  // const handleShowCrewmates = (event, link, id) => {
-  //   event.preventDefault();
-
-  //   navigate(`/crewmates/${link}/${id}`);
-  //   console.log(navigate);
-  // };
 
   return (
     <div className="max-w-screen-2xl mx-auto">
