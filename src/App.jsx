@@ -7,6 +7,8 @@ import MeetTheIntern from "./pages/MeetTheInterns.jsx";
 import ShowBoardingPass from "./pages/ShowBoardingPass.jsx";
 import ShowCareers from "./pages/ShowCareers.jsx";
 import CareerDetails from "./components/CareerDetails.jsx";
+import ShowResources from "./pages/ShowResources.jsx";
+import ResourcesDetails from "./components/ResourcesDetails.jsx";
 function App() {
   return (
     <>
@@ -25,6 +27,8 @@ function App() {
         />
         <Route path="/ootb/careers" element={<ShowCareers />} />
         <Route path="/ootb/careers/:slug" element={<CareerDetails />} />
+        <Route path="/ootb/resources" element={<ShowResources />} />
+        <Route path="/ootb/resources/:slug" element={<ResourcesDetails />} />
       </Routes>
     </>
   );

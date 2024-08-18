@@ -21,7 +21,7 @@ const Offers = () => {
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
                   key={index}
-                  className="w-64 h-72 bg-gray-400 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer"
+                  className="w-64 h-72 bg-gray-500 bg-opacity-60 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer"
                 >
                   <div>
                     <h1 className="z-50 text-glow text-left text-xl font-bold font-metropolis text-white leading-none mb-2 uppercase">
