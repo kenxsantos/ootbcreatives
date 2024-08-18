@@ -64,6 +64,7 @@ const ShowCareers = () => {
                     {career.description.length > 50
                       ? `${career.description.slice(0, 50)}...`
                       : career.description}
+
                   </p>
                 </motion.div>
               </Link>

@@ -29,6 +29,7 @@ function App() {
         <Route path="/ootb/careers/:slug" element={<CareerDetails />} />
         <Route path="/ootb/resources" element={<ShowResources />} />
         <Route path="/ootb/resources/:slug" element={<ResourcesDetails />} />
+
       </Routes>
     </>
   );
