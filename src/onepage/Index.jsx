@@ -67,15 +67,15 @@ const Index = () => {
           offset={0}
           onSetActive={() => handleSetActiveLink("landing")}
         >
-          {/* <img
+          <img
             src="/assets/logo/OOTBLogoWhite.png"
             alt="logo"
             className="w-48"
-          /> */}
+          />
         </ScrollLink>
       </motion.div>
       <NavBar setActiveLink={handleSetActiveLink} />
-      {/* <div id="landing">
+      <div id="landing">
         <Landing />
       </div>
       <div id="services">
@@ -86,10 +86,10 @@ const Index = () => {
       </div>
       <div id="crewmates">
         <Crewmates />
-      </div> */}
-      {/* <div id="offers">
+      </div>
+      <div id="offers">
         <Offers />
-      </div> */}
+      </div>
       <div id="radio-us">
         <RadioUs />
       </div>
