@@ -9,7 +9,8 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Copywrting",
-          "image": "/assets/interns/batch1/daniela-chan.png",
+          "profile": "/assets/intens/2024/batch-1/mikyla-denise-jordan.png",
+          "boardingPass": "/assets/boardingpass/2024/batch-1/mikyla-denise-jordan.png",
           "works": {
             "1": {
               "client": "Bridgestone",
@@ -38,7 +39,8 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/daniela-chan.png",
+          "profile": "/assets/interns/2024/batch-1/cheska-joy-atienza.png",
+          "boardingPass": "/assets/boardingPass/2024/batch-1/cheska-joy-atienza.png",
           "works": {
             "1": {
               "client": "Bridgestone",
@@ -67,7 +69,30 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/batch1/daniela-chan.png"
+          "profile": "/assets/interns/2024/batch-1/justine-bryce-aldos.png",
+          "boardingPass": "/assets/boardingPass/2024/batch-1/justine-bryce-aldos.png",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
         }
       },
       "2": {
@@ -76,7 +101,8 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/batch1/daniela-chan.png",
+          "profile": "/assets/interns/2024/batch-2/dominic-salando.png",
+          "boardingPass": "/assets/boardingPass/2024/batch-2/dominic-salando.png",
           "works": {
             "1": {
               "client": "Bridgestone",
@@ -105,7 +131,8 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/batch1/daniela-chan.png",
+          "profile": "/assets/interns/2024/batch-2/shanelle-andrea-tiongson.png",
+          "boardingPass": "/assets/boardingPass/2024/batch-2/shanelle-andrea-tiongson.png",
           "works": {
             "1": {
               "client": "Bridgestone",
@@ -136,7 +163,8 @@
           "date-started": "April 2024",
           "date-ended": "July 2024",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/daniela-chan.png",
+          "profile": "/assets/interns/batch-3/daniela-chan.png",
+          "boardingPass": "/assets/boardingpass/2024/batch-3/daniela-chan.png",
           "works": {
             "1": {
               "client": "Bridgestone",
@@ -165,7 +193,8 @@
           "date-started": "April 2024",
           "date-ended": "ONGOING",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/hailie-pangilinan.png",
+          "profile": "/assets/interns/batch-3/hailie-pangilinan.png",
+          "boardingPass": "/assets/boardingpass/2024/batch-3/hailie-pangilinan.png",
           "works": {
             "1": {
               "client": "Bridgestone",
@@ -194,7 +223,8 @@
           "date-started": "April 2024",
           "date-ended": "ONGOING",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/gaddiel-johannes-sapnu.png",
+          "profile": "/assets/interns/batch-3/gaddiel-johannes-sapnu.png",
+          "boardingPass": "/assets/boardingpass/2024/batch-3/gaddiel-johannes-sapnu.png",
           "works": {
             "1": {
               "client": "Bridgestone",
@@ -223,7 +253,8 @@
           "date-started": "June 2024",
           "date-ended": "July 2024",
           "role": "Multimedia Artist",
-          "image": "/assets/interns/batch1/hazel-tiam-lee.png",
+          "profile": "/assets/interns/batch-3/hazel-tiam-lee.png",
+          "boardingPass": "/assets/boardingpass/2024/batch-3/hazel-tiam-lee.png",
           "works": {
             "1": {
               "client": "Bridgestone",
@@ -252,7 +283,8 @@
           "date-started": "June 2024",
           "date-ended": "July 2024",
           "role": "Sales and Marketing",
-          "image": "/assets/interns/batch1/sophia-cruz.png",
+          "profile": "/assets/interns/batch-3/sophia-cruz.png",
+          "boardingPass": "/assets/boardingpass/2024/batch-3/sophia-cruz.png",
           "works": {
             "1": {
               "client": "Bridgestone",
