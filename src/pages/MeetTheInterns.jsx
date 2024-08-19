@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
 import offers from "../json/offers.json";
@@ -9,19 +9,17 @@ import InternsProfile from "../components/InternsProfile";
 import DropdownButton from "../components/DropdownButton";
 
 const MeetTheIntern = () => {
-  // Extract the available years from the JSON data
   const years = internsData.map((internYear) => internYear.year.toString());
   const [selectedYear, setSelectedYear] = useState(years[0]); // default to the first year
   const [hoveredBatch, setHoveredBatch] = useState(null);
 
-  // Find the data corresponding to the selected year
   const selectedData = internsData.find(
     (internYear) => internYear.year.toString() === selectedYear
   );
 
   const batches = selectedData ? selectedData.batch : {};
-
-  console.log("batch", batches);
+  const location = useLocation();
+  const offer = location.state?.offer;
 
   return (
     <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
@@ -43,56 +41,52 @@ const MeetTheIntern = () => {
                 </div>
                 <span className="text-white font-jost flex items-center gap-4 transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow">
                   <IoIosArrowBack size={24} />
-                  BACK TO OTHER SERVICES
+                  BACK TO HOME
                 </span>
               </div>
             </Link>
-            {offers.map((offer, index) => (
-              <div className="ml-10" key={index}>
-                {offer.academy && (
-                  <div>
-                    <section className="mb-4">
-                      <h1 className="font-metropolis font-extrabold text-6xl flex flex-col leading-none text-white tracking-tighter text-glow uppercase">
-                        {offer.academy.title} <br />
-                        {offer.academy.subtitle}
-                      </h1>
-                    </section>
-                    <section className="pr-24">
-                      {Object.values(offer.academy.paragraph).map(
-                        (paragraph, idx) => (
-                          <p
-                            key={idx}
-                            className="font-jost text-base text-white mb-4 text-justify"
-                          >
-                            {paragraph}
-                          </p>
-                        )
-                      )}
-                      <ul>
-                        {Object.values(offer.academy.list).map((item, idx) => (
-                          <li
-                            key={idx}
-                            className="font-jost text-base text-white text-justify list-disc ml-8"
-                          >
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+            <div className="ml-10">
+              <div>
+                <section className="mb-4">
+                  <h1 className="font-metropolis font-extrabold text-6xl flex flex-col leading-none text-white tracking-tighter text-glow uppercase">
+                    {offer.title} <br />
+                    {offer.subtitle}
+                  </h1>
+                </section>
+                <section className=" pr-24">
+                  {offer.paragraph && (
+                    <div>
+                      {Object.values(offer.paragraph).map((paragraph, idx) => (
+                        <p
+                          key={idx}
+                          className="font-jost text-base text-white mb-4 text-justify"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                      {Object.values(offer.list).map((item, idx) => (
+                        <li
+                          key={idx}
+                          className="font-jost text-base text-white text-justify list-disc"
+                        >
+                          {item}
+                        </li>
+                      ))}
                       <p className="font-jost text-base text-white mb-4 text-justify mt-4">
-                        {offer.academy.end}
+                        {offer.end}
                       </p>
-                    </section>
-                  </div>
-                )}
+                    </div>
+                  )}
+                </section>
               </div>
-            ))}
+            </div>
             <motion.section
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
               className="w-max p-4 font-jost text-white mb-4 border ml-10"
             >
-              <Link to="/">MEET THE INTERNS</Link>
+              <Link to="/">COME ON BOARD NOW</Link>
             </motion.section>
           </section>
 
