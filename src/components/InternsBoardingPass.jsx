@@ -13,7 +13,7 @@ const InternsBoardingPass = ({ internData, yearData }) => {
             delay: 0.8,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          src={internData.image}
+          src={internData.boardingPass}
           alt={internData.name}
           className="w-full"
         />
