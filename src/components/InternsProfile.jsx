@@ -56,7 +56,9 @@ const InternsProfile = ({ batches, year }) => {
                 transition: { delay: 0.3, duration: 0.3, ease: "easeInOut" },
               }}
               className={`shadow-inner-crewmates  rounded-3xl flex flex-col justify-start h-60  p-4 w-[600px] ${
-                index === activeCard ? "bg-gradient-red" : "bg-gradient-purple"
+                index === activeCard
+                  ? "bg-gray-500 bg-opacity-90"
+                  : "bg-gray-500 bg-opacity-50"
               }`}
             >
               <div key={index} className="w-full">
@@ -89,7 +91,7 @@ const InternsProfile = ({ batches, year }) => {
                                 cursor: "pointer",
                                 opacity: 1,
                               }}
-                              src="https://randomuser.me/api/portraits/men/9.jpg"
+                              src={intern.image}
                               alt={intern.name}
                             />
                           </Link>

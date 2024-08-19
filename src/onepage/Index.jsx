@@ -90,7 +90,7 @@ const Index = () => {
       <div id="offers">
         <Offers />
       </div>
-      <div id="radio-us">
+      <div id="radio">
         <RadioUs />
       </div>
     </div>
