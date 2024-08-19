@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
-import offers from "../json/offers.json";
 import { motion } from "framer-motion";
 import internsData from "../json/internship.json";
 import InternsProfile from "../components/InternsProfile";
