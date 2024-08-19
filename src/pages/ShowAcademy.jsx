@@ -44,7 +44,7 @@ const ShowAcademy = () => {
                   </h1>
                 </section>
                 <section className=" pr-24">
-                  {(offer.paragraph && (
+                  {offer.paragraph && (
                     <div>
                       {Object.values(offer.paragraph).map((paragraph, idx) => (
                         <p
@@ -66,19 +66,7 @@ const ShowAcademy = () => {
                         {offer.end}
                       </p>
                     </div>
-                  )) ||
-                    (offer.list && (
-                      <ul>
-                        {Object.values(offer.list).map((listItem, index) => (
-                          <li
-                            key={index}
-                            className="text-white font-jost text-base text-left leading-none"
-                          >
-                            {listItem}
-                          </li>
-                        ))}
-                      </ul>
-                    ))}
+                  )}
                 </section>
               </div>
             </div>
@@ -89,7 +77,9 @@ const ShowAcademy = () => {
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
               className="w-max p-4 font-jost text-white mb-12 border  ml-10"
             >
-              <Link to="/ootb/academy/meet-the-interns">MEET THE INTERNS</Link>
+              <Link to="/ootb/academy/meet-the-interns" state={{ offer }}>
+                MEET THE INTERNS
+              </Link>
             </motion.section>
           </section>
           <section className="relative w-1/2 flex flex-col px-12 h-[600px] mx-auto mt-36 items-center justify-center">

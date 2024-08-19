@@ -78,7 +78,6 @@ const CareerDetails = () => {
             <div className="mb-4 font-jost text-white text-base">
               <h1 className="mb-4">JOB DESCRIPTION</h1>
               <p>We&apos;re looking for:</p>
-
               {career.qualifications && (
                 <ol className="list-disc ml-12">
                   {Object.values(career.qualifications).map((quali, index) => (
