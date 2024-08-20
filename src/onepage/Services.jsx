@@ -59,7 +59,7 @@ const Services = () => {
                   <img
                     src={service.thumbnail}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full z-0 rounded-2xl"
+                    className="absolute inset-0 w-full h-full z-0 rounded-2xl object-cover"
                   />
                   <h2 className="font-metropolis font-bold text-white text-2xl flex flex-col leading-none z-10">
                     {service.title}
