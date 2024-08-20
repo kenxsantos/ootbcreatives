@@ -25,7 +25,7 @@
     },
     "images": {
       "1": "/assets/eventsmanagement/rally.png",
-      "2/": "/assets/eventsmanagement/rally.png"
+      "2": "/assets/eventsmanagement/rally.png"
     }
   },
   {
@@ -55,7 +55,7 @@
     "heading": {
       "text": "Brand Strategy & Marketing that Fuels Growth",
       "highlight": "Fuels Growth"
-    }, 
+    },
     "subheading": "We got it covered!",
     "thumbnail": "/assets/branding/thumbnail.png",
     "description": {
@@ -68,21 +68,61 @@
       "3": "Integrated Marketing Communications",
       "4": "Digital Marketing",
       "5": "Website Design & Development"
+    },
+    "images": {
+      "1": {
+        "1": "/assets/branding/market-research/mr-1",
+        "2": "/assets/branding/market-research/mr-2",
+        "3": "/assets/branding/market-research/mr-3",
+        "4": "/assets/branding/market-research/mr-4",
+        "5": "/assets/branding/market-research/mr-5",
+        "6": "/assets/branding/market-research/mr-6",
+        "7": "/assets/branding/market-research/mr-7",
+        "8": "/assets/branding/market-research/mr-8"
+      },
+      "2": {
+        "1": "/assets/branding/branding-development/asian-harm-branding.png",
+        "2": "/assets/branding/branding-development/bridgestone-brand.png",
+        "3": "/assets/branding/branding-development/george-brand.png"
+      },
+      "3": {
+        "1": "/assets/branding/integrated-marketing-communications/ev-1",
+        "2": "/assets/branding/integrated-marketing-communications/ev-2",
+        "3": "/assets/branding/integrated-marketing-communications/imc-1",
+        "4": "/assets/branding/integrated-marketing-communications/imc-2",
+        "5": "/assets/branding/integrated-marketing-communications/imc-3",
+        "6": "/assets/branding/integrated-marketing-communications/imc-4",
+        "7": "/assets/branding/integrated-marketing-communications/imc-5",
+        "8": "/assets/branding/integrated-marketing-communications/imc-6",
+        "9": "/assets/branding/integrated-marketing-communications/imc-7",
+        "10": "/assets/branding/integrated-marketing-communications/imc-8",
+        "11": "/assets/branding/integrated-marketing-communications/imc-9"
+      },
+      "4": {
+        "1": "/assets/branding/digital-marketing/dgm-1",
+        "2": "/assets/branding/digital-marketing/dgm-2",
+        "3": "/assets/branding/digital-marketing/dgm-3",
+        "4": "/assets/branding/digital-marketing/dgm-4",
+        "5": "/assets/branding/digital-marketing/dgm-5",
+        "6": "/assets/branding/digital-marketing/dgm-6",
+        "7": "/assets/branding/digital-marketing/dgm-7",
+        "8": "/assets/branding/digital-marketing/dgm-8"
+      }
     }
   },
   {
     "id": 4,
     "title": "COMMERCIAL",
     "subtitle": "PRODUCTION",
-      "heading": {
-        "text": "Bring Your Vision to Life.",
-        "highlight": "Vision"
-      },
+    "heading": {
+      "text": "Bring Your Vision to Life.",
+      "highlight": "Vision"
+    },
     "subheading": "We got it covered!",
     "thumbnail": "/assets/commercial/thumbnail.jpg",
     "description": {
       "1": "Your commercial isn't just an advertisement; it's a story, a moment, an experience. Our passion is all about transforming your ideas into captivating visuals that leave a lasting impact. Our team of experienced directors, producers, and creatives will guide you through every step of the production process, from concept development and scriptwriting to filming, editing, and post-production. We ensure your commercial is not only visually stunning but also strategically aligned with your brand's message and goals. "
-    },  
+    },
     "link": "production",
     "offers": {
       "1": "Script Writing",
