@@ -91,7 +91,7 @@ const InternsProfile = ({ batches, year }) => {
                                 cursor: "pointer",
                                 opacity: 1,
                               }}
-                              src={intern.image}
+                              src={intern.profile}
                               alt={intern.name}
                             />
                           </Link>

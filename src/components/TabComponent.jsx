@@ -51,7 +51,7 @@ const TabComponent = ({ yearData }) => {
 
   return (
     <div className="relative flex flex-col overflow-auto w-full rounded-3xl px-12 items-center justify-center h-full">
-      <div className="relative flex flex-col w-full h-full  overflow-hidden ">
+      <div className="relative flex flex-col w-full h-full ">
         <Swiper
           ref={swiperRef}
           spaceBetween={10}
@@ -61,7 +61,7 @@ const TabComponent = ({ yearData }) => {
           slidesPerGroup={3}
           centerInsufficientSlides={true}
           initialSlide={initialSlideIndex >= 0 ? initialSlideIndex : 0}
-          className="w-full h-full p-2 mt-6"
+          className="w-full h-full py-2 mt-6 "
           pagination={{ clickable: true, dynamicBullets: true }}
           modules={[Mousewheel, Pagination, Navigation]}
           navigation={{
@@ -76,7 +76,7 @@ const TabComponent = ({ yearData }) => {
             return (
               <SwiperSlide
                 key={internIndex}
-                className="flex items-center justify-center w-24 h-24 cursor-pointer"
+                className="flex items-center justify-center w-24 h-[85px] cursor-pointer mb-4"
               >
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -90,7 +90,7 @@ const TabComponent = ({ yearData }) => {
                     }/batch-${activeTab}/${formattedName(internData.name)}`}
                   >
                     <img
-                      src="https://randomuser.me/api/portraits/men/73.jpg"
+                      src={internData.profile}
                       alt={internData.name}
                       className={`w-full h-full object-cover ${
                         isSelected ? "opacity-100" : "opacity-50"
