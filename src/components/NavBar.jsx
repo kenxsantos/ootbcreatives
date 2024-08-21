@@ -8,7 +8,6 @@ const NavBar = () => {
   const [isScrolling, setIsScrolling] = useState(false);
 
   const navLinks = [
-    { id: "landing" },
     { name: "SERVICES", id: "services" },
     { name: "CLIENTS", id: "clients" },
     { name: "CREWMATES", id: "crewmates" },
@@ -47,7 +46,7 @@ const NavBar = () => {
   }, [blurAnimation]);
 
   return (
-    <nav className="w-full fixed top-0 z-40 h-28 overflow-visible">
+    <nav className="w-full fixed top-0 h-28 overflow-visible z-[80]">
       <motion.div
         className="mx-auto max-w-screen-2xl px-12 h-24"
         animate={blurAnimation}
@@ -61,31 +60,33 @@ const NavBar = () => {
               spy={true}
               smooth={true}
               duration={800}
-              offset={0} // Adjust this offset according to your navbar height
+              offset={0}
               onSetActive={() => setActiveLink(link.id)}
-              className="relative flex flex-col items-center justify-center h-24 w-[150px] cursor-pointer"
+              className="relative flex  items-center justify-evenly h-24 w-[150px] cursor-pointer"
             >
               <motion.span
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="s hover:text-glow -ml-20"
+                className="hover:text-glow "
               >
                 {link.name}
               </motion.span>
-              {activeLink === link.id && activeLink !== "landing" && (
-                <motion.img
-                  src="/assets/others/lineflare.png"
-                  alt="flare"
-                  className="w-44 absolute mt-12 -ml-20"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 0.8,
-                    delay: 0.5,
-                    ease: [0, 0.71, 0.2, 1.01],
-                  }}
-                />
-              )}
+              {activeLink === link.id &&
+                activeLink !== "landing" &&
+                activeLink !== "academy" && (
+                  <motion.img
+                    src="/assets/others/lineflare.png"
+                    alt="flare"
+                    className="w-44 absolute mt-12"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.5,
+                      ease: [0, 0.71, 0.2, 1.01],
+                    }}
+                  />
+                )}
             </ScrollLink>
           ))}
         </div>

@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
 import ClientForm from "../components/ClientForm";
 import CrewmatesForm from "../components/CrewmatesForm";
 import ExplorersForm from "../components/ExplorersForm";
-import { motion } from "framer-motion";
 const RadioUs = () => {
   const [activeOption, setActiveOption] = useState("Client");
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 3000) {
+        controls.start({ y: 0 }); // Adjust the y value and opacity
+      } else {
+        controls.start({ y: -360 }); // Initial state when at the top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [controls]);
 
   const renderForm = () => {
     switch (activeOption) {
@@ -23,12 +39,16 @@ const RadioUs = () => {
     <div className="max-w-screen-2xl bg-clear-planets h-screen mx-auto bg-cover">
       <div className="w-full mx-auto pt-20 flex justify-center items-center h-full">
         <section className="w-full flex">
-          <div className="w-1/2 flex items-center justify-end">
+          <motion.div
+            animate={controls}
+            transition={{ duration: 0.3 }}
+            className="w-1/2 flex items-center justify-end"
+          >
             <h1 className="font-metropolis text-white font-extrabold text-glow text-right uppercase flex flex-col">
               <span className="text-7xl">Let's Go </span>
               <span className="text-6xl">Interstellar!</span>
             </h1>
-          </div>
+          </motion.div>
           <div className="w-1/2 flex flex-col px-12 gap-6">
             <div className="w-full h-16 flex gap-4 justify-center">
               <div>

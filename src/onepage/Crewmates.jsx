@@ -1,11 +1,34 @@
-import React from "react";
 import CrewmatesCard from "../components/CrewmatesCard";
-
+import { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
 const Crewmates = () => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 1500) {
+        controls.start({ y: 0 });
+      } else {
+        controls.start({ y: -130 });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [controls]);
+
   return (
-    <div className=" max-w-screen-2xl bg-blurred-planets h-full mx-auto bg-cover">
+    <div className=" max-w-screen-2xl bg-blurred-planets h-screen mx-auto bg-cover">
       <div className="w-full mx-auto pt-28">
-        <section className="mx-auto text-center flex flex-col justify-center">
+        <motion.section
+          animate={controls}
+          transition={{ duration: 0.3 }}
+          className="mx-auto text-center flex flex-col justify-center"
+        >
           <h1 className="font-metropolis text-white text-3xl font-bold mx-auto text-center">
             It&apos;s always a never ending fun journey with OOTB!
           </h1>
@@ -14,8 +37,8 @@ const Crewmates = () => {
             <span className="text-orange ">out-of-the-box witteam</span> and
             discover how far we can go.
           </h2>
-        </section>
-        <section className="mt-12 w-full">
+        </motion.section>
+        <section className="w-full">
           <CrewmatesCard />
         </section>
       </div>
