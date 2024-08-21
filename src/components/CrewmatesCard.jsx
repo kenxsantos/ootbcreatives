@@ -28,12 +28,8 @@ const CrewmatesCard = () => {
         mousewheel={true}
         centerInsufficientSlides={true}
         spaceBetween={0}
-        pagination={{
-          clickable: true,
-          el: ".custom-pagination",
-        }}
         modules={[Mousewheel, Pagination, Navigation]}
-        className="h-full relative w-full pt-28 pb-28"
+        className="h-full relative w-full pt-24 pb-28"
         onSlideChange={handleSlideChange}
       >
         {crewmates.map((crewmate, index) => (
@@ -117,12 +113,6 @@ const CrewmatesCard = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <div className="relative bottom-8 flex items-center justify-center mt-16 ">
-        <div className="flex  justify-evenly gap-28 items-center justify-center">
-          <div className="custom-pagination flex justify-center w-full"></div>
-        </div>
-      </div>
     </div>
   );
 };
