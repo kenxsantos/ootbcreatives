@@ -71,14 +71,14 @@
     },
     "images": {
       "1": {
-        "1": "/assets/branding/market-research/mr-1",
-        "2": "/assets/branding/market-research/mr-2",
-        "3": "/assets/branding/market-research/mr-3",
-        "4": "/assets/branding/market-research/mr-4",
-        "5": "/assets/branding/market-research/mr-5",
-        "6": "/assets/branding/market-research/mr-6",
-        "7": "/assets/branding/market-research/mr-7",
-        "8": "/assets/branding/market-research/mr-8"
+        "1": "/assets/branding/market-research/mr-1.png",
+        "2": "/assets/branding/market-research/mr-2.png",
+        "3": "/assets/branding/market-research/mr-3.png",
+        "4": "/assets/branding/market-research/mr-4.png",
+        "5": "/assets/branding/market-research/mr-5.png",
+        "6": "/assets/branding/market-research/mr-6.png",
+        "7": "/assets/branding/market-research/mr-7.png",
+        "8": "/assets/branding/market-research/mr-8.png"
       },
       "2": {
         "1": "/assets/branding/branding-development/asian-harm-branding.png",
@@ -86,27 +86,32 @@
         "3": "/assets/branding/branding-development/george-brand.png"
       },
       "3": {
-        "1": "/assets/branding/integrated-marketing-communications/ev-1",
-        "2": "/assets/branding/integrated-marketing-communications/ev-2",
-        "3": "/assets/branding/integrated-marketing-communications/imc-1",
-        "4": "/assets/branding/integrated-marketing-communications/imc-2",
-        "5": "/assets/branding/integrated-marketing-communications/imc-3",
-        "6": "/assets/branding/integrated-marketing-communications/imc-4",
-        "7": "/assets/branding/integrated-marketing-communications/imc-5",
-        "8": "/assets/branding/integrated-marketing-communications/imc-6",
-        "9": "/assets/branding/integrated-marketing-communications/imc-7",
-        "10": "/assets/branding/integrated-marketing-communications/imc-8",
-        "11": "/assets/branding/integrated-marketing-communications/imc-9"
+        "1": "/assets/branding/integrated-marketing-communications/ev-1.png",
+        "2": "/assets/branding/integrated-marketing-communications/ev-2.png",
+        "3": "/assets/branding/integrated-marketing-communications/imc-1.png",
+        "4": "/assets/branding/integrated-marketing-communications/imc-2.png",
+        "5": "/assets/branding/integrated-marketing-communications/imc-3.png",
+        "6": "/assets/branding/integrated-marketing-communications/imc-4.png",
+        "7": "/assets/branding/integrated-marketing-communications/imc-5.png",
+        "8": "/assets/branding/integrated-marketing-communications/imc-6.png",
+        "9": "/assets/branding/integrated-marketing-communications/imc-7.png",
+        "10": "/assets/branding/integrated-marketing-communications/imc-8.png",
+        "11": "/assets/branding/integrated-marketing-communications/imc-9.png"
       },
       "4": {
-        "1": "/assets/branding/digital-marketing/dgm-1",
-        "2": "/assets/branding/digital-marketing/dgm-2",
-        "3": "/assets/branding/digital-marketing/dgm-3",
-        "4": "/assets/branding/digital-marketing/dgm-4",
-        "5": "/assets/branding/digital-marketing/dgm-5",
-        "6": "/assets/branding/digital-marketing/dgm-6",
-        "7": "/assets/branding/digital-marketing/dgm-7",
-        "8": "/assets/branding/digital-marketing/dgm-8"
+        "1": "/assets/branding/digital-marketing/dgm-1.png",
+        "2": "/assets/branding/digital-marketing/dgm-2.png",
+        "3": "/assets/branding/digital-marketing/dgm-3.png",
+        "4": "/assets/branding/digital-marketing/dgm-4.png",
+        "5": "/assets/branding/digital-marketing/dgm-5.png",
+        "6": "/assets/branding/digital-marketing/dgm-6.png",
+        "7": "/assets/branding/digital-marketing/dgm-7.png",
+        "8": "/assets/branding/digital-marketing/dgm-8.png"
+      },
+      "5": {
+        "1": "/assets/branding/web-development/web-1.png",
+        "2": "/assets/branding/web-development/web-2.png",
+        "3": "/assets/branding/web-development/web-3.png"
       }
     }
   },
