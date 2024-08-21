@@ -19,7 +19,7 @@ const Index = () => {
           scale: 0.5,
           opacity: 1,
           x: -40,
-          y: -145,
+          y: -100,
           transition: { duration: 0.3 },
         });
       } else {
@@ -55,7 +55,7 @@ const Index = () => {
   return (
     <div className="relative max-w-screen-2xl mx-auto">
       <motion.div
-        className="z-50 fixed ml-12 mt-28 cursor-pointer"
+        className="z-[80] fixed ml-12 mt-20 cursor-pointer"
         animate={logoAnimation}
         initial={{ scale: 1, opacity: 1 }}
       >
@@ -66,11 +66,11 @@ const Index = () => {
           offset={0}
           onSetActive={() => handleSetActiveLink("landing")}
         >
-          {/* <img
+          <img
             src="/assets/logo/OOTBLogoWhite.png"
             alt="logo"
-            className="w-48"
-          /> */}
+            className="w-40"
+          />
         </ScrollLink>
       </motion.div>
 
