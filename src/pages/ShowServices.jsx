@@ -100,8 +100,8 @@ const ShowServices = () => {
                         id={service.offers[groupKey]
                           .replace(/\s+/g, "")
                           .toLowerCase()}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: -10 }}
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 10 }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                       >
                         <h3 className="text-xl uppercase font-bold mb-4 text-white text-center font-jost">
