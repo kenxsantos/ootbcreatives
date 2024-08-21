@@ -42,9 +42,11 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className={`relative max-w-screen-2xl mx-auto bg-cover ${bgClass}`}>
-      <div className="relative max-w-screen-2xl mx-auto z-20 p-12">
-        <div className="relative z-30">
+    <div
+      className={`relative max-w-screen-2xl mx-auto bg-cover h-full ${bgClass}`}
+    >
+      <div className="relative max-w-screen-2xl mx-auto z-20  px-12 pb-12 h-full">
+        <div className="relative z-30  mb-12 ">
           <section className="mb-4">
             <h1 className="pt-60 text-left text-[65px] leading-none text-white font-metropolis font-bold tracking-tighter">
               <span>BOLD IDEAS</span>

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import services from "../json/services.json";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 const Services = () => {
   const defaultService =
@@ -12,21 +12,37 @@ const Services = () => {
     defaultService.thumbnail
   );
 
+  const controls = useAnimation();
+
   const handleMouseEnter = (service) => {
     setSelectedService(service);
     setBackgroundImage(service.thumbnail);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      controls.start({ y: -460 });
+      if (scrollY === 0) {
+      } else {
+        controls.start({ y: 0 });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [controls]);
+
   return (
     <div
-      className="relative pt-48 h-full max-w-screen-2xl mx-auto px-12 shadow-inner-overlay"
+      className="relative pt-48 h-full max-w-screen-2xl mx-auto px-12 shadow-inner-overlay h-screen overflow-visible"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
       }}
     >
       <div className="relative z-30">
-        <section className="mb-4 h-48">
+        <motion.section className="h-full mb-20">
           <h1 className="text-left text-[65px] leading-none text-white font-metropolis font-bold tracking-tighter">
             {selectedService.title}
             <br />
@@ -35,8 +51,12 @@ const Services = () => {
           <p className="font-jost text-base text-white">
             {selectedService.heading.text}
           </p>
-        </section>
-        <section className="mb-12">
+        </motion.section>
+        <motion.section
+          className="mb-12"
+          animate={controls}
+          transition={{ duration: 0.3 }}
+        >
           <div>
             <h1 className="font-jost text-white">
               <span className="mr-8">SERVICES</span>
@@ -59,7 +79,7 @@ const Services = () => {
                   <img
                     src={service.thumbnail}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full z-0 rounded-2xl"
+                    className="absolute inset-0 w-full h-full z-0 rounded-2xl object-cover"
                   />
                   <h2 className="font-metropolis font-bold text-white text-2xl flex flex-col leading-none z-10">
                     {service.title}
@@ -71,7 +91,7 @@ const Services = () => {
               </Link>
             ))}
           </div>
-        </section>
+        </motion.section>
       </div>
     </div>
   );

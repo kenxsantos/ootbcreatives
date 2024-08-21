@@ -1,8 +1,9 @@
 import ClientsOnboard from "../components/ClientsOnboard";
 import RecentlyAdded from "../components/RecentlyAdded";
+
 const Clients = () => {
   return (
-    <div className=" max-w-screen-2xl bg-blurred-planets h-full mx-auto bg-cover">
+    <div className="max-w-screen-2xl bg-blurred-planets h-screen mx-auto bg-cover overflow-visible">
       <div className="w-full mx-auto pt-28 flex flex-col px-12">
         <section className="mx-auto text-center flex flex-col justify-center">
           <h1 className="font-metropolis text-white text-4xl font-bold">
@@ -17,11 +18,6 @@ const Clients = () => {
         </section>
         <section className="mt-10">
           <ClientsOnboard />
-        </section>
-        <section>
-          <h1 className="font-metropolis text-white text-3xl font-bold mx-auto my-20 text-center">
-            It&apos;s always a never ending fun journey with OOTB!
-          </h1>
         </section>
       </div>
     </div>

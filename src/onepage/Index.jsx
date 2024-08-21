@@ -8,7 +8,6 @@ import { Link as ScrollLink } from "react-scroll";
 import Crewmates from "./Crewmates";
 import Offers from "./Offers";
 import RadioUs from "./RadioUs";
-
 const Index = () => {
   const [activeLink, setActiveLink] = useState(null);
   const logoAnimation = useAnimation();
@@ -67,30 +66,34 @@ const Index = () => {
           offset={0}
           onSetActive={() => handleSetActiveLink("landing")}
         >
-          <img
+          {/* <img
             src="/assets/logo/OOTBLogoWhite.png"
             alt="logo"
             className="w-48"
-          />
+          /> */}
         </ScrollLink>
       </motion.div>
+
       <NavBar setActiveLink={handleSetActiveLink} />
+
       <div id="landing">
         <Landing />
       </div>
-      <div id="services">
+      <div id="services" className="relative z-30">
         <Services />
       </div>
-      <div id="clients">
+      <div id="clients" className="relative z-40">
         <Clients />
       </div>
-      <div id="crewmates">
+      <div id="crewmates" className="relative z-50">
         <Crewmates />
       </div>
-      <div id="offers">
+      <div id="academy" className="relative z-[60]">
+        <div id="careers"></div>
+        <div id="resources"></div>
         <Offers />
       </div>
-      <div id="radio">
+      <div id="radio" className="relative z-[70]">
         <RadioUs />
       </div>
     </div>
