@@ -4,9 +4,13 @@ import { IoIosArrowBack } from "react-icons/io";
 import services from "../json/services.json";
 import { useParams, Link } from "react-router-dom";
 import HighlightText from "../components/HighlightText";
+import { scroller } from "react-scroll";
+import { motion } from "framer-motion";
+
 const ShowServices = () => {
-  const { slug } = useParams(); // Access the slug sfrom the URL
+  const { slug } = useParams(); // Access the slug from the URL
   const service = services.find((p) => p.link === slug);
+
   if (!service) {
     return <div>Project not found</div>;
   }
@@ -45,18 +49,19 @@ const ShowServices = () => {
                   <span className="text-purple">{service.subtitle}</span>
                 </h1>
               </section>
+
               <section>
                 {service.offers && (
                   <ol className="list-decimal-none">
                     {Object.values(service.offers).map((offer, index) => (
-                      <Link
+                      <a
                         key={index}
-                        to={`#${offer.replace(/\s+/g, "").toLowerCase()}`}
+                        href={`#${offer.replace(/\s+/g, "").toLowerCase()}`} // Use href for in-page linking
                       >
-                        <li className="font-jost text-white transition-all duration-300 ease-in-out  hover:text-glow hover:cursor-pointer">
+                        <li className="font-jost text-white transition-all duration-300 ease-in-out hover:text-glow hover:cursor-pointer">
                           {offer}
                         </li>
-                      </Link>
+                      </a>
                     ))}
                   </ol>
                 )}
@@ -72,7 +77,12 @@ const ShowServices = () => {
             </div>
           </section>
           <section className="relative w-1/2 flex flex-col pt-36 overflow-auto h-[630px] hide-scrollbar">
-            <div className="px-8">
+            <motion.div
+              className="px-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
               <div className="font-metropolis text-2xl font-bold text-white text-center mb-4">
                 <HighlightText
                   text={service.heading.text}
@@ -80,38 +90,37 @@ const ShowServices = () => {
                   highlightClassName="text-orange"
                 />
               </div>
-              <div className="bg-opacity-30 bg-gray-50 px-8 pt-4 pb-4 rounded-xl">
-                {service.description &&
-                  Object.values(service.description).map((desc, index) => (
-                    <p
-                      key={index}
-                      className="font-jost text-white text-sm  text-justify"
-                    >
-                      {desc}
-                    </p>
-                  ))}
-              </div>
-              <div className="w-full mt-8 mb-4 rounded-xl ">
+              <div className="w-full mt-8 mb-4 rounded-xl">
                 {service.images &&
-                  Object.values(service.images).map((img, index) => (
-                    <div
-                      key={index}
-                      className=" border border-orange mb-4 rounded-xl"
-                    >
-                      <div>
-                        <img src={img} alt="" className="rounded-t-xl" />
-                      </div>
-                      <div className="bg-opacity-80 bg-gray-700 px-8 pt-4 pb-4 rounded-b-xl">
-                        <p className="font-jost text-white text-sm  text-justify">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Ducimus itaque repudiandae ullam provident
-                          officiis accusantium minima id eum nisi maxime?
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+                  Object.entries(service.images).map(
+                    ([groupKey, imageGroup], groupIndex) => (
+                      <motion.div
+                        key={groupIndex}
+                        className="mb-12 border-b-4 border-orange pb-12"
+                        id={service.offers[groupKey]
+                          .replace(/\s+/g, "")
+                          .toLowerCase()}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: -10 }}
+                        transition={{ duration: 0.8, ease: "easeInOut" }}
+                      >
+                        <h3 className="text-xl uppercase font-bold mb-4 text-white text-center font-jost">
+                          {service.offers[groupKey]}
+                        </h3>
+                        {Object.values(imageGroup).map((img, imgIndex) => (
+                          <div key={imgIndex} className="rounded-xl mb-4">
+                            <img
+                              src={img}
+                              alt={`Image ${imgIndex + 1}`}
+                              className="rounded-xl"
+                            />
+                          </div>
+                        ))}
+                      </motion.div>
+                    )
+                  )}
               </div>
-            </div>
+            </motion.div>
             <div className="sticky w-full bottom-0 pointer-events-none">
               <img
                 src="/assets/others/BottomShadow.png"

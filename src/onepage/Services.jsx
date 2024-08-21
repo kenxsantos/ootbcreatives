@@ -22,7 +22,7 @@ const Services = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      controls.start({ y: -460 });
+      controls.start({ y: -500 });
       if (scrollY === 0) {
       } else {
         controls.start({ y: 0 });
