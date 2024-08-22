@@ -8,7 +8,7 @@ const ReadMoreReadLess = () => {
   };
 
   return (
-    <div className="text-left h-64 w-[550px] ">
+    <div className="text-left h-64 xs:text-xs xs:w-[250px] sm:w-[350px] md:w-[550px] ">
       <p className="text-left font-jost text-white text-justify">
         OUT OF THE BOX CREATIVES is a 360 creative firm that specializes in PR
         and marketing, we&apos;re not just about campaigns

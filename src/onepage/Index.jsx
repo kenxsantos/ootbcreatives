@@ -55,7 +55,7 @@ const Index = () => {
   return (
     <div className="relative max-w-screen-2xl mx-auto">
       <motion.div
-        className="z-[80] fixed ml-12 mt-20 cursor-pointer"
+        className="z-[80] fixed xs:ml-4 xs:mt-20 md:ml-12 md:mt-20 cursor-pointer"
         animate={logoAnimation}
         initial={{ scale: 1, opacity: 1 }}
       >
@@ -69,7 +69,7 @@ const Index = () => {
           <img
             src="/assets/logo/OOTBLogoWhite.png"
             alt="logo"
-            className="w-40"
+            className="xs:w-24 md:w-40"
           />
         </ScrollLink>
       </motion.div>
