@@ -5,6 +5,14 @@ export default {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      screens: {
+        xs: "390px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       fontFamily: {
         metropolis: ["Metropolis", "sans-serif"],
         jost: ["Jost"],
@@ -21,6 +29,8 @@ export default {
           "linear-gradient(90deg, rgba(114,64,130,1) 26%, rgba(155,120,164,1) 100%)",
         "gradient-white":
           "linear-gradient(0deg, rgba(255,255,255,0.3757878151260504) 0%, rgba(255,255,255,1) 100%)",
+        "gradient-navbar":
+          "linear-gradient(90deg, rgba(166,103,209,0) 0%, rgba(0,212,255,1) 100%)",
       },
       colors: {
         orange: "#F38920",
