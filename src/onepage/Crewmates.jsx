@@ -27,7 +27,7 @@ const Crewmates = () => {
         <motion.section
           animate={controls}
           transition={{ duration: 0.3 }}
-          className="mx-auto text-center flex flex-col justify-center"
+          className="mx-auto text-center flex flex-col justify-center px-2"
         >
           <h1 className="font-metropolis text-white text-3xl font-bold mx-auto text-center">
             It&apos;s always a never ending fun journey with OOTB!

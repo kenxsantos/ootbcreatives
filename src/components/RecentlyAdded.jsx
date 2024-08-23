@@ -63,7 +63,7 @@ const RecentlyAdded = () => {
               <motion.div
                 key={idx}
                 onClick={() => openModal(recentlyAddedItem)}
-                className="relative h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center hover:cursor-pointer"
+                className="relative xs:w-[250px] xs:h-36 md:h-36 md:w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center hover:cursor-pointer"
                 whileTap={{ scale: 1.1 }}
                 whileHover={{
                   scale: 1.1,

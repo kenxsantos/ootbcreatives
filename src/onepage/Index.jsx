@@ -69,7 +69,7 @@ const Index = () => {
           <img
             src="/assets/logo/OOTBLogoWhite.png"
             alt="logo"
-            className="xs:w-24 md:w-40"
+            className="xs:w-20 sm:w-32 md:w-44 md:-ml-8 xl:ml-4"
           />
         </ScrollLink>
       </motion.div>
