@@ -48,36 +48,65 @@ const NavBar = () => {
     };
   }, [blurAnimation]);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="w-full fixed top-0 h-28 overflow-visible z-[80]">
-      <motion.div
-        className="mx-auto max-w-screen-2xl md:px-12 h-24 "
-        animate={blurAnimation}
-        initial={{ backdropFilter: "blur(0px)" }}
-      >
-        <div
-          className={`${
-            isMenuOpen ? "xs:bg-gradient-navbar" : "bg-transparent"
-          } text-white flex justify-end font-jost text-md flex-col md:bg-transparent`}
-        >
-          <div className="flex justify-end text-right md:hidden border p-4">
+    <nav className="w-full fixed left-0 top-0 h-28 overflow-visible z-[80]">
+      <div className="mx-auto max-w-screen-2xl md:px-12 h-24">
+        <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent">
+          <div className="flex justify-end text-right xl:hidden p-4">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={toggleMenu}
               className="text-white focus:outline-none flex justify-end"
             >
-              {isMenuOpen ? (
-                <IoIosClose className="w-8 h-8" />
-              ) : (
-                <RxHamburgerMenu className="w-8 h-8" />
-              )}
+              {isMenuOpen ? "" : <RxHamburgerMenu className="w-8 h-8" />}
             </button>
           </div>
 
-          {/* Navigation Links */}
+          {isMenuOpen && (
+            <motion.div
+              className="fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-8 xl:hidden z-40"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <button
+                onClick={closeMenu}
+                className="absolute top-6 right-6 text-white text-3xl focus:outline-none"
+              >
+                <IoIosClose size={40} />
+              </button>
+
+              {navLinks.map((link) => (
+                <ScrollLink
+                  key={link.id}
+                  to={link.id}
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  offset={0}
+                  onSetActive={() => setActiveLink(link.id)}
+                  onClick={closeMenu} // Close the menu after clicking a link
+                  className="text-2xl text-white hover:text-glow transition-all duration-300 cursor-pointer"
+                >
+                  {link.name}
+                </ScrollLink>
+              ))}
+            </motion.div>
+          )}
+
+          {/* Navigation Links (Visible on larger screens) */}
           <div
             className={`${
-              isMenuOpen ? "block" : "hidden"
-            } w-full md:flex  md:w-auto  md:justify-center`}
+              isMenuOpen ? "hidden" : "hidden xl:flex space-x-8"
+            } w-full md:justify-center`}
           >
             {navLinks.map((link) => (
               <ScrollLink
@@ -88,12 +117,12 @@ const NavBar = () => {
                 duration={800}
                 offset={0}
                 onSetActive={() => setActiveLink(link.id)}
-                className="relative flex items-center justify-end h-12 md:h-24 md:w-[150px] cursor-pointer mt-4 md:mt-0 xs:px-12"
+                className="relative flex items-center justify-center p-8 h-12 mt-4"
               >
                 <motion.span
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  className="hover:text-glow"
+                  className="hover:text-glow cursor-pointer"
                 >
                   {link.name}
                 </motion.span>
@@ -117,7 +146,7 @@ const NavBar = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
     </nav>
   );
 };
