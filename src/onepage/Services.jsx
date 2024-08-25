@@ -35,15 +35,15 @@ const Services = () => {
 
   return (
     <div
-      className="relative h-full max-w-screen-2xl mx-auto  shadow-inner-overlay h-full overflow-visible xs:px-3 xl:px-12 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-60"
+      className="relative h-full w-screen mx-auto  shadow-inner-overlay  overflow-visible xs:px-3 xl:px-12 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-60"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
       }}
     >
-      <div className="relative z-30">
-        <motion.section className="h-full mb-20">
-          <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
+      <div className="relative z-30 flex flex-col">
+        <motion.section className="h-full mb-40">
+          <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
             {selectedService.title}
             <br />
             {selectedService.subtitle}
@@ -58,19 +58,19 @@ const Services = () => {
           transition={{ duration: 0.3 }}
         >
           <div>
-            <h1 className="font-jost text-white xs:text-xs sm:text-sm md:text-base">
+            <h1 className="font-jost text-white xs:text-xs sm:text-sm md:text-base 3xl:text-xl">
               <span className="xs:mr-4 xl:mr-8">SERVICES</span>
               <span>Let&apos;s discover how far your business can go!</span>
             </h1>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 mt-4 mb-4">
+          <div className="flex flex-wrap justify-center gap-4 mt-12 mb-12">
             {services.map((service) => (
               <Link to={`/services/${service.link}`} key={service.id}>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
                   onMouseEnter={() => handleMouseEnter(service)}
-                  className={`relative flex w-full xs:w-40 xs:h-32 sm:h-48 sm:w-64 md:w-72 rounded-2xl p-4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   items-end hover:cursor-pointer ${
+                  className={`relative flex w-full xs:w-40 xs:h-32 sm:h-48 sm:w-64 md:w-72 lg:w-52 lg:h-40 xl:w-[270px] 2xl:h-48 2xl:w-72 3xl:w-96 3xl:h-64  rounded-2xl p-4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   items-end hover:cursor-pointer ${
                     selectedService.id === service.id
                       ? "border-2 border-orange "
                       : "border-2 border-white"

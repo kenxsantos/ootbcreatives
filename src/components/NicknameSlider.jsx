@@ -4,7 +4,6 @@ import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import "swiper/css";
 import { Mousewheel, Navigation } from "swiper/modules";
 import crewmates from "../json/crewmates.json";
-import { motion } from "framer-motion";
 const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
   const { slug } = useParams(); // Extract id from URL params
   const navigate = useNavigate();
@@ -32,9 +31,8 @@ const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
   };
 
   return (
-    <div className="w-[100px] h-[330px] overflow-visible flex relative">
+    <div className="xs:w-full sm:w-[550px] md:w-[700px] lg:w-[900px] xl:w-[100px] xl:h-[400px] overflow-visible flex">
       <Swiper
-        direction="vertical"
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -49,19 +47,26 @@ const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
           nextEl: nextRef.current,
           prevEl: prevRef.current,
         }}
+        breakpoints={{
+          390: {
+            direction: "horizontal",
+          },
+          1280: {
+            direction: "vertical",
+          },
+        }}
         modules={[Mousewheel, Navigation]}
-        className="mySwiper flex flex-col items-center justify-center"
         onSlideChange={handleSlideChange}
-        ref={swiperRef} // Attach the swiperRef to Swiper
+        ref={swiperRef}
       >
         {crewmates.map((crewmate, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`flex items-center justify-center h-32 ${
+              className={`flex items-center justify-center h-24 w-full ${
                 index === activeIndex
                   ? "text-4xl font-bold hover:text-glow"
                   : "text-lg"
-              } text-white text-center font-metropolis transform -rotate-90 transition-all duration-300`}
+              } text-white text-center font-metropolis transform xl:-rotate-90 transition-all duration-300`}
             >
               {crewmate.nickname}
             </div>

@@ -36,28 +36,32 @@ const RadioUs = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl bg-clear-planets h-screen mx-auto bg-cover">
+    <div className="w-screen bg-clear-planets h-screen mx-auto bg-cover">
       <div className="w-full mx-auto pt-20 flex justify-center items-center h-full">
-        <section className="w-full flex">
+        <section className="w-full xl:flex">
           <motion.div
             animate={controls}
             transition={{ duration: 0.3 }}
-            className="w-1/2 flex items-center justify-end"
+            className="xs:w-full xl:w-1/2 flex items-center  xs:justify-center xl:justify-end"
           >
-            <h1 className="font-metropolis text-white font-extrabold text-glow text-right uppercase flex flex-col">
-              <span className="text-7xl">Let's Go </span>
-              <span className="text-6xl">Interstellar!</span>
+            <h1 className="font-metropolis text-white font-extrabold text-glow xs:text-center xl:text-right uppercase flex flex-col">
+              <span className="xs:text-5xl sm:text-6xl xl:text-8xl 3xl:text-9xl">
+                Let's Go
+              </span>
+              <span className="xs:text-4xl sm:text-5xl xl:text-7xl 3xl:text-8xl">
+                Interstellar!
+              </span>
             </h1>
           </motion.div>
-          <div className="w-1/2 flex flex-col px-12 gap-6">
-            <div className="w-full h-16 flex gap-4 justify-center">
-              <div>
-                <h1 className="w-28 h-full flex flex-col font-metropolis text-white font-extrabold uppercase justify-center items-center text-glow text-xl leading-none">
+          <div className="xs:w-full xs:mt-4 xl:w-1/2 flex flex-col xs:px-2 md:px-12 gap-6 items-center">
+            <div className="w-full xs:h-full sm:h-16 sm:flex gap-4 justify-center text-center">
+              <div className="flex justify-center">
+                <h1 className="w-28 flex flex-col font-metropolis text-white font-extrabold uppercase justify-center items-center text-glow text-xl leading-none">
                   <span>Who&apos;s </span>
                   <span>There?</span>
                 </h1>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 xs:h-16 sm:h-full xs:mt-4 sm:mt-0 ">
                 {["Client", "Potential Crewmate", "Just Exploring"].map(
                   (option) => (
                     <motion.div
@@ -80,14 +84,14 @@ const RadioUs = () => {
               </div>
             </div>
             <div
-              className="relative w-full h-[420px] bg-gray-500 bg-opacity-50 overflow-auto p-8 hide-scrollbar"
+              className="relative w-full 3xl:w-4/5 xs:h-[350px] sm:h-[450px] lg:h-[550px] xl:h-[500px] bg-gray-500 bg-opacity-50 overflow-auto p-8 hide-scrollbar"
               style={{
                 clipPath:
                   "polygon(7% 0%, 93% 0%, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0% 93%, 0% 7%)",
               }}
             >
-              <div className="w-full flex mb-8">
-                <div className="w-1/2 flex justify-end flex-col">
+              <div className="w-full mb-10 xs:flex-col flex sm:flex-row">
+                <div className="xs:w-full sm:w-1/2 flex justify-end flex-col xs:order-last sm:order-first xs:mt-4 sm:mt-0">
                   <div className="relative h-11 w-full min-w-[200px]">
                     <input
                       placeholder="ex. John Doe"
@@ -98,7 +102,7 @@ const RadioUs = () => {
                     </label>
                   </div>
                 </div>
-                <div className="w-1/2 flex justify-end px-8">
+                <div className="xs:w-full sm:w-1/2 flex xs:justify-center sm:justify-end px-8">
                   <img
                     src="/assets/logo/OOTBLogoRed.png"
                     alt=""

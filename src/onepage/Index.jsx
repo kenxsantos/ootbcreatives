@@ -53,7 +53,7 @@ const Index = () => {
   };
 
   return (
-    <div className="relative max-w-screen-2xl mx-auto">
+    <div className="relative w-screen mx-auto">
       <motion.div
         className="z-[80] fixed xs:ml-4 xs:mt-20 md:ml-12 md:mt-20 cursor-pointer"
         animate={logoAnimation}

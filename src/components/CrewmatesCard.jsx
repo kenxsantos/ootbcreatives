@@ -18,7 +18,7 @@ const CrewmatesCard = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto">
+    <div className="w-screen mx-auto 3xl:px-12">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -46,6 +46,10 @@ const CrewmatesCard = () => {
           1280: {
             slidesPerView: 3,
             spaceBetween: 10,
+          },
+          1920: {
+            slidesPerView: 4,
+            spaceBetween: -200,
           },
         }}
       >

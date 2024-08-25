@@ -21,9 +21,9 @@ const Offers = () => {
   }, [controls]);
 
   return (
-    <div className=" max-w-screen-2xl bg-blurred-planets h-screen mx-auto bg-cover">
+    <div className="w-screen bg-blurred-planets h-screen mx-auto bg-cover">
       <div className="w-full mx-auto  flex justify-center  items-center h-full">
-        <section className="mx-auto text-center flex flex-col justify-center boder px-28 pt-20">
+        <section className="text-center flex flex-col justify-center  px-28 pt-20">
           <motion.div
             className="px-36"
             animate={controls}
