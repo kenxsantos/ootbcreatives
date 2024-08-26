@@ -16,6 +16,10 @@ export default {
         "4xl": "2560px",
         "5xl": "3200px",
       },
+      clipPath: {
+        "custom-polygon":
+          "polygon(7% 0%, 100% 0%, 100% 100%, 7% 100%, 0% 93%, 0% 7%)",
+      },
       fontFamily: {
         metropolis: ["Metropolis", "sans-serif"],
         jost: ["Jost"],
@@ -85,8 +89,16 @@ export default {
         ".text-glow": {
           "text-shadow": "4px -1px 33px rgba(255,255,255,1)",
         },
-        ".hover\\:text-glow": {
+        ".hover:text-glow": {
           "@apply hover:text-glow": {},
+        },
+        ".clip-path-custom-polygon": {
+          clipPath:
+            "polygon(7% 0%, 100% 0%, 100% 100%, 7% 100%, 0% 93%, 0% 7%)",
+        },
+        ".clip-path-cut-top-corners": {
+          clipPath:
+            "polygon(7% 0%, 90% 0%, 100% 7%, 100% 100%, 0% 100%, 0% 7%)",
         },
       });
     },
