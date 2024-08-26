@@ -16,7 +16,7 @@ const ShowServices = () => {
   }
 
   return (
-    <div className="relative max-w-screen-2xl bg-rocket bg-cover mx-auto">
+    <div className="relative w-screen h-full bg-rocket bg-auto mx-auto">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
@@ -25,8 +25,8 @@ const ShowServices = () => {
         <div className="xs:px-3 xl:px-12 lg:w-full lg:flex">
           <section className="relative w-full lg:w-1/2 flex flex-col">
             <Link to="/">
-              <div className="flex items-center xs:h-24 md:h-28 lg:h-36 xs:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
-                <div className="rotate-90 xs:w-28 md:w-36 -ml-[60px]">
+              <div className="flex items-center xs:h-24 md:h-28 lg:h-36 x:-ml-5 ssm:-ml-9 md:-ml-12 justify-start w-full">
+                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
                   <img
                     src="/assets/others/BackShadow.png"
                     alt="Back Flare"
@@ -80,7 +80,7 @@ const ShowServices = () => {
               </section>
             </div>
           </section>
-          <section className="relative w-full lg:w-1/2 flex flex-col lg:pt-36 overflow-auto h-[630px] hide-scrollbar">
+          <section className="relative w-full lg:w-1/2 flex flex-col lg:pt-36 overflow-auto lg:h-[700px] 3xl:h-[850px] hide-scrollbar">
             <motion.div
               className="xs:px-4 lg:px-8"
               initial={{ opacity: 0, y: 20 }}

@@ -3,8 +3,8 @@ import TabComponent from "./TabComponent";
 import { motion } from "framer-motion";
 const InternsBoardingPass = ({ internData, yearData }) => {
   return (
-    <div className="flex flex-col items-center justify-center overflow-hidden h-full">
-      <div className="w-full flex flex-col items-center justify-center mt-20">
+    <div className="flex flex-col items-center justify-center h-full w-full">
+      <div className="w-full  sm:px-0 flex flex-col items-center justify-center mt-20">
         <motion.img
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -18,7 +18,7 @@ const InternsBoardingPass = ({ internData, yearData }) => {
           className="w-full"
         />
       </div>
-      <div className="shadow-inner-crewmates rounded-t-3xl flex flex-col  h-[250px] w-[600px]">
+      <div className="shadow-inner-crewmates rounded-t-3xl flex flex-col items-center h-[250px] xs:w-[400px] sm:w-[600px]">
         <TabComponent yearData={yearData} />
       </div>
     </div>

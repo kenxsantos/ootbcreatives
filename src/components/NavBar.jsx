@@ -60,7 +60,7 @@ const NavBar = () => {
     <nav className="w-full fixed left-0 top-0 h-28 overflow-visible z-[80]">
       <div className="mx-auto max-w-screen-2xl md:px-12 h-24">
         <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent">
-          <div className="flex justify-end text-right xl:hidden p-4">
+          <div className="flex justify-end text-right 2xl:hidden p-4">
             <button
               onClick={toggleMenu}
               className="text-white focus:outline-none flex justify-end"
@@ -71,7 +71,7 @@ const NavBar = () => {
 
           {isMenuOpen && (
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-8 xl:hidden z-40"
+              className="fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-8 2xl:hidden z-40"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -105,7 +105,7 @@ const NavBar = () => {
           {/* Navigation Links (Visible on larger screens) */}
           <div
             className={`${
-              isMenuOpen ? "hidden" : "hidden xl:flex space-x-8"
+              isMenuOpen ? "hidden" : "hidden 2xl:flex space-x-8"
             } w-full md:justify-center`}
           >
             {navLinks.map((link) => (

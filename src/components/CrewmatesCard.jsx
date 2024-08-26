@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import ReadMoreButton from "./ReadMoreButton";
@@ -12,7 +12,6 @@ import { Mousewheel, Pagination, Navigation } from "swiper/modules";
 
 const CrewmatesCard = () => {
   const [activeCard, setActiveCard] = useState(0);
-  const navigate = useNavigate();
   const handleSlideChange = (swiper) => {
     setActiveCard(swiper.realIndex);
   };
@@ -35,7 +34,7 @@ const CrewmatesCard = () => {
             slidesPerView: 2,
             spaceBetween: 180,
           },
-          758: {
+          768: {
             slidesPerView: 2,
             spaceBetween: 40,
           },

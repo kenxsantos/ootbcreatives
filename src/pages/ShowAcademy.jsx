@@ -10,19 +10,18 @@ const ShowAcademy = () => {
   const location = useLocation();
   const offer = location.state?.offer;
 
-  const width = 530;
   return (
-    <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
-      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-10">
-        <div className="absolute inset-0 w-1/2 h-full z-0 bg-black  bg-opacity-30"></div>
+    <div className="relative w-screen bg-academy bg-cover mx-auto h-full">
+      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
+        <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
         <FixedNavBar />
-        <div className="w-full flex">
-          <section className="relative w-1/2 flex flex-col px-12">
+        <div className="xs:px-3 xl:w-full xl:flex items-center lg:justify-between overflow-hidden">
+          <section className="relative w-full xl:w-1/2 flex flex-col">
             <Link to="/">
-              <div className="flex items-center h-36 -ml-12 justify-start ">
-                <div className="rotate-90 w-36 -ml-[60px]">
+              <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
+                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
                   <img
                     src="/assets/others/BackShadow.png"
                     alt="Back Flare"
@@ -31,25 +30,27 @@ const ShowAcademy = () => {
                 </div>
                 <span className="text-white font-jost flex items-center gap-4 transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow">
                   <IoIosArrowBack size={24} />
-                  BACK TO OTHER SERVICES
+                  <p className="xs:text-xs md:text-base">
+                    BACK TO OTHER SERVICES
+                  </p>
                 </span>
               </div>
             </Link>
-            <div className="ml-10">
+            <div className="2xl:ml-10">
               <div>
                 <section className="mb-4">
-                  <h1 className="font-metropolis font-extrabold text-6xl flex flex-col leading-none text-white tracking-tighter text-glow uppercase">
+                  <h1 className="font-metropolis xs:text-center text-glow lg:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl flex flex-col leading-none text-white tracking-tighter">
                     {offer.title} <br />
                     {offer.subtitle}
                   </h1>
                 </section>
-                <section className=" pr-24">
+                <section className="xl:pr-24 xs:p-2">
                   {offer.paragraph && (
                     <div>
                       {Object.values(offer.paragraph).map((paragraph, idx) => (
                         <p
                           key={idx}
-                          className="font-jost text-base text-white mb-4 text-justify"
+                          className="font-jost text-base text-white mb-4 text-justify lg:text-xl"
                         >
                           {paragraph}
                         </p>
@@ -57,12 +58,12 @@ const ShowAcademy = () => {
                       {Object.values(offer.list).map((item, idx) => (
                         <li
                           key={idx}
-                          className="font-jost text-base text-white text-justify list-disc"
+                          className="font-jost text-base text-white text-justify list-disc pl-4  lg:text-xl"
                         >
                           {item}
                         </li>
                       ))}
-                      <p className="font-jost text-base text-white mb-4 text-justify mt-4">
+                      <p className="font-jost text-base text-white mb-4 text-justify mt-4  lg:text-xl">
                         {offer.end}
                       </p>
                     </div>
@@ -70,22 +71,20 @@ const ShowAcademy = () => {
                 </section>
               </div>
             </div>
-
             <motion.section
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost text-white mb-12 border  ml-10"
+              className="w-max p-4 font-jost border text-white mb-12 2xl:ml-10"
             >
               <Link to="/ootb/academy/meet-the-interns" state={{ offer }}>
                 MEET THE INTERNS
               </Link>
             </motion.section>
           </section>
-          <section className="relative w-1/2 flex flex-col px-12 h-[600px] mx-auto mt-36 items-center justify-center">
+          <section className="relative xl:w-1/2 flex flex-col items-center">
             {interns.map((intern, index) => (
               <TransparentDiv
-                width={width}
                 key={index}
                 index={index}
                 title={intern.job}

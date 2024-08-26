@@ -17,7 +17,7 @@ const CrewmatesDetails = ({ activeIndex }) => {
     <div className="xl:w-4/5">
       <div className="xs:w-full md:flex relative box xs:h-full">
         <div className="xs:w-full md:w-1/5 xl:w-[30%] relative">
-          <div className="absolute xs:w-[90px] xs:left-[280px] sm:left-[520px] xs:top-[25px] sm:top-[20px] md:left-[125px] md:top-[300px] md:w-[250px] lg:w-[320px] lg:left-[180px] md:top-[250px] lg:top-[180px] xl:w-[450px] xl:top-[150px] 2xl:w-[500px] 2xl:top-[100px] 2xl:left-[200px] 3xl:w-[600px] 3xl:left-[280px] 3xl:top-[0px] md:-translate-x-1/2">
+          <div className="absolute xs:w-[90px] xs:left-[280px] sm:left-[520px] xs:top-[25px] sm:top-[20px] md:left-[125px] md:top-[250px] md:w-[250px] lg:w-[320px] lg:left-[180px] md:top-[250px] lg:top-[180px] xl:w-[450px] xl:top-[150px] 2xl:w-[500px] 2xl:top-[100px] 2xl:left-[200px] 3xl:w-[600px] 3xl:left-[280px] 3xl:top-[0px] md:-translate-x-1/2">
             <motion.img
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -50,7 +50,7 @@ const CrewmatesDetails = ({ activeIndex }) => {
               delay: 0.8,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="text-white xs:text-2xl xs:w-[90%] md:w-full sm:text-4xl xl:text-[40px] 2xl:text-5xl 3xl:text-6xl font-metropolis font-bold leading-none"
+            className="text-white xs:text-2xl xs:w-4/5 md:w-full sm:text-4xl xl:text-[40px] 2xl:text-5xl 3xl:text-6xl font-metropolis font-bold leading-none"
           >
             {crewmate.name}
           </motion.h1>
@@ -62,7 +62,7 @@ const CrewmatesDetails = ({ activeIndex }) => {
               delay: 0.9,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="font-jost w-full text-white xs:text-sm xl:text-base 2xl:text-xl 3xl:text-2xl uppercase mb-4"
+            className="font-jost w-4/5 text-white xs:text-sm xl:text-base 2xl:text-xl 3xl:text-2xl uppercase mb-4"
           >
             {crewmate.position}
             {crewmate.title ? ` – ${crewmate.title}` : ""}

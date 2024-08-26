@@ -42,7 +42,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className={`relative w-screen h-screen ${bgClass}`}>
+    <div className={`relative w-screen h-screen object-cover ${bgClass}`}>
       <div className="relative w-screen mx-auto z-20 xs:px-3 xl:px-12 md:pb-12 flex flex-col items-left justify-center h-full">
         <div className="relative z-30 mb-6 ">
           <section className="mb-4 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-60">
@@ -76,7 +76,7 @@ const Landing = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 w-full h-full z-10 shadow-inner-overlay"
+              className="absolute inset-0 w-full h-full z-10 shadow-inner-overlay object-cover"
             />
           )}
         </AnimatePresence>
@@ -88,7 +88,7 @@ const Landing = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 w-full h-full z-10 shadow-inner sm:shadow-lg md:shadow-xl lg:shadow-2xl xl:shadow-inner-overlay"
+              className="absolute inset-0 w-full h-full z-10  xl:shadow-inner-overlay"
             />
             <motion.button
               onClick={toggleMute}
