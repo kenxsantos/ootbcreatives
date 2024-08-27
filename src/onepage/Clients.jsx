@@ -16,7 +16,7 @@ const Clients = () => {
         <section className="mt-12">
           <RecentlyAdded />
         </section>
-        <section className="mt-10">
+        <section className="mt-10 mb-20">
           <ClientsOnboard />
         </section>
       </div>
