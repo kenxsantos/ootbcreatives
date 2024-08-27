@@ -26,13 +26,13 @@ const ShowCrewmates = () => {
     );
   }
   return (
-    <div className="relative w-screen bg-blurred-planets bg-cover mx-auto h-screen">
-      <div className="w-full h-screen  flex flex-col">
+    <div className="relative w-screen h-full bg-blurred-planets bg-auto mx-auto">
+      <div className="w-full h-full flex flex-col">
         <div className="relative z-10">
           <FixedNavBar />
         </div>
-        <div className="flex justify-between flex-col h-screen">
-          <section className="relative w-full flex flex-col items-center justify-center pt-12">
+        <div className="flex justify-between flex-col h-full">
+          <section className="relative w-full flex flex-col items-center justify-center">
             <div className="w-full flex justify-center items-center">
               <img
                 src="/assets/logo/OOTBFlatWhite.png"
@@ -40,7 +40,7 @@ const ShowCrewmates = () => {
                 className="xs:h-6 sm:h-10 lg:h-16"
               />
             </div>
-            <div className="absolute xs:top-[45px] sm:top-[30px] md:-top-[20px] z-50 w-full  xs:pl-2 xs:pt-4 sm:pl-2 md:pl-20 2xl:pl-56 items-center">
+            <div className="absolute xs:top-[45px] sm:top-[30px] xl:-top-[70px] md:-top-[20px] z-50 w-full  xs:pl-2 xs:pt-4 sm:pl-2 md:pl-20 xl:pl-56 2xl:pl-56 items-center">
               {imageSrc && (
                 <motion.img
                   key={imageSrc}

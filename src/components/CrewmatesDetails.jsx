@@ -62,7 +62,7 @@ const CrewmatesDetails = ({ activeIndex }) => {
               delay: 0.9,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="font-jost w-4/5 text-white xs:text-sm xl:text-base 2xl:text-xl 3xl:text-2xl uppercase mb-4"
+            className="font-jost w-4/5 text-white xs:text-sm xl:text-base  2xl:text-xl 3xl:text-2xl uppercase mb-4"
           >
             {crewmate.position}
             {crewmate.title ? ` – ${crewmate.title}` : ""}
@@ -82,7 +82,7 @@ const CrewmatesDetails = ({ activeIndex }) => {
                     transition: { delay: 1.2, duration: 0.5 },
                   }}
                   exit={{ opacity: 0, y: -20, transition: { duration: 0.5 } }}
-                  className="font-jost text-white text-base text-justify mb-4 2xl:text-lg 3xl:text-xl"
+                  className="font-jost text-white text-base text-justify mb-4 2xl:text-xl 3xl:text-xl"
                 >
                   {desc}
                 </motion.p>

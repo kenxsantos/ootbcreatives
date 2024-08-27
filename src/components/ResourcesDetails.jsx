@@ -15,7 +15,7 @@ const ResourcesDetails = () => {
   }
 
   return (
-    <div className="relative max-w-screen-2xl bg-clear-planets bg-cover mx-auto h-screen">
+    <div className="relative w-screen bg-clear-planets bg-cover mx-auto h-full">
       <div className="relative">
         <FixedNavBar />
         <div className="w-full">

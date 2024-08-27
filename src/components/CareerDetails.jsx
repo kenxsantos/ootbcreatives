@@ -33,7 +33,7 @@ const CareerDetails = () => {
             </Link>
           </section>
         </div>
-        <div className="flex flex-col px-12 2xl:w-[500px] bg-purple-black h-screen 2xl:absolute 2xl:top-0 pt-44 z-0 2xl:ml-96 2xl:-mt-28">
+        <div className="flex flex-col px-12 xl:w-[500px] bg-purple-black h-screen xl:absolute xl:top-0 pt-44 z-0 xl:ml-96 xl:-mt-28">
           <h1 className="text-white font-jost">OOTB CAREERS</h1>
           <h1 className="text-white font-extrabold text-white text-glow tracking-tighter uppercase text-4xl font-metropolis">
             {career.position}
@@ -67,8 +67,8 @@ const CareerDetails = () => {
             <Link to="/">COME ONBOARD NOW</Link>
           </section>
         </div>
-        <div className="2xl:h-screen 2xl:absolute 2xl:top-0 2xl:right-0 mx-auto flex items-center justify-center 2xl:-mt-28 ">
-          <div className="xs:clip-path-cut-top-corners 2xl:clip-path-custom-polygon xs:pt-12 xs:w-full 2xl:w-[450px]  2xl:h-[400px]  sm:p-8 bg-gray-500 overflow-auto hide-scrollbar bg-black bg-opacity-60 p-5 shadow-lg  backdrop-blur-sm text-white">
+        <div className="xl:h-screen xl:absolute xl:top-0 xl:right-0 mx-auto flex items-center justify-center xl:-mt-28 ">
+          <div className="xs:clip-path-cut-top-corners xl:clip-path-custom-polygon xs:pt-12 xs:w-full xl:w-[450px]  xl:h-[400px]  sm:p-8 bg-gray-500 overflow-auto hide-scrollbar bg-black bg-opacity-60 p-5 shadow-lg  backdrop-blur-sm text-white">
             <div className="mb-4 font-jost text-white text-base">
               <h1 className="mb-4">JOB DESCRIPTION</h1>
               <p>We&apos;re looking for:</p>

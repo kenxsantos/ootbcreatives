@@ -60,7 +60,7 @@ const MeetTheIntern = () => {
                       {Object.values(offer.paragraph).map((paragraph, idx) => (
                         <p
                           key={idx}
-                          className="font-jost text-base text-white mb-4 text-justify lg:text-xl"
+                          className="font-jost text-base text-white mb-4 text-justify lg:text-lg"
                         >
                           {paragraph}
                         </p>
@@ -68,12 +68,12 @@ const MeetTheIntern = () => {
                       {Object.values(offer.list).map((item, idx) => (
                         <li
                           key={idx}
-                          className="font-jost text-base text-white text-justify list-disc pl-4  lg:text-xl"
+                          className="font-jost text-base text-white text-justify list-disc pl-4  lg:text-lg"
                         >
                           {item}
                         </li>
                       ))}
-                      <p className="font-jost text-base text-white mb-4 text-justify mt-4  lg:text-xl">
+                      <p className="font-jost text-base text-white mb-4 text-justify mt-4  lg:text-lg">
                         {offer.end}
                       </p>
                     </div>
