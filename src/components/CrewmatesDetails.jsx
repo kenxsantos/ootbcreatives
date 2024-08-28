@@ -40,7 +40,7 @@ const CrewmatesDetails = ({ activeIndex }) => {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="xs:w-full m:w-4/5 xl:w-[70%] bg-red-500 bg-opacity-80 xs:rounded-t-[40px] md:rounded-tl-[80px] md:rounded-tr-none pt-12 px-12 xl:px-16 xs:h-[550px] md:h-[500px] xl:h-[600px] "
+          className="xs:w-full m:w-4/5 xl:w-[70%] bg-red-500 bg-opacity-80 xs:rounded-t-[40px] md:rounded-tl-[80px] md:rounded-tr-none pt-12 px-12 xl:px-16 xs:h-[550px] md:h-[500px] xl:h-[600px]"
         >
           <motion.h1
             initial={{ opacity: 0, scale: 0.5 }}
@@ -68,7 +68,7 @@ const CrewmatesDetails = ({ activeIndex }) => {
             {crewmate.title ? ` – ${crewmate.title}` : ""}
           </motion.p>
           <div
-            className="md:pl-16 lg:pl-28 xl:pl-12 overflow-auto xs:h-[400px] md:h-[350px] xl:h-[400px] mb-4  hide-scrollbar "
+            className="md:pl-16 lg:pl-28 xl:pl-10 overflow-auto xs:h-[400px] md:h-[350px] xl:h-[400px] mb-4  hide-scrollbar "
             style={{ scaleX }}
           >
             {crewmate.description &&
