@@ -42,8 +42,8 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className={`relative w-screen h-screen object-cover ${bgClass}`}>
-      <div className="relative w-screen mx-auto z-20 xs:px-3 xl:px-12 md:pb-12 flex flex-col items-left justify-center h-full">
+    <div className={`relative h-screen object-cover ${bgClass}`}>
+      <div className="relative mx-auto z-20 xs:px-3 xl:px-12 md:pb-12 flex flex-col items-left justify-center h-full">
         <div className="relative z-30 mb-6 ">
           <section className="mb-4 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-60">
             <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 3xl:text-8xl">

@@ -28,7 +28,7 @@ const Offers = () => {
   }, [controls]);
 
   return (
-    <div className="w-screen bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
+    <div className="bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
       <section className="text-center flex flex-col justify-center  ">
         <motion.div
           className="lg:px-20 xl:px-28 2xl:px-36 w-full"
@@ -95,7 +95,7 @@ const Offers = () => {
                     className="w-[300px] h-[350px] bg-gray-500 bg-opacity-60 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer"
                   >
                     <div>
-                      <h1 className="z-50 text-glow text-left text-xl font-bold font-metropolis text-white leading-none mb-2 uppercase">
+                      <h1 className="z-50 text-glow text-left text-xl font-bold font-garnet text-white leading-none mb-2 uppercase">
                         {offer.title} <br /> {offer.subtitle}
                       </h1>
                       {(offer.description && (

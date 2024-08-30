@@ -53,9 +53,9 @@ const Index = () => {
   };
 
   return (
-    <div className="relative w-screen mx-auto">
+    <div className="relative w-screen-2xl">
       <motion.div
-        className="z-[80] fixed xs:ml-4 xs:mt-20 md:ml-12 md:mt-20 cursor-pointer"
+        className="z-[80] fixed xs:ml-4 xs:mt-16 md:ml-10 md:mt-10 cursor-pointer"
         animate={logoAnimation}
         initial={{ scale: 1, opacity: 1 }}
       >

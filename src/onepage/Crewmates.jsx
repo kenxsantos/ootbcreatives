@@ -22,7 +22,7 @@ const Crewmates = () => {
   }, [controls]);
 
   return (
-    <div className="w-screen bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
+    <div className="bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
       <div className="w-full mx-auto pt-28">
         <motion.section
           animate={controls}

@@ -13,7 +13,7 @@ const TransparentDiv = ({ title, description, index }) => {
       className="shadow-inner-crewmates rounded-3xl flex flex-col justify-start h-60 -mb-16"
       style={{ width: `${width + index * 20}px` }}
     >
-      <div className="xs:p-4 sm:p-10 ">
+      <div className="xs:p-4 sm:p-10">
         <h1 className="text-3xl font-extrabold mb-2 font-metropolis text-white text-glow uppercase">
           {title}
         </h1>

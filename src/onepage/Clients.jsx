@@ -3,7 +3,7 @@ import RecentlyAdded from "../components/RecentlyAdded";
 
 const Clients = () => {
   return (
-    <div className="w-screen bg-blurred-planets h-screen mx-auto bg-cover overflow-visible">
+    <div className="bg-blurred-planets h-screen mx-auto bg-cover overflow-visible">
       <div className="w-full m-auto pt-28 h-full flex flex-col xs:px-4 md:px-12 justify-center">
         <section className="mx-auto text-center flex flex-col justify-center">
           <h1 className="font-metropolis text-white text-4xl font-bold 3xl:text-5xl">

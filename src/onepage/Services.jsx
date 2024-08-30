@@ -35,7 +35,7 @@ const Services = () => {
 
   return (
     <div
-      className="relative h-screen w-screen mx-auto  shadow-inner-overlay  overflow-visible xs:px-3 xl:px-12 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-32 2xl:60"
+      className="relative h-screen mx-auto  shadow-inner-overlay  overflow-visible xs:px-3 xl:px-12 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-32 2xl:60"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
