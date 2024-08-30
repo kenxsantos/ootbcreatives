@@ -92,8 +92,25 @@ const Offers = () => {
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 15 }}
                     key={index}
-                    className="w-[300px] h-[350px] bg-gray-500 bg-opacity-60 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer"
+                    className="w-[300px] h-[350px] bg-gray-500 bg-opacity-60 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer relative overflow-hidden"
                   >
+                    {/* Border animation */}
+                    <motion.div
+                      className="absolute inset-0 rounded-2xl border-4"
+                      style={{
+                        borderColor: "transparent",
+                        borderImageSource: "url('/path-to-your-image.png')", // Replace with your image
+                        borderImageSlice: 1,
+                      }}
+                      animate={{ rotate: 360 }}
+                      transition={{
+                        repeat: Infinity,
+                        ease: "linear",
+                        duration: 4,
+                      }}
+                    />
+
+                    {/* Content inside the div */}
                     <div>
                       <h1 className="z-50 text-glow text-left text-xl font-bold font-garnet text-white leading-none mb-2 uppercase">
                         {offer.title} <br /> {offer.subtitle}

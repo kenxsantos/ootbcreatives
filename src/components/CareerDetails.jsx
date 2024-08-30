@@ -33,12 +33,12 @@ const CareerDetails = () => {
             </Link>
           </section>
         </div>
-        <div className="flex flex-col px-12 xl:w-[500px] bg-purple-black h-screen xl:absolute xl:top-0 pt-44 z-0 xl:ml-96 xl:-mt-28">
+        <div className="flex flex-col px-12 xl:w-[400px] 2xl:w-[600px] 3xl:w-[700px] bg-purple-black h-screen xl:absolute xl:top-0 pt-44 z-0 xl:ml-96 xl:-mt-28 2xl:ml-[400px] 3xl:ml-[500px]">
           <h1 className="text-white font-jost">OOTB CAREERS</h1>
-          <h1 className="text-white font-extrabold text-white text-glow tracking-tighter uppercase text-4xl font-garnet">
+          <h1 className="text-white font-extrabold text-white text-glow tracking-tighter uppercase xs:text-4xl 2xl:text-6xl  font-garnet">
             {career.position}
           </h1>
-          <p className="mt-4 text-white font-jost text-base text-justify leading-none">
+          <p className="mt-4 text-white font-jost text-base 2xl:text-lg text-justify leading-none">
             {career.description}
           </p>
 
@@ -67,8 +67,8 @@ const CareerDetails = () => {
             <Link to="/">COME ONBOARD NOW</Link>
           </section>
         </div>
-        <div className="xl:h-screen xl:absolute xl:top-0 xl:right-0 mx-auto flex items-center justify-center xl:-mt-28 ">
-          <div className="xs:clip-path-cut-top-corners xl:clip-path-custom-polygon xs:pt-12 xs:w-full xl:w-[450px]  xl:h-[400px]  sm:p-8 bg-gray-500 overflow-auto hide-scrollbar bg-black bg-opacity-60 p-5 shadow-lg  backdrop-blur-sm text-white">
+        <div className="xl:h-screen xl:absolute xl:top-0 xl:right-0 mx-auto flex items-center justify-center xl:-mt-28">
+          <div className="xs:clip-path-cut-top-corners xl:clip-path-custom-polygon xs:pt-12 xs:w-full xl:w-[450px] 3xl:w-[600px]  xl:h-[400px] 3xl:h-[500px] sm:p-8 bg-gray-500 overflow-auto hide-scrollbar bg-black bg-opacity-60 p-5 shadow-lg  backdrop-blur-sm text-white">
             <div className="mb-4 font-jost text-white text-base">
               <h1 className="mb-4">JOB DESCRIPTION</h1>
               <p>We&apos;re looking for:</p>
