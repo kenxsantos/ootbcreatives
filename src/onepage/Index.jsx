@@ -19,7 +19,7 @@ const Index = () => {
           scale: 0.5,
           opacity: 1,
           x: -40,
-          y: -100,
+          y: -70,
           transition: { duration: 0.3 },
         });
       } else {

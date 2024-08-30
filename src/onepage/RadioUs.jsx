@@ -37,7 +37,7 @@ const RadioUs = () => {
 
   return (
     <div className="bg-clear-planets 2xl:h-screen xs:h-full mx-auto bg-cover">
-      <div className="w-full mx-auto pt-20 flex justify-center items-center h-full">
+      <div className="w-full mx-auto pt-14 flex justify-center items-center h-full">
         <section className="w-full xl:flex">
           <motion.div
             animate={controls}
@@ -84,7 +84,7 @@ const RadioUs = () => {
               </div>
             </div>
             <div
-              className="relative w-full 3xl:w-4/5 xs:h-[350px] sm:h-[450px] lg:h-[550px] xl:h-[500px] bg-gray-500 bg-opacity-50 overflow-auto p-8 hide-scrollbar"
+              className="relative mb-4 w-full 3xl:w-4/5 xs:h-[350px] sm:h-[450px] lg:h-[550px] xl:h-[480px] bg-gray-500 bg-opacity-50 overflow-auto p-8 hide-scrollbar"
               style={{
                 clipPath:
                   "polygon(7% 0%, 93% 0%, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0% 93%, 0% 7%)",

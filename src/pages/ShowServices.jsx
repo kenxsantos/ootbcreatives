@@ -16,7 +16,7 @@ const ShowServices = () => {
   }
 
   return (
-    <div className="relative w-screen h-full bg-rocket bg-auto mx-auto">
+    <div className="relative h-full bg-rocket bg-auto mx-auto">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
