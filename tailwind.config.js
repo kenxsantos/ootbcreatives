@@ -23,6 +23,7 @@ export default {
       fontFamily: {
         metropolis: ["Metropolis", "sans-serif"],
         jost: ["Jost"],
+        garnet: ["Garnet", "sans-serif"],
       },
       backgroundImage: {
         rocket: 'url("/assets/backgrounds/OOTBRocketBG.png")',
