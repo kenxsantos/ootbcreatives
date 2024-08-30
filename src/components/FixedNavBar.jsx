@@ -53,7 +53,7 @@ const NavBar = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.id}
-                to="#"
+                to="/"
                 onClick={() => handleLinkClick(link.id)}
               >
                 <div className="flex flex-col items-center justify-center h-24 w-[120px]">
