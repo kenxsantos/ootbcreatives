@@ -11,13 +11,13 @@ const ShowAcademy = () => {
   const offer = location.state?.offer;
 
   return (
-    <div className="relative w-screen bg-academy bg-cover mx-auto h-full">
+    <div className="relative bg-academy bg-cover mx-auto h-full">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
         <FixedNavBar />
-        <div className="xs:px-3 xl:w-full xl:flex items-center lg:justify-between overflow-hidden">
+        <div className="xs:px-3 xl:w-full xl:flex items-center lg:justify-between overflow-hidden border">
           <section className="relative w-full xl:w-1/2 flex flex-col">
             <Link to="/">
               <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
@@ -36,11 +36,11 @@ const ShowAcademy = () => {
                 </span>
               </div>
             </Link>
-            <div className="2xl:ml-10">
+            <div className="2xl:ml-10  px-8">
               <div>
                 <section className="mb-4">
-                  <h1 className="font-metropolis xs:text-center text-glow lg:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl flex flex-col leading-none text-white tracking-tighter">
-                    {offer.title} <br />
+                  <h1 className="font-garnet xs:text-center text-glow lg:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl flex flex-col leading-none text-white tracking-tighter uppercase">
+                    {offer.title} &nbsp;
                     {offer.subtitle}
                   </h1>
                 </section>
@@ -50,7 +50,7 @@ const ShowAcademy = () => {
                       {Object.values(offer.paragraph).map((paragraph, idx) => (
                         <p
                           key={idx}
-                          className="font-jost text-base text-white mb-4 text-justify lg:text-xl"
+                          className="font-jost text-base text-white mb-4 text-justify"
                         >
                           {paragraph}
                         </p>
@@ -58,12 +58,12 @@ const ShowAcademy = () => {
                       {Object.values(offer.list).map((item, idx) => (
                         <li
                           key={idx}
-                          className="font-jost text-base text-white text-justify list-disc pl-4  lg:text-xl"
+                          className="font-jost text-base text-white text-justify list-disc pl-4"
                         >
                           {item}
                         </li>
                       ))}
-                      <p className="font-jost text-base text-white mb-4 text-justify mt-4  lg:text-xl">
+                      <p className="font-jost text-base text-white mb-4 text-justify mt-4">
                         {offer.end}
                       </p>
                     </div>
@@ -75,7 +75,7 @@ const ShowAcademy = () => {
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost border text-white mb-12 2xl:ml-10"
+              className="w-max p-4 font-jost border text-white mb-12 2xl:ml-10 xl:ml-10"
             >
               <Link to="/ootb/academy/meet-the-interns" state={{ offer }}>
                 MEET THE INTERNS

@@ -35,7 +35,7 @@ const CareerDetails = () => {
         </div>
         <div className="flex flex-col px-12 xl:w-[500px] bg-purple-black h-screen xl:absolute xl:top-0 pt-44 z-0 xl:ml-96 xl:-mt-28">
           <h1 className="text-white font-jost">OOTB CAREERS</h1>
-          <h1 className="text-white font-extrabold text-white text-glow tracking-tighter uppercase text-4xl font-metropolis">
+          <h1 className="text-white font-extrabold text-white text-glow tracking-tighter uppercase text-4xl font-garnet">
             {career.position}
           </h1>
           <p className="mt-4 text-white font-jost text-base text-justify leading-none">

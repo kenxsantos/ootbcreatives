@@ -56,7 +56,7 @@ const ShowCareers = () => {
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
                   className="w-48 xs:w-60 md:w-72 lg:w-60 h-64 sm:h-72 bg-gray-500 bg-opacity-60 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer"
                 >
-                  <h1 className="font-metropolis font-extrabold text-xl sm:text-2xl text-white text-glow uppercase">
+                  <h1 className="font-garnet font-extrabold text-xl sm:text-2xl text-white text-glow uppercase">
                     {career.position}
                   </h1>
                   <p className="font-jost text-white text-sm sm:text-base leading-tight">

@@ -46,11 +46,11 @@ const MeetTheIntern = () => {
                 </span>
               </div>
             </Link>
-            <div className="2xl:ml-10">
+            <div className="2xl:ml-10 px-8">
               <div>
                 <section className="mb-4">
-                  <h1 className="font-metropolis xs:text-center lg:text-left text-glow font-extrabold xs:text-4xl sm:text-5xl md:text-6xl flex flex-col leading-none text-white tracking-tighter">
-                    {offer.title} <br />
+                  <h1 className="font-garnet xs:text-center text-glow lg:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl flex flex-col leading-none text-white tracking-tighter uppercase">
+                    {offer.title} &nbsp;
                     {offer.subtitle}
                   </h1>
                 </section>
@@ -60,7 +60,7 @@ const MeetTheIntern = () => {
                       {Object.values(offer.paragraph).map((paragraph, idx) => (
                         <p
                           key={idx}
-                          className="font-jost text-base text-white mb-4 text-justify lg:text-lg"
+                          className="font-jost text-base text-white mb-4 text-justify"
                         >
                           {paragraph}
                         </p>
@@ -68,12 +68,12 @@ const MeetTheIntern = () => {
                       {Object.values(offer.list).map((item, idx) => (
                         <li
                           key={idx}
-                          className="font-jost text-base text-white text-justify list-disc pl-4  lg:text-lg"
+                          className="font-jost text-base text-white text-justify list-disc pl-4"
                         >
                           {item}
                         </li>
                       ))}
-                      <p className="font-jost text-base text-white mb-4 text-justify mt-4  lg:text-lg">
+                      <p className="font-jost text-base text-white mb-4 text-justify mt-4">
                         {offer.end}
                       </p>
                     </div>
@@ -86,7 +86,7 @@ const MeetTheIntern = () => {
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost border text-white  2xl:ml-10"
+              className="w-max p-4 font-jost border text-white xl:ml-10"
             >
               <Link to="/ootb/academy/meet-the-interns" state={{ offer }}>
                 COME ONBOARD NOW
