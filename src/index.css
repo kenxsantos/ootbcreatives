@@ -5,6 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Garnet';
+  src: url('/fonts/GarnetCapitals-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 .custom-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;

@@ -26,9 +26,9 @@ const InternsWork = ({ internData }) => {
 
   return (
     <div>
-      <section className="w-full h-full">
-        <div className="flex items-center justify-center gap-4 w-full">
-          <h1 className="font-metropolis font-bold text-3xl text-white flex gap-4">
+      <section className="w-full h-full  2xl:px-16 2xl:mt-12 3xl:mt-20">
+        <div className="flex items-center justify-center gap-4 w-full xs:flex xs:flex-col">
+          <h1 className="font-metropolis font-bold xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl text-white flex gap-4">
             <span>{firstname}'s</span>
             <span>best works at</span>
           </h1>

@@ -58,7 +58,7 @@ const ClientsOnboard = () => {
               <motion.div
                 key={idx}
                 onClick={() => openModal(clientsOnboardItem)}
-                className="h-36 w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center justify-center hover:cursor-pointer"
+                className="xs:w-[250px] xs:h-36 md:h-36 md:w-[270px] rounded-2xl bg-white shadow-inner-clients flex items-center justify-center hover:cursor-pointer"
                 whileTap={{ scale: 1.1 }}
                 whileHover={{ scale: 1.1, margin: "0px 12px" }}
                 transition={{ type: "spring", stiffness: 400, damping: 15 }}

@@ -16,17 +16,17 @@ const ShowServices = () => {
   }
 
   return (
-    <div className="relative max-w-screen-2xl bg-rocket bg-cover mx-auto">
-      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50">
-        <div className="absolute inset-0 w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
+    <div className="relative h-full bg-rocket bg-auto mx-auto">
+      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
+        <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
         <FixedNavBar />
-        <div className="px-12 w-full flex">
-          <section className="relative w-1/2 flex flex-col">
+        <div className="xs:px-3 xl:px-12 lg:w-full lg:flex">
+          <section className="relative w-full lg:w-1/2 flex flex-col">
             <Link to="/">
-              <div className="flex items-center h-36 -ml-12 justify-start ">
-                <div className="rotate-90 w-36 -ml-[60px]">
+              <div className="flex items-center xs:h-24 md:h-28 lg:h-36 x:-ml-5 ssm:-ml-9 md:-ml-12 justify-start w-full">
+                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
                   <img
                     src="/assets/others/BackShadow.png"
                     alt="Back Flare"
@@ -35,15 +35,17 @@ const ShowServices = () => {
                 </div>
                 <span className="text-white font-jost flex items-center gap-4 transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow">
                   <IoIosArrowBack size={24} />
-                  BACK TO OTHER SERVICES
+                  <p className="xs:text-xs md:text-base">
+                    BACK TO OTHER SERVICES
+                  </p>
                 </span>
               </div>
             </Link>
-            <div className="ml-10">
+            <div className="md:ml-10">
               <section className="mb-4">
                 <h1
                   key={service.id}
-                  className="font-metropolis font-bold text-6xl flex flex-col leading-none text-white tracking-tighter"
+                  className="font-metropolis font-bold xs:text-4xl sm:text-5xl md:text-6xl flex flex-col leading-none text-white tracking-tighter"
                 >
                   <span className="text-orange">{service.title}</span>
                   <span className="text-purple">{service.subtitle}</span>
@@ -71,14 +73,16 @@ const ShowServices = () => {
                   {service.subheading}
                 </h1>
               </section>
-              <section className="w-max p-4 font-jost text-white border mb-12">
-                <Link to="/">COME ONBOARD NOW</Link>
+              <section className="w-max p-4 font-jost text-white border mb-12 xs:text-sm md:text-base">
+                <Link to="/">
+                  <h1>COME ONBOARD NOW</h1>
+                </Link>
               </section>
             </div>
           </section>
-          <section className="relative w-1/2 flex flex-col pt-36 overflow-auto h-[630px] hide-scrollbar">
+          <section className="relative w-full lg:w-1/2 flex flex-col lg:pt-36 overflow-auto lg:h-[700px] 3xl:h-[850px] hide-scrollbar">
             <motion.div
-              className="px-8"
+              className="xs:px-4 lg:px-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}

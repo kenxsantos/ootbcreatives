@@ -21,17 +21,17 @@ const MeetTheIntern = () => {
   const offer = location.state?.offer;
 
   return (
-    <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
-      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-10">
-        <div className="absolute inset-0 w-1/2 h-full z-0 bg-black bg-opacity-40"></div>
+    <div className="relative w-screen bg-academy bg-cover mx-auto h-full">
+      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
+        <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
         <FixedNavBar />
-        <div className="w-full flex">
-          <section className="relative w-1/2 flex flex-col px-12">
+        <div className="xs:px-3 xl:w-full xl:flex items-center lg:justify-between overflow-hidden">
+          <section className="relative w-full xl:w-1/2 flex flex-col">
             <Link to="/">
-              <div className="flex items-center h-36 -ml-12 justify-start">
-                <div className="rotate-90 w-36 -ml-[60px]">
+              <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
+                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
                   <img
                     src="/assets/others/BackShadow.png"
                     alt="Back Flare"
@@ -40,19 +40,21 @@ const MeetTheIntern = () => {
                 </div>
                 <span className="text-white font-jost flex items-center gap-4 transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow">
                   <IoIosArrowBack size={24} />
-                  BACK TO HOME
+                  <p className="xs:text-xs md:text-base">
+                    BACK TO OTHER SERVICES
+                  </p>
                 </span>
               </div>
             </Link>
-            <div className="ml-10">
+            <div className="2xl:ml-10 px-8">
               <div>
                 <section className="mb-4">
-                  <h1 className="font-metropolis font-extrabold text-6xl flex flex-col leading-none text-white tracking-tighter text-glow uppercase">
-                    {offer.title} <br />
+                  <h1 className="font-garnet xs:text-center text-glow lg:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl flex flex-col leading-none text-white tracking-tighter uppercase">
+                    {offer.title} &nbsp;
                     {offer.subtitle}
                   </h1>
                 </section>
-                <section className=" pr-24">
+                <section className="xl:pr-24 xs:p-2">
                   {offer.paragraph && (
                     <div>
                       {Object.values(offer.paragraph).map((paragraph, idx) => (
@@ -66,7 +68,7 @@ const MeetTheIntern = () => {
                       {Object.values(offer.list).map((item, idx) => (
                         <li
                           key={idx}
-                          className="font-jost text-base text-white text-justify list-disc"
+                          className="font-jost text-base text-white text-justify list-disc pl-4"
                         >
                           {item}
                         </li>
@@ -79,19 +81,22 @@ const MeetTheIntern = () => {
                 </section>
               </div>
             </div>
+
             <motion.section
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost text-white mb-4 border ml-10"
+              className="w-max p-4 font-jost border text-white xl:ml-10"
             >
-              <Link to="/">COME ON BOARD NOW</Link>
+              <Link to="/ootb/academy/meet-the-interns" state={{ offer }}>
+                COME ONBOARD NOW
+              </Link>
             </motion.section>
           </section>
 
-          <section className="relative w-1/2 flex flex-col">
-            <div className="flex justify-center gap-8 px-20 items-center h-28 w-full pl-32">
-              <h1 className="text-white font-metropolis text-3xl text-left font-bold">
+          <section className="relative xs:w-full xl:w-1/2 flex flex-col h-full mx-auto sm:px-12 items-center justify-center">
+            <div className="flex justify-center gap-8 3xl:px-20 items-center h-28 w-full 3xl:pl-32">
+              <h1 className="text-white font-metropolis xs:text-xl sm:text-3xl text-left font-bold">
                 Meet the interns!
               </h1>
               <DropdownButton

@@ -35,20 +35,20 @@ const Services = () => {
 
   return (
     <div
-      className="relative pt-48 h-full max-w-screen-2xl mx-auto px-12 shadow-inner-overlay h-screen overflow-visible"
+      className="relative h-screen mx-auto  shadow-inner-overlay  overflow-visible xs:px-3 xl:px-12 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-32 2xl:60"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
       }}
     >
-      <div className="relative z-30">
-        <motion.section className="h-full mb-20">
-          <h1 className="text-left text-[65px] leading-none text-white font-metropolis font-bold tracking-tighter">
+      <div className="relative z-30 flex flex-col">
+        <motion.section className="h-full xl:mb-32 xl:mb-20 2xl:mb-40">
+          <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
             {selectedService.title}
             <br />
             {selectedService.subtitle}
-          </h1>
-          <p className="font-jost text-base text-white">
+          </h2>
+          <p className="font-jost text-base text-white xs:text-xs md:text-base lg:text-lg xl:text-xl">
             {selectedService.heading.text}
           </p>
         </motion.section>
@@ -58,21 +58,21 @@ const Services = () => {
           transition={{ duration: 0.3 }}
         >
           <div>
-            <h1 className="font-jost text-white">
-              <span className="mr-8">SERVICES</span>
+            <h1 className="font-jost text-white xs:text-xs sm:text-sm md:text-base 3xl:text-xl">
+              <span className="xs:mr-4 xl:mr-8">SERVICES</span>
               <span>Let&apos;s discover how far your business can go!</span>
             </h1>
           </div>
-          <div className="flex justify-evenly gap-4 mt-4 mb-4">
+          <div className="flex flex-wrap justify-center gap-8 mt-8 mb-12">
             {services.map((service) => (
               <Link to={`/services/${service.link}`} key={service.id}>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
                   onMouseEnter={() => handleMouseEnter(service)}
-                  className={`relative flex w-72 h-48 rounded-2xl p-4 items-end hover:cursor-pointer ${
+                  className={`relative flex w-full xs:w-40 xs:h-32 sm:h-48 sm:w-64 md:w-72 lg:w-52 lg:h-40 xl:w-[270px] 2xl:h-48 2xl:w-72 3xl:w-[350px] 3xl:h-64  rounded-2xl p-4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   items-end hover:cursor-pointer ${
                     selectedService.id === service.id
-                      ? "scale-110 border-orange border-2 mx-4"
+                      ? "border-2 border-orange "
                       : "border-2 border-white"
                   }`}
                 >
@@ -81,7 +81,7 @@ const Services = () => {
                     alt={service.title}
                     className="absolute inset-0 w-full h-full z-0 rounded-2xl object-cover"
                   />
-                  <h2 className="font-metropolis font-bold text-white text-2xl flex flex-col leading-none z-10">
+                  <h2 className="font-metropolis font-bold text-white flex flex-col leading-none z-10 text-sm sm:text-base md:text-lg lg:text-xl">
                     {service.title}
                     <br />
                     {service.subtitle}

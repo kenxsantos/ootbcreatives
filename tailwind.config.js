@@ -5,9 +5,25 @@ export default {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      screens: {
+        xs: "390px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+        "3xl": "1920px",
+        "4xl": "2560px",
+        "5xl": "3200px",
+      },
+      clipPath: {
+        "custom-polygon":
+          "polygon(7% 0%, 100% 0%, 100% 100%, 7% 100%, 0% 93%, 0% 7%)",
+      },
       fontFamily: {
         metropolis: ["Metropolis", "sans-serif"],
         jost: ["Jost"],
+        garnet: ["Garnet", "sans-serif"],
       },
       backgroundImage: {
         rocket: 'url("/assets/backgrounds/OOTBRocketBG.png")',
@@ -21,6 +37,8 @@ export default {
           "linear-gradient(90deg, rgba(114,64,130,1) 26%, rgba(155,120,164,1) 100%)",
         "gradient-white":
           "linear-gradient(0deg, rgba(255,255,255,0.3757878151260504) 0%, rgba(255,255,255,1) 100%)",
+        "gradient-navbar":
+          "linear-gradient(90deg, rgba(166,103,209,0) 0%, rgba(0,212,255,1) 100%)",
       },
       colors: {
         orange: "#F38920",
@@ -72,8 +90,16 @@ export default {
         ".text-glow": {
           "text-shadow": "4px -1px 33px rgba(255,255,255,1)",
         },
-        ".hover\\:text-glow": {
+        ".hover:text-glow": {
           "@apply hover:text-glow": {},
+        },
+        ".clip-path-custom-polygon": {
+          clipPath:
+            "polygon(7% 0%, 100% 0%, 100% 100%, 7% 100%, 0% 93%, 0% 7%)",
+        },
+        ".clip-path-cut-top-corners": {
+          clipPath:
+            "polygon(7% 0%, 90% 0%, 100% 7%, 100% 100%, 0% 100%, 0% 7%)",
         },
       });
     },

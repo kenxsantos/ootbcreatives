@@ -42,17 +42,14 @@ const Landing = () => {
   }, []);
 
   return (
-    <div
-      className={`relative max-w-screen-2xl mx-auto bg-cover h-full ${bgClass}`}
-    >
-      <div className="relative max-w-screen-2xl mx-auto z-20  px-12 pb-12 h-full">
-        <div className="relative z-30  mb-12 ">
-          <section className="mb-4">
-            <h1 className="pt-60 text-left text-[65px] leading-none text-white font-metropolis font-bold tracking-tighter">
+    <div className={`relative h-screen object-cover ${bgClass}`}>
+      <div className="relative mx-auto z-20 xs:px-3 xl:px-12 md:pb-12 flex flex-col items-left justify-center h-full">
+        <div className="relative z-30 mb-6 ">
+          <section className="mb-4 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-60">
+            <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
               <span>BOLD IDEAS</span>
-              <br />
               <span>STELLAR RESULTS</span>
-            </h1>
+            </h2>
           </section>
           <section>
             <ReadMoreReadLess />
@@ -79,10 +76,11 @@ const Landing = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 w-full h-full z-10 shadow-inner-overlay"
+              className="absolute inset-0 w-full h-full z-10 shadow-inner-overlay object-cover"
             />
           )}
         </AnimatePresence>
+
         {showVideo && (
           <>
             <motion.div
@@ -90,14 +88,14 @@ const Landing = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 w-full h-full z-10 shadow-inner-overlay"
+              className="absolute inset-0 w-full h-full z-10  xl:shadow-inner-overlay"
             />
             <motion.button
               onClick={toggleMute}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="absolute bottom-20 right-4 z-40 p-2 text-white rounded-full"
+              className="absolute bottom-10 right-10 z-40 p-2 text-white rounded-full"
             >
               {isMuted ? <VscMute size={24} /> : <VscUnmute size={24} />}
             </motion.button>

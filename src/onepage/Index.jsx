@@ -19,7 +19,7 @@ const Index = () => {
           scale: 0.5,
           opacity: 1,
           x: -40,
-          y: -100,
+          y: -70,
           transition: { duration: 0.3 },
         });
       } else {
@@ -53,9 +53,9 @@ const Index = () => {
   };
 
   return (
-    <div className="relative max-w-screen-2xl mx-auto">
+    <div className="relative w-screen-2xl">
       <motion.div
-        className="z-[80] fixed ml-12 mt-20 cursor-pointer"
+        className="z-[80] fixed xs:ml-4 xs:mt-16 md:ml-10 md:mt-10 cursor-pointer"
         animate={logoAnimation}
         initial={{ scale: 1, opacity: 1 }}
       >
@@ -69,7 +69,7 @@ const Index = () => {
           <img
             src="/assets/logo/OOTBLogoWhite.png"
             alt="logo"
-            className="w-40"
+            className="xs:w-20 sm:w-32 md:w-44 md:-ml-8 xl:ml-4"
           />
         </ScrollLink>
       </motion.div>

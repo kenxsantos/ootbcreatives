@@ -24,8 +24,7 @@ const SearchForm = () => {
         <div className="relative w-full">
           <input
             type="search"
-            id="search-dropdown"
-            className="block p-2.5 w-full z-20 text-sm text-white bg-transparent border font-jost"
+            className="block p-2.5 w-full z-20 text-sm text-white bg-transparent border font-jost focus:outline-none"
             placeholder="SEARCH"
             required
           />

@@ -1,15 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-const TransparentDiv = ({ title, description, index, width }) => {
+
+const TransparentDiv = ({ title, description, index }) => {
+  const isXsScreen = window.matchMedia("(max-width: 390px)").matches;
+  const width = isXsScreen ? 300 : 530;
+
   return (
     <motion.div
       whileTap={{ scale: 1.1 }}
       whileHover={{ scale: 1.1, cursor: "pointer" }}
       transition={{ type: "spring", stiffness: 400, damping: 15 }}
-      className="shadow-inner-crewmates rounded-3xl flex flex-col justify-start h-60 -mb-16 w-[600px] "
+      className="shadow-inner-crewmates rounded-3xl flex flex-col justify-start h-60 -mb-16"
       style={{ width: `${width + index * 20}px` }}
     >
-      <div className="p-10">
+      <div className="xs:p-4 sm:p-10">
         <h1 className="text-3xl font-extrabold mb-2 font-metropolis text-white text-glow uppercase">
           {title}
         </h1>

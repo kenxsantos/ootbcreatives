@@ -37,17 +37,17 @@ const ShowBoardingPass = () => {
     return <div>Intern not found</div>;
   }
   return (
-    <div className="relative max-w-screen-2xl bg-academy bg-cover mx-auto h-full">
-      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-10">
-        <div className="absolute inset-0 w-1/2 h-full z-0 bg-black  bg-opacity-40"></div>
+    <div className="relative w-screen bg-academy bg-cover mx-auto h-full">
+      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
+        <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
         <FixedNavBar />
-        <div className="w-full flex">
-          <section className="relative w-1/2 flex flex-col px-12">
+        <div className="xs:px-3 xl:w-full xl:flex lg:justify-between overflow-hidden">
+          <section className="relative w-full xl:w-1/2 flex flex-col">
             <Link to="/">
-              <div className="flex items-center h-36 -ml-12 justify-start">
-                <div className="rotate-90 w-36 -ml-[60px]">
+              <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
+                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
                   <img
                     src="/assets/others/BackShadow.png"
                     alt="Back Flare"
@@ -56,7 +56,9 @@ const ShowBoardingPass = () => {
                 </div>
                 <span className="text-white font-jost flex items-center gap-4 transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow">
                   <IoIosArrowBack size={24} />
-                  BACK TO OTHER SERVICES
+                  <p className="xs:text-xs md:text-base">
+                    BACK TO OTHER SERVICES
+                  </p>
                 </span>
               </div>
             </Link>
@@ -64,7 +66,7 @@ const ShowBoardingPass = () => {
               <InternsWork internData={internData} />
             </div>
           </section>
-          <section className="relative w-1/2 flex flex-col">
+          <section className="relative xs:w-full xl:w-1/2 flex flex-col h-full mx-auto sm:px-12 items-center justify-center ">
             <InternsBoardingPass internData={internData} yearData={yearData} />
           </section>
         </div>

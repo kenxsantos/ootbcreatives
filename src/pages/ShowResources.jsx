@@ -18,7 +18,7 @@ const ShowResources = () => {
     setActiveCard(swiper.realIndex);
   };
   return (
-    <div className="relative max-w-screen-2xl bg-clear-planets bg-cover mx-auto h-full">
+    <div className="relative bg-clear-planets bg-cover mx-auto xs:h-full 3xl:h-screen">
       <div className="relative ">
         <FixedNavBar />
         <div className="w-full">

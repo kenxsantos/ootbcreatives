@@ -15,7 +15,7 @@ const ResourcesDetails = () => {
   }
 
   return (
-    <div className="relative max-w-screen-2xl bg-clear-planets bg-cover mx-auto h-screen">
+    <div className="relative bg-clear-planets bg-cover mx-auto h-full">
       <div className="relative">
         <FixedNavBar />
         <div className="w-full">
@@ -38,7 +38,7 @@ const ResourcesDetails = () => {
           </section>
           <section>
             <div className="-mt-[88px]">
-              <h1 className="text-center tracking-tighter font-metropolis text-glow text-white text-xl font-extrabold uppercase">
+              <h1 className="text-center tracking-tighter font-metropolis text-glow text-white text-xl font-extrabold uppercase xs:mt-20 lg:mt-0">
                 {"OOTB " + formattedTitle}
               </h1>
             </div>
