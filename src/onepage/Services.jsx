@@ -41,7 +41,7 @@ const Services = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="relative z-30 flex flex-col">
+      <div className="relative z-30 flex flex-col fixed">
         <motion.section className="h-full xl:mb-32 xl:mb-20 2xl:mb-40">
           <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
             {selectedService.title}

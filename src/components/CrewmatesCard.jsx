@@ -17,7 +17,7 @@ const CrewmatesCard = () => {
   };
 
   return (
-    <div className="mx-auto 3xl:px-12">
+    <div className="mx-auto 3xl:px-12 mb-12">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

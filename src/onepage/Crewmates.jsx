@@ -11,7 +11,7 @@ const Crewmates = () => {
       if (scrollY > 1500) {
         controls.start({ y: 0 });
       } else {
-        controls.start({ y: -130 });
+        controls.start({ y: -75 });
       }
     };
 

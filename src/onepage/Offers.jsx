@@ -18,7 +18,7 @@ const Offers = () => {
       if (scrollY > 2200) {
         controls.start({ y: 0 }); // Adjust the y value and opacity
       } else {
-        controls.start({ y: -195 }); // Initial state when at the top
+        controls.start({ y: -130 }); // Initial state when at the top
       }
     };
 
@@ -28,8 +28,8 @@ const Offers = () => {
   }, [controls]);
 
   return (
-    <div className="bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
-      <section className="text-center flex flex-col justify-center  ">
+    <div className="bg-blurred-planets h-full mx-auto bg-cover flex flex-col justify-center">
+      <section className="text-center flex flex-col justify-center xl:pt-28 ">
         <motion.div
           className="lg:px-20 xl:px-28 2xl:px-36 w-full"
           animate={controls}
@@ -49,7 +49,7 @@ const Offers = () => {
           spaceBetween={0}
           centerInsufficientSlides={true}
           modules={[Mousewheel, Pagination, Navigation]}
-          className="h-full w-full pt-24 pb-28 2xl:w-[80%] 3xl:w-[70%] 2xl:px-24  xl:px-32 "
+          className="h-full w-full pt-16 pb-28 2xl:w-[80%] 3xl:w-[70%] 2xl:px-24  xl:px-32 "
           breakpoints={{
             640: {
               slidesPerView: 3,
