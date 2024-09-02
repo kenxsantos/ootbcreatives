@@ -11,7 +11,7 @@ const ShowAcademy = () => {
   const offer = location.state?.offer;
 
   return (
-    <div className="relative bg-academy bg-cover mx-auto h-full">
+    <div className="relative bg-academy bg-cover mx-auto xs:h-full xl:h-screen">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
@@ -36,15 +36,15 @@ const ShowAcademy = () => {
                 </span>
               </div>
             </Link>
-            <div className="2xl:ml-10  px-8">
+            <div className="2xl:ml-10">
               <div>
                 <section className="mb-4">
-                  <h1 className="font-garnet xs:text-center text-glow lg:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl flex flex-col leading-none text-white tracking-tighter uppercase">
+                  <h1 className="font-garnet xs:text-center text-glow xl:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl flex flex-col leading-none text-white tracking-tighter uppercase">
                     {offer.title} &nbsp;
                     {offer.subtitle}
                   </h1>
                 </section>
-                <section className="xl:pr-24 xs:p-2">
+                <section className="xl:pr-24 xs:p-2 md:px-20 lg:px-0">
                   {offer.paragraph && (
                     <div>
                       {Object.values(offer.paragraph).map((paragraph, idx) => (
@@ -75,7 +75,7 @@ const ShowAcademy = () => {
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost border text-white xs:ml-10  mb-12 2xl:ml-10 xl:ml-10"
+              className="w-max p-4 font-jost border text-white 2xl:ml-10  mb-12 md:ml-20 lg:ml-0"
             >
               <Link to="/ootb/academy/meet-the-interns" state={{ offer }}>
                 MEET THE INTERNS

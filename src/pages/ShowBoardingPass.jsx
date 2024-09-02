@@ -30,7 +30,6 @@ const ShowBoardingPass = () => {
 
   const internData = findIntern();
 
-  console.log(internData);
   if (!internData) {
     return <div>Intern not found</div>;
   }

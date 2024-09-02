@@ -31,7 +31,7 @@ const MeetTheIntern = () => {
           <section className="relative w-full xl:w-1/2 flex flex-col">
             <Link to="/">
               <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
-                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
+                <div className="rotate-90 xs:w-28 xs:-ml-[55px] md:w-36 md:-ml-7 xl:-ml-16">
                   <img
                     src="/assets/others/BackShadow.png"
                     alt="Back Flare"
@@ -46,15 +46,15 @@ const MeetTheIntern = () => {
                 </span>
               </div>
             </Link>
-            <div className="2xl:ml-10 px-8">
+            <div className="2xl:ml-10">
               <div>
                 <section className="mb-4">
-                  <h1 className="font-garnet xs:text-center text-glow lg:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl flex flex-col leading-none text-white tracking-tighter uppercase">
+                  <h1 className="font-garnet xs:text-center text-glow xl:text-left font-extrabold xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl flex flex-col leading-none text-white tracking-tighter uppercase">
                     {offer.title} &nbsp;
                     {offer.subtitle}
                   </h1>
                 </section>
-                <section className="xl:pr-24 xs:p-2">
+                <section className="xl:pr-24 xs:p-2 md:px-20 lg:px-0">
                   {offer.paragraph && (
                     <div>
                       {Object.values(offer.paragraph).map((paragraph, idx) => (
@@ -81,19 +81,17 @@ const MeetTheIntern = () => {
                 </section>
               </div>
             </div>
-
             <motion.section
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost border xs:ml-10 text-white xl:ml-10"
+              className="w-max p-4 font-jost border text-white 2xl:ml-10  mb-12 md:ml-20 lg:ml-0"
             >
               <Link to="/ootb/academy/meet-the-interns" state={{ offer }}>
                 COME ONBOARD NOW
               </Link>
             </motion.section>
           </section>
-
           <section className="relative xs:w-full xl:w-1/2 flex flex-col h-full mx-auto sm:px-12 items-center justify-center">
             <div className="flex justify-center gap-8 3xl:px-20 items-center h-28 w-full 3xl:pl-32">
               <h1 className="text-white font-metropolis xs:text-xl sm:text-3xl text-left font-bold">

@@ -47,8 +47,8 @@ const CrewmatesCard = () => {
             spaceBetween: 10,
           },
           1920: {
-            slidesPerView: 4,
-            spaceBetween: -200,
+            slidesPerView: 3,
+            spaceBetween: 0,
           },
         }}
       >

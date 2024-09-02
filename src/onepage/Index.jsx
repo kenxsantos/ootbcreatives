@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Landing from "./Landing";
 import NavBar from "../components/NavBar";
 import Services from "./Services";
@@ -21,37 +22,30 @@ const Index = () => {
 
       if (window.scrollY > 5) {
         if (windowWidth >= 1536) {
-          // 2xl
           scale = 0.5;
           x = -70;
           y = -350;
         } else if (windowWidth >= 1280) {
-          // xl
           scale = 0.5;
           x = -90;
           y = -150;
         } else if (windowWidth >= 1024) {
-          // lg
           scale = 0.6;
           x = -50;
           y = -350;
         } else if (windowWidth >= 768) {
-          // md
           scale = 0.6;
           x = -55;
           y = -450;
         } else if (windowWidth >= 640) {
-          // sm
           scale = 0.7;
           x = -30;
           y = -300;
         } else if (windowWidth >= 390) {
-          // xs
           scale = 0.8;
           x = -10;
           y = -300;
         } else {
-          // default case, for very small screens
           scale = 0.9;
           x = -10;
           y = -20;
@@ -92,7 +86,7 @@ const Index = () => {
   return (
     <div className="relative w-screen-2xl">
       <div
-        className="z-[80] xs:ml-4 fixed xs:mt-60 sm:mt-52 md:mt-64 md:ml-12 lg:mt-48 xl:mt-12 xl:ml-10 2xl: cursor-pointer"
+        className="z-[90] xs:ml-4 fixed xs:mt-60 sm:mt-52 md:mt-64 md:ml-12 lg:mt-48 xl:mt-20 xl:ml-10 2xl:mt-40 cursor-pointer"
         id="logo"
         initial={{ scale: 1, opacity: 1 }}
       >

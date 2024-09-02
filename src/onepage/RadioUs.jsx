@@ -10,15 +10,28 @@ const RadioUs = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY > 3000) {
-        controls.start({ y: 0 }); // Adjust the y value and opacity
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth < 640) {
+        controls.start({ y: scrollY > 3300 ? 0 : -150 });
+      } else if (screenWidth < 768) {
+        controls.start({ y: scrollY > 3300 ? 0 : -130 });
+      } else if (screenWidth < 1024) {
+        controls.start({ y: scrollY > 3300 ? 0 : -110 });
+      } else if (screenWidth < 1280) {
+        controls.start({ y: scrollY > 3300 ? 0 : -60 });
+      } else if (screenWidth < 1536) {
+        controls.start({ y: scrollY > 3300 ? 0 : -380 });
+      } else if (screenWidth < 1920) {
+        controls.start({ y: scrollY > 3300 ? 0 : -380 });
+      } else if (screenWidth < 2560) {
+        controls.start({ y: scrollY > 3900 ? 0 : -450 });
       } else {
-        controls.start({ y: -300 }); // Initial state when at the top
+        controls.start({ y: scrollY > 3300 ? 0 : -400 });
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [controls]);
 

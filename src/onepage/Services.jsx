@@ -24,12 +24,22 @@ const Services = () => {
       const scrollY = window.scrollY;
       const screenWidth = window.innerWidth;
 
-      if (screenWidth >= 390) {
-        controls.start({ y: scrollY > 0 ? 0 : -350 });
+      if (screenWidth < 640) {
+        controls.start({ y: scrollY > 0 ? 0 : -300 });
       } else if (screenWidth < 768) {
-        controls.start({ y: scrollY > -500 ? 0 : 0 });
+        controls.start({ y: scrollY > 0 ? 0 : -400 });
+      } else if (screenWidth < 1024) {
+        controls.start({ y: scrollY > 0 ? 0 : -450 });
+      } else if (screenWidth < 1280) {
+        controls.start({ y: scrollY > 0 ? 0 : -430 });
+      } else if (screenWidth < 1536) {
+        controls.start({ y: scrollY > 0 ? 0 : -500 });
+      } else if (screenWidth < 1920) {
+        controls.start({ y: scrollY > 0 ? 0 : -650 });
+      } else if (screenWidth < 2560) {
+        controls.start({ y: scrollY > 0 ? 0 : -700 });
       } else {
-        controls.start({ y: scrollY > 0 ? -500 : 0 });
+        controls.start({ y: scrollY > 0 ? 0 : 0 });
       }
     };
 
@@ -39,13 +49,13 @@ const Services = () => {
 
   return (
     <div
-      className="relative h-screen mx-auto  shadow-inner-overlay  overflow-visible xs:px-3 xl:px-12 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-32 2xl:60"
+      className="relative h-screen mx-auto  shadow-inner-overlay  overflow-visible xs:px-3 xl:px-12 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-32 2xl:pt-56"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
       }}
     >
-      <div className="relative z-30 flex flex-col fixed">
+      <div className="relative z-30 flex flex-col">
         <motion.section className="h-full xl:mb-32 xl:mb-20 2xl:mb-40">
           <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
             {selectedService.title}

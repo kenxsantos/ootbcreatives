@@ -76,7 +76,7 @@ const Landing = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 w-full h-full z-10 shadow-inner-overlay object-cover"
+              className="absolute inset-0 w-full h-full z-10 xs:bg-black xs:bg-opacity-70 xl:shadow-inner-overlay object-cover"
             />
           )}
         </AnimatePresence>
@@ -88,7 +88,7 @@ const Landing = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 w-full h-full z-10 xs:bg-black xs:bg-opacity-70  xl:shadow-inner-overlay"
+              className="absolute inset-0 w-full h-full z-10 xs:bg-black xs:bg-opacity-70 xl:shadow-inner-overlay"
             />
             <motion.button
               onClick={toggleMute}
