@@ -40,7 +40,7 @@ const ShowCrewmates = () => {
                 className="xs:h-6 sm:h-10 lg:h-16"
               />
             </div>
-            <div className="absolute xs:top-[45px] sm:top-[30px] xl:-top-[70px] md:-top-[20px] z-50 w-full  xs:pl-2 xs:pt-4 sm:pl-2 md:pl-20 xl:pl-56 2xl:pl-56 items-center">
+            <div className="absolute xs:top-0 sm:top-[30px] xl:-top-[70px] md:-top-[20px] z-50 w-full  xs:pl-2 xs:pt-4 sm:pl-2 md:pl-20 xl:pl-56 2xl:pl-56 items-center">
               {imageSrc && (
                 <motion.img
                   key={imageSrc}

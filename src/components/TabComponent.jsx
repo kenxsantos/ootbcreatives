@@ -5,13 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Mousewheel, Pagination, Navigation } from "swiper/modules";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const TabComponent = ({ yearData }) => {
-  const [activeTab, setActiveTab] = useState("1"); // Default to Batch 1
+  const [activeTab, setActiveTab] = useState("1");
   const { batch, intern } = useParams();
   const swiperRef = useRef(null);
-  const batchKey = batch?.replace("batch-", "") || "1"; // Fallback to "1" if batch is undefined
+  const batchKey = batch?.replace("batch-", "") || "1";
 
   useEffect(() => {
     if (batch && yearData.batch[batchKey]) {
@@ -23,11 +22,11 @@ const TabComponent = ({ yearData }) => {
     const swiper = swiperRef.current?.swiper;
     if (swiper) {
       const updateArrowVisibility = () => {
-        swiper.navigation.update(); // Update arrows visibility
+        swiper.navigation.update();
       };
 
       swiper.on("slideChange", updateArrowVisibility);
-      updateArrowVisibility(); // Initialize visibility on mount
+      updateArrowVisibility();
 
       return () => {
         swiper.off("slideChange", updateArrowVisibility);
@@ -41,7 +40,6 @@ const TabComponent = ({ yearData }) => {
 
   const formattedName = (name) => name.toLowerCase().replace(/ /g, "-");
 
-  // Calculate initial slide based on the selected intern
   const initialSlideIndex = Object.keys(
     yearData.batch[activeTab] || {}
   ).findIndex(
@@ -84,7 +82,7 @@ const TabComponent = ({ yearData }) => {
                     isSelected ? "border-2 border-orange" : "border-none"
                   }`}
                 >
-                  <a
+                  <Link
                     href={`/ootb/academy/meet-the-interns/${
                       yearData.year
                     }/batch-${activeTab}/${formattedName(internData.name)}`}
@@ -96,7 +94,7 @@ const TabComponent = ({ yearData }) => {
                         isSelected ? "opacity-100" : "opacity-50"
                       }`}
                     />
-                  </a>
+                  </Link>
                 </motion.div>
               </SwiperSlide>
             );
