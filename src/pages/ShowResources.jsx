@@ -40,7 +40,7 @@ const ShowResources = () => {
             </Link>
           </section>
           <section>
-            <div className="-mt-12">
+            <div className="lg:-mt-12">
               <h1 className="text-center tracking-tighter font-metropolis text-glow text-white text-5xl font-extrabold uppercase">
                 Resources
               </h1>

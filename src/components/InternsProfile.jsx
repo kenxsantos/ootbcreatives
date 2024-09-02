@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,7 +12,6 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
-import { Link } from "react-router-dom";
 
 const InternsProfile = ({ batches, year }) => {
   const [activeCard, setActiveCard] = useState(0);

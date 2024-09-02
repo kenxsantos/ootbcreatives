@@ -22,10 +22,14 @@ const Services = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      controls.start({ y: -500 });
-      if (scrollY === 0) {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth >= 390) {
+        controls.start({ y: scrollY > 0 ? 0 : -350 });
+      } else if (screenWidth < 768) {
+        controls.start({ y: scrollY > -500 ? 0 : 0 });
       } else {
-        controls.start({ y: 0 });
+        controls.start({ y: scrollY > 0 ? -500 : 0 });
       }
     };
 
