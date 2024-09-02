@@ -47,8 +47,8 @@ const CrewmatesCard = () => {
             spaceBetween: 10,
           },
           1920: {
-            slidesPerView: 4,
-            spaceBetween: -200,
+            slidesPerView: 3,
+            spaceBetween: 0,
           },
         }}
       >
@@ -103,7 +103,7 @@ const CrewmatesCard = () => {
                     <motion.img
                       src={crewmate.satellite}
                       alt="rocket"
-                      className="absolute xs:w-28 xs:h-28 xs:ml-8 xs:mt-4 sm:mt-0 sm:ml-0 sm:w-40 sm:h-40"
+                      className="absolute xs:w-28 xs:h-28 xs:ml-8 xs:-mt-4 sm:mt-0 sm:ml-0 sm:w-40 sm:h-40"
                       animate={{
                         scale: index === activeCard ? 1.25 : 1.2,
                         x: -60,

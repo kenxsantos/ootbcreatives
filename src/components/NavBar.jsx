@@ -11,6 +11,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
+    { name: "LANDING", id: "landing" },
     { name: "SERVICES", id: "services" },
     { name: "CLIENTS", id: "clients" },
     { name: "CREWMATES", id: "crewmates" },
@@ -102,7 +103,6 @@ const NavBar = () => {
             </motion.div>
           )}
 
-          {/* Navigation Links (Visible on larger screens) */}
           <div
             className={`${
               isMenuOpen ? "hidden" : "hidden 2xl:flex space-x-8"
@@ -117,7 +117,9 @@ const NavBar = () => {
                 duration={800}
                 offset={0}
                 onSetActive={() => setActiveLink(link.id)}
-                className="relative flex items-center justify-center p-8 h-12 mt-4"
+                className={`relative flex items-center justify-center p-8 h-12 mt-4 ${
+                  link.name === "LANDING" ? "hidden" : "block"
+                }`}
               >
                 <motion.span
                   whileHover={{ scale: 1.1 }}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -83,7 +83,7 @@ const TabComponent = ({ yearData }) => {
                   }`}
                 >
                   <Link
-                    href={`/ootb/academy/meet-the-interns/${
+                    to={`/ootb/academy/meet-the-interns/${
                       yearData.year
                     }/batch-${activeTab}/${formattedName(internData.name)}`}
                   >

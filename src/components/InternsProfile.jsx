@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,7 +12,6 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
-import { Link } from "react-router-dom";
 
 const InternsProfile = ({ batches, year }) => {
   const [activeCard, setActiveCard] = useState(0);
@@ -55,10 +55,8 @@ const InternsProfile = ({ batches, year }) => {
               animate={{
                 transition: { delay: 0.3, duration: 0.3, ease: "easeInOut" },
               }}
-              className={`shadow-inner-crewmates  rounded-3xl flex flex-col justify-start h-60  p-4 w-[600px] ${
-                index === activeCard
-                  ? "bg-gray-500 bg-opacity-90"
-                  : "bg-gray-500 bg-opacity-50"
+              className={`shadow-inner-crewmates  rounded-3xl flex flex-col justify-start h-60  p-4 xs:w-[380px] sm:w-[600px] ${
+                index === activeCard ? "bg-gradient-red" : "bg-gradient-purple"
               }`}
             >
               <div key={index} className="w-full">

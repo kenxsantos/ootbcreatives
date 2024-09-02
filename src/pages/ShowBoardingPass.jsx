@@ -14,8 +14,6 @@ const ShowBoardingPass = () => {
 
   const yearData = internship.find((data) => data.year.toString() === year);
 
-  console.log("yearData:" + yearData);
-
   const findIntern = () => {
     const batchKey = selectedBatch.replace("batch-", "");
 
@@ -32,7 +30,6 @@ const ShowBoardingPass = () => {
 
   const internData = findIntern();
 
-  console.log(internData);
   if (!internData) {
     return <div>Intern not found</div>;
   }
