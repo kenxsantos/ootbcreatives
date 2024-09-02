@@ -13,7 +13,7 @@ const RadioUs = () => {
       if (scrollY > 3000) {
         controls.start({ y: 0 }); // Adjust the y value and opacity
       } else {
-        controls.start({ y: -360 }); // Initial state when at the top
+        controls.start({ y: -300 }); // Initial state when at the top
       }
     };
 
@@ -36,7 +36,7 @@ const RadioUs = () => {
   };
 
   return (
-    <div className="bg-clear-planets 2xl:h-screen xs:h-full mx-auto bg-cover">
+    <div className="bg-clear-planets h-screen mx-auto bg-cover">
       <div className="w-full mx-auto pt-14 flex justify-center items-center h-full">
         <section className="w-full xl:flex">
           <motion.div

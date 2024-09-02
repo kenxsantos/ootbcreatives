@@ -17,7 +17,7 @@ const NewsBlogs = () => {
           className="flex w-full h-36 rounded-xl font-jost text-white text-base bg-gray-500 bg-opacity-60"
         >
           <div className="w-[40%] rounded-l-xl p-6 uppercase">{item.title}</div>
-          <div className="w-[60%] rounded-r-xl p-6 text-justify">
+          <div className="w-[60%] rounded-r-xl p-6 text-justify overflow-auto hide-scrollbar">
             {item.content}
           </div>
         </motion.div>

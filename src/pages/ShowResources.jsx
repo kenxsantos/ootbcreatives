@@ -50,15 +50,37 @@ const ShowResources = () => {
                 effect={"slide"}
                 grabCursor={true}
                 mousewheel={true}
-                spaceBetween={-120}
+                spaceBetween={10}
                 speed={800}
                 loop={true}
-                slidesPerView={3}
+                slidesPerView={1}
                 centeredSlides={true}
                 onSlideChange={handleSlideChange}
                 pagination={{
                   clickable: true,
                   dynamicBullets: true,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: -100,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: -100,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: -100,
+                  },
+                  1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                  },
+                  1920: {
+                    slidesPerView: 3,
+                    spaceBetween: -200,
+                  },
                 }}
                 modules={[Mousewheel, Pagination, Navigation]}
                 className="w-full h-full flex items-center justify-center py-12"

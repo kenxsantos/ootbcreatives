@@ -9,7 +9,7 @@ import InternsWork from "../components/InternsWork";
 import InternsBoardingPass from "../components/InternsBoardingPass";
 const ShowBoardingPass = () => {
   const { batch, year, intern } = useParams();
-  const [selectedBatch, setSelectedBatch] = useState(batch || "batch-1"); // Default to batch 1 if no batch is provided in the URL
+  const [selectedBatch, setSelectedBatch] = useState(batch || "batch-1");
   const formattedName = (name) => name.toLowerCase().replace(/ /g, "-");
 
   const yearData = internship.find((data) => data.year.toString() === year);

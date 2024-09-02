@@ -27,7 +27,7 @@ const MeetTheIntern = () => {
       </div>
       <div className="relative z-10">
         <FixedNavBar />
-        <div className="xs:px-3 xl:w-full xl:flex items-center lg:justify-between overflow-hidden">
+        <div className="xs:px-2 xl:w-full xl:flex items-center lg:justify-between overflow-hidden">
           <section className="relative w-full xl:w-1/2 flex flex-col">
             <Link to="/">
               <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
@@ -86,7 +86,7 @@ const MeetTheIntern = () => {
               whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1, cursor: "pointer" }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-max p-4 font-jost border text-white xl:ml-10"
+              className="w-max p-4 font-jost border xs:ml-10 text-white xl:ml-10"
             >
               <Link to="/ootb/academy/meet-the-interns" state={{ offer }}>
                 COME ONBOARD NOW
