@@ -95,7 +95,9 @@ const NavBar = () => {
                   offset={0}
                   onSetActive={() => setActiveLink(link.id)}
                   onClick={closeMenu} // Close the menu after clicking a link
-                  className="text-2xl text-white hover:text-glow transition-all duration-300 cursor-pointer"
+                  className={`text-2xl text-white hover:text-glow transition-all duration-300 cursor-pointer ${
+                    link.name === "LANDING" ? "hidden" : "block"
+                  }`}
                 >
                   {link.name}
                 </ScrollLink>

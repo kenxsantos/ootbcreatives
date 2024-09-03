@@ -27,7 +27,7 @@ const ClientsModal = ({ isOpen, close, modalContent }) => {
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
-            className="overflow-visible  relative transform rounded-lg bg-white text-left shadow-2xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+            className="overflow-visible  relative transform rounded-lg bg-[#4FB2DD] w-[800px] bg-opacity-95 text-left shadow-2xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
             <div className="relative px-4 py-3">
               <IoIosClose
@@ -41,7 +41,7 @@ const ClientsModal = ({ isOpen, close, modalContent }) => {
                 <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left ">
                   <div className="mt-2">
                     <img
-                      src={modalContent.logo}
+                      src={modalContent.poster}
                       alt={modalContent.brand}
                       className="w-full"
                     />

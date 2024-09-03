@@ -47,7 +47,7 @@ const ClientsOnboard = () => {
 
   return (
     <div>
-      <div className="font-jost text-white text-base">CLIENTS ONBOARD</div>
+      <div className="font-jost text-white text-base ml-2">CLIENTS ONBOARD</div>
       <div className="overflow-hidden py-2">
         <div className="w-full">
           <motion.div

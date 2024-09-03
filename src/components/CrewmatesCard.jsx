@@ -24,7 +24,6 @@ const CrewmatesCard = () => {
         centeredSlides={true}
         loop={true}
         slidesPerView={1} // Default for small screens
-        mousewheel={true}
         spaceBetween={10}
         modules={[Mousewheel, Pagination, Navigation]}
         className="h-full w-full pt-24 pb-28"

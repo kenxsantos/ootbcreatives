@@ -11,7 +11,7 @@ const ShowAcademy = () => {
   const offer = location.state?.offer;
 
   return (
-    <div className="relative bg-academy bg-cover mx-auto xs:h-full xl:h-screen">
+    <div className="relative bg-academy bg-cover mx-auto xs:h-full 2xl:h-screen">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>

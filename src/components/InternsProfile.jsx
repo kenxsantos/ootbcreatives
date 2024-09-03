@@ -74,7 +74,7 @@ const InternsProfile = ({ batches, year }) => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.3 }}
-                          className="w-20 h-20 flex"
+                          className="w-20 h-20 flex object-cover"
                         >
                           <Link
                             to={`/ootb/academy/meet-the-interns/${year}/batch-${batch}/${formattedName(

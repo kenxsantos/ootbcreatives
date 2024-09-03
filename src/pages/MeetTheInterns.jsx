@@ -31,7 +31,7 @@ const MeetTheIntern = () => {
           <section className="relative w-full xl:w-1/2 flex flex-col">
             <Link to="/">
               <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
-                <div className="rotate-90 xs:w-28 xs:-ml-[55px] md:w-36 md:-ml-7 xl:-ml-16">
+                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
                   <img
                     src="/assets/others/BackShadow.png"
                     alt="Back Flare"
