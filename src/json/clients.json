@@ -5,11 +5,16 @@
       "1": {
         "brand": "JML",
         "logo": "/assets/clients/recently-added/logo/jml.png",
-        "poster": "/assets/clients/recently-added/case-study/jml.webp"
+        "poster": "/assets/clients/recently-added/case-study/jml.png"
       },
       "2": {
         "brand": "bridgestone",
         "logo": "/assets/clients/recently-added/logo/bridgestone.png"
+      },
+      "3": {
+        "brand": "mariveles",
+        "logo": "/assets/clients/recently-added/logo/mariveles.png",
+        "poster": "/assets/clients/recently-added/case-study/mariveles-1.png"
       }
     },
     "clientsOnboard": {

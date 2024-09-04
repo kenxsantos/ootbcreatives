@@ -559,36 +559,6 @@
     "batch": {
       "1": {
         "1": {
-          "name": "Joseph Enriquez",
-          "date-started": "January 2023",
-          "date-ended": "February 2023",
-          "role": "Multimedia Artist",
-          "profile": "https://via.placeholder.com/150",
-          "boardingPass": "/assets/boardingpass/nopass.png",
-          "works": {
-            "1": {
-              "client": "Bridgestone",
-              "project": "Bridgestone Philippines",
-              "description": "Copywriting for Bridgestone Philippines",
-              "images": {
-                "1": "https://via.placeholder.com/150",
-                "2": "https://via.placeholder.com/150",
-                "3": "https://via.placeholder.com/150"
-              }
-            },
-            "2": {
-              "client": "BDO",
-              "project": "We find ways",
-              "description": "Copywriting for Bridgestone Philippines",
-              "images": {
-                "1": "https://via.placeholder.com/150",
-                "2": "https://via.placeholder.com/150",
-                "3": "https://via.placeholder.com/150"
-              }
-            }
-          }
-        },
-        "2": {
           "name": "Russel Bautista",
           "date-started": "January 2023",
           "date-ended": "February 2023",
@@ -618,7 +588,7 @@
             }
           }
         },
-        "3": {
+        "2": {
           "name": "Chrissen Tiglao",
           "date-started": "January 2023",
           "date-ended": "February 2023",
@@ -647,7 +617,7 @@
             }
           }
         },
-        "4": {
+        "3": {
           "name": "Alvin Estrella Jr.",
           "date-started": "January 2023",
           "date-ended": "February 2023",
@@ -676,7 +646,7 @@
             }
           }
         },
-        "5": {
+        "4": {
           "name": "Krishna Mae Bacolod",
           "date-started": "January 2023",
           "date-ended": "February 2023",

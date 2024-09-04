@@ -27,19 +27,17 @@
       "1": {
         "img": {
           "1": "/assets/eventsmanagement/conceptualization/1.png"
-          
         },
         "caption": {
-         
+          "1": "Out of the Box Creatives excels in turning abstract ideas into vivid, unforgettable experiences. Our team will collaborate with you to create a unique and inspiring theme that perfectly aligns with your brand and event objectives."
         }
       },
       "2": {
         "img": {
           "1": "/assets/eventsmanagement/planning/3.png"
-          
         },
-        "caption": {
-      
+        "caption": {  
+          "1": "With meticulous attention to detail, Out of the Box Creatives will arrange every detail of your event, from timelines to vendor coordination, ensuring a seamless and stress-free preparation process."
         }
       },
       "3": {
@@ -47,7 +45,7 @@
           
         },
         "caption": {
-      
+          "1": "Our team will bring your vision to life by creating custom-designed elements, such as stage sets, backdrops, and interactive displays, that enhance the event’s theme and leave a lasting impression on your guests."
         }
       },
       "4": {
@@ -55,7 +53,7 @@
         
         },
         "caption": {
-        
+          "1": "Our team will bring your vision to life by creating custom-designed elements, such as stage sets, backdrops, and interactive displays, that enhance the event’s theme and leave a lasting impression on your guests."
         }
       },
       "5": {
@@ -63,12 +61,15 @@
           
         },
         "caption": {
-
+          "1": "Our team will bring your vision to life by creating custom-designed elements, such as stage sets, backdrops, and interactive displays, that enhance the event’s theme and leave a lasting impression on your guests."
         }
       },
       "6": {
         "img": {
          
+        },
+        "caption": {
+          "1": "Our team will bring your vision to life by creating custom-designed elements, such as stage sets, backdrops, and interactive displays, that enhance the event’s theme and leave a lasting impression on your guests."
         }
       }
     }
