@@ -108,7 +108,7 @@ const ShowServices = () => {
                       return (
                         <motion.div
                           key={groupIndex}
-                          className="mb-12 border-b-4 border-orange"
+                          className="mb-12 border-b-4 border-orange pb-12"
                           id={
                             service.offers[groupKey]
                               ? service.offers[groupKey]

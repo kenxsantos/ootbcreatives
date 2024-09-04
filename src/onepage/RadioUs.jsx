@@ -7,34 +7,6 @@ const RadioUs = () => {
   const [activeOption, setActiveOption] = useState("Client");
   const controls = useAnimation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const screenWidth = window.innerWidth;
-
-      if (screenWidth < 640) {
-        controls.start({ y: scrollY > 3300 ? 0 : -150 });
-      } else if (screenWidth < 768) {
-        controls.start({ y: scrollY > 3300 ? 0 : -130 });
-      } else if (screenWidth < 1024) {
-        controls.start({ y: scrollY > 3300 ? 0 : -110 });
-      } else if (screenWidth < 1280) {
-        controls.start({ y: scrollY > 3300 ? 0 : -60 });
-      } else if (screenWidth < 1536) {
-        controls.start({ y: scrollY > 3300 ? 0 : -380 });
-      } else if (screenWidth < 1920) {
-        controls.start({ y: scrollY > 3300 ? 0 : -380 });
-      } else if (screenWidth < 2560) {
-        controls.start({ y: scrollY > 3900 ? 0 : -450 });
-      } else {
-        controls.start({ y: scrollY > 3300 ? 0 : -400 });
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [controls]);
-
   const renderForm = () => {
     switch (activeOption) {
       case "Client":
@@ -90,7 +62,7 @@ const RadioUs = () => {
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      {option}
+                      <p>{option}</p>
                     </motion.div>
                   )
                 )}
@@ -107,6 +79,7 @@ const RadioUs = () => {
                 <div className="xs:w-full sm:w-1/2 flex justify-end flex-col xs:order-last sm:order-first xs:mt-4 sm:mt-0">
                   <div className="relative h-11 w-full min-w-[200px]">
                     <input
+                      required
                       placeholder="ex. John Doe"
                       className="font-jost text-white peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 text-base font-normal outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
                     />

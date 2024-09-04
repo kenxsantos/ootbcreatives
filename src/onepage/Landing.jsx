@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { VscMute, VscUnmute } from "react-icons/vsc";
 import services from "../json/services.json";
-import { BiBorderAll } from "react-icons/bi";
+
 const Landing = () => {
   const [showVideo, setShowVideo] = useState(false);
   const [bgClass, setBgClass] = useState("bg-rocket");
@@ -47,7 +47,7 @@ const Landing = () => {
       <div className="relative mx-auto z-20 xs:px-3 xl:px-12 md:pb-12 flex flex-col items-left justify-center h-full">
         <div className="relative z-30 mb-6">
           <section className="mb-4 xs:pt-40 sm:pt-48 md:pt-52 xl:pt-60">
-            <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
+            <h2 className="flex flex-col leading-none text-left  text-white font-metropolis font-extrabold tracking-tighter xs:text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
               <span>BOLD IDEAS</span>
               <span>STELLAR RESULTS</span>
             </h2>
@@ -55,7 +55,7 @@ const Landing = () => {
           <section>
             <ReadMoreReadLess />
           </section>
-          <section className="h-[80px]">
+          {/* <section className="h-[80px]">
             <section>
               <div>
                 <h1 className="font-jost text-white xs:text-xs sm:text-sm md:text-base 3xl:text-xl hover:cursor-pointer">
@@ -81,7 +81,7 @@ const Landing = () => {
                 ))}
               </div>
             </section>
-          </section>
+          </section> */}
         </div>
         <AnimatePresence>
           {showVideo ? (

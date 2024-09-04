@@ -12,34 +12,6 @@ import { Mousewheel, Pagination, Navigation } from "swiper/modules";
 const Offers = () => {
   const controls = useAnimation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const screenWidth = window.innerWidth;
-
-      if (screenWidth < 640) {
-        controls.start({ y: scrollY > 2500 ? 0 : -110 });
-      } else if (screenWidth < 768) {
-        controls.start({ y: scrollY > 2500 ? 0 : -130 });
-      } else if (screenWidth < 1024) {
-        controls.start({ y: scrollY > 2500 ? 0 : -100 });
-      } else if (screenWidth < 1280) {
-        controls.start({ y: scrollY > 2500 ? 0 : -120 });
-      } else if (screenWidth < 1536) {
-        controls.start({ y: scrollY > 2500 ? 0 : -170 });
-      } else if (screenWidth < 1920) {
-        controls.start({ y: scrollY > 2500 ? 0 : -170 });
-      } else if (screenWidth < 2040) {
-        controls.start({ y: scrollY > 2900 ? 0 : -250 });
-      } else {
-        controls.start({ y: scrollY > 2500 ? 0 : -200 });
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [controls]);
-
   return (
     <div className="bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
       <section className="text-center flex flex-col justify-center xl:pt-28 ">
@@ -105,25 +77,8 @@ const Offers = () => {
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 15 }}
                     key={index}
-                    className="w-[300px] h-[350px] bg-gray-500 bg-opacity-60 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer relative overflow-hidden"
+                    className="w-[300px] h-[350px] bg-gray-500 bg-opacity-60 p-6 rounded-2xl flex flex-col justify-end hover:cursor-pointer relative overflow-hidden focus:outline-none"
                   >
-                    {/* Border animation */}
-                    <motion.div
-                      className="absolute inset-0 rounded-2xl border-4"
-                      style={{
-                        borderColor: "transparent",
-                        borderImageSource: "url('/path-to-your-image.png')", // Replace with your image
-                        borderImageSlice: 1,
-                      }}
-                      animate={{ rotate: 360 }}
-                      transition={{
-                        repeat: Infinity,
-                        ease: "linear",
-                        duration: 4,
-                      }}
-                    />
-
-                    {/* Content inside the div */}
                     <div>
                       <h1 className="z-50 text-glow text-left text-xl font-bold font-garnet text-white leading-none mb-2 uppercase">
                         {offer.title} <br /> {offer.subtitle}
