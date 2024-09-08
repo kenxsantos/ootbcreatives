@@ -34,7 +34,7 @@ const ShowBoardingPass = () => {
     return <div>Intern not found</div>;
   }
   return (
-    <div className="relative w-screen bg-academy bg-cover mx-auto h-full">
+    <div className="relative w-screen bg-academy bg-cover mx-auto xs:h-full xl:h-screen">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
@@ -63,7 +63,7 @@ const ShowBoardingPass = () => {
               <InternsWork internData={internData} />
             </div>
           </section>
-          <section className="relative xs:w-full xl:w-1/2 flex flex-col h-full mx-auto sm:px-12 items-center justify-center ">
+          <section className="relative xs:w-full xl:w-1/2 flex flex-col h-full mt-10 mx-auto sm:px-12 items-center justify-center">
             <InternsBoardingPass internData={internData} yearData={yearData} />
           </section>
         </div>

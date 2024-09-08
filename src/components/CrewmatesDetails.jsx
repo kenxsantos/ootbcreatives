@@ -4,7 +4,7 @@ import crewmates from "../json/crewmates.json";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const CrewmatesDetails = ({ activeIndex }) => {
-  const { id } = useParams(); // Extract id from URL params
+  const { id } = useParams();
   const crewmate = crewmates[activeIndex];
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
