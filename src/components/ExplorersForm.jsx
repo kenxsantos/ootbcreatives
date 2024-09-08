@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { MdEmail } from "react-icons/md";
 import emailjs from "emailjs-com";
-
+import { motion } from "framer-motion";
 const ExplorersForm = () => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     message: "",
@@ -39,7 +40,7 @@ const ExplorersForm = () => {
   };
 
   return (
-    <div className="w-full flex flex-col px-8">
+    <div className="w-full flex flex-col sm:px-8 mt-12">
       <form onSubmit={handleSubmit} className="w-full">
         <div className="w-full mb-4">
           <div className="relative w-full min-w-[200px] xs:h-10 lg:h-12 flex items-center gap-2">
@@ -74,11 +75,40 @@ const ExplorersForm = () => {
           </div>
         </div>
         <div className="pl-8">
-          <input
+          <motion.button
+            whileHover={{
+              scale: 1.03,
+            }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            whileTap={{ backgroundColor: "#9b4ecf" }}
             type="submit"
-            value="SUBMIT"
             className="font-jost hover:cursor-pointer text-white xs:h-10 lg:h-14 text-base rounded-sm px-4 py-2 w-full bg-purple"
-          />
+          >
+            <motion.div
+              className="relative items-center flex justify-center"
+              animate={{
+                opacity: loading ? [1, 0.7, 1] : 1,
+                transition: {
+                  duration: 0.3,
+                  repeat: loading ? Infinity : 0,
+                  repeatType: "loop",
+                },
+              }}
+            >
+              {loading ? (
+                <motion.span
+                  initial={{ width: 0 }}
+                  animate={{ width: "auto" }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="inline-block overflow-hidden"
+                >
+                  SENDING...
+                </motion.span>
+              ) : (
+                <span className="inline-block overflow-hidden">SUBMIT</span>
+              )}
+            </motion.div>
+          </motion.button>
         </div>
       </form>
     </div>
