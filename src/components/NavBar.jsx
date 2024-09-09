@@ -30,7 +30,7 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
     <nav className="w-full fixed left-0 top-0 overflow-visible z-[80] flex items-center">
       <div className="mx-auto max-w-screen-2xl">
         <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent w-full">
-          <div className="flex justify-between w-screen border text-right 2xl:hidden px-2 py-4 items-center">
+          <div className="flex justify-between w-screen text-right 2xl:hidden px-2 py-4 items-center">
             <div>
               {activeLink !== "landing" && (
                 <motion.img
