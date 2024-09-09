@@ -7,7 +7,7 @@ const Offers = () => {
 
   return (
     <div className="bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
-      <section className="text-center flex flex-col justify-center xl:pt-28">
+      <section className="text-center flex flex-col justify-center lg:pt-20 2xl:pt-28">
         <motion.div
           className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 2xl:px-36 w-full"
           animate={controls}
@@ -18,13 +18,13 @@ const Offers = () => {
             WITH US!
           </h1>
         </motion.div>
-        <div className="flex flex-wrap justify-center gap-6 mt-12 p-4 sm:p-6 md:p-8 lg:p-12">
+        <div className="flex flex-wrap justify-center gap-6 p-4 sm:p-6 md:p-8 lg:px-12">
           {offers.map((offer, index) => (
             <Link to={`/ootb/${offer.link}`} key={offer.id} state={{ offer }}>
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                className="flex-shrink-0 w-full xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[300px] md:w-[300px] md:h-[350px]  lg:w-[350px] lg:h-[400px] bg-gray-500 bg-opacity-60 p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-end h-full hover:cursor-pointer relative overflow-hidden focus:outline-none"
+                className="flex-shrink-0 w-full xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[300px] md:w-[300px] md:h-[350px]  lg:w-[300px] lg:h-[350px] xl:w-[350px] xl:h-[400px] bg-gray-500 bg-opacity-60 p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col justify-end h-full hover:cursor-pointer relative overflow-hidden focus:outline-none"
               >
                 <div>
                   <h1 className="text-glow text-left text-base sm:text-lg md:text-xl lg:text-2xl font-bold font-garnet text-white leading-none mb-2 uppercase font-jost">

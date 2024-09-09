@@ -29,17 +29,25 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
     <nav className="w-full fixed left-0 top-0 overflow-visible z-[80]">
       <div className="mx-auto max-w-screen-2xl md:px-12">
         <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent">
-          {/* Mobile Menu Toggle */}
-          <div className="flex justify-end text-right 2xl:hidden p-4">
-            <button
-              onClick={toggleMenu}
-              className="text-white focus:outline-none flex justify-end"
-            >
-              {isMenuOpen ? "" : <RxHamburgerMenu className="w-8 h-8" />}
-            </button>
+          <div className="flex justify-between text-right 2xl:hidden px-2 py-4">
+            <div>
+              {/* {slideIndex === 1 && (
+                <img
+                  src="/assets/logo/OOTBLogoWhite.png"
+                  alt="logo"
+                  className="w-16"
+                />
+              )} */}
+            </div>
+            <div>
+              <button
+                onClick={toggleMenu}
+                className="text-white focus:outline-none flex justify-end"
+              >
+                {isMenuOpen ? "" : <RxHamburgerMenu className="w-8 h-8" />}
+              </button>
+            </div>
           </div>
-
-          {/* Mobile Menu */}
           {isMenuOpen && (
             <motion.div
               className="fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-8 2xl:hidden z-40"
@@ -62,12 +70,10 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
                     onNavLinkClick(link.slideIndex);
                     closeMenu();
                   }}
-                  className={`text-white transition-all font-jost duration-300 cursor-pointer  ${
+                  className={`text-white transition-all font-jost duration-300 cursor-pointer hover:text-glow ${
                     link.name === "LANDING" ? "hidden" : "block"
                   } ${
-                    activeLink === link.id
-                      ? "text-[#F38920]"
-                      : "hover:text-glow"
+                    activeLink === link.id ? "text-yellow-500" : "text-white"
                   }`}
                 >
                   {link.name}
