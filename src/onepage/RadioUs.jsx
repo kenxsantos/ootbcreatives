@@ -22,7 +22,7 @@ const RadioUs = () => {
   };
 
   return (
-    <div className="bg-clear-planets h-screen mx-auto bg-cover">
+    <div className="bg-vertical-planets-4 h-screen mx-auto bg-cover">
       <div className="w-full mx-auto pt-14 flex justify-center items-center h-full">
         <section className="w-full xl:flex">
           <motion.div

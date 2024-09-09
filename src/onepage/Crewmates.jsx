@@ -5,7 +5,7 @@ const Crewmates = () => {
   const controls = useAnimation();
 
   return (
-    <div className="bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
+    <div className="bg-vertical-planets-2 h-screen mx-auto bg-cover flex flex-col justify-center">
       <div className="w-full mx-auto pt-28">
         <motion.section
           animate={controls}

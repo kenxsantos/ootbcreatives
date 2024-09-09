@@ -6,7 +6,7 @@ const Offers = () => {
   const controls = useAnimation();
 
   return (
-    <div className="bg-blurred-planets h-screen mx-auto bg-cover flex flex-col justify-center">
+    <div className="bg-vertical-planets-3 h-screen  bg-cover flex flex-col justify-center">
       <section className="text-center flex flex-col justify-center lg:pt-20 2xl:pt-28">
         <motion.div
           className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 2xl:px-36 w-full"

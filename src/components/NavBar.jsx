@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAnimation, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosClose } from "react-icons/io";
 
@@ -25,19 +25,24 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
     setIsMenuOpen(false);
   };
 
+  console.log(activeLink);
   return (
-    <nav className="w-full fixed left-0 top-0 overflow-visible z-[80]">
-      <div className="mx-auto max-w-screen-2xl md:px-12">
-        <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent">
-          <div className="flex justify-between text-right 2xl:hidden px-2 py-4">
+    <nav className="w-full fixed left-0 top-0 overflow-visible z-[80] flex items-center">
+      <div className="mx-auto max-w-screen-2xl">
+        <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent w-full">
+          <div className="flex justify-between w-screen border text-right 2xl:hidden px-2 py-4 items-center">
             <div>
-              {/* {slideIndex === 1 && (
-                <img
+              {activeLink !== "landing" && (
+                <motion.img
                   src="/assets/logo/OOTBLogoWhite.png"
                   alt="logo"
                   className="w-16"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 50 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
                 />
-              )} */}
+              )}
             </div>
             <div>
               <button
@@ -86,8 +91,21 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
           <div
             className={`${
               isMenuOpen ? "hidden" : "hidden 2xl:flex space-x-8"
-            } w-full md:justify-center`}
+            } w-full `}
           >
+            <div className="absolute top-4 left-20">
+              {activeLink !== "landing" && (
+                <motion.img
+                  src="/assets/logo/OOTBLogoWhite.png"
+                  alt="logo"
+                  className="w-20"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 50 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                />
+              )}
+            </div>
             {navLinks.map((link) => (
               <button
                 key={link.id}
