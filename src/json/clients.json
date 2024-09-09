@@ -3,24 +3,18 @@
     "recently": {
       "id": 1,
       "1": {
-        "brand": "bridgestone",
-        "logo": "/assets/clients/recently-added/bridgestone.png"
+        "brand": "JML",
+        "logo": "/assets/clients/recently-added/logo/jml.png",
+        "poster": "/assets/clients/recently-added/case-study/jml.png"
       },
       "2": {
         "brand": "bridgestone",
-        "logo": "/assets/clients/recently-added/bridgestone.png"
+        "logo": "/assets/clients/recently-added/logo/bridgestone.png"
       },
       "3": {
-        "brand": "bridgestone",
-        "logo": "/assets/clients/recently-added/bridgestone.png"
-      },
-      "4": {
-        "brand": "bridgestone",
-        "logo": "/assets/clients/recently-added/bridgestone.png"
-      },
-      "5": {
-        "brand": "bridgestone",
-        "logo": "/assets/clients/recently-added/bridgestone.png"
+        "brand": "mariveles",
+        "logo": "/assets/clients/recently-added/logo/mariveles.png",
+        "poster": "/assets/clients/recently-added/case-study/mariveles-1.png"
       }
     },
     "clientsOnboard": {

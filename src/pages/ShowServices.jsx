@@ -4,7 +4,6 @@ import { IoIosArrowBack } from "react-icons/io";
 import services from "../json/services.json";
 import { useParams, Link } from "react-router-dom";
 import HighlightText from "../components/HighlightText";
-import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 
 const ShowServices = () => {
@@ -95,34 +94,63 @@ const ShowServices = () => {
                 />
               </div>
               <div className="w-full mt-8 mb-4 rounded-xl">
-                {service.images &&
+                {service.images && Object.keys(service.images).length > 0 ? (
                   Object.entries(service.images).map(
-                    ([groupKey, imageGroup], groupIndex) => (
-                      <motion.div
-                        key={groupIndex}
-                        className="mb-12 border-b-4 border-orange pb-12"
-                        id={service.offers[groupKey]
-                          .replace(/\s+/g, "")
-                          .toLowerCase()}
-                        initial={{ opacity: 0, y: -30 }}
-                        whileInView={{ opacity: 1, y: 10 }}
-                        transition={{ duration: 0.8, ease: "easeInOut" }}
-                      >
-                        <h3 className="text-xl uppercase font-bold mb-4 text-white text-center font-jost">
-                          {service.offers[groupKey]}
-                        </h3>
-                        {Object.values(imageGroup).map((img, imgIndex) => (
-                          <div key={imgIndex} className="rounded-xl mb-4">
-                            <img
-                              src={img}
-                              alt={`Image ${imgIndex + 1}`}
-                              className="rounded-xl"
-                            />
+                    ([groupKey, imageGroup], groupIndex) => {
+                      const captions = Object.entries(
+                        imageGroup.caption || {}
+                      ).map(([key, caption]) => (
+                        <p key={key} className="text-white text-justify mt-2">
+                          {caption}
+                        </p>
+                      ));
+
+                      return (
+                        <motion.div
+                          key={groupIndex}
+                          className="mb-12 border-b-4 border-orange pb-12"
+                          id={
+                            service.offers[groupKey]
+                              ? service.offers[groupKey]
+                                  .replace(/\s+/g, "")
+                                  .toLowerCase()
+                              : `group-${groupIndex}`
+                          }
+                          initial={{ opacity: 0, y: -30 }}
+                          whileInView={{ opacity: 1, y: 10 }}
+                          transition={{ duration: 0.8, ease: "easeInOut" }}
+                        >
+                          <h3 className="text-xl uppercase font-bold mb-2 text-white text-center font-jost">
+                            {service.offers[groupKey] ||
+                              `Group ${groupIndex + 1}`}
+                          </h3>
+                          <div>
+                            {Object.entries(imageGroup.img || {}).map(
+                              ([imgKey, img], imgIndex) => (
+                                <div key={imgIndex} className="rounded-lg mb-4">
+                                  <img
+                                    src={img}
+                                    alt={`Image ${imgIndex + 1}`}
+                                    className="rounded-lg"
+                                  />
+                                </div>
+                              )
+                            )}
                           </div>
-                        ))}
-                      </motion.div>
-                    )
-                  )}
+                          <div>
+                            <p className="font-jost text-base text-white">
+                              {captions}
+                            </p>
+                          </div>
+                        </motion.div>
+                      );
+                    }
+                  )
+                ) : (
+                  <p className="text-center text-gray-500">
+                    No images available for this service.
+                  </p>
+                )}
               </div>
             </motion.div>
             <div className="sticky w-full bottom-0 pointer-events-none">

@@ -27,6 +27,15 @@ export default {
       },
       backgroundImage: {
         rocket: 'url("/assets/backgrounds/OOTBRocketBG.png")',
+        "vertical-planets": 'url("/assets/backgrounds/OOTBVerticalBG.png")',
+        "vertical-planets-1":
+          'url("/assets/backgrounds/OOTBVerticalPlanets1.png")',
+        "vertical-planets-2":
+          'url("/assets/backgrounds/OOTBVerticalPlanets2.png")',
+        "vertical-planets-3":
+          'url("/assets/backgrounds/OOTBVerticalPlanets3.png")',
+        "vertical-planets-4":
+          'url("/assets/backgrounds/OOTBVerticalPlanets4.png")',
         "blurred-planets":
           'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
         "clear-planets": 'url("/assets/backgrounds/OOTBClearPlanetsBG.png")',

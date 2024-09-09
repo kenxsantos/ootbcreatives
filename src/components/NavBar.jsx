@@ -1,53 +1,21 @@
-import { useState, useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { Link as ScrollLink } from "react-scroll";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosClose } from "react-icons/io";
 
-const NavBar = () => {
-  const blurAnimation = useAnimation();
-  const [activeLink, setActiveLink] = useState("landing");
-  const [isScrolling, setIsScrolling] = useState(false);
+const NavBar = ({ onNavLinkClick, activeLink }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "LANDING", id: "landing" },
-    { name: "SERVICES", id: "services" },
-    { name: "CLIENTS", id: "clients" },
-    { name: "CREWMATES", id: "crewmates" },
-    { name: "ACADEMY", id: "academy" },
-    { name: "CAREERS", id: "careers" },
-    { name: "RESOURCES", id: "resources" },
-    { name: "RADIO US", id: "radio" },
+    { name: "LANDING", id: "landing", slideIndex: 0 },
+    { name: "SERVICES", id: "services", slideIndex: 1 },
+    { name: "CLIENTS", id: "clients", slideIndex: 2 },
+    { name: "CREWMATES", id: "crewmates", slideIndex: 3 },
+    { name: "ACADEMY", id: "academy", slideIndex: 4 },
+    { name: "CAREERS", id: "careers", slideIndex: 4 },
+    { name: "RESOURCES", id: "resources", slideIndex: 4 },
+    { name: "RADIO US", id: "radio", slideIndex: 5 },
   ];
-
-  useEffect(() => {
-    let scrollTimer = null;
-
-    const handleScroll = () => {
-      setIsScrolling(true);
-      blurAnimation.start({
-        backdropFilter: "blur(5px)",
-        transition: { duration: 0.01 },
-      });
-
-      if (scrollTimer !== null) {
-        clearTimeout(scrollTimer);
-      }
-      scrollTimer = setTimeout(() => {
-        setIsScrolling(false);
-        blurAnimation.start({
-          backdropFilter: "blur(0px)",
-          transition: { duration: 0.5 },
-        });
-      }, 200);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [blurAnimation]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -57,19 +25,34 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
+  console.log(activeLink);
   return (
-    <nav className="w-full fixed left-0 top-0 h-28 overflow-visible z-[80]">
-      <div className="mx-auto max-w-screen-2xl md:px-12 h-24">
-        <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent">
-          <div className="flex justify-end text-right 2xl:hidden p-4">
-            <button
-              onClick={toggleMenu}
-              className="text-white focus:outline-none flex justify-end"
-            >
-              {isMenuOpen ? "" : <RxHamburgerMenu className="w-8 h-8" />}
-            </button>
+    <nav className="w-full fixed left-0 top-0 overflow-visible z-[80] flex items-center">
+      <div className="mx-auto max-w-screen-2xl">
+        <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent w-full">
+          <div className="flex justify-between w-screen border text-right 2xl:hidden px-2 py-4 items-center">
+            <div>
+              {activeLink !== "landing" && (
+                <motion.img
+                  src="/assets/logo/OOTBLogoWhite.png"
+                  alt="logo"
+                  className="w-16"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 50 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                />
+              )}
+            </div>
+            <div>
+              <button
+                onClick={toggleMenu}
+                className="text-white focus:outline-none flex justify-end"
+              >
+                {isMenuOpen ? "" : <RxHamburgerMenu className="w-8 h-8" />}
+              </button>
+            </div>
           </div>
-
           {isMenuOpen && (
             <motion.div
               className="fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-8 2xl:hidden z-40"
@@ -86,38 +69,50 @@ const NavBar = () => {
               </button>
 
               {navLinks.map((link) => (
-                <ScrollLink
+                <button
                   key={link.id}
-                  to={link.id}
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  offset={0}
-                  onSetActive={() => setActiveLink(link.id)}
-                  onClick={closeMenu} // Close the menu after clicking a link
-                  className="text-2xl text-white hover:text-glow transition-all duration-300 cursor-pointer"
+                  onClick={() => {
+                    onNavLinkClick(link.slideIndex);
+                    closeMenu();
+                  }}
+                  className={`text-white transition-all font-jost duration-300 cursor-pointer hover:text-glow ${
+                    link.name === "LANDING" ? "hidden" : "block"
+                  } ${
+                    activeLink === link.id ? "text-yellow-500" : "text-white"
+                  }`}
                 >
                   {link.name}
-                </ScrollLink>
+                </button>
               ))}
             </motion.div>
           )}
 
+          {/* Desktop Menu */}
           <div
             className={`${
               isMenuOpen ? "hidden" : "hidden 2xl:flex space-x-8"
-            } w-full md:justify-center`}
+            } w-full `}
           >
+            <div className="absolute top-4 left-20">
+              {activeLink !== "landing" && (
+                <motion.img
+                  src="/assets/logo/OOTBLogoWhite.png"
+                  alt="logo"
+                  className="w-20"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 50 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                />
+              )}
+            </div>
             {navLinks.map((link) => (
-              <ScrollLink
+              <button
                 key={link.id}
-                to={link.id}
-                spy={true}
-                smooth={true}
-                duration={800}
-                offset={0}
-                onSetActive={() => setActiveLink(link.id)}
-                className={`relative flex items-center justify-center p-8 h-12 mt-4 ${
+                onClick={() => {
+                  onNavLinkClick(link.slideIndex);
+                }}
+                className={`relative flex items-center justify-center p-8 h-12 mt-4 focus:outline-none ${
                   link.name === "LANDING" ? "hidden" : "block"
                 }`}
               >
@@ -144,7 +139,7 @@ const NavBar = () => {
                       }}
                     />
                   )}
-              </ScrollLink>
+              </button>
             ))}
           </div>
         </div>

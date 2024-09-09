@@ -41,7 +41,7 @@ const InternsProfile = ({ batches, year }) => {
           slideShadows: false,
         }}
         modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
-        className="h-[700px] relative w-[650px] flex items-center mt-12 px-12 overflow-hidden "
+        className="h-[600px] relative w-[650px] px-8 overflow-hidden"
         onSlideChange={handleSlideChange}
       >
         {Object.keys(batches).map((batch, index) => (
@@ -50,7 +50,6 @@ const InternsProfile = ({ batches, year }) => {
             className="w-full h-full mx-auto items-center flex  justify-center bg-transparent "
           >
             <motion.div
-              whileTap={{ scale: 1.1 }}
               whileHover={{ scale: 1.1 }}
               animate={{
                 transition: { delay: 0.3, duration: 0.3, ease: "easeInOut" },
@@ -74,7 +73,7 @@ const InternsProfile = ({ batches, year }) => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.3 }}
-                          className="w-20 h-20 flex"
+                          className="w-20 h-20 flex object-cover"
                         >
                           <Link
                             to={`/ootb/academy/meet-the-interns/${year}/batch-${batch}/${formattedName(

@@ -17,18 +17,23 @@ const CrewmatesCard = () => {
   };
 
   return (
-    <div className="mx-auto 3xl:px-12 mb-12">
+    <div className="mx-auto 3xl:px-12">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
         slidesPerView={1} // Default for small screens
-        mousewheel={true}
         spaceBetween={10}
         modules={[Mousewheel, Pagination, Navigation]}
-        className="h-full w-full pt-24 pb-28"
+        className="h-full w-full pt-20 2xl:pt-28 pb-52"
         onSlideChange={handleSlideChange}
+        pagination={{ el: ".swiper-pagination", clickable: true }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          clickable: true,
+        }}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -103,7 +108,7 @@ const CrewmatesCard = () => {
                     <motion.img
                       src={crewmate.satellite}
                       alt="rocket"
-                      className="absolute xs:w-28 xs:h-28 xs:ml-8 xs:-mt-4 sm:mt-0 sm:ml-0 sm:w-40 sm:h-40"
+                      className="absolute xs:w-28 xs:h-28 xs:ml-8 xs:-mt-4 sm:mt-0 sm:ml-0"
                       animate={{
                         scale: index === activeCard ? 1.25 : 1.2,
                         x: -60,
@@ -132,6 +137,18 @@ const CrewmatesCard = () => {
             </motion.section>
           </SwiperSlide>
         ))}
+        <div className="custom-pagination">
+          <div className="swiper-button-prev slider-arrow text-white xs:hidden xl:block">
+            <ion-icon
+              name="arrow-back-outline"
+              className="text-sm border"
+            ></ion-icon>
+          </div>
+          <div className="swiper-button-next slider-arrow text-white xs:hidden xl:block">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div className="swiper-pagination w-full xs:mt-40"></div>
+        </div>
       </Swiper>
     </div>
   );

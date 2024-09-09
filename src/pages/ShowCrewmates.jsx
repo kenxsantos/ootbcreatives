@@ -26,7 +26,7 @@ const ShowCrewmates = () => {
     );
   }
   return (
-    <div className="relative xs:h-full 3xl:h-screen bg-blurred-planets bg-auto mx-auto">
+    <div className="relative h-screen bg-blurred-planets bg-auto mx-auto">
       <div className="w-full h-full flex flex-col">
         <div className="relative z-10">
           <FixedNavBar />
@@ -68,7 +68,7 @@ const ShowCrewmates = () => {
                 <div>
                   <button
                     ref={nextRef}
-                    className="text-white xl:rounded-full border p-1 cursor-pointer rounded-3xl text-xl  xl:rotate-90 xl:mb-1"
+                    className="text-white xs:hidden sm:block xl:rounded-full border p-1 cursor-pointer rounded-3xl text-xl  xl:rotate-90 xl:mb-1"
                   >
                     <IoIosArrowBack size={16} />
                   </button>
@@ -82,7 +82,7 @@ const ShowCrewmates = () => {
                 <div>
                   <button
                     ref={prevRef}
-                    className="text-white xl:rounded-full border p-1 cursor-pointer rounded-3xl text-xl xs:rotate-180 xl:-rotate-90  xl:mt-8"
+                    className="text-white xs:hidden sm:block xl:rounded-full border p-1 cursor-pointer rounded-3xl text-xl xs:rotate-180 xl:-rotate-90  xl:mt-8"
                   >
                     <IoIosArrowBack size={16} />
                   </button>
