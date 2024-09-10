@@ -59,7 +59,7 @@ const ExplorersForm = () => {
         <div className="w-full mb-4">
           <div className="relative w-full min-w-[200px] h-50 flex justify-center gap-2">
             <img
-              src="/assets/logo/OOTBLogoRed.png"
+              src="/assets/logo/OOTBLogoRed.webp"
               alt="Logo"
               className="w-6 h-full mt-1"
             />

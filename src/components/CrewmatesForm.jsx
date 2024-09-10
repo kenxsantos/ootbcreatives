@@ -129,7 +129,7 @@ const CrewmatesForm = ({ name, setName }) => {
           <div className="w-full mb-4">
             <div className="relative w-full min-w-[200px] xs:h-10 lg:h-12 flex items-center gap-2">
               <img
-                src="/assets/logo/OOTBLogoRed.png"
+                src="/assets/logo/OOTBLogoRed.webp"
                 alt="Logo"
                 className="w-6"
               />

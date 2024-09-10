@@ -10,7 +10,7 @@ const ReadMoreButton = ({ isExpanded, handleToggle }) => {
         id="myBtn"
         className="gap-1 inline-flex items-center rounded-full bg-gray-50  bg-opacity-30 px-2 py-1 px-3 text-xs text-white font-jost"
       >
-        <img src="/assets/others/staricon.png" alt="star" className="w-2" />
+        <img src="/assets/others/staricon.webp" alt="star" className="w-2" />
         {isExpanded ? "READ LESS" : "READ MORE"}
       </motion.button>
     </div>

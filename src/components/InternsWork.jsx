@@ -33,7 +33,7 @@ const InternsWork = ({ internData }) => {
             <span>best works at</span>
           </h1>
           <img
-            src="/assets/logo/OOTBFlatWhite.png"
+            src="/assets/logo/OOTBFlatWhite.webp"
             alt="logo"
             className="w-40"
           />

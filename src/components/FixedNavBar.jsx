@@ -37,7 +37,7 @@ const NavBar = () => {
         <div className="flex items-center justify-between text-white font-jost text-md">
           <Link to="/">
             <img
-              src="/assets/logo/OOTBLogoWhite.png"
+              src="/assets/logo/OOTBLogoWhite.webp"
               alt="logo"
               className="w-20 md:w-24"
             />
@@ -64,7 +64,7 @@ const NavBar = () => {
                   </div>
                   {activeLink === link.id && (
                     <motion.img
-                      src="/assets/others/lineflare.png"
+                      src="/assets/others/lineflare.webp"
                       alt="flare"
                       className="w-36 absolute mt-12"
                       initial={{ opacity: 0, y: 10 }}
