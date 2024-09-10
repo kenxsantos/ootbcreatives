@@ -26,20 +26,20 @@ export default {
         garnet: ["Garnet", "sans-serif"],
       },
       backgroundImage: {
-        rocket: 'url("/assets/backgrounds/OOTBRocketBG.png")',
-        "vertical-planets": 'url("/assets/backgrounds/OOTBVerticalBG.png")',
+        rocket: 'url("/assets/backgrounds/OOTBRocketBG.webp")',
+        "vertical-planets": 'url("/assets/backgrounds/OOTBVerticalBG.webp")',
         "vertical-planets-1":
-          'url("/assets/backgrounds/OOTBVerticalPlanets1.png")',
+          'url("/assets/backgrounds/OOTBVerticalPlanets1.webp")',
         "vertical-planets-2":
-          'url("/assets/backgrounds/OOTBVerticalPlanets2.png")',
+          'url("/assets/backgrounds/OOTBVerticalPlanets2.webp")',
         "vertical-planets-3":
-          'url("/assets/backgrounds/OOTBVerticalPlanets3.png")',
+          'url("/assets/backgrounds/OOTBVerticalPlanets3.webp")',
         "vertical-planets-4":
-          'url("/assets/backgrounds/OOTBVerticalPlanets4.png")',
+          'url("/assets/backgrounds/OOTBVerticalPlanets4.webp")',
         "blurred-planets":
-          'url("/assets/backgrounds/OOTBBlurredPlanetsBG.png")',
-        "clear-planets": 'url("/assets/backgrounds/OOTBClearPlanetsBG.png")',
-        academy: 'url("/assets/backgrounds/OOTBAcademyBG.png")',
+          'url("/assets/backgrounds/OOTBBlurredPlanetsBG.webp")',
+        "clear-planets": 'url("/assets/backgrounds/OOTBClearPlanetsBG.webp")',
+        academy: 'url("/assets/backgrounds/OOTBAcademyBG.webp")',
         "gradient-red":
           "linear-gradient(90deg, rgba(200,111,73,1) 26%, rgba(208,129,96,1) 45%, rgba(221,159,133,1) 63%, rgba(199,179,183,1) 90%)",
         "gradient-purple":
@@ -58,7 +58,7 @@ export default {
         "bottom-glow": "0 0px 15px rgba(255, 105, 180, 0.6)",
         "inner-clients": "0px 50px 44px -22px rgba(166, 103, 209, 1)  inset",
         "inner-service": "0px -177px 157px -73px rgba(0,0,0,1) inset",
-        "inner-overlay": "255px 0px 255px 200px rgba(0,0,0,1) inset",
+        "inner-overlay": "450px 0px 500px 100px rgba(0, 0, 0, 0.9) inset",
         "border-glow": "20px 20px 60px #bebebe, -20px -20px 60px #ffffff",
         "inner-crewmates":
           "11px 200px 400px -160px rgba(255,255,255,0.5) inset",
