@@ -28,7 +28,7 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
   console.log(activeLink);
   return (
     <nav className="w-full fixed left-0 top-0 overflow-visible z-[80] flex items-center">
-      <div className="mx-auto max-w-screen-2xl">
+      <div className="mx-auto">
         <div className="text-white flex justify-end font-jost text-md flex-col md:bg-transparent lg:px-12 w-screen">
           <div className="flex justify-between text-right 2xl:hidden px-2 py-4 items-center h-20">
             <div>
@@ -36,7 +36,7 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
                 <motion.img
                   src="/assets/logo/OOTBLogoWhite.webp"
                   alt="logo"
-                  className="w-16"
+                  className="w-16 xs:ml-2 xl:-ml-1"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 50 }}
@@ -90,7 +90,9 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
           {/* Desktop Menu */}
           <div
             className={`${
-              isMenuOpen ? "hidden" : "hidden 2xl:flex space-x-8"
+              isMenuOpen
+                ? "hidden"
+                : "hidden 2xl:flex space-x-8 flex justify-center"
             } w-full `}
           >
             <div className="absolute top-4 left-16">
@@ -112,7 +114,7 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
                 onClick={() => {
                   onNavLinkClick(link.slideIndex);
                 }}
-                className={`relative flex items-center justify-center p-8 h-12 mt-4 focus:outline-none ${
+                className={`relative flex items-center justify-center p-8 h-12 mt-4 focus:outline-none mx-auto ${
                   link.name === "LANDING" ? "hidden" : "block"
                 }`}
               >

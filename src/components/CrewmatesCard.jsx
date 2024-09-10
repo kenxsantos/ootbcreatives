@@ -144,7 +144,7 @@ const CrewmatesCard = () => {
           <div className="swiper-button-next slider-arrow text-white xs:hidden xl:block">
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
-          <div className="swiper-pagination w-full xs:mt-24 sm:16"></div>
+          <div className="swiper-pagination w-full xs:mt-20"></div>
         </div>
       </Swiper>
     </div>

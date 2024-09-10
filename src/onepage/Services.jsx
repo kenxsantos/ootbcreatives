@@ -42,7 +42,7 @@ const Services = () => {
 
   return (
     <div
-      className="relative h-screen mx-auto shadow-inner-overlay overflow-visible xs:px-3 xl:px-12 xs:pt-20 "
+      className="relative h-screen mx-auto shadow-inner-overlay overflow-visible xs:px-3 xl:px-12 xs:pt-20 lg:pt-28 xl:pt-24"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -74,7 +74,7 @@ const Services = () => {
           </div>
         </section>
         <section
-          className="mb-12 2xl:mt-12"
+          className="mb-12 2xl:mt-12 xs:mt-24 sm:mt-0"
           style={{
             transform: `translateY(${translateY}px)`,
             transition: "transform 0.3s ease",
