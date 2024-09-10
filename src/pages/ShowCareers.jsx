@@ -15,7 +15,7 @@ const ShowCareers = () => {
               <div className="flex items-center h-36 -ml-12 justify-start ">
                 <div className="rotate-90 w-36 -ml-[63px]">
                   <img
-                    src="/assets/others/BackShadow.png"
+                    src="/assets/others/BackShadow.webp"
                     alt="Back Flare"
                     className="transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow"
                   />

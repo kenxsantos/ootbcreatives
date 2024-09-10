@@ -35,7 +35,7 @@ const ShowCrewmates = () => {
           <section className="relative w-full flex flex-col items-center justify-center">
             <div className="w-full flex justify-center items-center">
               <img
-                src="/assets/logo/OOTBFlatWhite.png"
+                src="/assets/logo/OOTBFlatWhite.webp"
                 alt=""
                 className="xs:h-6 sm:h-10 lg:h-16"
               />

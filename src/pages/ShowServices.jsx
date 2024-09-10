@@ -27,7 +27,7 @@ const ShowServices = () => {
               <div className="flex items-center xs:h-24 md:h-28 lg:h-36 x:-ml-5 ssm:-ml-9 md:-ml-12 justify-start w-full">
                 <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
                   <img
-                    src="/assets/others/BackShadow.png"
+                    src="/assets/others/BackShadow.webp"
                     alt="Back Flare"
                     className="transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow"
                   />
@@ -155,7 +155,7 @@ const ShowServices = () => {
             </motion.div>
             <div className="sticky w-full bottom-0 pointer-events-none">
               <img
-                src="/assets/others/BottomShadow.png"
+                src="/assets/others/BottomShadow.webp"
                 alt="Bottom Shadow"
                 className="w-full h-full object-cover"
               />
