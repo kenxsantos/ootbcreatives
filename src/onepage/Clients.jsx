@@ -4,7 +4,7 @@ import RecentlyAdded from "../components/RecentlyAdded";
 const Clients = () => {
   return (
     <div className="bg-vertical-planets-1 h-screen mx-auto bg-cover overflow-visible">
-      <div className="w-full m-auto pt-28 h-full flex flex-col justify-center">
+      <div className="w-full m-auto pt-32 h-full flex flex-col justify-center">
         <section className="mx-auto text-center flex flex-col justify-center">
           <h1 className="font-metropolis text-white text-4xl font-bold 3xl:text-5xl">
             We&apos;ve brought so many brands interstellar!

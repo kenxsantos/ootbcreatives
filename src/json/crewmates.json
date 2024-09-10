@@ -5,14 +5,14 @@
     "nickname": "Timothy",
     "position": "President",
     "title": "The Pilot",
-    "astronaut": "/assets/astronauts/RafaelTimothyEstrella.png",
+    "astronaut": "/assets/astronauts/RafaelTimothyEstrella.webp",
     "link": "rafael-timothy-estrella",
     "description": {
       "1": "Out of the Box Creatives is a launching rocketship, and Timothy is the dude in the pilot's seat. He's the co-founder and the boss, making sure all teams are working together, the finances are on point, and they're all blasting off in the same direction.",
       "2": "Timothy has been in the game for six years, crushing it in business management, advertising, and marketing. He's not just the boss. He's a doer and a leader. He can win over clients with his chill personality and keep his team pumped for the next big project. But what really makes Timothy special is his go-getter attitude. He's got a million ideas and the know-how to make them happen, from crafting global marketing plans to implementing crazy-creative solutions that keep OOTB miles ahead of the competition.",
       "3": "Buckle up with Timothy as they navigate the advertising world and  celebrate wins."
     },
-    "rocket": "/assets/astronauts/Rocket.png"
+    "rocket": "/assets/astronauts/Rocket.webp"
   },
   {
     "id": 2,
@@ -20,7 +20,7 @@
     "nickname": "Tammy",
     "position": "Chief Executive Officer",
     "title": "The Navigator",
-    "astronaut": "/assets/astronauts/RondelynMaeMakalintal.png",
+    "astronaut": "/assets/astronauts/RondelynMaeMakalintal.webp",
     "link": "rondelyn-mae-makalintal",
     "description": {
       "1": "Out of the Box Creatives isn't just a rocket ship – it's one that's powered by creativity! And at the helm, guiding them through the world of advertising, is Tammy, the Chief Executive Officer and resident navigator.",
@@ -29,30 +29,29 @@
       "4": "Get ready for a wild ride filled with creative genius, strategic navigation, and a whole lot of magic!"
     }
   },
+
   {
     "id": 3,
-    "name": "Mark Anthony Edano",
-    "nickname": "Anthony",
-    "position": "Event Producer",
-    "title": "",
-    "astronaut": "/assets/astronauts/MarkAnthonyEdano.png",
-    "link": "mark-anthony-edano",
-    "description": {
-
-    },
-    "satellite": "/assets/astronauts/Satellite.png"
-  },
-  {
-    "id": 4,
     "name": "Atty. Ramon Christopher Ganan ",
     "nickname": "Ramon",
     "position": "Chief Financial Officer",
     "title": "",
-    "astronaut": "/assets/astronauts/RamonChristopherGanan.png",
+    "astronaut": "/assets/astronauts/RamonChristopherGanan.webp",
     "link": "atty-ramon-christopher-ganan",
     "description": {
       "1": "The team needs someone who knows how to secure the team’s resources, especially if you’re in the outer space! Ramon is a Juris Doctor who graduated from the Pamantasan ng Lungsod ng Maynila and has been legally backing up businesses for more than 5 years now.",
       "2": "As the managing director of RCG Law & Business Consultancy Services and the Chief Financial Officer of Out of the Box Creatives, he definitely knows how to secure money IN THE BAG! No budget goes unchecked and no coin goes uncounted. The budget-setter of the team!"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Mike Maranan",
+    "nickname": "Mike",
+    "position": "Chief Technical Officer",
+    "title": "No Description",
+    "astronaut": "/assets/astronauts/MikeMaranan.webp",
+    "link": "mike-maranan",
+    "description": {
     }
   },
   {
@@ -61,7 +60,7 @@
     "nickname": "Blessie",
     "position": "HR Specialist",
     "title": "",
-    "astronaut": "/assets/astronauts/BlessiePeveeAgrante.png",
+    "astronaut": "/assets/astronauts/BlessiePeveeAgrante.webp",
     "link": "blessie-pevee-agrante",
     "description": {
       "1": "Keeping the whole crew together is Blessie, the resident HR. Forget uptight suits; Blessie is all about keeping the vibes chill and making sure everyone feels like part of the Out of the Box Creatives fam.",
@@ -70,25 +69,11 @@
   },
   {
     "id": 6,
-    "name": "Maria Carmela Ansale",
-    "nickname": "Mela",
-    "position": "Copywriter",
-    "title": "",
-    "astronaut": "/assets/astronauts/MariaCarmelaAnsale.png",
-    "link": "maria-carmela-ansale",
-    "description": {
-      "1": "At the control panel for all things creative is Mela, the resident copywriting whiz. She's the onboard DJ, blasting out catchy tunes that make every campaign a hit. This Communication graduate from Batangas State University may have only 4 years of experience, but her ideas are as loud and bold as her personality.",
-      "2": "Need a tagline that sticks? A social media post that pops? Mela's on it! She's the master of crafting compelling ideas and out-of-the-box copy that cuts through the noise and grabs attention across every platform.",
-      "3": "So get ready for a wild ride where words become super powers!"
-    }
-  },
-  {
-    "id": 7,
     "name": "Christian James “Sachi” Liwag",
     "nickname": "Sachi",
     "position": "Creative Director",
     "title": "",
-    "astronaut": "/assets/astronauts/ChristianJamesLiwag.png",
+    "astronaut": "/assets/astronauts/ChristianJamesLiwag.webp",
     "link": "christian-james-liwanag",
     "description": {
       "1": "Sachi is a wizard who turns these crazy space mission ideas into reality.",
@@ -97,12 +82,38 @@
     }
   },
   {
+    "id": 7,
+    "name": "Maria Carmela Ansale",
+    "nickname": "Mela",
+    "position": "Copywriter",
+    "title": "",
+    "astronaut": "/assets/astronauts/MariaCarmelaAnsale.webp",
+    "link": "maria-carmela-ansale",
+    "description": {
+      "1": "At the control panel for all things creative is Mela, the resident copywriting whiz. She's the onboard DJ, blasting out catchy tunes that make every campaign a hit. This Communication graduate from Batangas State University may have only 4 years of experience, but her ideas are as loud and bold as her personality.",
+      "2": "Need a tagline that sticks? A social media post that pops? Mela's on it! She's the master of crafting compelling ideas and out-of-the-box copy that cuts through the noise and grabs attention across every platform.",
+      "3": "So get ready for a wild ride where words become super powers!"
+    }
+  },
+  {
     "id": 8,
+    "name": "Dominic Salando",
+    "nickname": "Doms",
+    "position": "Business Development Executive",
+    "title": "No Description | Austronaut",
+    "astronaut": "/assets/astronauts/MariaCarmelaAnsale.webp",
+    "link": "dominic-salando",
+    "description": {
+      
+    }
+  },
+  {
+    "id": 9,
     "name": "Andre Kirby Aquino",
     "nickname": "Andre",
     "position": "Multimedia Artist",
     "title": "",
-    "astronaut": "/assets/astronauts/AndreKirbyAquino.png",
+    "astronaut": "/assets/astronauts/AndreKirbyAquino.webp",
     "link": "andre-kirby-aquino",
     "description": {
       "1": "Andre is a social media savvy crewmate with a degree in making things look INSANE. He can turn everything into mind-blowing graphics and videos that'll have you glued to your phone.",
@@ -111,14 +122,27 @@
     }
   },
   {
-    "id": 9,
-    "name": "Mike Maranan",
-    "nickname": "Mike",
-    "position": "Chief Technical Officer",
-    "title": "No-Description",
-    "astronaut": "/assets/astronauts/MikeMaranan.png",
-    "link": "mike-maranan",
+    "id": 10,
+    "name": "Cheska Joy Atienza",
+    "nickname": "Andre",
+    "position": "Multimedia Artist",
+    "title": "No Description | Astronaut",
+    "astronaut": "/assets/astronauts/AndreKirbyAquino.webp",
+    "link": "cheska-joy-atienza",
     "description": {
     }
+  },
+  {
+    "id": 11,
+    "name": "Mark Anthony Edano",
+    "nickname": "Anthony",
+    "position": "Event Producer",
+    "title": "No Description",
+    "astronaut": "/assets/astronauts/MarkAnthonyEdano.webp",
+    "link": "mark-anthony-edano",
+    "description": {
+
+    },
+    "satellite": "/assets/astronauts/Satellite.webp"
   }
 ]

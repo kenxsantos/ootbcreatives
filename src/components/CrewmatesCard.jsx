@@ -23,10 +23,10 @@ const CrewmatesCard = () => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={1} // Default for small screens
+        slidesPerView={1}
         spaceBetween={10}
         modules={[Mousewheel, Pagination, Navigation]}
-        className="h-full w-full pt-20 2xl:pt-28 pb-52"
+        className="h-full w-full pt-24 2xl:pt-28 pb-32"
         onSlideChange={handleSlideChange}
         pagination={{ el: ".swiper-pagination", clickable: true }}
         navigation={{
@@ -139,15 +139,12 @@ const CrewmatesCard = () => {
         ))}
         <div className="custom-pagination">
           <div className="swiper-button-prev slider-arrow text-white xs:hidden xl:block">
-            <ion-icon
-              name="arrow-back-outline"
-              className="text-sm border"
-            ></ion-icon>
+            <ion-icon name="arrow-back-outline"></ion-icon>
           </div>
           <div className="swiper-button-next slider-arrow text-white xs:hidden xl:block">
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
-          <div className="swiper-pagination w-full xs:mt-40"></div>
+          <div className="swiper-pagination w-full xs:mt-24 sm:16"></div>
         </div>
       </Swiper>
     </div>

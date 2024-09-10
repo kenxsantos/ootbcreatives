@@ -13,9 +13,11 @@ const Offers = () => {
           animate={controls}
           transition={{ duration: 0.3 }}
         >
-          <h1 className="font-metropolis font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-            DIVE INTO THE REALM OF ADVERTISING AND LET YOUR CREATIVITY SHINE
-            WITH US!
+          <h1 className="font-metropolis font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl ">
+            Dive into the realm of{" "}
+            <span className="text-orange">advertising</span> and let your{" "}
+            <span className="text-orange">creativity</span>{" "}
+            <span className="text-orange">shine</span> with us!
           </h1>
         </motion.div>
         <div className="flex flex-wrap justify-center gap-6 p-4 sm:p-6 md:p-8 lg:px-12">

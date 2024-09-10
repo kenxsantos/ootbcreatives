@@ -1,13 +1,19 @@
 import React, { useState } from "react";
-import { MdEmail, MdBusiness } from "react-icons/md";
+import {
+  MdEmail,
+  MdBusiness,
+  MdCall,
+  MdOutlineErrorOutline,
+} from "react-icons/md";
 import emailjs from "emailjs-com";
-import { MdOutlineErrorOutline } from "react-icons/md";
 import { motion } from "framer-motion";
+
 const ClientForm = ({ name, setName }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     email: "",
+    contact: "",
     company: "",
     service: "",
   });
@@ -41,6 +47,7 @@ const ClientForm = ({ name, setName }) => {
 
       setFormData({
         email: "",
+        contact: "",
         company: "",
         service: "",
       });
@@ -65,7 +72,7 @@ const ClientForm = ({ name, setName }) => {
       )}
       <div className="w-full flex flex-col sm:px-8 mt-12">
         <form onSubmit={handleSubmit} className="w-full">
-          <div className="w-full mb-4">
+          <div className="w-full mb-2">
             <div className="relative w-full min-w-[200px] xs:h-10 lg:h-12 flex items-center gap-2">
               <MdEmail size={24} color="white" />
               <input
@@ -79,7 +86,23 @@ const ClientForm = ({ name, setName }) => {
               />
             </div>
           </div>
-          <div className="w-full mb-4">
+          <div className="w-full mb-2">
+            <div className="relative w-full min-w-[200px] xs:h-10 lg:h-12 flex items-center gap-2">
+              <MdCall size={24} color="white" />
+              <input
+                type="tel"
+                name="contact"
+                value={formData.contact}
+                onChange={handleChange}
+                className="peer w-full h-full bg-transparent text-white font-jost text-base outline outline-0 focus:outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 border focus:border-2 px-3 py-2.5 rounded-sm border-blue-gray-200"
+                placeholder="CONTACT NUMBER"
+                pattern="[0-9]{11}"
+                required
+                maxLength="11"
+              />
+            </div>
+          </div>
+          <div className="w-full mb-2">
             <div className="relative w-full min-w-[200px] xs:h-10 lg:h-12 flex items-center gap-2">
               <MdBusiness size={24} color="white" />
               <input
@@ -93,10 +116,10 @@ const ClientForm = ({ name, setName }) => {
               />
             </div>
           </div>
-          <div className="w-full mb-4">
+          <div className="w-full mb-2">
             <div className="relative w-full min-w-[200px] xs:h-10 lg:h-14 flex items-center gap-2">
               <img
-                src="/assets/logo/OOTBLogoRed.png"
+                src="/assets/logo/OOTBLogoRed.webp"
                 alt="Logo"
                 className="w-6"
               />
@@ -114,28 +137,28 @@ const ClientForm = ({ name, setName }) => {
                   -- DESIRED SERVICE FROM US --
                 </option>
                 <option
-                  value="Copywriting"
+                  value="Events Management"
                   className="font-jost bg-gray-500 bg-opacity-60 text-white"
                 >
-                  Copywriting
+                  Events Management
                 </option>
                 <option
-                  value="Multimedia"
+                  value="Public Relation"
                   className="font-jost bg-gray-500 bg-opacity-60 text-white"
                 >
-                  Multimedia
+                  Public Relation
                 </option>
                 <option
-                  value="Videographer"
+                  value="Branding and Marketing"
                   className="font-jost bg-gray-500 bg-opacity-60 text-white"
                 >
-                  Videographer
+                  Branding and Marketing
                 </option>
                 <option
-                  value="Web Developer"
+                  value="Commercial Production"
                   className="font-jost bg-gray-500 bg-opacity-60 text-white"
                 >
-                  Web Developer
+                  Commercial Production
                 </option>
               </select>
             </div>

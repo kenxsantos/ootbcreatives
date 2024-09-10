@@ -94,7 +94,7 @@ const RadioUs = () => {
                 </div>
                 <div className="xs:w-full sm:w-1/2 flex xs:justify-center sm:justify-end px-8">
                   <img
-                    src="/assets/logo/OOTBLogoRed.png"
+                    src="/assets/logo/OOTBLogoRed.webp"
                     alt=""
                     className="h-24"
                   />
