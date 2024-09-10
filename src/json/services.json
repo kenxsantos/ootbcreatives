@@ -8,8 +8,8 @@
       "highlight": "Attract Crowds"
     },
     "subheading": "We got it covered for any type of event",
-    "thumbnail": "/assets/eventsmanagement/thumbnail.png",
-    "background": "/assets/eventsmanagement/thumbnail.png",
+    "thumbnail": "/assets/eventsmanagement/thumbnail.webp",
+    "background": "/assets/eventsmanagement/thumbnail.webp",
     "description": {
       "1": "Planning for events could be stressful. Especially when you’re clueless on where to start and what to do. Let the Out of the Box Creatives crewmates do the work. ",
       "2": "With extensive experience in event planning and management, we create bespoke solutions for corporate and private clients. Our services include theme development, creative design, vendor coordination, and seamless event execution. We are committed to delivering high-quality events that exceed your expectations while remaining budget-conscious."
@@ -26,7 +26,7 @@
     "images": {
       "1": {
         "img": {
-          "1": "/assets/eventsmanagement/conceptualization/1.png"
+          "1": "/assets/eventsmanagement/conceptualization/1.webp"
         },
         "caption": {
           "1": "Out of the Box Creatives excels in turning abstract ideas into vivid, unforgettable experiences. Our team will collaborate with you to create a unique and inspiring theme that perfectly aligns with your brand and event objectives."
@@ -34,40 +34,32 @@
       },
       "2": {
         "img": {
-          "1": "/assets/eventsmanagement/planning/3.png"
+          "1": "/assets/eventsmanagement/planning/3.webp"
         },
-        "caption": {  
+        "caption": {
           "1": "With meticulous attention to detail, Out of the Box Creatives will arrange every detail of your event, from timelines to vendor coordination, ensuring a seamless and stress-free preparation process."
         }
       },
       "3": {
-        "img": {
-          
-        },
+        "img": {},
         "caption": {
           "1": "Our team will bring your vision to life by creating custom-designed elements, such as stage sets, backdrops, and interactive displays, that enhance the event’s theme and leave a lasting impression on your guests."
         }
       },
       "4": {
-        "img": {
-        
-        },
+        "img": {},
         "caption": {
           "1": "Our team will bring your vision to life by creating custom-designed elements, such as stage sets, backdrops, and interactive displays, that enhance the event’s theme and leave a lasting impression on your guests."
         }
       },
       "5": {
-        "img": {
-          
-        },
+        "img": {},
         "caption": {
           "1": "Our team will bring your vision to life by creating custom-designed elements, such as stage sets, backdrops, and interactive displays, that enhance the event’s theme and leave a lasting impression on your guests."
         }
       },
       "6": {
-        "img": {
-         
-        },
+        "img": {},
         "caption": {
           "1": "Our team will bring your vision to life by creating custom-designed elements, such as stage sets, backdrops, and interactive displays, that enhance the event’s theme and leave a lasting impression on your guests."
         }
@@ -83,7 +75,7 @@
       "highlight": "Period."
     },
     "subheading": "We got it covered!",
-    "thumbnail": "/assets/publicrelation/thumbnail.png",
+    "thumbnail": "/assets/publicrelation/thumbnail.webp",
     "description": {
       "1": "We don't just talk about PR; we deliver measurable results. Our team of seasoned PR professionals combines data and creativity with strategic thinking to create campaigns that generate buzz, build awareness, and drive real impact. Whether you're looking to launch a new product, or enhance your reputation, we have the expertise and experience to help you succeed. Let us show you the power of PR that truly works."
     },
@@ -103,7 +95,7 @@
       "highlight": "Fuels Growth"
     },
     "subheading": "We got it covered!",
-    "thumbnail": "/assets/branding/thumbnail.png",
+    "thumbnail": "/assets/branding/thumbnail.webp",
     "description": {
       "1": "We believe that branding and marketing should do more than just look good – they should deliver measurable results. Our team will be with you every step of the way to develop and execute comprehensive branding and marketing plans that are tailored to your unique goals and objectives. "
     },
@@ -118,14 +110,14 @@
     "images": {
       "1": {
         "img": {
-          "1": "/assets/branding/market-research/mr-1.png",
-          "2": "/assets/branding/market-research/mr-2.png",
-          "3": "/assets/branding/market-research/mr-3.png",
-          "4": "/assets/branding/market-research/mr-4.png",
-          "5": "/assets/branding/market-research/mr-5.png",
-          "6": "/assets/branding/market-research/mr-6.png",
-          "7": "/assets/branding/market-research/mr-7.png",
-          "8": "/assets/branding/market-research/mr-8.png"
+          "1": "/assets/branding/market-research/mr-1.webp",
+          "2": "/assets/branding/market-research/mr-2.webp",
+          "3": "/assets/branding/market-research/mr-3.webp",
+          "4": "/assets/branding/market-research/mr-4.webp",
+          "5": "/assets/branding/market-research/mr-5.webp",
+          "6": "/assets/branding/market-research/mr-6.webp",
+          "7": "/assets/branding/market-research/mr-7.webp",
+          "8": "/assets/branding/market-research/mr-8.webp"
         },
         "caption": {
           "1": "Lorem Ipsum"
@@ -133,9 +125,9 @@
       },
       "2": {
         "img": {
-          "1": "/assets/branding/branding-development/asian-harm-branding.png",
-          "2": "/assets/branding/branding-development/bridgestone-brand.png",
-          "3": "/assets/branding/branding-development/george-brand.png"
+          "1": "/assets/branding/branding-development/asian-harm-branding.webp",
+          "2": "/assets/branding/branding-development/bridgestone-brand.webp",
+          "3": "/assets/branding/branding-development/george-brand.webp"
         },
         "caption": {
           "1": "Lorem Ipsum"
@@ -143,17 +135,17 @@
       },
       "3": {
         "img": {
-          "1": "/assets/branding/integrated-marketing-communications/ev-1.png",
-          "2": "/assets/branding/integrated-marketing-communications/ev-2.png",
-          "3": "/assets/branding/integrated-marketing-communications/imc-1.png",
-          "4": "/assets/branding/integrated-marketing-communications/imc-2.png",
-          "5": "/assets/branding/integrated-marketing-communications/imc-3.png",
-          "6": "/assets/branding/integrated-marketing-communications/imc-4.png",
-          "7": "/assets/branding/integrated-marketing-communications/imc-5.png",
-          "8": "/assets/branding/integrated-marketing-communications/imc-6.png",
-          "9": "/assets/branding/integrated-marketing-communications/imc-7.png",
-          "10": "/assets/branding/integrated-marketing-communications/imc-8.png",
-          "11": "/assets/branding/integrated-marketing-communications/imc-9.png"
+          "1": "/assets/branding/integrated-marketing-communications/ev-1.webp",
+          "2": "/assets/branding/integrated-marketing-communications/ev-2.webp",
+          "3": "/assets/branding/integrated-marketing-communications/imc-1.webp",
+          "4": "/assets/branding/integrated-marketing-communications/imc-2.webp",
+          "5": "/assets/branding/integrated-marketing-communications/imc-3.webp",
+          "6": "/assets/branding/integrated-marketing-communications/imc-4.webp",
+          "7": "/assets/branding/integrated-marketing-communications/imc-5.webp",
+          "8": "/assets/branding/integrated-marketing-communications/imc-6.webp",
+          "9": "/assets/branding/integrated-marketing-communications/imc-7.webp",
+          "10": "/assets/branding/integrated-marketing-communications/imc-8.webp",
+          "11": "/assets/branding/integrated-marketing-communications/imc-9.webp"
         },
         "caption": {
           "1": "Lorem Ipsum"
@@ -161,14 +153,14 @@
       },
       "4": {
         "img": {
-          "1": "/assets/branding/digital-marketing/dgm-1.png",
-          "2": "/assets/branding/digital-marketing/dgm-2.png",
-          "3": "/assets/branding/digital-marketing/dgm-3.png",
-          "4": "/assets/branding/digital-marketing/dgm-4.png",
-          "5": "/assets/branding/digital-marketing/dgm-5.png",
-          "6": "/assets/branding/digital-marketing/dgm-6.png",
-          "7": "/assets/branding/digital-marketing/dgm-7.png",
-          "8": "/assets/branding/digital-marketing/dgm-8.png"
+          "1": "/assets/branding/digital-marketing/dgm-1.webp",
+          "2": "/assets/branding/digital-marketing/dgm-2.webp",
+          "3": "/assets/branding/digital-marketing/dgm-3.webp",
+          "4": "/assets/branding/digital-marketing/dgm-4.webp",
+          "5": "/assets/branding/digital-marketing/dgm-5.webp",
+          "6": "/assets/branding/digital-marketing/dgm-6.webp",
+          "7": "/assets/branding/digital-marketing/dgm-7.webp",
+          "8": "/assets/branding/digital-marketing/dgm-8.webp"
         },
         "caption": {
           "1": "Lorem Ipsum"
@@ -176,9 +168,9 @@
       },
       "5": {
         "img": {
-          "1": "/assets/branding/web-development/web-1.png",
-          "2": "/assets/branding/web-development/web-2.png",
-          "3": "/assets/branding/web-development/web-3.png"
+          "1": "/assets/branding/web-development/web-1.webp",
+          "2": "/assets/branding/web-development/web-2.webp",
+          "3": "/assets/branding/web-development/web-3.webp"
         },
         "caption": {
           "1": "Lorem"
@@ -195,7 +187,7 @@
       "highlight": "Vision"
     },
     "subheading": "We got it covered!",
-    "thumbnail": "/assets/commercial/thumbnail.jpg",
+    "thumbnail": "/assets/commercial/thumbnail.webp",
     "description": {
       "1": "Your commercial isn't just an advertisement; it's a story, a moment, an experience. Our passion is all about transforming your ideas into captivating visuals that leave a lasting impact. Our team of experienced directors, producers, and creatives will guide you through every step of the production process, from concept development and scriptwriting to filming, editing, and post-production. We ensure your commercial is not only visually stunning but also strategically aligned with your brand's message and goals. "
     },

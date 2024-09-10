@@ -51,8 +51,7 @@
     "title": "No Description",
     "astronaut": "/assets/astronauts/MikeMaranan.webp",
     "link": "mike-maranan",
-    "description": {
-    }
+    "description": {}
   },
   {
     "id": 5,
@@ -103,9 +102,7 @@
     "title": "No Description | Austronaut",
     "astronaut": "/assets/astronauts/MariaCarmelaAnsale.webp",
     "link": "dominic-salando",
-    "description": {
-      
-    }
+    "description": {}
   },
   {
     "id": 9,
@@ -129,8 +126,7 @@
     "title": "No Description | Astronaut",
     "astronaut": "/assets/astronauts/AndreKirbyAquino.webp",
     "link": "cheska-joy-atienza",
-    "description": {
-    }
+    "description": {}
   },
   {
     "id": 11,
@@ -140,9 +136,6 @@
     "title": "No Description",
     "astronaut": "/assets/astronauts/MarkAnthonyEdano.webp",
     "link": "mark-anthony-edano",
-    "description": {
-
-    },
-    "satellite": "/assets/astronauts/Satellite.webp"
+    "description": {}
   }
 ]

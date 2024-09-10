@@ -4,100 +4,100 @@
       "id": 1,
       "1": {
         "brand": "JML",
-        "logo": "/assets/clients/recently-added/logo/jml.png",
-        "poster": "/assets/clients/recently-added/case-study/jml.png"
+        "logo": "/assets/clients/recently-added/logo/jml.webp",
+        "poster": "/assets/clients/recently-added/case-study/jml.webp"
       },
       "2": {
         "brand": "bridgestone",
-        "logo": "/assets/clients/recently-added/logo/bridgestone.png"
+        "logo": "/assets/clients/recently-added/logo/bridgestone.webp"
       },
       "3": {
         "brand": "mariveles",
-        "logo": "/assets/clients/recently-added/logo/mariveles.png",
-        "poster": "/assets/clients/recently-added/case-study/mariveles-1.png"
+        "logo": "/assets/clients/recently-added/logo/mariveles.webp",
+        "poster": "/assets/clients/recently-added/case-study/mariveles-1.webp"
       }
     },
     "clientsOnboard": {
       "id": 2,
       "1": {
         "brand": "coca-cola",
-        "logo": "/assets/clients/clients-onboard/coca-cola.png"
+        "logo": "/assets/clients/clients-onboard/coca-cola.webp"
       },
       "2": {
         "brand": "bdo",
-        "logo": "/assets/clients/clients-onboard/bdo.png"
+        "logo": "/assets/clients/clients-onboard/bdo.webp"
       },
       "3": {
         "brand": "zeiss",
-        "logo": "/assets/clients/clients-onboard/zeiss.png"
+        "logo": "/assets/clients/clients-onboard/zeiss.webp"
       },
       "4": {
         "brand": "dove",
-        "logo": "/assets/clients/clients-onboard/dove.png"
+        "logo": "/assets/clients/clients-onboard/dove.webp"
       },
       "5": {
         "brand": "lazada",
-        "logo": "/assets/clients/clients-onboard/lazada.png"
+        "logo": "/assets/clients/clients-onboard/lazada.webp"
       },
       "6": {
         "brand": "seagames2019",
-        "logo": "/assets/clients/clients-onboard/seagames2019.png"
+        "logo": "/assets/clients/clients-onboard/seagames2019.webp"
       },
       "7": {
         "brand": "securitybank",
-        "logo": "/assets/clients/clients-onboard/securitybank.png"
+        "logo": "/assets/clients/clients-onboard/securitybank.webp"
       },
       "8": {
         "brand": "smart",
-        "logo": "/assets/clients/clients-onboard/smart.png"
+        "logo": "/assets/clients/clients-onboard/smart.webp"
       },
       "9": {
         "brand": "StLukes",
-        "logo": "/assets/clients/clients-onboard/StLukes.png"
+        "logo": "/assets/clients/clients-onboard/StLukes.webp"
       },
       "10": {
         "brand": "unilever",
-        "logo": "/assets/clients/clients-onboard/unilever.png"
+        "logo": "/assets/clients/clients-onboard/unilever.webp"
       },
       "11": {
         "brand": "paymaya",
-        "logo": "/assets/clients/clients-onboard/paymaya.png"
+        "logo": "/assets/clients/clients-onboard/paymaya.webp"
       },
       "12": {
         "brand": "robinsons",
-        "logo": "/assets/clients/clients-onboard/robinson.png"
+        "logo": "/assets/clients/clients-onboard/robinson.webp"
       },
       "13": {
         "brand": "bosshugo",
-        "logo": "/assets/clients/clients-onboard/bosshugo.png"
+        "logo": "/assets/clients/clients-onboard/bosshugo.webp"
       },
       "14": {
         "brand": "garudapancasila",
-        "logo": "/assets/clients/clients-onboard/GarudaPancasila.png"
+        "logo": "/assets/clients/clients-onboard/GarudaPancasila.webp"
       },
       "15": {
         "brand": "dost",
-        "logo": "/assets/clients/clients-onboard/dost.png"
+        "logo": "/assets/clients/clients-onboard/dost.webp"
       },
       "16": {
         "brand": "cosmopolitan",
-        "logo": "/assets/clients/clients-onboard/cosmopolitan.png"
+        "logo": "/assets/clients/clients-onboard/cosmopolitan.webp"
       },
       "17": {
         "brand": "filinvest",
-        "logo": "/assets/clients/clients-onboard/filinvest.png"
+        "logo": "/assets/clients/clients-onboard/filinvest.webp"
       },
       "18": {
         "brand": "asianinstitute",
-        "logo": "/assets/clients/clients-onboard/asianinstitute.png"
+        "logo": "/assets/clients/clients-onboard/asianinstitute.webp"
       },
       "19": {
         "brand": "smdc",
-        "logo": "/assets/clients/clients-onboard/smdc.png"
+        "logo": "/assets/clients/clients-onboard/smdc.webp"
       },
       "20": {
         "brand": "dot",
-        "logo": "/assets/clients/clients-onboard/DoT.png"
+        "logo": "/assets/clients/clients-onboard/DoT.webp"
       }
     }
   }
