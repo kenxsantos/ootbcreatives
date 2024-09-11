@@ -9,11 +9,11 @@ const Offers = () => {
     <div className="bg-vertical-planets-3 h-screen  bg-cover flex flex-col justify-center">
       <section className="text-center flex flex-col justify-center lg:pt-20 2xl:pt-28">
         <motion.div
-          className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 2xl:px-36 w-full"
+          className="w-1/2 mx-auto"
           animate={controls}
           transition={{ duration: 0.3 }}
         >
-          <h1 className="font-metropolis font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl ">
+          <h1 className="font-metropolis font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl">
             Dive into the realm of{" "}
             <span className="text-orange">advertising</span> and let your{" "}
             <span className="text-orange">creativity</span>{" "}

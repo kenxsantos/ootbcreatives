@@ -55,7 +55,7 @@ const Services = () => {
             <br />
             {selectedService.subtitle}
           </h2>
-          <div className="font-jost pr-4 text-white xs:w-full sm:xl:w-1/2 text-justify h-[100px]">
+          <div className="font-jost pr-4 text-white xs:w-full sm:w-4/5 lg:w-1/2 text-justify h-[100px]">
             {isExpanded ? (
               fullDescriptionArray.map((desc, index) => (
                 <p key={index} className="mb-2 xs:text-sm 2xl:text-lg">
