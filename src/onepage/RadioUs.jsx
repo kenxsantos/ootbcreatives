@@ -3,10 +3,15 @@ import { useAnimation, motion } from "framer-motion";
 import ClientForm from "../components/ClientForm";
 import CrewmatesForm from "../components/CrewmatesForm";
 import ExplorersForm from "../components/ExplorersForm";
+
 const RadioUs = () => {
   const [activeOption, setActiveOption] = useState("Client");
   const controls = useAnimation();
   const [name, setName] = useState("");
+
+  useEffect(() => {
+    controls.start({ opacity: 1, x: 0 });
+  }, [activeOption, controls]);
 
   const renderForm = () => {
     switch (activeOption) {
@@ -27,8 +32,9 @@ const RadioUs = () => {
         <section className="w-full xl:flex">
           <motion.div
             animate={controls}
+            initial={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.3 }}
-            className="xs:w-full xl:w-1/2 flex items-center  xs:justify-center xl:justify-end"
+            className="xs:w-full xl:w-1/2 flex items-center xs:justify-center xl:justify-end"
           >
             <h1 className="font-metropolis text-white font-extrabold text-glow xs:text-center xl:text-right uppercase flex flex-col">
               <span className="xs:text-5xl sm:text-6xl xl:text-8xl 3xl:text-9xl">
@@ -47,7 +53,7 @@ const RadioUs = () => {
                   <span>There?</span>
                 </h1>
               </div>
-              <div className="flex gap-2 xs:h-16 sm:h-full xs:mt-4 sm:mt-0 ">
+              <div className="flex gap-2 xs:h-16 sm:h-full xs:mt-4 sm:mt-0">
                 {["Client", "Potential Crewmate", "Just Exploring"].map(
                   (option) => (
                     <motion.div
@@ -70,7 +76,7 @@ const RadioUs = () => {
               </div>
             </div>
             <div
-              className="relative mb-4 w-full 3xl:w-4/5 xs:h-[350px] sm:h-[450px] lg:h-[550px] xl:h-[480px] bg-gray-500 bg-opacity-50 overflow-auto p-8 hide-scrollbar"
+              className="relative mb-4 w-full 3xl:w-4/5 xs:h-[370px] sm:h-[470px] lg:h-[570px] xl:h-[500px] bg-gray-500 bg-opacity-50 overflow-auto p-8"
               style={{
                 clipPath:
                   "polygon(7% 0%, 93% 0%, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0% 93%, 0% 7%)",
