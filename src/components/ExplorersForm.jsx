@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdCall } from "react-icons/md";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 const ExplorersForm = () => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
+    contact: "",
     message: "",
   });
 
@@ -27,9 +28,9 @@ const ExplorersForm = () => {
       .then(
         (result) => {
           alert("Email successfully sent!");
-
           setFormData({
             email: "",
+            contact: "",
             message: "",
           });
         },
@@ -42,7 +43,7 @@ const ExplorersForm = () => {
   return (
     <div className="w-full flex flex-col sm:px-8 mt-12">
       <form onSubmit={handleSubmit} className="w-full">
-        <div className="w-full mb-4">
+        <div className="w-full mb-2">
           <div className="relative w-full min-w-[200px] xs:h-10 lg:h-12 flex items-center gap-2">
             <MdEmail size={24} color="white" />
             <input
@@ -56,6 +57,22 @@ const ExplorersForm = () => {
             />
           </div>
         </div>
+        <div className="w-full mb-2">
+          <div className="relative w-full min-w-[200px] xs:h-10 lg:h-12 flex items-center gap-2">
+            <MdCall size={24} color="white" />
+            <input
+              type="tel"
+              name="contact"
+              value={formData.contact}
+              onChange={handleChange}
+              className="peer w-full h-full bg-transparent text-white font-jost text-base outline outline-0 focus:outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 border focus:border-2 px-3 py-2.5 rounded-sm border-blue-gray-200"
+              placeholder="CONTACT NUMBER"
+              pattern="[0-9]{11}"
+              required
+              maxLength="11"
+            />
+          </div>
+        </div>
         <div className="w-full mb-4">
           <div className="relative w-full min-w-[200px] h-50 flex justify-center gap-2">
             <img
@@ -65,7 +82,7 @@ const ExplorersForm = () => {
             />
             <textarea
               name="message"
-              rows="5"
+              rows="4"
               value={formData.message}
               onChange={handleChange}
               className="p-2.5 w-full text-white bg-transparent font-jost text-base rounded-sm border border-gray-300 focus:ring-white focus:border-white focus:outline-none"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ onNavLinkClick, activeLink }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +26,10 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
     setIsMenuOpen(false);
   };
 
-  console.log(activeLink);
+  const handleLogoClick = () => {
+    onNavLinkClick(0);
+  };
+
   return (
     <nav className="w-full fixed left-0 top-0 overflow-visible z-[80] flex items-center">
       <div className="mx-auto">
@@ -34,6 +38,8 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
             <div>
               {activeLink !== "landing" && (
                 <motion.img
+                  whileHover={{ cursor: "pointer", scale: 1.1 }}
+                  onClick={handleLogoClick}
                   src="/assets/logo/OOTBLogoWhite.webp"
                   alt="logo"
                   className="w-16 xs:ml-2 xl:-ml-1"
@@ -98,6 +104,8 @@ const NavBar = ({ onNavLinkClick, activeLink }) => {
             <div className="absolute top-4 left-16">
               {activeLink !== "landing" && (
                 <motion.img
+                  whileHover={{ cursor: "pointer", scale: 1.1 }}
+                  onClick={handleLogoClick}
                   src="/assets/logo/OOTBLogoWhite.webp"
                   alt="logo"
                   className="w-20"

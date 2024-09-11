@@ -55,7 +55,7 @@ const ClientForm = ({ name, setName }) => {
     } catch (error) {
       alert("Failed to send email. Please try again.");
     } finally {
-      setLoading(false); // End loading animation
+      setLoading(false);
     }
   };
 

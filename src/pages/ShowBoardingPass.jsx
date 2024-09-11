@@ -1,15 +1,15 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
 import internship from "../json/internship.json";
-import { useState } from "react";
 import InternsWork from "../components/InternsWork";
 import InternsBoardingPass from "../components/InternsBoardingPass";
+
 const ShowBoardingPass = () => {
   const { batch, year, intern } = useParams();
   const [selectedBatch, setSelectedBatch] = useState(batch || "batch-1");
+
   const formattedName = (name) => name.toLowerCase().replace(/ /g, "-");
 
   const yearData = internship.find((data) => data.year.toString() === year);
@@ -30,13 +30,20 @@ const ShowBoardingPass = () => {
 
   const internData = findIntern();
 
+  // Update selectedBatch when batch changes from URL params
+  useEffect(() => {
+    setSelectedBatch(batch || "batch-1");
+  }, [batch]);
+
+  // If intern data is not found, display a message
   if (!internData) {
     return <div>Intern not found</div>;
   }
+
   return (
-    <div className="relative w-screen bg-academy bg-cover mx-auto xs:h-full 2xl:h-screen">
-      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
-        <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
+    <div className="relative w-screen bg-academy bg-cover mx-auto xs:h-full">
+      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-50 flex">
+        <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
         <FixedNavBar />
@@ -49,6 +56,10 @@ const ShowBoardingPass = () => {
                     src="/assets/others/BackShadow.webp"
                     alt="Back Flare"
                     className="transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "/assets/others/defaultImage.webp"; // Fallback image
+                    }}
                   />
                 </div>
                 <span className="text-white font-jost flex items-center gap-4 transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow">
@@ -59,11 +70,11 @@ const ShowBoardingPass = () => {
                 </span>
               </div>
             </Link>
-            <div>
+            <div key={internData.name}>
               <InternsWork internData={internData} />
             </div>
           </section>
-          <section className="relative xs:w-full xl:w-1/2 flex flex-col h-full mt-10 mx-auto sm:px-12 items-center justify-center">
+          <section className="relative xs:w-full xl:w-1/2 flex flex-col sm:px-12">
             <InternsBoardingPass internData={internData} yearData={yearData} />
           </section>
         </div>

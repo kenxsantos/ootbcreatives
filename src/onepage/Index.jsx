@@ -47,7 +47,7 @@ const Index = () => {
   }, [swiperInstance]);
 
   return (
-    <div className="relative max-w-screen-3xl mx-auto">
+    <div className="relative 3xl:max-w-screen-3xl mx-auto">
       <NavBar onNavLinkClick={handleNavLinkClick} activeLink={activeLink} />
 
       <Swiper
