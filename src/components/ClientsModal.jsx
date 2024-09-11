@@ -12,7 +12,7 @@ const ClientsModal = ({ isOpen, close, modalContent }) => {
     >
       <DialogBackdrop
         transition
-        className="fixed inset-0  transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
+        className="fixed inset-0 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
       />
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
@@ -27,9 +27,9 @@ const ClientsModal = ({ isOpen, close, modalContent }) => {
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
-            className="overflow-visible  relative transform rounded-lg bg-transparent w-[800px] bg-opacity-95 text-left transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+            className="overflow-visible py-12 relative transform rounded-lg bg-transparent w-[800px] bg-opacity-95 text-left transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
-            <div className="relative px-4 py-3">
+            <div className="relative py-3">
               <IoIosClose
                 size={24}
                 className="absolute text-white rounded-full  hover:cursor-pointer top-0 right-0"
