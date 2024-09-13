@@ -22,7 +22,7 @@ const WorksModal = ({ isOpen, close, modalContent }) => {
           delay: 0.5,
           ease: [0, 0.1, 0.1, 1.0],
         }}
-        className="fixed inset-0 z-10 w-screen overflow-y-auto"
+        className="fixed inset-0 z-10 overflow-y-auto"
       >
         <div className="flex min-h-full items-center justify-start text-center">
           <DialogPanel

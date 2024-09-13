@@ -9,7 +9,7 @@ const CareerDetails = () => {
   const career = location.state?.career;
 
   return (
-    <div className="relative w-screen bg-clear-planets bg-cover mx-auto md:h-full lg:h-screen">
+    <div className="relative bg-clear-planets bg-cover mx-auto md:h-full lg:h-screen">
       <div className="relative z-30">
         <FixedNavBar />
       </div>

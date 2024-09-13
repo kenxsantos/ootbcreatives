@@ -30,18 +30,16 @@ const ShowBoardingPass = () => {
 
   const internData = findIntern();
 
-  // Update selectedBatch when batch changes from URL params
   useEffect(() => {
     setSelectedBatch(batch || "batch-1");
   }, [batch]);
 
-  // If intern data is not found, display a message
   if (!internData) {
     return <div>Intern not found</div>;
   }
 
   return (
-    <div className="relative w-screen bg-academy bg-cover mx-auto xs:h-full">
+    <div className="relative bg-academy bg-cover mx-auto xs:h-full">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity-50 flex">
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity-10"></div>
       </div>
