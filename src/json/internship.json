@@ -550,6 +550,99 @@
             }
           }
         }
+      },
+      "5": {
+        "1": {
+          "name": "John Angelo Tupas",
+          "date-started": "September 2024",
+          "date-ended": "ONGOING",
+          "role": "Multimedia Artist",
+          "profile": "/assets/interns/2024/batch-5/john-angelo-tupas.webp",
+          "boardingPass": "/assets/boardingpass/2024/batch-5/john-angelo-tupas.webp",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
+        },
+        "2": {
+          "name": "Kaila Arvi Ariston",
+          "date-started": "September 2024",
+          "date-ended": "ONGOING",
+          "role": "Multimedia Artist",
+          "profile": "/assets/interns/2024/batch-5/kaila-arvi-ariston.webp",
+          "boardingPass": "/assets/boardingpass/2024/batch-5/kaila-arvi-ariston.webp",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
+        },
+        "3": {
+          "name": "Anire Guilliani",
+          "date-started": "September 2024",
+          "date-ended": "ONGOING",
+          "role": "Multimedia Artist",
+          "profile": "/assets/interns/2024/batch-5/anire-guilliani.webp",
+          "boardingPass": "/assets/boardingpass/2024/batch-5/anire-guilliani.webp",
+          "works": {
+            "1": {
+              "client": "Bridgestone",
+              "project": "Bridgestone Philippines",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            },
+            "2": {
+              "client": "BDO",
+              "project": "We find ways",
+              "description": "Copywriting for Bridgestone Philippines",
+              "images": {
+                "1": "https://via.placeholder.com/150",
+                "2": "https://via.placeholder.com/150",
+                "3": "https://via.placeholder.com/150"
+              }
+            }
+          }
+        
+      }
       }
     }
   },
