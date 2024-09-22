@@ -104,7 +104,7 @@ export default {
         },
         ".clip-path-custom-polygon": {
           clipPath:
-            "polygon(7% 0%, 100% 0%, 100% 100%, 7% 100%, 0% 93%, 0% 7%)",
+            "polygon(7% 0%, 93% 0%, 100% 7%, 100% 93%, 93% 100%, 7% 100%, 0% 93%, 0% 7%)",
         },
         ".clip-path-cut-top-corners": {
           clipPath:
