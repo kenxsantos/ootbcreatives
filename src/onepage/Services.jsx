@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import services from "../json/services.json";
 import ReadMoreButton from "../components/ReadMoreButton";
@@ -9,62 +9,54 @@ const Services = () => {
     services.find((service) => service.title === "Event Management") ||
     services[0];
   const [selectedService, setSelectedService] = useState(defaultService);
-  const [backgroundImage, setBackgroundImage] = useState(
-    defaultService.thumbnail
-  );
-  const [translateY, setTranslateY] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
+  const servicesSectionRef = useRef(null);
+
   const wordLimit = 35;
 
-  const fullDescriptionArray = Object.values(selectedService.description).map(
-    (desc) => desc.split(" ")
-  );
+  const fullDescription = useMemo(() => {
+    return Object.values(selectedService.description).flat().join(" ");
+  }, [selectedService]);
 
-  const fullDescription = fullDescriptionArray.flat();
-  const limitedDescription = fullDescription.slice(0, wordLimit).join(" ");
+  const limitedDescription = useMemo(() => {
+    return fullDescription.split(" ").slice(0, wordLimit).join(" ") + "...";
+  }, [fullDescription, wordLimit]);
 
-  const handleToggle = () => {
-    setIsExpanded(!isExpanded);
-  };
-
-  const servicesSectionRef = useRef(null);
+  const handleToggle = () => setIsExpanded((prev) => !prev);
 
   const handleMouseEnter = (service) => {
     setSelectedService(service);
-    setBackgroundImage(service.thumbnail);
   };
 
   const handleScrollToServices = () => {
-    if (servicesSectionRef.current) {
-      servicesSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    servicesSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div
       className="relative h-screen mx-auto shadow-inner-overlay overflow-visible xs:px-3 xl:px-12 xs:pt-20 lg:pt-28 xl:pt-24"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${selectedService.thumbnail})`,
         backgroundSize: "cover",
       }}
     >
       <div className="relative z-30 flex flex-col">
         <section className="h-full mb-20 2xl:mt-24">
-          <h2 className="flex flex-col leading-none text-left text-white font-metropolis font-extrabold tracking-tighter xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
+          <h2 className="text-white font-metropolis font-extrabold leading-none tracking-tighter xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
             {selectedService.title}
             <br />
             {selectedService.subtitle}
           </h2>
           <div className="font-jost pr-4 text-white xs:w-full sm:w-4/5 lg:w-1/2 text-justify h-[100px]">
             {isExpanded ? (
-              fullDescriptionArray.map((desc, index) => (
+              fullDescription.split(" ").map((word, index) => (
                 <p key={index} className="mb-2 xs:text-sm 2xl:text-lg">
-                  {desc.join(" ")}
+                  {word}
                 </p>
               ))
             ) : (
               <p className="mb-2 xs:text-sm 2xl:text-base">
-                {limitedDescription}...
+                {limitedDescription}
               </p>
             )}
             <ReadMoreButton
@@ -73,13 +65,10 @@ const Services = () => {
             />
           </div>
         </section>
+
         <section
           className="mb-12 2xl:mt-12 xs:mt-24 sm:mt-0"
-          style={{
-            transform: `translateY(${translateY}px)`,
-            transition: "transform 0.3s ease",
-          }}
-          ref={servicesSectionRef} // Set the ref here
+          ref={servicesSectionRef}
         >
           <div onClick={handleScrollToServices}>
             <h1 className="font-jost text-white xs:text-xs sm:text-sm md:text-base 3xl:text-xl hover:cursor-pointer">
@@ -110,7 +99,7 @@ const Services = () => {
                     <br />
                     {service.subtitle}
                   </h2>
-                  <div className="absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-black opacity-50 rounded-2xl" />
                 </motion.div>
               </Link>
             ))}

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import TabComponent from "./TabComponent";
 import { motion } from "framer-motion";
+
 const InternsBoardingPass = ({ internData, yearData }) => {
   return (
     <div className="flex flex-col items-center xs:h-full w-full">
-      <div className="w-[800px] sm:px-0">
+      <div className="w-full max-w-[800px] sm:px-0">
         <motion.img
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -16,6 +17,7 @@ const InternsBoardingPass = ({ internData, yearData }) => {
           src={internData.boardingPass}
           alt={internData.name}
           className="w-full object-cover"
+          loading="lazy"
         />
       </div>
       <div className="shadow-inner-crewmates rounded-t-3xl flex flex-col items-center h-[250px] xs:w-[400px] sm:w-[600px]">
@@ -25,4 +27,4 @@ const InternsBoardingPass = ({ internData, yearData }) => {
   );
 };
 
-export default InternsBoardingPass;
+export default React.memo(InternsBoardingPass);

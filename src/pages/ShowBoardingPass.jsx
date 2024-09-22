@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import FixedNavBar from "../components/FixedNavBar";
@@ -7,17 +7,21 @@ import InternsWork from "../components/InternsWork";
 import InternsBoardingPass from "../components/InternsBoardingPass";
 
 const ShowBoardingPass = () => {
-  const { batch, year, intern } = useParams();
-  const [selectedBatch, setSelectedBatch] = useState(batch || "batch-1");
+  const { batch = "batch-1", year, intern } = useParams();
 
+  // Memoizing formattedName function to avoid unnecessary recreations
   const formattedName = (name) => name.toLowerCase().replace(/ /g, "-");
 
-  const yearData = internship.find((data) => data.year.toString() === year);
+  // Memoizing yearData to prevent recalculating on every render
+  const yearData = useMemo(
+    () => internship.find((data) => data.year.toString() === year),
+    [year]
+  );
 
-  const findIntern = () => {
-    const batchKey = selectedBatch.replace("batch-", "");
-
+  // Memoizing internData for efficient calculation
+  const internData = useMemo(() => {
     if (!yearData) return null;
+    const batchKey = batch.replace("batch-", "");
     const batchData = yearData.batch[batchKey];
     if (!batchData) return null;
 
@@ -26,13 +30,7 @@ const ShowBoardingPass = () => {
         (internData) => formattedName(internData.name) === intern
       ) || null
     );
-  };
-
-  const internData = findIntern();
-
-  useEffect(() => {
-    setSelectedBatch(batch || "batch-1");
-  }, [batch]);
+  }, [yearData, batch, intern, formattedName]);
 
   if (!internData) {
     return <div>Intern not found</div>;
@@ -48,16 +46,15 @@ const ShowBoardingPass = () => {
         <div className="xs:px-3 xl:w-full xl:flex lg:justify-between overflow-hidden">
           <section className="relative w-full xl:w-1/2 flex flex-col">
             <Link to="/">
-              <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
-                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
+              <div className="flex items-center xs:h-24 md:h-28 justify-start w-full">
+                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-[75px]">
                   <img
                     src="/assets/others/BackShadow.webp"
                     alt="Back Flare"
                     className="transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = "/assets/others/defaultImage.webp"; // Fallback image
-                    }}
+                    onError={(e) =>
+                      (e.target.src = "/assets/others/defaultImage.webp")
+                    }
                   />
                 </div>
                 <span className="text-white font-jost flex items-center gap-4 transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow">
@@ -68,11 +65,11 @@ const ShowBoardingPass = () => {
                 </span>
               </div>
             </Link>
-            <div key={internData.name}>
+            <div>
               <InternsWork internData={internData} />
             </div>
           </section>
-          <section className="relative xs:w-full xl:w-1/2 flex flex-col sm:px-12">
+          <section className="relative xs:w-full xl:w-1/2 flex flex-col">
             <InternsBoardingPass internData={internData} yearData={yearData} />
           </section>
         </div>
@@ -81,4 +78,4 @@ const ShowBoardingPass = () => {
   );
 };
 
-export default ShowBoardingPass;
+export default React.memo(ShowBoardingPass);

@@ -37,7 +37,7 @@ const RadioUs = () => {
             className="xs:w-full xl:w-1/2 flex items-center xs:justify-center xl:justify-end"
           >
             <h1 className="font-metropolis text-white font-extrabold text-glow xs:text-center xl:text-right uppercase flex flex-col">
-              <span className="xs:text-5xl sm:text-6xl xl:text-8xl 3xl:text-9xl">
+              <span className="xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-8xl">
                 Let's Go
               </span>
               <span className="xs:text-4xl sm:text-5xl xl:text-7xl 3xl:text-8xl">

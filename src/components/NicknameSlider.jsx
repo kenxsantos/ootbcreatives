@@ -40,8 +40,13 @@ const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
         initialSlide={index}
         slidesPerView={3}
         centerInsufficientSlides={true}
-        mousewheel
-        speed={600}
+        mousewheel={{
+          forceToAxis: true,
+          releaseOnEdges: true,
+          thresholdDelta: 50,
+        }}
+        lazy="true"
+        speed={400}
         spaceBetween={50}
         navigation={{
           nextEl: nextRef.current,
@@ -64,7 +69,7 @@ const NicknameSlider = ({ nextRef, prevRef, setActiveIndex, activeIndex }) => {
             <div
               className={`flex items-center justify-center h-24 w-full ${
                 index === activeIndex
-                  ? "text-4xl font-bold hover:text-glow"
+                  ? "text-4xl font-bold text-glow"
                   : "text-lg"
               } text-white text-center font-metropolis transform xl:-rotate-90 transition-all duration-300`}
             >

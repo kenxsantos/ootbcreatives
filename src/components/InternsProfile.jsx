@@ -29,15 +29,20 @@ const InternsProfile = ({ batches, year }) => {
         effect={"coverflow"}
         direction="vertical"
         slidesPerView={3}
-        mousewheel={true}
+        lazy="true"
         spaceBetween={10}
         centeredSlides={true}
+        mousewheel={{
+          forceToAxis: true,
+          releaseOnEdges: true,
+          thresholdDelta: 50,
+        }}
         speed={600}
         coverflowEffect={{
           rotate: 0,
           stretch: 100,
           depth: 50,
-          modifier: 4,
+          modifier: 3,
           slideShadows: false,
         }}
         modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
