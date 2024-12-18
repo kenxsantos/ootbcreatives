@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import FixedNavBar from "../components/FixedNavBar";
 import { motion } from "framer-motion";
 import careers from "../json/careers.json";
 const ShowCareers = () => {
   return (
     <div className="relative bg-clear-planets bg-cover mx-auto xs:h-full 2xl:h-screen">
       <div className="relative z-10">
-        <FixedNavBar />
         <div className="w-full ">
           <section className="relative w-full flex flex-col px-12">
             <Link to="/">

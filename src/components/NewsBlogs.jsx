@@ -10,7 +10,7 @@ const NewsBlogs = () => {
   const content = slug === "articles-blogs" ? articles : news;
 
   return (
-    <div className="w-4/5 mx-auto mt-12 rounded-xl h-[400px] flex flex-col gap-4 overflow-auto hide-scrollbar">
+    <div className="w-4/5 mx-auto mt-12 rounded-xl h-screen flex flex-col gap-4 overflow-auto hide-scrollbar">
       {content.map((item, index) => (
         <motion.div
           key={index}

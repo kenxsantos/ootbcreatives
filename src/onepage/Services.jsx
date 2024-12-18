@@ -26,6 +26,7 @@ const Services = () => {
 
   const handleMouseEnter = (service) => {
     setSelectedService(service);
+    setIsExpanded(false);
   };
 
   const handleScrollToServices = () => {
@@ -41,24 +42,16 @@ const Services = () => {
       }}
     >
       <div className="relative z-30 flex flex-col">
-        <section className="h-full mb-20 2xl:mt-24">
+        <section className="h-full 2xl:mt-24">
           <h2 className="text-white font-metropolis font-extrabold leading-none tracking-tighter xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 3xl:text-8xl">
             {selectedService.title}
             <br />
             {selectedService.subtitle}
           </h2>
-          <div className="font-jost pr-4 text-white xs:w-full sm:w-4/5 lg:w-1/2 text-justify h-[100px]">
-            {isExpanded ? (
-              fullDescription.split(" ").map((word, index) => (
-                <p key={index} className="mb-2 xs:text-sm 2xl:text-lg">
-                  {word}
-                </p>
-              ))
-            ) : (
-              <p className="mb-2 xs:text-sm 2xl:text-base">
-                {limitedDescription}
-              </p>
-            )}
+          <div className="font-jost pr-4 text-white xs:w-full sm:w-4/5 lg:w-1/2 text-justify h-[200px] overflow-y-auto">
+            <p className="mb-2 xs:text-sm 2xl:text-lg">
+              {isExpanded ? fullDescription : limitedDescription}
+            </p>
             <ReadMoreButton
               isExpanded={isExpanded}
               handleToggle={handleToggle}
@@ -67,7 +60,7 @@ const Services = () => {
         </section>
 
         <section
-          className="mb-12 2xl:mt-12 xs:mt-24 sm:mt-0"
+          className="mb-12 2xl:mt-12 xs:mt-16 sm:mt-0"
           ref={servicesSectionRef}
         >
           <div onClick={handleScrollToServices}>
@@ -76,7 +69,7 @@ const Services = () => {
               <span>Let&apos;s discover how far your business can go!</span>
             </h1>
           </div>
-          <div className="flex flex-wrap justify-center gap-8 mt-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
             {services.map((service) => (
               <Link to={`/services/${service.link}`} key={service.id}>
                 <motion.div

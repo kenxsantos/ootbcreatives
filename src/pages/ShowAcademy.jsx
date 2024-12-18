@@ -16,9 +16,8 @@ const ShowAcademy = () => {
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
-        <FixedNavBar />
         <div className="xs:px-3 sm:px-0 xl:w-full xl:flex items-center lg:justify-between overflow-hidden">
-          <section className="relative w-full xl:w-1/2 flex flex-col">
+          <section className="relative w-full xl:w-1/2 flex flex-col mt-12">
             <Link to="/">
               <div className="flex items-center xs:h-24 md:h-28 x:-ml-5 sm:-ml-9 md:-ml-12 justify-start w-full">
                 <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-4">

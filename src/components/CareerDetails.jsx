@@ -10,9 +10,6 @@ const CareerDetails = () => {
 
   return (
     <div className="relative bg-clear-planets bg-cover mx-auto md:h-full lg:h-screen">
-      <div className="relative z-30">
-        <FixedNavBar />
-      </div>
       <div className="relative z-10">
         <div className="w-full">
           <section className="relative w-full flex flex-col px-12">
@@ -33,7 +30,7 @@ const CareerDetails = () => {
             </Link>
           </section>
         </div>
-        <div className="flex flex-col px-12 xl:w-[400px] 2xl:w-[600px] 3xl:w-[700px] bg-purple-black h-screen xl:absolute xl:top-0 pt-44 z-0 xl:ml-96 xl:-mt-28 2xl:ml-[400px] 3xl:ml-[500px]">
+        <div className="flex flex-col px-12 xl:w-[400px] 2xl:w-[600px] 3xl:w-[700px] bg-purple-black h-screen xl:absolute xl:top-0 pt-60 border z-0 xl:ml-96 xl:-mt-28 2xl:ml-[400px] 3xl:ml-[500px]">
           <h1 className="text-white font-jost">OOTB CAREERS</h1>
           <h1 className="text-white font-extrabold text-white text-glow tracking-tighter uppercase xs:text-4xl 2xl:text-6xl  font-garnet">
             {career.position}

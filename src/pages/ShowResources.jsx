@@ -20,7 +20,6 @@ const ShowResources = () => {
   return (
     <div className="relative bg-clear-planets bg-cover mx-auto xs:h-full 3xl:h-screen">
       <div className="relative ">
-        <FixedNavBar />
         <div className="w-full">
           <section className="relative w-1/2 flex flex-col px-12">
             <Link to="/">
@@ -39,7 +38,7 @@ const ShowResources = () => {
               </div>
             </Link>
           </section>
-          <section>
+          <section className="mt-12 h-screen">
             <div className="lg:-mt-12">
               <h1 className="text-center tracking-tighter font-metropolis text-glow text-white text-5xl font-extrabold uppercase">
                 Resources

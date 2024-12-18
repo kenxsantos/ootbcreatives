@@ -28,10 +28,7 @@ const ShowCrewmates = () => {
   return (
     <div className="relative xs:h-full 2xl:h-screen bg-blurred-planets bg-auto mx-auto">
       <div className="w-full h-full flex flex-col">
-        <div className="relative z-10">
-          <FixedNavBar />
-        </div>
-        <div className="flex justify-between flex-col h-full">
+        <div className="flex justify-between flex-col h-full mt-12">
           <section className="relative w-full flex flex-col items-center justify-center">
             <div className="w-full flex justify-center items-center">
               <img

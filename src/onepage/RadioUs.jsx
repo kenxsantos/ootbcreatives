@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useAnimation, motion } from "framer-motion";
 import ClientForm from "../components/ClientForm";
 import CrewmatesForm from "../components/CrewmatesForm";
 import ExplorersForm from "../components/ExplorersForm";
+
+const formComponents = {
+  Client: ClientForm,
+  "Potential Crewmate": CrewmatesForm,
+  "Just Exploring": ExplorersForm,
+};
+
+const options = ["Client", "Potential Crewmate", "Just Exploring"];
 
 const RadioUs = () => {
   const [activeOption, setActiveOption] = useState("Client");
@@ -13,23 +21,16 @@ const RadioUs = () => {
     controls.start({ opacity: 1, x: 0 });
   }, [activeOption, controls]);
 
-  const renderForm = () => {
-    switch (activeOption) {
-      case "Client":
-        return <ClientForm name={name} setName={setName} />;
-      case "Potential Crewmate":
-        return <CrewmatesForm name={name} setName={setName} />;
-      case "Just Exploring":
-        return <ExplorersForm name={name} setName={setName} />;
-      default:
-        return null;
-    }
-  };
+  const ActiveForm = useMemo(
+    () => formComponents[activeOption],
+    [activeOption]
+  );
 
   return (
     <div className="bg-vertical-planets-4 h-screen mx-auto bg-cover">
       <div className="w-full mx-auto pt-14 flex justify-center items-center h-full">
         <section className="w-full xl:flex">
+          {/* Heading Section */}
           <motion.div
             animate={controls}
             initial={{ opacity: 0, x: -50 }}
@@ -45,7 +46,10 @@ const RadioUs = () => {
               </span>
             </h1>
           </motion.div>
+
+          {/* Form Section */}
           <div className="xs:w-full xs:mt-4 xl:w-1/2 flex flex-col xs:px-2 md:px-12 gap-6 items-center">
+            {/* Options */}
             <div className="w-full xs:h-full sm:h-16 sm:flex gap-4 justify-center text-center">
               <div className="flex justify-center">
                 <h1 className="w-28 flex flex-col font-metropolis text-white font-extrabold uppercase justify-center items-center text-glow text-xl leading-none">
@@ -54,27 +58,25 @@ const RadioUs = () => {
                 </h1>
               </div>
               <div className="flex gap-2 xs:h-16 sm:h-full xs:mt-4 sm:mt-0">
-                {["Client", "Potential Crewmate", "Just Exploring"].map(
-                  (option) => (
-                    <motion.div
-                      key={option}
-                      className={`border w-28 h-full font-jost text-white uppercase text-center flex flex-col justify-center items-center cursor-pointer ${
-                        activeOption === option
-                          ? "bg-gray-500 bg-opacity-500 text-white border-0"
-                          : "bg-transparent"
-                      }`}
-                      onClick={() => setActiveOption(option)}
-                      animate={{
-                        opacity: activeOption === option ? 1 : 0.5,
-                      }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <p>{option}</p>
-                    </motion.div>
-                  )
-                )}
+                {options.map((option) => (
+                  <motion.div
+                    key={option}
+                    className={`border w-28 h-full font-jost text-white uppercase text-center flex flex-col justify-center items-center cursor-pointer ${
+                      activeOption === option
+                        ? "bg-gray-500 bg-opacity-500 text-white border-0"
+                        : "bg-transparent"
+                    }`}
+                    onClick={() => setActiveOption(option)}
+                    animate={{ opacity: activeOption === option ? 1 : 0.5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p>{option}</p>
+                  </motion.div>
+                ))}
               </div>
             </div>
+
+            {/* Form Container */}
             <div
               className="relative mb-4 w-full 3xl:w-4/5 xs:h-[370px] sm:h-[470px] lg:h-[570px] xl:h-[500px] bg-gray-500 bg-opacity-50 overflow-auto p-8"
               style={{
@@ -83,6 +85,7 @@ const RadioUs = () => {
               }}
             >
               <div className="w-full xs:flex-col flex sm:flex-row">
+                {/* Input Field */}
                 <div className="xs:w-full sm:w-1/2 flex justify-end flex-col xs:order-last sm:order-first xs:mt-4 sm:mt-0">
                   <div className="relative h-11 w-full min-w-[200px]">
                     <input
@@ -91,22 +94,26 @@ const RadioUs = () => {
                       placeholder="Your Name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="font-jost text-white peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 text-base font-normal outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
+                      className="font-jost text-white peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 text-base font-normal outline-none placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-none disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
                     />
-                    <label className="font-jost after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none truncate text-sm leading-tight text-gray-300 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-300 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                    <label className="font-jost absolute left-0 -top-1.5 text-sm text-gray-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-blue-gray-500 peer-focus:-top-1.5 peer-focus:text-gray-300 transition-all">
                       YOUR NAME
                     </label>
                   </div>
                 </div>
+
+                {/* Logo */}
                 <div className="xs:w-full sm:w-1/2 flex xs:justify-center sm:justify-end px-8">
                   <img
                     src="/assets/logo/OOTBLogoRed.webp"
-                    alt=""
+                    alt="OOTB Logo"
                     className="h-24"
                   />
                 </div>
               </div>
-              {renderForm()}
+
+              {/* Active Form */}
+              <ActiveForm name={name} setName={setName} />
             </div>
           </div>
         </section>

@@ -20,7 +20,6 @@ const ShowServices = () => {
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
       <div className="relative z-10">
-        <FixedNavBar />
         <div className="xs:px-3 xl:px-12 lg:w-full lg:flex">
           <section className="relative w-full lg:w-1/2 flex flex-col">
             <Link to="/">

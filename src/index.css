@@ -12,6 +12,11 @@
   font-style: normal;
 }
 
+.slide-container {
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
 .custom-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
