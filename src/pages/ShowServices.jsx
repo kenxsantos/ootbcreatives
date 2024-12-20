@@ -5,6 +5,7 @@ import services from "../json/services.json";
 import { useParams, Link } from "react-router-dom";
 import HighlightText from "../components/HighlightText";
 import { motion } from "framer-motion";
+import EventsManagement from "../templates/EventsManagement";
 
 const ShowServices = () => {
   const { slug } = useParams(); // Access the slug from the URL
@@ -45,7 +46,7 @@ const ShowServices = () => {
                   key={service.id}
                   className="font-metropolis font-bold xs:text-4xl sm:text-5xl md:text-6xl flex flex-col leading-none text-white tracking-tighter"
                 >
-                  <span className="text-orange">{service.title}</span>
+                  <span className="text-orange-red">{service.title}</span>
                   <span className="text-purple">{service.subtitle}</span>
                 </h1>
               </section>
@@ -79,7 +80,7 @@ const ShowServices = () => {
             </div>
           </section>
           <section className="relative w-full lg:w-1/2 flex flex-col lg:pt-36 overflow-auto lg:h-[700px] 3xl:h-[850px] hide-scrollbar">
-            <motion.div
+            {/* <motion.div
               className="xs:px-4 lg:px-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,7 +90,7 @@ const ShowServices = () => {
                 <HighlightText
                   text={service.heading.text}
                   highlight={service.heading.highlight}
-                  highlightClassName="text-orange"
+                  highlightClassName="text-orange-red"
                 />
               </div>
               <div className="w-full mt-8 mb-4 rounded-xl">
@@ -152,6 +153,8 @@ const ShowServices = () => {
                 )}
               </div>
             </motion.div>
+             */}
+            <EventsManagement/>
             <div className="sticky w-full bottom-0 pointer-events-none">
               <img
                 src="/assets/others/BottomShadow.webp"

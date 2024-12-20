@@ -4,7 +4,7 @@ const Crewmates = () => {
   const controls = useAnimation();
 
   return (
-    <div className="bg-vertical-planets-2 h-screen mx-auto bg-cover bg-center overflow-visible">
+    <div className="bg-crewmates h-screen mx-auto bg-cover bg-center overflow-visible">
       <div className="w-full m-auto pt-32 h-full flex flex-col justify-center">
         <motion.section
           animate={controls}
@@ -16,7 +16,7 @@ const Crewmates = () => {
           </h1>
           <h2 className="text-white font-metropolis font-bold text-3xl 3xl:text-4xl">
             Meet our{" "}
-            <span className="text-orange ">out-of-the-box witteam</span> and
+            <span className="text-orange-red">out-of-the-box witteam</span> and
             discover how far we can go.
           </h2>
         </motion.section>

@@ -11,7 +11,7 @@ const RecentlyAdded = () => {
   const openModal = (item) => {
     setModalContent(item);
     setIsOpen(true);
-    controls.stop(); // Stop the animation when modal opens
+    controls.stop();
   };
 
   const closeModal = () => {
