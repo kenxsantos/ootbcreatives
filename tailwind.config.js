@@ -5,6 +5,9 @@ export default {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      animation: {
+        spinSlow: "spin 8s linear infinite",
+      },
       screens: {
         xs: "390px",
         sm: "640px",
@@ -48,11 +51,20 @@ export default {
           "linear-gradient(0deg, rgba(255,255,255,0.3757878151260504) 0%, rgba(255,255,255,1) 100%)",
         "gradient-navbar":
           "linear-gradient(90deg, rgba(166,103,209,0) 0%, rgba(0,212,255,1) 100%)",
+
+        //new homepage
+
+        services: 'url("/assets/backgrounds/services.png")',
+        clients: 'url("/assets/backgrounds/clients.png")',
+        crewmates: 'url("/assets/backgrounds/crewmates.png")',
+
       },
       colors: {
-        orange: "#F38920",
-        purple: "#A667D1",
-        "purple-black": "rgba(25, 20, 59, 0.8)",
+        "orange-red": "#EF722E",
+        onyx: "#3A3A3C",
+        purple: "#7D2A8C",
+        "oxford-blue": "#122344",
+        "honey-yellow": "#FCB43E"
       },
       boxShadow: {
         "bottom-glow": "0 0px 15px rgba(255, 105, 180, 0.6)",
@@ -62,6 +74,10 @@ export default {
         "border-glow": "20px 20px 60px #bebebe, -20px -20px 60px #ffffff",
         "inner-crewmates":
           "11px 200px 400px -160px rgba(255,255,255,0.5) inset",
+
+
+        //new box
+        "inner-shadow": "0px 0px 59px 3px rgba(0,0,0,0.79) inset"
       },
       rotate: {
         120: "120deg",
