@@ -16,13 +16,32 @@ import {
 
 const Service = () => {
   const images = [
-    { src: "/assets/backgrounds/OOTBVerticalPlanets1.webp", title: "Events Management", link: "events-management"},
-    { src: "/assets/backgrounds/OOTBVerticalPlanets2.webp", title: "Public Relation", link: "public-relation"},
-    { src: "/assets/backgrounds/OOTBVerticalPlanets3.webp", title: "Branding and Marketing", link: "branding-and-marketing"},
-    { src: "/assets/backgrounds/OOTBVerticalPlanets4.webp", title: "Commercial Production", link: "production"},
+    {
+      src: "/assets/backgrounds/OOTBVerticalPlanets1.webp",
+      title: "Events Management",
+      link: "events-management",
+    },
+    {
+      src: "/assets/backgrounds/OOTBVerticalPlanets2.webp",
+      title: "Public Relation",
+      link: "public-relation",
+    },
+    {
+      src: "/assets/backgrounds/OOTBVerticalPlanets3.webp",
+      title: "Branding and Marketing",
+      link: "branding-and-marketing",
+    },
+    {
+      src: "/assets/backgrounds/OOTBVerticalPlanets4.webp",
+      title: "Commercial Production",
+      link: "production",
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
+  };
 
   return (
     <div className="w-full h-screen bg-services flex flex-wrap lg:flex-nowrap gap-4 mt-12">
@@ -51,12 +70,14 @@ const Service = () => {
       {/* Swiper Section */}
       <div className=" absolute bottom-[-170px] left-[10px]">
         <Swiper
+          loop={true}
           effect={"coverflow"}
           direction="horizontal"
           slidesPerView={3}
           lazy="true"
           spaceBetween={0}
           centeredSlides={true}
+          onSlideChange={handleSlideChange}
           mousewheel={{
             forceToAxis: true,
             releaseOnEdges: true,
@@ -76,17 +97,17 @@ const Service = () => {
           {images.map((image, index) => (
             <SwiperSlide key={index}>
               <Link to={`/services/${image.link}`} key={index}>
-              <motion.div
-                whileHover={{ scale: 1.15 }}
-                onMouseEnter={() => setActiveIndex(index)}
-                className="flex justify-center"
-              >
-                <img
-                  src={image.src}
-                  alt={image.title}
-                  className="w-[270px] h-40 object-cover rounded-lg"
-                />
-              </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.15 }}
+                  // onMouseEnter={() => setActiveIndex(index)}
+                  className="flex justify-center"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-[270px] h-40 object-cover rounded-lg"
+                  />
+                </motion.div>
               </Link>
             </SwiperSlide>
           ))}
