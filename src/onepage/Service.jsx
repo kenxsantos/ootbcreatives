@@ -13,6 +13,7 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
+import Carousel from "../components/carousel";
 
 const Service = () => {
   const images = [
@@ -39,20 +40,12 @@ const Service = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.realIndex);
-  };
 
   return (
     <div className="w-full h-screen bg-services flex flex-wrap lg:flex-nowrap gap-4 mt-12">
       {/* Left Section */}
-      <div className="text-white w-1/2 flex justify-center items-center relative">
-        <div className="relative border-8 border-orange-red rounded-full w-[80%] h-[80%] -ml-0 lg:-ml-32 flex items-center justify-center">
-          {/* <h1 className="text-white font-jost text-xl md:text-2xl -ml-0 lg:-ml-28 z-10 text-center">
-            Let's discover <br />
-            how far your business <br />
-            can go!
-          </h1> */}
+      <div className="text-white w-1/2 flex items-center relative">
+        <div className="relative border-8 border-orange-red rounded-full w-[80%] h-[80%] -ml-20 flex items-center justify-center">
           <div className="w-full h-full rounded-full overflow-hidden">
             <motion.img
               src={images[activeIndex].src}
@@ -68,16 +61,16 @@ const Service = () => {
       </div>
 
       {/* Swiper Section */}
-      <div className=" absolute bottom-[-170px] left-[10px]">
+      <div className="absolute w-1/2 left-[100px]">
+        {/* <Carousel /> */}
         <Swiper
           loop={true}
           effect={"coverflow"}
-          direction="horizontal"
+          direction="vertical"
           slidesPerView={3}
           lazy="true"
           spaceBetween={0}
           centeredSlides={true}
-          onSlideChange={handleSlideChange}
           mousewheel={{
             forceToAxis: true,
             releaseOnEdges: true,
@@ -92,14 +85,14 @@ const Service = () => {
             slideShadows: false,
           }}
           modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
-          className="h-[400px] w-[90%] md:w-[650px] overflow-visible"
+          className="h-screen w-[90%] md:w-[650px] overflow-visible"
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
               <Link to={`/services/${image.link}`} key={index}>
                 <motion.div
                   whileHover={{ scale: 1.15 }}
-                  // onMouseEnter={() => setActiveIndex(index)}
+                  onMouseEnter={() => setActiveIndex(index)}
                   className="flex justify-center"
                 >
                   <img

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { motion, useAnimation } from "motion/react"
+import { motion, useAnimation } from "motion/react";
 import ReadMoreButton from "./ReadMoreButton";
 import crewmates from "../json/crewmates.json";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,7 +38,7 @@ const CrewmatesCard = () => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={3} 
+        slidesPerView={3}
         modules={[Mousewheel, Pagination, Navigation]}
         className="h-full w-full pt-24 2xl:pt-28 pb-32"
         onSlideChange={handleSlideChange}
@@ -85,7 +85,7 @@ const CrewmatesCard = () => {
                 transition: { duration: 0.6, ease: "easeInOut" },
               }}
             >
-              <div className="relative xs:w-56 xs:h-48 sm:w-96 sm:h-64">
+              <div className="relative xs:w-56 xs:h-48 sm:w-72 2xl:w-96 sm:h-64">
                 <div className="flex w-full">
                   <h1 className="font-metropolis text-white font-bold xs:text-xl sm:text-3xl leading-none w-3/4">
                     {crewmate.name}
@@ -111,9 +111,9 @@ const CrewmatesCard = () => {
                     {crewmate.position}
                   </h1>
                   <div onClick={() => openModal(crewmate)}>
-                     <ReadMoreButton />
+                    <ReadMoreButton />
                   </div>
-                   
+
                   <h1 className="absolute bottom-0 text-xs font-jost text-white uppercase">
                     {crewmate.title}
                   </h1>
