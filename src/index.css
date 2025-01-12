@@ -23,7 +23,6 @@
   background-color: #fff;
   opacity: 1;
   transition: transform 0.3s ease;
-  margin: 0px 2px;
 }
 
 .custom-pagination .swiper-pagination-bullet-active {
@@ -49,13 +48,14 @@
   }
 }
 
+
 .animate-blob-bounce {
   animation: blob-bounce 5s infinite ease;
 }
 /* Default bullet style */
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   background-color: #ddd;
   opacity: 1;
   transition: width 0.3s ease, height 0.3s ease;
@@ -63,18 +63,19 @@
 
 /* Active bullet */
 .swiper-pagination-bullet-active {
-  width: 10px;
-  height: 10px;
-  background-color: #a667d1; /* Example: active bullet color */
+  width: 9px;
+  height: 9px;
+  background-color: #EF722E; /* Example: active bullet color */
 }
 
 /* Dynamic next/prev bullets */
 .swiper-pagination-bullet-next,
 .swiper-pagination-bullet-prev {
-  width: 10px;
-  height: 10px;
-  background-color: #f38920; /* Example: dynamic bullet color */
+  width: 8px;
+  height: 8px;
+  background-color: #EF722E; /* Example: dynamic bullet color */
 }
+
 
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
