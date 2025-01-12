@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useRef, useMemo } from "react";
 import { motion } from "framer-motion";
-import ReadMoreReadLess from "../components/ReadMoreReadLess";
+import ReadMoreButton from "../components/ReadMoreButton";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import services from "../json/services.json";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -13,45 +14,44 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
-import Carousel from "../components/carousel";
 
 const Service = () => {
-  const images = [
-    {
-      src: "/assets/backgrounds/OOTBVerticalPlanets1.webp",
-      title: "Events Management",
-      link: "events-management",
-    },
-    {
-      src: "/assets/backgrounds/OOTBVerticalPlanets2.webp",
-      title: "Public Relation",
-      link: "public-relation",
-    },
-    {
-      src: "/assets/backgrounds/OOTBVerticalPlanets3.webp",
-      title: "Branding and Marketing",
-      link: "branding-and-marketing",
-    },
-    {
-      src: "/assets/backgrounds/OOTBVerticalPlanets4.webp",
-      title: "Commercial Production",
-      link: "production",
-    },
-  ];
+  const defaultService =
+    services.find((service) => service.title === "Event Management") ||
+    services[0];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeCard, setActiveCard] = useState(defaultService);
+
+  const [isExpanded, setIsExpanded] = useState(false);
+  const servicesSectionRef = useRef(null);
+
+  const wordLimit = 35;
+
+  const fullDescription = useMemo(() => {
+    return Object.values(activeCard.description).flat().join(" ");
+  }, [activeCard]);
+
+  const limitedDescription = useMemo(() => {
+    return fullDescription.split(" ").slice(0, wordLimit).join(" ") + "...";
+  }, [fullDescription, wordLimit]);
+
+  const handleToggle = () => setIsExpanded((prev) => !prev);
+
+  const handleSlideChange = (swiper) => {
+    setActiveCard(services[swiper.realIndex]);
+  };
 
   return (
-    <div className="w-full h-screen bg-services flex flex-wrap lg:flex-nowrap gap-4 mt-12">
+    <div className="w-full h-screen flex flex-wrap lg:flex-nowrap gap-4 mt-12 bg-services bg-cover">
       {/* Left Section */}
       <div className="text-white w-1/2 flex items-center relative">
-        <div className="relative border-8 border-orange-red rounded-full w-[80%] h-[80%] -ml-20 flex items-center justify-center">
+        <div className="relative border-8 border-orange-red rounded-full w-[80%] h-[80%] -ml-28 flex items-center justify-center">
           <div className="w-full h-full rounded-full overflow-hidden">
+            <div className="absolute inset-0 bg-black opacity-50 rounded-full" />
             <motion.img
-              src={images[activeIndex].src}
+              src={activeCard.thumbnail}
               alt="Active"
-              className="w-full h-full object-cover"
-              key={activeIndex}
+              className="w-full h-full object-cover "
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -61,62 +61,76 @@ const Service = () => {
       </div>
 
       {/* Swiper Section */}
-      <div className="absolute w-1/2 left-[100px]">
-        {/* <Carousel /> */}
-        <Swiper
-          loop={true}
-          effect={"coverflow"}
-          direction="vertical"
-          slidesPerView={3}
-          lazy="true"
-          spaceBetween={0}
-          centeredSlides={true}
-          mousewheel={{
-            forceToAxis: true,
-            releaseOnEdges: true,
-            thresholdDelta: 50,
-          }}
-          speed={600}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 50,
-            depth: 80,
-            modifier: 1.5,
-            slideShadows: false,
-          }}
-          modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
-          className="h-screen w-[90%] md:w-[650px] overflow-visible"
-        >
-          {images.map((image, index) => (
-            <SwiperSlide key={index}>
-              <Link to={`/services/${image.link}`} key={index}>
-                <motion.div
-                  whileHover={{ scale: 1.15 }}
-                  onMouseEnter={() => setActiveIndex(index)}
-                  className="flex justify-center"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.title}
-                    className="w-[270px] h-40 object-cover rounded-lg"
-                  />
-                </motion.div>
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <Swiper
+        loop={true}
+        effect={"coverflow"}
+        direction="vertical"
+        slidesPerView={3}
+        lazy="true"
+        spaceBetween={0}
+        onSlideChange={handleSlideChange}
+        centeredSlides={true}
+        mousewheel={{
+          forceToAxis: true,
+          releaseOnEdges: true,
+          thresholdDelta: 50,
+        }}
+        speed={600}
+        coverflowEffect={{
+          slideShadows: false,
+        }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
+        className="absolute left-[350px] w-[450px] px-16 h-screen overflow-hidden"
+      >
+        {services.map((service) => (
+          <SwiperSlide key={service.id}>
+            <Link to={`/services/${service.link}`}>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className={`relative flex w-full h-48 w-[300px] rounded-2xl p-4 items-end hover:cursor-pointer ${
+                  activeCard.id === service.id
+                    ? "border-4 border-orange-red"
+                    : "border-2 border-white"
+                }`}
+              >
+                <img
+                  src={service.thumbnail}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full z-0 rounded-2xl object-cover"
+                />
+                <h2 className="font-metropolis font-bold text-white flex flex-col leading-none z-10 text-sm sm:text-base md:text-lg lg:text-xl">
+                  {service.title}
+                  <br />
+                  {service.subtitle}
+                </h2>
+                <div className="absolute inset-0 bg-black opacity-50 rounded-2xl" />
+              </motion.div>
+            </Link>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-      {/* Right Section */}
-      <div className="w-1/2 flex items-center justify-center pl-4 lg:pl-16">
+      <div className="w-1/2 flex items-center justify-center p-8">
         <div>
           <h2 className="flex flex-col leading-none text-center lg:text-left text-white font-metropolis font-extrabold tracking-tighter text-3xl md:text-5xl lg:text-6xl">
-            <span>BOLD IDEAS</span>
-            <span>STELLAR RESULTS</span>
+            {activeCard.title}
+            <br />
+            {activeCard.subtitle}
           </h2>
-          <section className="mt-4">
-            <ReadMoreReadLess />
-          </section>
+          <div className="font-jost pr-4 text-white text-justify h-[200px] overflow-visible">
+            <p className="mb-2 xs:text-sm 2xl:text-lg">
+              {isExpanded ? fullDescription : limitedDescription}
+            </p>
+            <ReadMoreButton
+              isExpanded={isExpanded}
+              handleToggle={handleToggle}
+            />
+          </div>
         </div>
       </div>
     </div>

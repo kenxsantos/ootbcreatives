@@ -16,11 +16,11 @@ const ShowServices = () => {
   }
 
   return (
-    <div className="relative h-full bg-rocket bg-auto mx-auto">
+    <div className="relative h-screen bg-rocket bg-auto mx-auto">
       <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
         <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
       </div>
-      <div className="relative z-10">
+      <div className="relative z-10 h-screen">
         <div className="xs:px-3 xl:px-12 lg:w-full lg:flex">
           <section className="relative w-full lg:w-1/2 flex flex-col">
             <Link to="/">
@@ -79,8 +79,8 @@ const ShowServices = () => {
               </section>
             </div>
           </section>
-          <section className="relative w-full lg:w-1/2 flex flex-col lg:pt-36 overflow-auto lg:h-[700px] 3xl:h-[850px] hide-scrollbar">
-            {/* <motion.div
+          <section className="relative w-full lg:w-1/2 flex flex-col lg:pt-36 overflow-auto h-screen hide-scrollbar">
+            <motion.div
               className="xs:px-4 lg:px-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -153,8 +153,8 @@ const ShowServices = () => {
                 )}
               </div>
             </motion.div>
-             */}
-            <EventsManagement/>
+
+            {/* <EventsManagement /> */}
             <div className="sticky w-full bottom-0 pointer-events-none">
               <img
                 src="/assets/others/BottomShadow.webp"
