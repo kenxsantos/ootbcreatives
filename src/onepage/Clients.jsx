@@ -13,7 +13,7 @@ const Clients = () => {
             Let our works do the talking.
           </h2>
         </section>
-        <section className="mt-12">
+        <section className="mt-12 px-12">
           <RecentlyAdded />
         </section>
         <section className="mt-10 mb-20">
