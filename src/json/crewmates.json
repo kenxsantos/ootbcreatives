@@ -8,7 +8,7 @@
     "astronaut": "/assets/astronauts/RafaelTimothyEstrella.webp",
     "link": "rafael-timothy-estrella",
     "description": {
-      "1": "Out of the Box Creatives is a launching rocketship, and Timothy is the dude in the pilot's seat. He's the co-founder and the boss, making sure all teams are working together, the finances are on point, and they're all blasting off in the same direction.",
+      "1": "Out of the Box Creatives is a launching rocket ship, and Timothy is the dude in the pilot's seat. He's the co-founder and the boss, making sure all teams are working together, the finances are on point, and they're all blasting off in the same direction.",
       "2": "Timothy has been in the game for six years, crushing it in business management, advertising, and marketing. He's not just the boss. He's a doer and a leader. He can win over clients with his chill personality and keep his team pumped for the next big project. But what really makes Timothy special is his go-getter attitude. He's got a million ideas and the know-how to make them happen, from crafting global marketing plans to implementing crazy-creative solutions that keep OOTB miles ahead of the competition.",
       "3": "Buckle up with Timothy as they navigate the advertising world and  celebrate wins."
     },
@@ -39,22 +39,12 @@
     "astronaut": "/assets/astronauts/RamonChristopherGanan.webp",
     "link": "atty-ramon-christopher-ganan",
     "description": {
-      "1": "The team needs someone who knows how to secure the team’s resources, especially if you’re in the outer space! Ramon is a Juris Doctor who graduated from the Pamantasan ng Lungsod ng Maynila and has been legally backing up businesses for more than 5 years now.",
+      "1": "The team needs someone who knows how to secure the team’s resources, especially if you’re in outer space! Ramon is a Juris Doctor who graduated from the Pamantasan ng Lungsod ng Maynila and has been legally backing up businesses for more than 5 years now.",
       "2": "As the managing director of RCG Law & Business Consultancy Services and the Chief Financial Officer of Out of the Box Creatives, he definitely knows how to secure money IN THE BAG! No budget goes unchecked and no coin goes uncounted. The budget-setter of the team!"
     }
   },
   {
     "id": 4,
-    "name": "Mike Maranan",
-    "nickname": "Mike",
-    "position": "Chief Technical Officer",
-    "title": "No Description",
-    "astronaut": "/assets/astronauts/MikeMaranan.webp",
-    "link": "mike-maranan",
-    "description": {}
-  },
-  {
-    "id": 5,
     "name": "Blessie Pevee Agrante",
     "nickname": "Blessie",
     "position": "HR Specialist",
@@ -67,24 +57,24 @@
     }
   },
   {
-    "id": 6,
-    "name": "Christian James “Sachi” Liwag",
-    "nickname": "Sachi",
-    "position": "Creative Director",
+    "id": 5,
+    "name": "Dominic Salando",
+    "nickname": "Doms",
+    "position": "Accounts Executive",
     "title": "",
-    "astronaut": "/assets/astronauts/ChristianJamesLiwag.webp",
-    "link": "christian-james-liwanag",
+    "astronaut": "/assets/astronauts/MariaCarmelaAnsale.webp",
+    "link": "dominic-salando",
     "description": {
-      "1": "Sachi is a wizard who turns these crazy space mission ideas into reality.",
-      "2": "He's a tech master with a degree in IT under his belt. But his real passion lies in the world of visual arts. He can take any mind-blowing concept the team throws at him and turn it into something awesome with his digital skills.",
-      "3": "Sachi is basically the one who fuels up these space missions. He takes those far-out ideas from the crewmates and creates incredible visuals that make everyone say, \"Woah, sign me up for that space adventure!\""
+      "1": "Dominic is the mission commander who ensures every space expedition stays on course.",
+      "2": "As the Accounts Executive, he’s the vital link between our clients and the team, keeping communication clear and seamless. Dominic makes sure every task is executed flawlessly, ensuring that no detail is left adrift in the cosmos.",
+      "3": "Dominic is the navigator who keeps the crew aligned and the clients thrilled whose dedication ensures every mission reaches stellar success!"
     }
   },
   {
-    "id": 7,
+    "id": 6,
     "name": "Maria Carmela Ansale",
     "nickname": "Mela",
-    "position": "Copywriter",
+    "position": "Senior Copywriter",
     "title": "",
     "astronaut": "/assets/astronauts/MariaCarmelaAnsale.webp",
     "link": "maria-carmela-ansale",
@@ -95,47 +85,56 @@
     }
   },
   {
-    "id": 8,
-    "name": "Dominic Salando",
-    "nickname": "Doms",
-    "position": "Business Development Executive",
-    "title": "No Description | Austronaut",
+    "id": 7,
+    "name": "Mikyla Denise Jordan",
+    "nickname": "Mikay",
+    "position": "Junior Copywriter",
+    "title": "",
     "astronaut": "/assets/astronauts/MariaCarmelaAnsale.webp",
-    "link": "dominic-salando",
-    "description": {}
+    "link": "mikayla-denise-jordan",
+    "description": {
+      "1": "Mikyla is the wordsmith apprentice who brings ideas to life with a fresh perspective and boundless creativity. Working closely with the Senior Copywriter, she takes concepts and runs with them, delivering copy that’s sharp, engaging, and on point.",
+      "2": "From brainstorming punchy taglines to drafting captivating captions, Mikyla is all about turning creative direction into content that connects. With her enthusiasm and flair for writing, she’s the perfect teammate to ensure every campaign is infused with originality and charm."
+    }
   },
   {
-    "id": 9,
-    "name": "Andre Kirby Aquino",
-    "nickname": "Andre",
+    "id": 8,
+    "name": "Cheska Joy Atienza",
+    "nickname": "Cheska",
     "position": "Multimedia Artist",
     "title": "",
     "astronaut": "/assets/astronauts/AndreKirbyAquino.webp",
-    "link": "andre-kirby-aquino",
+    "link": "cheska-joy-atienza",
     "description": {
-      "1": "Andre is a social media savvy crewmate with a degree in making things look INSANE. He can turn everything into mind-blowing graphics and videos that'll have you glued to your phone.",
-      "2": "Andre's mission? Turn every aspect of the space mission into a must-see content. Of course, who would forget about \"Insta-worthy\" space selfies and recreating those TikTok trends in zero gravity?",
-      "3": "Basically, Andre is the one who makes sure Earth doesn't just hear about it, they'll share it, and be totally stoked about humans reaching for the stars."
+      "1": "Cheska is the creative wizard who brings out-of-this-world ideas to life through the magic of multimedia artworks.",
+      "2": "With exceptional digital skills and a flair for crafting immersive visuals, she transforms bold concepts into stunning masterpieces that captivate and inspire. Specializing in 3D animation, Cheska adds depth and dynamism to every project, creating visuals that leave audiences in awe.",
+      "3": "Cheska serves as the rocket fuel for our space missions—who takes bold, far-out ideas and crafts jaw-dropping visuals that make everyone go, \"Wow, where do I sign up for that space adventure?\""
+    }
+  },
+  {
+    "id": 9,
+    "name": "Kayezel Bation",
+    "nickname": "Zel",
+    "position": "Multimedia Artist",
+    "title": "",
+    "astronaut": "/assets/astronauts/MarkAnthonyEdano.webp",
+    "link": "keyezel-bation",
+    "description": {
+      "1": "Kayezel is the creative force behind every scroll-stopping reel and attention-grabbing video. Specializing in video editing, she transforms raw footage into captivating content that keeps audiences hooked and clients thrilled.",
+      "2": "With an eye for detail and a passion for storytelling, Kayezel knows how to craft engaging visuals that bring brands to life. Whether it’s a dynamic reel or a polished video ad, she ensures each project resonates with the target audience and elevates video marketing strategies to the next level."
     }
   },
   {
     "id": 10,
-    "name": "Cheska Joy Atienza",
-    "nickname": "Andre",
+    "name": "Beatriz Llantada",
+    "nickname": "Bea",
     "position": "Multimedia Artist",
-    "title": "No Description | Astronaut",
-    "astronaut": "/assets/astronauts/AndreKirbyAquino.webp",
-    "link": "cheska-joy-atienza",
-    "description": {}
-  },
-  {
-    "id": 11,
-    "name": "Mark Anthony Edano",
-    "nickname": "Anthony",
-    "position": "Event Producer",
-    "title": "No Description",
+    "title": "",
     "astronaut": "/assets/astronauts/MarkAnthonyEdano.webp",
-    "link": "mark-anthony-edano",
-    "description": {}
+    "link": "beatriz-llantada",
+    "description": {
+      "1": "Beatriz Llantada is a crewmate that helps in launching visual experiences that transcend the ordinary. As a graphic artist, she crafts social media pubmats that not only captivate but also guide brands through the vast expanse of digital space. ",
+      "2": "With her impeccable eye for design and her ability to steer creative direction with precision, Beatriz ensures every visual aligns with the mission's core purpose. Her skills are the fuel that ensures every design leaves a lasting impression in the universe of social media."
   }
+}
 ]
