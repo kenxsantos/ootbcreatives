@@ -19,12 +19,12 @@ const Index = () => {
   const [activeLink, setActiveLink] = useState("landing");
 
   const navLinks = [
-    // { name: "LANDING", id: "landing", slideIndex: 0 },
+    { name: "LANDING", id: "landing", slideIndex: 0 },
     { name: "SERVICES", id: "services", slideIndex: 1 },
     { name: "CLIENTS", id: "clients", slideIndex: 2 },
     { name: "CREWMATES", id: "crewmates", slideIndex: 3 },
-    // { name: "ACADEMY", id: "academy", slideIndex: 4 },
-    // { name: "RADIO US", id: "radio", slideIndex: 5 },
+    { name: "ACADEMY", id: "academy", slideIndex: 4 },
+    { name: "RADIO US", id: "radio", slideIndex: 5 },
   ];
 
   const handleNavLinkClick = useCallback(
