@@ -8,23 +8,26 @@ const ReadMoreReadLess = () => {
   };
 
   return (
-    <div className="text-left h-64 xs:text-xs xs:w-full sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] 3xl:w-[850px]">
+    <div className="text-left h-64 xs:text-xs xs:w-full sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[700px] 3xl:w-[900px]">
       <p className="text-left pr-4 font-jost text-white text-justify xs:text-xs md:text-base xl:text-lg 3xl:text-lg">
-        OUT OF THE BOX CREATIVES is a 360 creative firm that specializes in PR
-        and marketing, we&apos;re not just about campaigns
-        <span style={{ display: isExpanded ? "none" : "inline" }} id="dots">
-          &nbsp;–
-        </span>
+        We propel your business beyond the ordinary–from innovative campaigns to
+        seamless storytelling.
         <span style={{ display: isExpanded ? "inline" : "none" }} id="more">
-          &nbsp;– we&apos;re about crafting your brand&apos;s narrative,
-          amplifying your message, and propelling you to new heights.
-          <br />
-          <br />
-          Our team blends imagination with data-driven insights to create
-          solutions that are as unique as your brand. From PR that sparks
-          conversations to marketing strategies that drive results, we&apos;re
-          here to help you reach your full potential. Let&apos;s explore
-          what&apos;s possible together.
+          <p className="mb-4 mt-4">
+            Explore the advertising world with Out of the Box Creatives–a
+            full-service Creative Firm specialized in PR and marketing that
+            gives you an out-of-this-worldly view of where your business can go.
+          </p>
+          <p className="mb-4 mt-4">
+            Ideas out of our mind, your business needs fulfilled by heart. We’re
+            here to help you develop ideas into clear, concise, scroll-stopping
+            content together.
+          </p>
+          <p className="mb-4 mt-4">
+            Our team blends imagination with data-driven insights to create
+            solutions that are as unique as your brand. Let's explore and reach
+            your business’ full potential together.
+          </p>
         </span>
       </p>
       <div className="mt-4">
