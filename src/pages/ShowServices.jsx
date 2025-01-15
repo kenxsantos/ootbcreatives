@@ -16,63 +16,65 @@ const ShowServices = () => {
   }
 
   return (
-    <div className="relative h-screen bg-rocket bg-auto mx-auto">
-      <div className="absolute inset-0 w-full h-full z-0 bg-black bg-opacity bg-opacity-50 flex">
-        <div className="absolute inset-0 lg:w-1/2 h-full z-0 bg-black bg-opacity bg-opacity-10"></div>
-      </div>
+    <div className="relative h-screen bg-show-services bg-cover mx-auto">
       <div className="relative z-10 h-screen">
         <div className="xs:px-3 xl:px-12 lg:w-full lg:flex">
           <section className="relative w-full lg:w-1/2 flex flex-col">
+            <div>
+              <img
+                src="/assets/logo/OOTBLogoWhite.webp"
+                alt="logo"
+                className="w-24 mt-8"
+              />
+            </div>
             <Link to="/">
-              <div className="flex items-center xs:h-24 md:h-28 lg:h-36 x:-ml-5 ssm:-ml-9 md:-ml-12 justify-start w-full">
-                <div className="rotate-90 xs:w-28 xs:-ml-[60px] md:w-36 md:-ml-7 xl:-ml-16">
-                  <img
-                    src="/assets/others/BackShadow.webp"
-                    alt="Back Flare"
-                    className="transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow"
-                  />
-                </div>
+              <div className="flex items-center xs:h-24 md:h-28 lg:h-36 justify-start w-full">
                 <span className="text-white font-jost flex items-center gap-4 transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer hover:text-glow">
-                  <IoIosArrowBack size={24} />
+                  <IoIosArrowBack size={30} />
                   <p className="xs:text-xs md:text-base">
                     BACK TO OTHER SERVICES
                   </p>
                 </span>
               </div>
             </Link>
-            <div className="md:ml-10">
+            <div className="">
               <section className="mb-4">
                 <h1
                   key={service.id}
                   className="font-metropolis font-bold xs:text-4xl sm:text-5xl md:text-6xl flex flex-col leading-none text-white tracking-tighter"
                 >
                   <span className="text-orange-red">{service.title}</span>
-                  <span className="text-purple">{service.subtitle}</span>
+                  <span className="text-white">{service.subtitle}</span>
                 </h1>
               </section>
-
-              <section>
-                {service.offers && (
-                  <ol className="list-decimal-none">
-                    {Object.values(service.offers).map((offer, index) => (
-                      <a
-                        key={index}
-                        href={`#${offer.replace(/\s+/g, "").toLowerCase()}`} // Use href for in-page linking
-                      >
-                        <li className="font-jost text-white transition-all duration-300 ease-in-out hover:text-glow hover:cursor-pointer">
-                          {offer}
-                        </li>
-                      </a>
-                    ))}
-                  </ol>
-                )}
+              <section className="pr-28 text-justify">
+                {service.description &&
+                  Object.values(service.description).map((desc, index) => (
+                    <motion.p
+                      key={index}
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                        transition: { delay: 1.2, duration: 0.5 },
+                      }}
+                      exit={{
+                        opacity: 0,
+                        y: -20,
+                        transition: { duration: 0.5 },
+                      }}
+                      className="font-jost mt-4 text-lg text-white"
+                    >
+                      {desc}
+                    </motion.p>
+                  ))}
               </section>
-              <section className="py-8">
-                <h1 className="font-jost text-base text-white">
+              <section className="py-4 mt-12">
+                <h1 className="font-jost text-lg text-white">
                   {service.subheading}
                 </h1>
               </section>
-              <section className="w-max p-4 font-jost text-white border mb-12 xs:text-sm md:text-base">
+              <section className="w-max py-2 px-8 font-jost text-white mb-12 xs:text-sm  bg-orange-red rounded-full">
                 <Link to="/">
                   <h1>COME ONBOARD NOW</h1>
                 </Link>
@@ -86,71 +88,8 @@ const ShowServices = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              <div className="font-metropolis text-2xl font-bold text-white text-center mb-4">
-                <HighlightText
-                  text={service.heading.text}
-                  highlight={service.heading.highlight}
-                  highlightClassName="text-orange-red"
-                />
-              </div>
               <div className="w-full mt-8 mb-4 rounded-xl">
-                {service.images && Object.keys(service.images).length > 0 ? (
-                  Object.entries(service.images).map(
-                    ([groupKey, imageGroup], groupIndex) => {
-                      const captions = Object.entries(
-                        imageGroup.caption || {}
-                      ).map(([key, caption]) => (
-                        <p key={key} className="text-white text-justify mt-2">
-                          {caption}
-                        </p>
-                      ));
-
-                      return (
-                        <motion.div
-                          key={groupIndex}
-                          className="mb-12 border-b-4 border-orange pb-12"
-                          id={
-                            service.offers[groupKey]
-                              ? service.offers[groupKey]
-                                  .replace(/\s+/g, "")
-                                  .toLowerCase()
-                              : `group-${groupIndex}`
-                          }
-                          initial={{ opacity: 0, y: -30 }}
-                          whileInView={{ opacity: 1, y: 10 }}
-                          transition={{ duration: 0.8, ease: "easeInOut" }}
-                        >
-                          <h3 className="text-xl uppercase font-bold mb-2 text-white text-center font-jost">
-                            {service.offers[groupKey] ||
-                              `Group ${groupIndex + 1}`}
-                          </h3>
-                          <div>
-                            {Object.entries(imageGroup.img || {}).map(
-                              ([imgKey, img], imgIndex) => (
-                                <div key={imgIndex} className="rounded-lg mb-4">
-                                  <img
-                                    src={img}
-                                    alt={`Image ${imgIndex + 1}`}
-                                    className="rounded-lg"
-                                  />
-                                </div>
-                              )
-                            )}
-                          </div>
-                          <div>
-                            <p className="font-jost text-base text-white">
-                              {captions}
-                            </p>
-                          </div>
-                        </motion.div>
-                      );
-                    }
-                  )
-                ) : (
-                  <p className="text-center text-gray-500">
-                    No images available for this service.
-                  </p>
-                )}
+                <img src={service.typography} alt="" />
               </div>
             </motion.div>
 

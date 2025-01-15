@@ -42,7 +42,7 @@ const Service = () => {
   };
 
   return (
-    <div className="w-full h-screen flex flex-wrap lg:flex-nowrap gap-4 mt-12 bg-services bg-cover">
+    <div className="w-full h-screen flex flex-wrap lg:flex-nowrap gap-4 mt-20 bg-services bg-cover">
       {/* Left Section */}
       <div className="text-white w-1/2 flex items-center relative">
         <div className="relative border-8 border-orange-red rounded-full w-[80%] h-[80%] -ml-28 flex items-center justify-center">
@@ -63,7 +63,7 @@ const Service = () => {
       {/* Swiper Section */}
       <Swiper
         loop={true}
-        effect={"coverflow"}
+        effect={"fade"}
         direction="vertical"
         slidesPerView={3}
         lazy="true"
@@ -79,24 +79,28 @@ const Service = () => {
         coverflowEffect={{
           slideShadows: false,
         }}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        //   dynamicBullets: true,
+        // }}
         modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
-        className="absolute left-[350px] w-[450px] px-16 h-screen overflow-hidden"
+        className="absolute left-[300px] px-16 py-12 h-screen overflow-hidden"
       >
-        {services.map((service) => (
-          <SwiperSlide key={service.id}>
+        {services.map((service, index) => (
+          <SwiperSlide key={`${service.id}-${index}`}>
             <Link to={`/services/${service.link}`}>
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                className={`relative flex w-full h-48 w-[300px] rounded-2xl p-4 items-end hover:cursor-pointer ${
-                  activeCard.id === service.id
-                    ? "border-4 border-orange-red"
-                    : "border-2 border-white"
-                }`}
+                animate={{
+                  marginLeft: activeCard.id === service.id ? "50px" : "0rem",
+                  height: activeCard.id === service.id ? "170px" : "150px",
+                  width: activeCard.id === service.id ? "270px" : "250px",
+                }}
+                transition={{
+                  damping: 20,
+                  duration: 0.5,
+                }}
+                className="relative flex rounded-2xl p-4 items-end hover:cursor-pointer"
               >
                 <img
                   src={service.thumbnail}
