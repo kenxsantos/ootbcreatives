@@ -57,14 +57,14 @@ export default {
         services: 'url("/assets/backgrounds/services.png")',
         clients: 'url("/assets/backgrounds/clients.png")',
         crewmates: 'url("/assets/backgrounds/crewmates.png")',
-
+        "show-services": 'url("/assets/backgrounds/show-services.png")',
       },
       colors: {
         "orange-red": "#EF722E",
         onyx: "#3A3A3C",
         purple: "#7D2A8C",
         "oxford-blue": "#122344",
-        "honey-yellow": "#FCB43E"
+        "honey-yellow": "#FCB43E",
       },
       boxShadow: {
         "bottom-glow": "0 0px 15px rgba(255, 105, 180, 0.6)",
@@ -75,9 +75,8 @@ export default {
         "inner-crewmates":
           "11px 200px 400px -160px rgba(255,255,255,0.5) inset",
 
-
         //new box
-        "inner-shadow": "0px 0px 59px 3px rgba(0,0,0,0.79) inset"
+        "inner-shadow": "0px 0px 59px 3px rgba(0,0,0,0.79) inset",
       },
       rotate: {
         120: "120deg",
