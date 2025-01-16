@@ -42,19 +42,23 @@ const Service = () => {
   };
 
   return (
-    <div className="w-full h-screen flex flex-wrap lg:flex-nowrap gap-4 mt-20 bg-services bg-cover">
+    <div className="w-full h-screen xs:items-center xs:justify-center flex flex-wrap lg:flex-nowrap gap-4 mt-16 bg-services bg-cover">
       {/* Left Section */}
-      <div className="text-white w-1/2 flex items-center relative">
-        <div className="relative border-8 border-orange-red rounded-full w-[80%] h-[80%] -ml-28 flex items-center justify-center">
+      <div className="2xl:w-1/2  flex items-center relative">
+        <div className="relative border-8 border-orange-red rounded-full xs:h-[300px] xs:w-[300px] sm:h-[500px] sm:w-[500px] 2xl:w-[650px] 2xl:h-[650px] 2xl:-ml-28 flex items-center justify-center">
           <div className="w-full h-full rounded-full overflow-hidden">
             <div className="absolute inset-0 bg-black opacity-50 rounded-full" />
             <motion.img
               src={activeCard.thumbnail}
               alt="Active"
-              className="w-full h-full object-cover "
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
             />
           </div>
         </div>
@@ -84,10 +88,10 @@ const Service = () => {
         //   dynamicBullets: true,
         // }}
         modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
-        className="absolute left-[300px] px-16 py-12 h-screen overflow-hidden"
+        className="2xl:absolute 2xl:left-[300px] 2xl:px-16 2xl:py-12 h-screen overflow-hidden"
       >
         {services.map((service, index) => (
-          <SwiperSlide key={`${service.id}-${index}`}>
+          <SwiperSlide key={`${service.id}`}>
             <Link to={`/services/${service.link}`}>
               <motion.div
                 whileHover={{ scale: 1.1 }}
@@ -119,7 +123,7 @@ const Service = () => {
         ))}
       </Swiper>
 
-      <div className="w-1/2 flex items-center justify-center p-8">
+      <div className="xs:w-full 2xl:w-1/2 flex items-center justify-center xs:p-4 2xl:p-8">
         <div>
           <h2 className="flex flex-col leading-none text-center lg:text-left text-white font-metropolis font-extrabold tracking-tighter text-3xl md:text-5xl lg:text-6xl">
             {activeCard.title}
