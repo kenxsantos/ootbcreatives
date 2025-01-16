@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.snap-y {
+  scroll-snap-type: y mandatory;
+}
+.snap-start {
+  scroll-snap-align: start;
+}
+
+
 @font-face {
   font-family: "Garnet";
   src: url("/fonts/GarnetCapitals-Black.ttf") format("truetype");
