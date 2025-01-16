@@ -29,19 +29,6 @@ export default {
         garnet: ["Garnet", "sans-serif"],
       },
       backgroundImage: {
-        rocket: 'url("/assets/backgrounds/OOTBRocketBG.webp")',
-        "vertical-planets": 'url("/assets/backgrounds/OOTBVerticalBG.webp")',
-        "vertical-planets-1":
-          'url("/assets/backgrounds/OOTBVerticalPlanets1.webp")',
-        "vertical-planets-2":
-          'url("/assets/backgrounds/OOTBVerticalPlanets2.webp")',
-        "vertical-planets-3":
-          'url("/assets/backgrounds/OOTBVerticalPlanets3.webp")',
-        "vertical-planets-4":
-          'url("/assets/backgrounds/OOTBVerticalPlanets4.webp")',
-        "blurred-planets":
-          'url("/assets/backgrounds/OOTBBlurredPlanetsBG.webp")',
-        "clear-planets": 'url("/assets/backgrounds/OOTBClearPlanetsBG.webp")',
         academy: 'url("/assets/backgrounds/OOTBAcademyBG.webp")',
         "gradient-red":
           "linear-gradient(90deg, rgba(200,111,73,1) 26%, rgba(208,129,96,1) 45%, rgba(221,159,133,1) 63%, rgba(199,179,183,1) 90%)",
@@ -52,12 +39,13 @@ export default {
         "gradient-navbar":
           "linear-gradient(90deg, rgba(166,103,209,0) 0%, rgba(0,212,255,1) 100%)",
 
-        //new homepage
-
+        //new homepage backgrounds
         services: 'url("/assets/backgrounds/services.png")',
         clients: 'url("/assets/backgrounds/clients.png")',
         crewmates: 'url("/assets/backgrounds/crewmates.png")',
         "show-services": 'url("/assets/backgrounds/show-services.png")',
+        offers: 'url("/assets/backgrounds/offers.png")',
+        radio: 'url("/assets/backgrounds/radio.png")',
       },
       colors: {
         "orange-red": "#EF722E",
